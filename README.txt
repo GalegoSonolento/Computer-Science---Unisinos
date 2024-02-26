@@ -1,0 +1,1 @@
+Documentação criada com o intuito de anotatar observações das cadeiras do semestre.
