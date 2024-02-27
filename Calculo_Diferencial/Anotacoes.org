@@ -25,9 +25,9 @@ DATA: (26/Fev/24)
 - funções trabalham com imagens e domínios
 - normalmente o eixo y é a imagem
 - Imagem em função do domínio (y em função do x, normalmente)
-*** lei:
-- 150x
-- identificação da função
+- lei:
+    - 150x
+    - identificação da função
 -  função:
     - y = 150x
     - é o fazer da lei
