@@ -28,31 +28,21 @@ DATA: (26/Fev/24)
 *** lei:
 - 150x
 - identificação da função
-*** função:
-- y = 150x
-- é o fazer da lei
-*** dominio abrange todos os conjuntos de valores pra x
-- muita mão calcular tudo
-*** restrições
+-  função:
+    - y = 150x
+    - é o fazer da lei
+- dominio abrange todos os conjuntos de valores pra x
+    - muita mão calcular tudo
+- restrições
     - tira só o q n faz sentido colocar
     - e.g.: y=1/x -> Dom:lR - {0}
     - precisa fzr as provas (até bhaskara) pra n ficar zerado
     - raiz de denominador par 
         - n é lR, vai entrar no domínio de números complexos
         - resultado precisa ser >= 0
-    ***** logaritmos naturais
+    - logaritmos naturais
         - logaritimando precisa ser positivo pra ser real (IR)
         - y = ln(x+8) -> x+8 > 0 -> x > 0
 
 *** Valor numérico de função 
 - valor de y quando x e alguém
-
-* Heading
-:PROPERTIES:
-:CUSTOM_ID: someid
-
-| Name  | Phone | Age |
-|-------+-------+-----|
-| Peter |  1234 |  24 |
-| Anna  |  4321 |  25 |
-:END:
