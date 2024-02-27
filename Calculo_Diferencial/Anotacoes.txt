@@ -1,3 +1,50 @@
 Anotações gerais da cadeira
 
+=== Pertinências ===
+- infinito não é número
+    - o máximo q dá pra fzr é aproximar
+    - esse é basicamente o problema do denominador ser zero
+- infinito é sempre aberto
+- se ainda existir linha de função onde tem marcação de aberto, segue como se fosse fechado
+- 
+
+(26/Fev/24)
 === Estudo de Funções ===
+-- Conjuntos ---
+- Eixo em flecha (não os vetores) é pra dar direção e sentido (igual um vetor)
+- 
+
+-- Intervalos --
+- conjunto de reais com deseigualdade
+- [intervalo de referência de img 1]
+- intervalo é sempre crescente
+- Todo intervalo é infinito mas a maioria é limitado
+    - intervalos ilimitados vão até o infinito
+- cuidar q entre chaves é conjunto e n intervalo - {conjunto} - [intervalo]
+- 
+
+-- Funções propriamente ditas ---
+- funções trabalham com imagens e domínios
+- normalmente o eixo y é a imagem
+- Imagem em função do domínio (y em função do x, normalmente)
+- lei:
+    - 150x
+    - identificação da função
+- função:
+    - y = 150x
+    - é o fazer da lei
+- dominio abrange todos os conjuntos de valores pra x
+    - muita mão calcular tudo
+    -> restrições
+        - tira só o q n faz sentido colocar
+        - e.g.: y=1/x -> Dom:lR - {0}
+        - precisa fzr as provas (até bhaskara) pra n ficar zerado
+        - raiz de denominador par 
+            - n é lR, vai entrar no domínio de números complexos
+            - resultado precisa ser >= 0
+        - logaritmos naturais
+            - logaritimando precisa ser positivo pra ser real (IR)
+            - y = ln(x+8) -> x+8 > 0 -> x > 0
+
+-> Valor numérico de função <-
+- valor de y quando x e alguém
