@@ -47,6 +47,7 @@ DATA: (26/Fev/24)
 *** Valor numérico de função 
 - valor de y quando x e alguém
 
-:NAME:
-SDFSDFSDFSDF
-:end:
+* Heading
+:PROPERTIES:
+:CUSTOM_ID: someid
+:END:
