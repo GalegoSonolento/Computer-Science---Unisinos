@@ -75,3 +75,4 @@ Essas funções seguem as regras básicas de formulações de Domínio e Imagem 
 - valor de y quando x e alguém
 
 *** Exercícios e exemplos
+
