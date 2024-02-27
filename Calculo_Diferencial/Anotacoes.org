@@ -50,4 +50,9 @@ DATA: (26/Fev/24)
 * Heading
 :PROPERTIES:
 :CUSTOM_ID: someid
+
+| Name  | Phone | Age |
+|-------+-------+-----|
+| Peter |  1234 |  24 |
+| Anna  |  4321 |  25 |
 :END:
