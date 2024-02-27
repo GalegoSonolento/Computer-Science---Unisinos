@@ -33,7 +33,7 @@ DATA: (26/Fev/24)
 - é o fazer da lei
 *** dominio abrange todos os conjuntos de valores pra x
 - muita mão calcular tudo
-***restrições
+*** restrições
     - tira só o q n faz sentido colocar
     - e.g.: y=1/x -> Dom:lR - {0}
     - precisa fzr as provas (até bhaskara) pra n ficar zerado
