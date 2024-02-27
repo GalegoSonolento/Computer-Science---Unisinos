@@ -71,6 +71,7 @@ Essas funções seguem as regras básicas de formulações de Domínio e Imagem 
     - logaritmos naturais
         - logaritimando precisa ser positivo pra ser real (IR)
         - y = ln(x+8) -> x+8 > 0 -> x > 0
-
 *** Valor numérico de função 
 - valor de y quando x e alguém
+
+*** Exercícios e exemplos
