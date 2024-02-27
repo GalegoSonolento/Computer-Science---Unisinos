@@ -10,7 +10,21 @@ Anotações gerais da cadeira
 DATA: (26/Fev/24)
 * Estudo de Funções
 ** Conjuntos
-- Eixo em flecha (não os vetores) é pra dar direção e sentido (igual um vetor) 
+- Eixo em flecha (não os vetores) é pra dar direção e sentido (igual um vetor)
+*** Pequena lista dos conjuntos básicos de números para consulta:
+- Naturais (IN)
+    - Lembrando dos naturais sem o zero tbm existe (IN*)
+Números simples >= a zero
+- Inteiros (Z)
+    - Inteiros sem o zero também existe (Z*)
+Numerais simples positivos e negativos
+- Racionais (Q)
+Designação entre razões de inteiros.
+Vale lembrar que denominador zero não é aceito - resultado dá infinito
+- Irracionais
+Inclui os números não periódicos. Pi, Euler, algumas raízes, etc
+- Reais (IR)
+Inclui todos os conjuntos anteriores
 
 ** Intervalos
 - conjunto de reais com deseigualdade
@@ -19,15 +33,29 @@ DATA: (26/Fev/24)
 - Todo intervalo é infinito mas a maioria é limitado
     - intervalos ilimitados vão até o infinito
 - cuidar q entre chaves é conjunto e n intervalo - {conjunto} - [intervalo]
-- 
+- é importante ter cuidado na hora de marcar os intervalos e n deixá-los com cara de conjuntos
+*** Pequena lista:
+Imagine uma linha com dois limites
+- aberto
+dois lados abertos
+- fechado
+dois lados fechados
+- semi-aberto à direita
+só direita aberta
+- semi-aberto à esquerda
+só esquerda aberta
+- bordas infinitas
+em alguns casos dá pra ir até o infinito
 
 ** Funções propriamente ditas
 - funções trabalham com imagens e domínios
+Essas funções seguem as regras básicas de formulações de Domínio e Imagem vistas no Ensino Médio
 - normalmente o eixo y é a imagem
 - Imagem em função do domínio (y em função do x, normalmente)
 - lei:
     - 150x
     - identificação da função
+    - f(x) = y é considerado uma lei
 -  função:
     - y = 150x
     - é o fazer da lei
@@ -43,6 +71,8 @@ DATA: (26/Fev/24)
     - logaritmos naturais
         - logaritimando precisa ser positivo pra ser real (IR)
         - y = ln(x+8) -> x+8 > 0 -> x > 0
-
 *** Valor numérico de função 
 - valor de y quando x e alguém
+
+*** Exercícios e exemplos
+
