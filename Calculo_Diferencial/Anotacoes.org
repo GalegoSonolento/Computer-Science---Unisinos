@@ -6,13 +6,11 @@ Anotações gerais da cadeira
     - esse é basicamente o problema do denominador ser zero
 - infinito é sempre aberto
 - se ainda existir linha de função onde tem marcação de aberto, segue como se fosse fechado
-- 
 
 DATA: (26/Fev/24)
 * Estudo de Funções
 ** Conjuntos
-- Eixo em flecha (não os vetores) é pra dar direção e sentido (igual um vetor)
-- 
+- Eixo em flecha (não os vetores) é pra dar direção e sentido (igual um vetor) 
 
 ** Intervalos
 - conjunto de reais com deseigualdade
