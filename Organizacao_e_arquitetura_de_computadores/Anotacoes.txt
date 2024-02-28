@@ -1,2 +1,4 @@
 Anotações gerais da cadeira
 
+DATA: 27/Fev/2024
+** Palestra com empresa de sistemas embarcados - Toradex
