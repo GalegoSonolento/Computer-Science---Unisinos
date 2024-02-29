@@ -1,0 +1,81 @@
+Anotações padrão da cadeira
+
+* Obersvações pertinentes
+ - Não existe Software sem bug
+    - em algum lugar eles estão
+- Software Craftmanship - artesanato de software?
+- Chaos report
+    - quantidade de caus instaurado dentro de projetos de software
+    - a grande maioria é meio quebrado e é implantado com algumas coisas tortas
+    - obviamente conforme aumenta o pojeto a taxa de sucesso diminui bastante
+- sempre pregunte a necessidade/motivo dos pedidos de um customer
+- 
+
+
+* Introdução à Engenharia de Software: conceitos, princípios, padrões e
+práticas
+- Por que sempre se começa com as apresentações pessoais?
+- "...aplicação de uma abordagem sistemática..." - IEEE Std 610.12 (1990)
+    - pensar em quem vai dar manutenção é MARAVILHOSO -> por favor faça isso
+    - documente seus códigos
+    - pense na escalabilidade
+        - provavelmente nenhum programa vai ficar igual pra sempre
+- eng. de Software data de 60
+    - obviamente era tecnologia militar - NATO (OTAN), 1960
+- em 1970 praticamente n tinha Software
+    - n tinha padrão de montagem
+    - Crise do Software
+        - isso englobava problemas básico de engenharia civil, mas com Software
+** mensuração de preço de aplicação
+- sempre vai depender
+- projetos corporativos podem chegar a milhões de dólares e anos pra serem desenvolvidos
+- preços, prazos, etc, sempre são variáveis 
+- *** problemas e erros são caros (normalmente)
+    - erros de implementação, principalmente em projetos OnPremise e sem atualizações em tempo real, podem ser fatais pra produtos
+        - ainda mais se a aplicação for bastante utilizada
+        - problemas escalam dependendo do contexto
+            - erros em sistemas aviônicos ou de saúde podem ser fatais
+    - Therac 25
+        - essa máquina de raio-X mandava tiros 100x maiores de radiação pra exames
+        - umas 5 pessoas morreram pelo menos 
+        - não haviam alertas de erros
+    - metodologias e tamanhos de projeto determinam bastante a taxa de sucesso dele
+        - Pojetos menores sã obivamente mais simples de realizar
+** Processo de software
+- antes de desenvolver precisa organizar o esquema
+    - e um tipo de hierarquia
+- cascata
+    - faz cada parte cascateado
+    - n abraça nenhuma mudança
+        - ai quero mudar requisitos - azar
+    - bastante problemático e enxuto, mas ainda usam
+    - modelo de 1970
+- iterativo
+    - similar ao cascata mas altera muitos requisitos durante o Processo
+        - modula os requisitos e implementa em partes
+    - o modelo espiral tá aqui dentro
+    - trabalhos com ciclos de tempo
+        - a falha aqui é menor já
+        - a validação vai ser constante dentro dos ciclos
+-ágil
+    - manifesto ágil de 2010
+    - mais proximidade com o usuário
+        - a validação do sistema é feita diretamente por eles
+    - pessoal ignorou a documentação kkkkkkkkkkk
+        - como vou dar manutenção sem documentação?
+        - GO HORSE!!!
+    - Scrum e eXtreme Programming são bastante abrangentes e distribuídas
+        - frameworks né
+** ciclo de vida de software 
+- sempre vai existir
+- projeto precisa:
+    - especificação
+        - problemas
+    - estruturação
+        - modelagem
+        - especificação de funcionalidade
+            - no fim as regras de negócio e validação de software dependem bastante do usuário (customer)
+    - codificação
+    - testes
+    - manutenção
+- o esmero dessas fases depende bastante de projero pra projeto
