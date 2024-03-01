@@ -1,0 +1,131 @@
+Anotações da cadeira
+
+* Conceitos universais
+- rede n funcional n é mais uma rede
+- internet - núcleo de liga~çao de borda - rede q liga redes
+- usar como infraestrutura n é trabalhar com ela
+- cabo de par trançado n pd ter mais de 100 metros
+    - ou dobrar > 45°
+- sinal 5G é fraco, corpo humano barra
+    - dentro dela n dá pra ver a 2,5G
+    - são duas redes diferentes dentro do transmissor
+- servidor em rede é um prestador de serviço
+    - um celular mandando uma msg é um servidor tbm
+- onda de rádio é um meio físico
+    - preciso de controle do meio físico pra transmissão
+- transmissões
+    - simplex
+        - só um lado faz a transmissão
+    - half-duplex
+        - só um pode falar por vez
+        - walkie-talkie
+            - controle de meio
+    - duplex
+        - coms duplas
+        - telefone
+- maioria dos pacotes n criptografam
+- dois sinais na mesma rede é a física básica de ondas
+    - se amplificar pode queimar alguma coisa
+- o roteador de casa é um roteador de borda, mas essecialmente ele é só um switch
+    - primeiro roteador, na borda da Net
+    - trabalha como switch na camada de enlace
+    - o roteamento é só com outro roteador
+- enlace é uma ligação física entre as máquinas
+- rede cabeada e wi-fi são diferentes (n tem rota)
+    - alguns fazem um bridge entre as duas redes
+    - com bridge vai ser sempre a 5G por ser mais rápida e n derrubar a latência do resto da rede
+        - velocidade baseada no mais lento
+- preocupação atual de rede é streaming 
+    
+
+
+DATA: 29/02/24
+* Introdução a redes de computadores
+- ideia básica de redes surgiu por causa dos mainframes
+    - um mainframe gigante e vários terminais burro
+    - isso e uma arquitetura pai de redes
+    - esse troço ficou mto lerdo e resolveram quebrar o processamento
+- necessidade de rede era pra compartilhar recurso
+- comuniação de rede é toda por pulso de luz
+    - a voltagem tem espaços de volts pra análise
+** evolução de rede
+- depois de montagem de rede ela teve uma fase alta e continuou desenvolvendo
+- trocar info cada vez mais rápido - menor custo facilita
+- internet era uma segunda linha de coms pra manter os EUA em pé em caso de invasão de quebra das comunicações telefônicas
+    - caminhão de dinheiro federal pra montagem da arpanet
+    *** preocupações de rede
+    - transmissão precisa ser com luz, piscando, e o receptor precisa ser bom o suficiente pra pegar e o envio precisa ser sinconizado o suficiente pra n atrasar
+- inicialmente todas as redes eram corporativas
+    - transmissão de pulso era em cima de rede telefônica
+    - já existiam alguns tipos de rede pessoal
+**  visão geral de rede
+- transmissor (origem)
+- receptor (destino)
+- dado enviado/recebido
+- canal de coms (link)
+- interface - conexão da máquina no meio físico
+    - precisa de um meio físico - wifi tbm tem (onda)
+    - pega o pulso e transforma em binário
+** rede local
+- LAN - Local Area Network
+- são privadas por definição
+- tamanhos definem LAN
+    - se n precisa de roteamento ainda é uma LAN
+- taxa de erro baixa por n ter roteamento - broadcast - transmite pra todos
+*** topologia
+- maneiras de ligar uma rede
+- estrela
+    - 90% da conexão
+    - um switch centralizando a coms da rede
+    - se derrubar o centro mata a rede
+- barra
+    - velha
+    - barramento com td mundo ligado lá dentro
+    - conector vampiro
+    - todo mundo recebe a msg
+    - n podia ter duas transmissões ao msm tempo
+- anel
+    - msg em único sentido
+    - token
+        - quem tem podia transmitir
+** redes metropolitanas
+- transmissão de sinal de wi-fi é um barramento
+- td mundo recebe a informação
+- MAN - Metropolitan Area Network
+- o próximo passo da rede é conectar a rede com outra rede
+- necessita de criação e rotas
+- rotas diferentes pra chegar em algum lugar
+** redes geograficas distribuidas
+- internet foi feita com infra de telefonia
+- WAN - Wide Area Network
+- qql coisa gera interferência
+    - redes grandes podem usar rádio em alguns momentos
+- logicamente tem roteamento
+- internet é um modelo de WAN
+    - ou pode ser um miolo da porrada de rede
+    - sem acesso de borda a internet n funciona
+** redes sem fio
+- cresce absurdamente
+- custo de infra é bem menor
+- segurança ainda é problemática
+    - barramento mto simples - sinal compartilhado
+** internet
+- se levar em conta qql sensor ou IoT tem bilhões de disp dentro dela
+- equipamentos são sistemas terminais/hosts
+- aplicaçções de internet são programas de aplicação de rede 
+*** componentes da internet
+- TCP/IP - são dois protocolos diferentes
+- protocolos tão tds prontos
+- redes em 4 camadas
+- links são enlaces -> tempo do disp até o access point
+    - eles formam a rede basicamente
+    - uso de meio físico
+- equip de comutação
+    - troca
+    - infindável
+    - serve pra trocar pacotes
+    - quando o pacote chega lá a linha morre
+    - roteadores (routers)
+        - quem faz a comutação
+*** intranet
+- intranet são redes isoladas de internet
