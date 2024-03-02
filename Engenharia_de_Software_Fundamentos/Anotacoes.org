@@ -35,8 +35,7 @@ Anotações padrão da cadeira
 
 
 DATA: 27/Fev/24
-* Introdução à Engenharia de Software: conceitos, princípios, padrões e
-práticas
+* Introdução à Engenharia de Software: conceitos, princípios, padrões e práticas
 - Por que sempre se começa com as apresentações pessoais?
     - uma pergunta que sempre me faço
 - "...aplicação de uma abordagem sistemática..." - IEEE Std 610.12 (1990)
