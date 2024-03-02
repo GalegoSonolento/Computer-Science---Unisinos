@@ -1,0 +1,23 @@
+Como você já trabalhou com desenvolvimento de software?
+
+Caso você não tenha contato hoje com desenvolvimento de software, mas já trabalhou nesse contexto, pode considerar esse cenário para responder às perguntas.
+
+1) Qual o ramo/segmento do seu trabalho?
+
+2) Como é o desenvolvimento de software no seu local de trabalho? Há documentação? Quais?
+
+3) Como é a manutenção de software no seu local de trabalho?
+
+4) Descreva sucintamente como a Engenharia de Software é aplicada (se for) no seu trabalho?
+
+5) Como a sua empresa investe (se investe) no processo de desenvolvimento e manutenção de software?
+    - Ferramentas
+    - Formação/treinamento de pessoal
+
+ 
+
+Caso você não tenha trabalhado ainda com desenvolvimento de sistemas, considere os pontos abaixo:
+
+1) Parece ser uma boa ideia investir tempo em modelagem de sistemas antes de implementar/codificar? Em todos os casos e tipos de sistemas?
+
+2) Você consegue enxergar um cenário em que se faça um modelo/projeto de software antes de implementar e outro cenário onde se faça? Quais seriam as diferenças?
