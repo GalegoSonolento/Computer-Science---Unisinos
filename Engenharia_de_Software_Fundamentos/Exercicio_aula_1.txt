@@ -3,21 +3,20 @@ Como você já trabalhou com desenvolvimento de software?
 Caso você não tenha contato hoje com desenvolvimento de software, mas já trabalhou nesse contexto, pode considerar esse cenário para responder às perguntas.
 
 1) Qual o ramo/segmento do seu trabalho?
+Suporte à software de comissionamento de vendas, vulgo, tecnologia.
 
 2) Como é o desenvolvimento de software no seu local de trabalho? Há documentação? Quais?
+A documentação elaborada pelos times de desenvolvimento é bastante esparsa e não possui muitos detalhes. A maior parte da documentação é elaborada pelos próprios engenheiros de suporte que, por sua vez, recebem os treinamentos de como realizar o trabalho com reuniões elaboradas pelo time de desenvolvimento.
 
 3) Como é a manutenção de software no seu local de trabalho?
+Existem atualizações e manutenções praticamente toda a semana. Atualizações essas que são mais "hot-fixes" do que outra coisa. 
+Além disso, mensalmente, existem corrreções de bugs ou implementações mais robustas de ferramentas e "features".
 
 4) Descreva sucintamente como a Engenharia de Software é aplicada (se for) no seu trabalho?
+Especificamente falando da parte de suporte (que é aquela com a qual tenho mais contato), as fases de suporte à produto e lançamento de pedidos de melhoria e fixes é aplicada e funciona relativamente bem.
 
 5) Como a sua empresa investe (se investe) no processo de desenvolvimento e manutenção de software?
     - Ferramentas
+        JIRA, Mural e Office.
     - Formação/treinamento de pessoal
-
- 
-
-Caso você não tenha trabalhado ainda com desenvolvimento de sistemas, considere os pontos abaixo:
-
-1) Parece ser uma boa ideia investir tempo em modelagem de sistemas antes de implementar/codificar? Em todos os casos e tipos de sistemas?
-
-2) Você consegue enxergar um cenário em que se faça um modelo/projeto de software antes de implementar e outro cenário onde se faça? Quais seriam as diferenças?
+        No meu software em específico é feito todo a partir de treinamentos "on call" e trocando informação com os demais colegas.
