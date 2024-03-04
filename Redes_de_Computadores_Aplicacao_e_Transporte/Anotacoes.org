@@ -48,31 +48,51 @@ DATA: 29/02/24
 - necessidade de rede era pra compartilhar recurso
 - comuniação de rede é toda por pulso de luz
     - a voltagem tem espaços de volts pra análise
-** evolução de rede
+Redes hoje em dia não necessariamente são compostas apenas por computadores. Ficou bastante comum o uso de microcontroladores e outras peças de hardware que não são exatamente computadores. Vide os sensores coectados na rede.
+Já meio batido mas para deixar claro, as redes funcionam com trocas de bits entre os computadores e a rede. Precisa-se converter o sinal na entrada e na saída.
+** Evolução de rede
 - depois de montagem de rede ela teve uma fase alta e continuou desenvolvendo
 - trocar info cada vez mais rápido - menor custo facilita
 - internet era uma segunda linha de coms pra manter os EUA em pé em caso de invasão de quebra das comunicações telefônicas
     - caminhão de dinheiro federal pra montagem da arpanet
-    *** preocupações de rede
-    - transmissão precisa ser com luz, piscando, e o receptor precisa ser bom o suficiente pra pegar e o envio precisa ser sinconizado o suficiente pra n atrasar
+A necessidade de uma rede alternativa à telefônica era por motivos bélicos, mas se tornou uma ferramenta indispensável na mão dos civis. 
+A troca de informações barata e rápida com compartilhamento de informação e recurosos supera bastante a da rede telefônica.
+*** preocupações de rede
+- transmissão precisa ser com luz, piscando, e o receptor precisa ser bom o suficiente pra pegar e o envio precisa ser sinconizado o suficiente pra n atrasar
 - inicialmente todas as redes eram corporativas
     - transmissão de pulso era em cima de rede telefônica
     - já existiam alguns tipos de rede pessoal
-**  visão geral de rede
+** Tipos de redes
+|dist. entre proces | proces. no mesmo |
+|-------------------+------------------|
+|       0.1 m       |Placa-msm pc      |
+|         1 m       |Sistema-multicomp |
+|        10 m       |Sala-rede local   |
+|       100 m       |Prédio-rede local |
+|         1 km      |Campus-rede local |
+|        10 km      |Cidade-MAN        |
+|       100 km      |Estado/País-WAN   |
+|      1000 km      |Continente-WAN    |
+|     10000 km      |Planeta-Internet  |
+** Visão geral de rede
 - transmissor (origem)
+    - geralmente é dinâmico (pode enviar e receber)
 - receptor (destino)
+    - mesmo caso do transmissor
 - dado enviado/recebido
+    - em binário
 - canal de coms (link)
+    - transporta o dado
 - interface - conexão da máquina no meio físico
     - precisa de um meio físico - wifi tbm tem (onda)
     - pega o pulso e transforma em binário
-** rede local
+** Rede local
 - LAN - Local Area Network
 - são privadas por definição
 - tamanhos definem LAN
     - se n precisa de roteamento ainda é uma LAN
 - taxa de erro baixa por n ter roteamento - broadcast - transmite pra todos
-*** topologia
+*** Topologia
 - maneiras de ligar uma rede
 - estrela
     - 90% da conexão
@@ -88,14 +108,17 @@ DATA: 29/02/24
     - msg em único sentido
     - token
         - quem tem podia transmitir
-** redes metropolitanas
+** Redes metropolitanas
 - transmissão de sinal de wi-fi é um barramento
 - td mundo recebe a informação
 - MAN - Metropolitan Area Network
 - o próximo passo da rede é conectar a rede com outra rede
 - necessita de criação e rotas
 - rotas diferentes pra chegar em algum lugar
-** redes geograficas distribuidas
+*** Topologia
+- DQBD (Dristributed Queue Dual Bus)
+Aqui dois cabos interligam os computadores, um para cada direção, não existe um barramento único ou um anel entre eles.
+** Redes geograficas distribuidas
 - internet foi feita com infra de telefonia
 - WAN - Wide Area Network
 - qql coisa gera interferência
@@ -104,16 +127,22 @@ DATA: 29/02/24
 - internet é um modelo de WAN
     - ou pode ser um miolo da porrada de rede
     - sem acesso de borda a internet n funciona
-** redes sem fio
+Esse tipo de rede não tem necessariamente um único tipo de topologia, ela pode usar múltiplas inclusive.
+O roteamento de dados aqui é imprescindível, uma vez que roteamento mal feito pode atrasar muitas partes do sistema.
+** Redes sem fio
 - cresce absurdamente
 - custo de infra é bem menor
 - segurança ainda é problemática
     - barramento mto simples - sinal compartilhado
-** internet
+O maior investimento na área de rede sem fio é em segurança, já que é um barrameto bastante simples. Ha não muito tempo era possível escutar (colocar o computador em modo promíscuo) diversos emails e compartilhamento de dados caso estivesse em um ambiente muito movimentado (aeroportos por exemplo).
+A maioria das soluções nesse sentido estão na área mais high level, de software e aplicações com criptografia de ponta a ponta.
+** Internet
 - se levar em conta qql sensor ou IoT tem bilhões de disp dentro dela
 - equipamentos são sistemas terminais/hosts
 - aplicaçções de internet são programas de aplicação de rede 
-*** componentes da internet
+Existe uma grande discussão se a internet é ou não uma rede ou um hub de várias redes. A resposta provavelmente está no que ela seria sem um monte de redes de borda para alimentá-la, nada, porque ela não "existe" de verdade.
+*** Componentes da internet
+- Cabos coaxais/fibra óptica/cabos normais de rede
 - TCP/IP - são dois protocolos diferentes
 - protocolos tão tds prontos
 - redes em 4 camadas
@@ -127,5 +156,6 @@ DATA: 29/02/24
     - quando o pacote chega lá a linha morre
     - roteadores (routers)
         - quem faz a comutação
+A distribuição de rede é levemente hierárquica, o que significa que existem apenas alguns componentes e camadas de comunicação. A maioria delas é referente à componentes de borda.
 *** intranet
 - intranet são redes isoladas de internet
