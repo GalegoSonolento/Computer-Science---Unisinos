@@ -13,6 +13,18 @@ Anotações padrão da cadeira
     - más escolhas de projeto, ainda no início, são os principais geradores de problemas
 - sempre pregunte a necessidade/motivo dos pedidos de um customer
 - https://developerslife.tech/pt/
+- SOLID
+    - princípios e boas práticas
+    - aberto à altera~ções e fechado a modificações
+    - dá pra fzr implementações sem alterar o código inteiro
+    - o sistema precisa ser expansível
+- Design Patterns
+    - facilite o trabalho do suporte e dos implementadores
+- a engenharia de requisitos nunca termina de vdd
+- existe um cargo dentro de empresas (TEM  Q TER)
+    - DPO - é o mano q cuida dos contatos de customers dentro da empresa
+    - o customer pode chegar na empresa e pedir pra excluir tds os dados dele dos sistemas
+    - é uma lei, n necessariamente seguida
 
 ** Ferramentas:
 *** Astah
@@ -139,3 +151,113 @@ Alguns adeptos dessas metodologias esquecem de fazer documentações.
     - testes
     - manutenção
 - o esmero dessas fases depende bastante de projero pra projeto
+
+DATA: 06/Mar/2024
+* Engenharia de Requisitos
+- Sempre escute o usuário e MANDE ele te passar o processo completo pra  errar menos
+- se acontecer alguma coisa a culpa sempre vai ser da TI
+- alguns sistemas já existem
+    - se o requisito pede alguma coisa q já existe, usa o existente caraio
+- a técnica de descobrir o q fzr exatamente ainda é trabalho do mano da TI
+- requisitos bem definidos evitam erros de comunicação e implementações tortas entre software (ou pedaços dele)
+** Exercício -> lista de requisitos pra compra de um smartphone
+- 9'30 polegadas
+- 18.5:9 de ratio de tala
+- 6GB RAM
+- tela touchscreen
+- processador ARM
+- conexão internet
+- conexão bluetooth
+- bateria de Lítio
+- Entrada de carregador tipo C com entrada e saída de dados
+- 128GB de armazenamento
+- saída de áudio
+- Câmera HDR zoom 100x
+- Câmera frontal
+- sinal de telefonia
+- película e capinha de fábrica
+- etc.
+
+- a moral desse exercício era mostrar como montagem de requisitos é u buraco de minhoca
+- ter mais de uma pessoa trabalhando nos requisitos é importantíssimo pra levantar requisitos de qualidade
+** causasa de falha
+- requisitos mal-feitos geram erros de implementação e bugs futuros
+- requisitos fracamente relacionados aos stakeholders
+    - trabalho de mais q provalvemente o customer n vai usar
+- dificuldade de mutar requisitos durante a montagem do software
+- volta e meia as implementações fogem do planejamento
+    - mas mesmo assim precisa documentar tudo e alinhar expectativas
+    - pensar q alterações n acontecem é uma falha
+- defina bem o escopo e sempre mantenha o usuário perto (apesar de ser chato pra kct)
+    - tenha processos de negócio bem definido (às vezes nem o usuário realmente sabe)
+        - ás vezes o analista precisa desenhar o processo junto com o customer
+*** por que requisitos?
+- planejamentos
+- estimativas (monetárias, principalemtne, softwares são caros)
+- definição de escopo de projeto
+    - às vezes precisa limitar o usuário nos pedidos (sim, eles pedem coisa pra caralho no mesmo ticket/projeto, n necesariamente relacionadas)
+- planejamento de testes de qualidade
+- administração de riscos
+    - n atender uma norma pode gerar uma multa
+        - é um risco querendo ou n
+    - ou ainda aplicações de alto risco de vidas em caso de erro
+** visão geral de projeto de desenvolvimento
+- erros de modelagem e projeto são os mais custosos de se corrigir (e onde mais eles aparecem)
+    - esses se propagam até o fim do projeto se deixar 
+    - aí a manutenção precisa arrumar o trem andando
+- custos de correção só dps na manutenção é pior q parar no meio e voltar
+** níveis de requisitos
+- basicamente o q precisa fzr
+    - n é o como
+- normalmente usuários tentam vir com soluções de primeira
+    - sempre pergunte o suficiente pra entender a issue dele
+    - normalmente a necessidade n é atendida pela solução dele
+    - sim, tu é um psicólogo pra entender
+*** requisitos de usuário
+- imaginação forte do usuário
+- extremamente alto nível
+- expectativas do user
+- públicos alvo são bastante diferentes
+    - gerência e contratantes
+    - arquitetos
+
+*** requisitos de sistema
+- feito pela TI
+- é bem mais específico
+- precisa detalhar o proceso feito pelo time
+- um refinamento "natural" dos requisitos do usuário
+- público engloba
+    - arquitetos analistas e desenvolvedores 
+    - às vezes coloca o usuário final pra acompanhar a montagem
+*** requisitos funcionais
+- funcionalidade de sistema
+- permite algumas funções pelo usuário
+
+*** requisitos n-funcionais 
+- regras de negócio
+- leis (trabalhistas)
+    - privacidade de dados (LGPD e GDPR)
+    - encarecem os sistemas - ainda mais se n tem preocupação com segurança desde o início
+    - seguança da informação tá bem requisitada hj em dia (inclusive a área de testes)
+- relacionamento com infra-estrutura
+    - às vezes precisa considerar o ambiente de execução
+- vira uma característica do sistema
+
+** classificando requisitos
+- tem uma árvore inteira de requisitos n-funcionais
+
+** atividades
+- estudo da Viabilidade
+    - ver se dá pra fzr o q o customer pede pra fzr
+    - dependendo do projeto pode levar bastante tempo
+    - relatório de Viabilidade
+- elicitação e análise de requisitos
+    - começo da modelagem
+- especificação
+    - docuemta~çao de como o sustema funciona pra modelagem e codagem
+- validação
+    - processo de doule-check com o user pra dar seguimento
+    - provalvemente feito em várias rodadas
+- em tese esse trabalho diminui com o tempo de desenvolvimento
+- precisa fzr gestão de rastreabilidade
+- ciclos de requisitos são sempre presentes

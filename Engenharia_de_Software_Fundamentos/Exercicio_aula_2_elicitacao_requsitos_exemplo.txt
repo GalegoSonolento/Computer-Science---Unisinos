@@ -1,0 +1,28 @@
+Universidade do Vale do Rio dos Sinos - Unisinos
+06/Mar/2024
+- Arthur Wild
+- Henrique Haag
+-----------------------------------------------------------------------------------------------------------------------
+Em duplas, pense em um cenário de um sistema de e-commerce (loja virtual). Quais seriam os requisitos funcionais e não funcionais para desenvolvermos esse tipo de sistema?
+
+=== Requisitos de sistema ===
+__ Requisitos funcionais __
+- Sistema de pagamento;
+- Sistema de pesquisa;
+- Sistema de anúncio de itens;
+- Sitema de tracker da encomenda;
+- Carrinho de compra;
+- Cadastro e edição de:
+    - Usuários;
+    - Vendedores;
+    - Produtos;
+    - Promoções;
+    - Estoque;
+- Sistema de paginação (abas);
+- Sistema de avaliação dos vendedores/itens;
+
+__ Requisitos não-funcionais __
+- Funcionando 24/7;
+- Seguir LGPD;
+- Sistema de recomendação;
+- Cumprimento de taxação;
