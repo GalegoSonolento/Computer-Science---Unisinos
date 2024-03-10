@@ -121,10 +121,10 @@ Gráficos não precisam necessariamente ter uma escala correta, apenas precisam 
 - sempre dá o double check pra ver se a variação faz sentido com o gráfico
 - Identificação da função sempre pode se dar pela definição de dois pontos. Veja, existem unfinitas retas dentro do plano, mas apenas uma com os dois pontos juntos.
 Exercícios:
-<img src = "imgs/Aula_2_Funcao_grau_1_exerc_1">
-<img src = "imgs/Aula_2_Funcao_grau_1_exerc_1_b">
-<img src = "imgs/Aula_2_Funcao_grau_1_exerc_2">
-<img src = "imgs/Aula_2_Funcao_grau_1_exerc_3">
+<img src = "imgs/Aula_2_Funcao_grau_1_exerc_1.png">
+<img src = "imgs/Aula_2_Funcao_grau_1_exerc_1_b.png">
+<img src = "imgs/Aula_2_Funcao_grau_1_exerc_2.png">
+<img src = "imgs/Aula_2_Funcao_grau_1_exerc_3.png">
 
 ## Funções polinomiais no 2° grau
 - f(x) = ax² + bx + c com a != 0
@@ -154,6 +154,6 @@ Ponto mais baixo ou o mais alto de uma parábola, à depender de sua formação.
 - Yv = -(b² - 4ac)/4a
 
 #### Exemplos
-<img src = "imgs/Aula_2_Funcao_grau_2_exerc_1">
-<img src = "imgs/Aula_2_Funcao_grau_2_exerc_2">
-<img src = "imgs/Aula_2_Funcao_grau_2_exerc_3">
+<img src = "imgs/Aula_2_Funcao_grau_2_exerc_1.png">
+<img src = "imgs/Aula_2_Funcao_grau_2_exerc_2.png">
+<img src = "imgs/Aula_2_Funcao_grau_2_exerc_3.png">
