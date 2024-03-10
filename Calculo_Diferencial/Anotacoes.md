@@ -46,7 +46,7 @@ Inclui todos os conjuntos anteriores
 - intervalo é sempre crescente
 - Todo intervalo é infinito mas a maioria é limitado
     - intervalos ilimitados vão até o infinito
-- cuidar q entre chaves é conjunto e n intervalo - {conjunto} - [intervalo]
+- cuidar q entre chaves é conjunto e n intervalo - {conjunto} - "[intervalo]"
 - é importante ter cuidado na hora de marcar os intervalos e n deixá-los com cara de conjuntos
 ### Pequena lista:
 Imagine uma linha com dois limites
@@ -88,27 +88,23 @@ Essas funções seguem as regras básicas de formulações de Domínio e Imagem 
 ### Valor numérico de função 
 - valor de y quando x e alguém
 
-DATA:04/MAR/24
 ## Gráfico de uma função
-- qql função pode ter gráfico
-    - nem td gráfico tem função
-- cartesiano ortogonal - base de desenho pros graficos
-- gráficos n precisam ficar exatamente na mesma escala
-    - gráficos de uso geral pelo menos, se estiver dentro da regra de progressão tá valendo
+Qualquer função na matemática terá um gráfico para lhe representar. Todavia, tenha em mente que nem todo gráfico tem uma função.
+Gráficos não precisam necessariamente ter uma escala correta, apenas precisam estar coerentes escritos dentro do plano cartesiano.
 ### função polinomial do 1° grau
 - f(x) = ax + b
 - a e b são IR
 - se a=0
     - f(x) = 3 -> ainda é uma função (consatante)
     - valor de x é qql coisa
-    - [img função constante]
+    - <img src = "imgs/Funcao_afim.png">
 - a!=0 e b=0
     - linear
 - a!=0 e b!=0
     - função afim
 - pra todos esses o gráfico é uma reta sempre
 - tirando a constante, tds as retas tem algum grau de inclinação
-    - [imagem de retas com inclinação]
+    - <img src = "imgs/Retas.png>
     - quem define a inclunação da reta é o a (taxa de variação)
         - 'a' é uma constante assim como 'b'
         - coeficiente angular
@@ -121,9 +117,15 @@ DATA:04/MAR/24
     - sem numeração é genérico
     - pra chegar no a faz:
         a=(x2-x1)/(y2-y1)
-- [colocar o trecho 1 como img aqui]
 - Com dois pontos sempre vai dar pra traçar a reta
 - sempre dá o double check pra ver se a variação faz sentido com o gráfico
+- Identificação da função sempre pode se dar pela definição de dois pontos. Veja, existem unfinitas retas dentro do plano, mas apenas uma com os dois pontos juntos.
+Exercícios:
+<img src = "imgs/Aula_2_Funcao_grau_1_exerc_1">
+<img src = "imgs/Aula_2_Funcao_grau_1_exerc_1_b">
+<img src = "imgs/Aula_2_Funcao_grau_1_exerc_2">
+<img src = "imgs/Aula_2_Funcao_grau_1_exerc_3">
+
 ## Funções polinomiais no 2° grau
 - f(x) = ax² + bx + c com a != 0
 - gráfico parabólico
@@ -145,3 +147,13 @@ DATA:04/MAR/24
 - [colocar imagem de referência 3]
 - a é sempre coeficiente de x²
 - raízes não reais indicam q a parábola n bate no x
+### Vértice
+Ponto mais baixo ou o mais alto de uma parábola, à depender de sua formação.
+É possível encontrar as coordenadas (X, Y) através das fórmulas:
+- Xv = (-b)/(2a)
+- Yv = -(b² - 4ac)/4a
+
+#### Exemplos
+<img src = "imgs/Aula_2_Funcao_grau_2_exerc_1">
+<img src = "imgs/Aula_2_Funcao_grau_2_exerc_2">
+<img src = "imgs/Aula_2_Funcao_grau_2_exerc_3">
