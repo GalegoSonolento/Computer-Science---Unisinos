@@ -157,3 +157,8 @@ Ponto mais baixo ou o mais alto de uma parábola, à depender de sua formação.
 <img src = "imgs/Aula_2_Funcao_grau_2_exerc_1.png">
 <img src = "imgs/Aula_2_Funcao_grau_2_exerc_2.png">
 <img src = "imgs/Aula_2_Funcao_grau_2_exerc_3.png">
+
+### Exercícios Aula
+<img src = "Aula_2_Exercicios_geogebra.png">
+
+### Exercícios extras
