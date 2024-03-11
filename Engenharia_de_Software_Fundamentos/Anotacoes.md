@@ -126,24 +126,6 @@ Dias    | Trecho
 12      | Desenvolvimento
 3       | Testes
 
-Exemplo   | Valor do exemplo
---------- | ------
-Exemplo 1 | R$ 10
-Exemplo 2 | R$ 8
-Exemplo 3 | R$ 7
-Exemplo 4 | R$ 8
-
-
-| dias | trecho |
-|------+--------|
-|  9   |Análise |
-|  6   |Projeto |
-|  12  |Desenvol|
-|  3   |Testes  |
-
-Alinhado a esquerda | Centralizado | Alinhado a direita
-:--------- | :------: | -------:
-Valor | Valor | Valor
 ### ágil
 Metodologias ágeis funcionam muito bem com projetos de MVP e testes de conceito, que realmente precisam de rapidez elevada.
 Alguns adeptos dessas metodologias esquecem de fazer documentações.
@@ -197,7 +179,6 @@ DATA: 06/Mar/2024
 - sinal de telefonia
 - película e capinha de fábrica
 - etc.
-
 - a moral desse exercício era mostrar como montagem de requisitos é u buraco de minhoca
 - ter mais de uma pessoa trabalhando nos requisitos é importantíssimo pra levantar requisitos de qualidade
 ## causasa de falha
