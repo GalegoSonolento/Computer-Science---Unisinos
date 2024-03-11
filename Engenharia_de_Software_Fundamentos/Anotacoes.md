@@ -119,7 +119,7 @@ Dificilmente vai ficar pronto na primeira versão.
 Ao final de cada iteração o projeto avança uma parte, mas muda em outras para acompanhar a evolução do projeto.
 - Exemplo de mês:
 Dias | Trecho
----- | ----------------
+---- | --------
 9    | Análise
 6    | Projeto
 12   | Desenvolvimento
