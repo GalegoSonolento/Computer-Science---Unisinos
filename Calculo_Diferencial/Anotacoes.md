@@ -162,3 +162,7 @@ Ponto mais baixo ou o mais alto de uma parábola, à depender de sua formação.
 <img src = "Aula_2_Exercicios_geogebra.png">
 
 ### Exercícios extras
+<img src = "imgs/Aula_2_Exercicios_Extras_1.png">
+<img src = "imgs/Aula_2_Exercicios_Extras_2.png">
+<img src = "imgs/Aula_2_Exercicios_Extras_3.png">
+<img src = "imgs/Aula_2_Exercicios_Extras_4.png">
