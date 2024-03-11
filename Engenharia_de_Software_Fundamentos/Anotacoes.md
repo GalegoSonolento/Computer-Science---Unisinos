@@ -118,12 +118,13 @@ Dificilmente vai ficar pronto na primeira versão.
 "Andar sobre a água e desenvolver software a partir de uma especificação é fácil. Se ambos estiverem congelados..." - Edward V. Berard (Engenheiro de Software renommado)
 Ao final de cada iteração o projeto avança uma parte, mas muda em outras para acompanhar a evolução do projeto.
 - Exemplo de mês:
-Dias | Trecho
----- | --------
-9    | Análise
-6    | Projeto
-12   | Desenvolvimento
-3    | Testes
+
+Dias    | Trecho
+:-----: | :--------:
+9       | Análise
+6       | Projeto
+12      | Desenvolvimento
+3       | Testes
 
 Exemplo   | Valor do exemplo
 --------- | ------
