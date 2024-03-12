@@ -11,6 +11,10 @@ Anotações gerais da cadeira
 - dois pontos são necessarios (2 variáveis) pq passam infinitas retas por um ponto só
     - só uma reta com aquela direçao passa por esses dois pontos
 - Um software fácil de mexer é: https://www.geogebra.org/classic?lang=en
+- a maioria dos avanços matemáticos são pra aumentar a margem de lucro e expandir negócios (tentativas comerciais)
+- 0^0 é uma indeterminação matemática
+- tempo zero é sempre o tempo onde a aplicação começa a ser considerada
+- é interessante sempre manter o padrão e usar logaritmo natural pra troca de bases
 
 # Formuletas interessantes:
 - f(x) = ax + b
@@ -20,6 +24,7 @@ Anotações gerais da cadeira
 - x = (-b +- √(b² - 4ac)) / 2a
 - Xv = -b/2a
 - Yv = -delta/4a -> -(b² - 4ac)/4a
+- f(x) = e^x -> aparece bastante na natureza
 
 DATA: (26/Fev/24)
 # Estudo de Funções
@@ -166,3 +171,88 @@ Ponto mais baixo ou o mais alto de uma parábola, à depender de sua formação.
 <img src = "imgs/Aula_2_Exercicios_Extras_2.png">
 <img src = "imgs/Aula_2_Exercicios_Extras_3.png">
 <img src = "imgs/Aula_2_Exercicios_Extras_4.png">
+
+DATA: 11/03/24
+## Funções exponenciais e logaritmicas: Definição, propriedades e gráficos
+### surgimento do exponencial e logaritmo
+- Uma é a inversa da outra
+    - n necessariamente o inveso
+    - Uma função inversa da outra
+- [Desenho 1 caderno]
+### Exercícios
+[imgs exercício marker 2]
+### A função exponencial
+- modelagem de crescimento algo de algo
+- é basicamente um cálculo para uma das curvas matemáaticas (no caso a exponencial)
+[Exercício marcador 3]
+- N é uma reta
+    - vai ser uma curva mto loca
+- geralmente a base é fator de crescimento
+[Exemplo marcador 4]
+- Expoente negativo n troca sinal de ngm, mas de fato o resultado é bastante pequeno
+- nunca alcança o zero (expoente precisaria ser -infinito)
+[Exercício marcador 5]
+### Função exponencial natural
+- base é o número de euler
+- f(x) = e^(kz), k!=0 ão usadas como modelos de decaimento exponencial
+- para f(x) = e^x, qql reta tangente, o coeficiente angular sempre tem o valor da ordenada
+#### Número de euler
+- e = 2.71828...
+
+x       | 1+(1/x) | (1+(1/x))^x
+:------:|:-------:|:-----------:
+1       |2        |2
+10      |1.1      |2.5937424601
+100     |1.01     |2.7048138294215260932671947108075
+1000    |1.001    |2.7169239322358924573830881219476
+10000   |1.0001   |2.7181459268252248640376646749131
+100000  |1.00001  |2.718268237174489668035064824426
+1000000 |1.000001 |2.7182804693193768838197997084544
+
+- lim(inf)(1+(1/x))^x
+
+### Logaritmos
+Iniciaram simplificando alguns cálculos mais complexos
+- dá pra dimiur os graus de dificuldade das operações
+- lê-se sempre pela linha
+- depende do conhecimento de potências
+    - a definição é basicamente uma potência dentro dela
+- 2^x = 4
+    - por qual expoente eleva pra ser verdadeiro?
+    - log_2 4 = 2
+    - a moral é perguntar quantas vezes precisa potencializar pra dar o resultado
+- log_b a = X <=> b^x = a
+- log de 'a' precisa necessariamente ser positivo
+    - exponencialmente a imagem n fica negativa
+    - pra evitar cair abaixo de zero nas ordenadas precisa manter > 0 (logaritimando positivo)
+#### condições de existência
+- a > 0
+- b > 0 também
+#### exercício
+[Exercicios marcação 6]
+#### Sistemas de logaritmos
+- todos os números reais positivos
+##### sistemas de logaritmos decimais
+- tudo com base 10
+- logaritmos comuns ou de Briggs
+- indicação de log x (base 10)
+- exemplos
+[exemplo marcação 7]
+##### sistemas de logaritmos naturais ou neperianos
+- base com o número de euler
+- podem fzr simplificações com eles mesmos
+- exemplos
+[exemplos marcaçã 8]
+#### propriedades operatórias
+- uma lista aqui
+- logaritmo do produto dá pra abrir na soma
+    - da divisão na subtração
+    - da potência na multiplicação (produto)
+- sempre dá pra fzr a mudança de base
+- normalmente se usa o logaritmo natural mesmo
+- log_3 5 = ln(5)/ln(3) -> sempre dá pra fzr td baseado nos logaritmos naturais -> 1.464973...
+    - log 5/log 3 vai dar a mesma coisa
+    - dá pra escolher qql base pra calcular
+- na maioria das operações de usa base euler
+### exercícios
+[exercícios marcação 9]
