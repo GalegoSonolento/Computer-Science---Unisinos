@@ -25,6 +25,7 @@ Anotações padrão da cadeira
     - DPO - é o mano q cuida dos contatos de customers dentro da empresa
     - o customer pode chegar na empresa e pedir pra excluir tds os dados dele dos sistemas
     - é uma lei, n necessariamente seguida
+- MVP - minimal viable product
 
 ## Ferramentas:
 ### Astah
@@ -267,3 +268,71 @@ A separação de temas e divisão entre os mais técnicos e gerais é importante
 - precisa fzr gestão de rastreabilidade
 - ciclos de requisitos são sempre presentes
 - as atividades mais efetivas são realizadem em organizações de ciclos entre as fazes de elicitação, organização, priorização e especificação dos requisitos
+
+DATA: 13/Mar/24
+### Elicitação de análise de requisitos
+- é bastante necessário identificar verdadeiramente quais os requisitos e necessidades do customer
+- entrevistas
+    - bastante comum
+    - pega um dos funcionários e entrevistar
+    - entender o que a pessoa faz e entender o processo
+    - quais dados ela precisa vizualisar, informar, inserir, etc
+    - às vezes é complicado pq a pessoa pode esquecer alguns pedaçoes
+    - aberta
+        - sem nada mto definido
+        - normalmente no começo do processo
+    - fechada
+        - questões especificas
+        - mais no meio, quando parte da situação já foi entendida
+    - tutorial 
+        - literalmente um tutorial do processo
+        - processo bastante específico do meio do projeto
+    - é um problema ter pessoas que falam de mais
+- leitura de documentos
+    - entender a dcuentação da empresa
+    - manuais de processos
+    - normas, leis, recomentações, etc
+    - ter acesso à intranet da empresa pode ser batante interessante
+    - vai atrás de documentação útil pro ptoblema
+- questionários
+    - quando precisa atingir muitas pessoas
+    - 100 usuários? n dá ra entrevistar todos
+- observação
+    - entendo o processo ao ver o usuário trabalhar
+    - santar junto com ele mesmo
+    - é realmente bastante tempo investido apenas nisso (desvantagem grande)
+- reutilização de requisitos
+    - seja cuidadoso e valide antes de mandar pra producção
+    - mas economiza tempo
+- prototipação
+    - MVP
+    - entendimento mútuo do que ambos estão esperando
+- histórias de usuário
+    - usuários contam histórias
+    - é mais fácil de colocar um contexto
+- caso de uso
+    - execução do sistema em casos específicos
+    - quais funiconalidades são necess´raias em casa interaçõa
+    - como o sistema responde
+- participação ativa do usuário
+    - nem todo projeto tem isso
+    - deixar o usuário por dentro e deixar ele entender o que tá acontecendo
+#### Classificação e organização de requisistos
+- revisar as anotações e entender o q elas dizem
+- agrupar os requisitos
+    - regras
+    - legislações
+    - etc
+    - regras de negócio basicamente
+#### priorização e neogciação
+- é bastante difícil n tirar o priorizar requisitos
+- algumas coisas são iteressantes msa n precisam estar presentar na primeira versão
+- a montagem do sistema precisa ter uma ordem lógica de montagem
+- MVP - minimal viable product
+- é interessante usar checklists e tentar buscar os problemas apresentados (evita esquecimento)
+#### especificação de requisitos
+- utilize algum tipo de padrão
+- wikis jira, confluence - precisa ter tudo em algum lugar 
+- referenciamento de requisitos é bastante importante dentro da documentação
+- glossário de termos facilita o trabalho pra tds terem a mesma linguagem durante o projeto - principalmente pra pessoas novas
+- 
