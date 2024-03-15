@@ -41,6 +41,10 @@ Anotações da cadeira
 - normalmente velocidade é o parametro de desempate
     - ás vezes precisa de aplicação com mais espaço
 - não dá pra transmitir dois sinai na mesma frequências no mesmo canal
+- nunca use uma informação de regra de negócio pra arquitetar nenhum sistema
+- o controle das informações da rede é feito completamente pela rede - os OS n tem nada a ver com isso
+- Um 'ack' é uma confirmação de resposta do par de dados enviados
+- checksum tá em basicamente todas as camadas
 
 
 DATA: 29/02/24
@@ -278,3 +282,150 @@ DATA: 07/Mar/2024
 - modulaão de bit no meio
 ### hierárquicos
 - um monte de etapa vinculada uma com a outra 
+
+DATA: 14/Mar/24
+## MOdelo de camadas
+- Modelo OSI (de referência)
+- criado por universidades européias
+    - modelagem acadêmica
+    - mais pensado antes de executar
+- funcionaria pra qql tipo de rede e protocolo
+- na coms lógica só o receptor se preocupa em entender
+    - só quem abre é a msm camada na outra máquina
+- primeira boa versão veio depois q o TCP/IP tava bombando
+    - http foi pensado pra funcionar em TCP/IP
+    - internet era mais simples q o modelo OSI
+- n necessariamente precisa usar todas as camadas
+    - n tem roteamento em LAN
+    - rede n deve exigir todas as camadas
+### nível físico
+- transmissão de bits pelo meio físico
+- detém o controle de acesso ao meio 
+### nível de enlace
+- quadros (frames)
+- detecta erros de transmissão e pode tentar corrigi-los
+- parte em software outra em firmware - permanente dentro da placa de rede
+### nivel de rede
+- roteamento e localização
+- sedex do processo
+- entrega como o processo certo
+### nível de transporte
+- preocupação entre os dois pontos finais
+- quem localiza e entrega a mensagem
+- gerenciamento de processos
+- cuida da ordem certa pra entrega na aplicação
+### nível de sessão
+- tempo máximo de interação
+### nível de apresentação
+- formatação dos dados pra aplicação
+- compressão de dados e descompressão seria aqui
+    - inclusive criptografica
+    - aplicação n precisa entender nada
+### nível de aplicação
+- terminal
+- jogo
+- etc...
+- criação dos programadores
+
+### TCP/IP
+- aplicação
+    - FTP (arquivo), SMTP (email), HTTP (web)
+- transporte
+    - TCP (conexão), UDP (transferência não confiável - não existe no modelo OSI, n entra nos parâmetros, serve só pra transmissão de dados rápida)
+    - garantir q a msg chega no nível de transporte pode gerar uma lentidão pq o protocolo precisa cuidar do reenvio do pacote
+    - identifica as portas abertas das aplicação e entrega os pacotes (se a aplicação existir, caso contrário o pacote é descartado)
+- rede
+    - IP
+- enlace (junto do físico)
+    - arestas da rede
+    - ligações entre os hosts
+    - PPP, Ethernet
+- físico
+    - bit no cabo
+
+### coms
+- cada camada consegue ver o q a outra camada fez
+    - comunicação horizontal
+- Overhead é o cabeçalho da informaçao e vem de cima
+    - comunicação vertical
+- roteador só abre a rede pra saber onde precisa mandar
+
+### camadas e protocolos de dados
+- comunicação é sempre com socket
+    - são as portas entre as camadas
+- dados gerados são mensagens
+- cada camada mete um cabeçalho em cima (uma porta)
+    - aplicação envia dados pras camadas abaixo - mensagem
+    - transporte tem a porta da aplicação e quem tá mandando - segmento
+    - ordenação da mensagem
+    - rede precisa saber o tempo de vida dele (pacote pode se perder) - datagrama
+    - enlace precisa do sabeçalho dele pra fzr validação de erros - quadro 
+- aplicação cuida da camada de sessão
+
+## atrasos
+- pra cada enlace
+    - 5 tipos diferentes de atrasos
+        - dproc - processamento nodal
+            - precisa abrir todos os cabeçalhos e identificar pra onde precisa mandar
+            - pequeno hoje em dia
+        - dqueue - enfileiramento
+            - filas podem ser grandes no buffer
+            - pode ser 0 se n tiver ngm na fila
+        - dtrans - transmissão
+            - tempo pra colocar os bit no enlace
+            - tempo pra colocar o fluxo de bits dentro da rede
+            - Taxa R - largura de banda
+                - Ethernet - 10Mbps, taxa de R=10 Mbps
+            - aumenta com uma taxa de transmissão menor
+            - L = taxa de bits
+            - L/R -> tempo de transmissão (pacote completo)
+        - dprop - propagação
+            - tempo q o bit leva pra chegar da máquina té o access point
+            - velocidade pelo espaço
+            - sempre na mesma velocidade
+            - D(distância)/S(velocidade) -> tempo de propagação
+            - luz trafega a ~2.10^8m/s dentro da rede
+        - dnodal - nodal total
+            - soma de todos
+### descarte de pacote
+- pacote pode se perder
+    - n chegar no destido ou ser descartado
+- se a fila ficar cheia é morte
+
+## Exercícios
+1.) Considere dois hosts A e B, conectados por um Unico enlace com taxa de R bits por segundo (b/s). Suponha que
+estes dois hosts estejam separados por d metros, e que a velocidade de propagação neste enlace seja de s metros
+por segundo. O host A tem que enviar um pacote de L bits ao host B. Pede-se:
+
+a) Escreva o atraso de propagação dprop em termos de d e s.
+**A propação desse pacote terá o cálculo de dprop=d/s**
+b) Determine o tempo de transmissão dtrans, em termos de L e R.
+**dtrans=L/R**
+c) Suponha que o host A comece a transmitir o pacote no instante t = O. Neste caso, no instante t = dtrans onde estarå
+o último bit do pacote? Justifique.
+**O último bit do pacote vai estar dentro do link de rede pronto pra percorrer todo o caminho**
+d) Suponha que dprop é MAIOR que dtrans. Onde estará o primeiro bit do pacote no instante t = dtrans ?
+**Dentro do link físico de rede**
+e) Suponha dprop seja MENOR do que dtrans. Onde estará o primeiro bit do pacote no instante t = dtrans ?
+**Ainda vai estar dentro do link de rede junto com o resto do pacote**
+f) Suponha que s = 2,5x10^8 m/s, L= 100 bits e R = 28 Kbps. Para qual distância d temos dprop igual a dtrans?
+```sql
+dprop = dtrans
+d/2,5x10^8 = L/R
+d/2,5x10^8 = 100/28
+d = 892 857,14285714285714285714285714 km
+```
+g) Considere dois hosts X e Y, conectados por um Unico enlace com taxa de 50 Mbps. Estes dois hosts estão separados
+por 300 quilômetros, e a velocidade de propagação neste enlace é de 2,5x10^8 metros por segundo. Que tamanho de
+pacote seria necessário para que o atraso de transmissão fosse igual ao atraso de propagação?
+```sql
+enlace = 50 Mbps
+d = 300 km
+dprop = 2.5x10^8 m/s
+
+dtrans = dprop
+L/R = d/s
+L/50 = 300 000/2.5x10^8
+L = 0.06 Mb
+L = 61,44 kb
+```
