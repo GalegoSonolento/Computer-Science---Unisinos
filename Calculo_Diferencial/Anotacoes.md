@@ -175,10 +175,33 @@ Ponto mais baixo ou o mais alto de uma parábola, à depender de sua formação.
 DATA: 11/03/24
 ## Funções exponenciais e logaritmicas: Definição, propriedades e gráficos
 ### surgimento do exponencial e logaritmo
+Normalmente as funções extrapolam os fatos que as montaram.
+Cálculos exponenciais e logaritmicos eram usados muito mais para cálculos financeiros e taxas de crescimnento que qualquer outra coisa.
 - Uma é a inversa da outra
     - n necessariamente o inveso
     - Uma função inversa da outra
+
 <img src = "imgs/Aula_3_quadro_1 .png">
+
+Propriedades           | Exemplo
+:---------------------:|:------------------------:
+a^m . a^n = a^(m+n)    | 2³ . 2^5 = 2^(3+5) = 2^8
+a^m/a^n = a^(m-n)      | 3^7/3² = 3^(7-2) = 3^5
+(a^m)^n = a^(mn)       | (2^5)³ = 2^(5.3) = 2^15
+(a/b)^m = a^m/b^m      | (3/5)² = 3²/5² = 9/25
+a^m . b^m = (ab)^m     | 2^5 . 3^5 = (2.3)^5 = 6^5
+a^0 = 1; a != 0        | 999^0 = 1
+m^-m = 1/a^m           | 2^-3 = 1/2³ = 1/8
+Atenção com sinais     | (-2)² = (-2).(-2) = 4 // -2² = -(2.2) = -4
+^n√a . ^n√b = ^n√(a.b) | ³√2.³√4 = ³√(2.4) = ³√8
+^n√a/^n√b = ^nv(a/b)   | ³√16/³√2 = ³√(16/2) = ³√8
+^n√a^m = a^(m/n)       | ^5√2³ = 2^(3/5)
+^m√(^n√a) = ^(mn)√a    | ³√^5√2 = ^(3.5)√2 = 15√2
+^n√a^m = (^n√a)^m      | ³√3² = (³√5)²
+^n√0 = 0               | ³√0 = 0
+b.^n√a = ^n√(a.b^n)    | 2.³√5 = ³√(5.2³) = ³√40
+Atenção com módulos    | se a raiz e par o resultado é módulo, se raiz ímpar o resultado carrega o sinal
+
 
 ### Exercícios
 <img src = "imgs/Aula_3_quadro_2_pt1.png">
@@ -187,7 +210,6 @@ DATA: 11/03/24
 ### A função exponencial
 - modelagem de crescimento algo de algo
 - é basicamente um cálculo para uma das curvas matemáaticas (no caso a exponencial)
-[Exercício marcador 3]
 - N é uma reta
     - vai ser uma curva mto loca
 - geralmente a base é fator de crescimento
@@ -297,3 +319,6 @@ Tenha em mente que a diferença entre um código ter tempo x² é imensa compara
 
 <img src = "imgs/Aula_3_diferenca_entre_curvas_log_e_exponencial.png">
 
+### Exercícios:
+<img src = "imgs/Aula_3_exercicios_pt1.png">
+<img src = "imgs/Aula_3_exercicios_pt2.png">
