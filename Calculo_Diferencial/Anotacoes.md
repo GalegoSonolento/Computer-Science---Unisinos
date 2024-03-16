@@ -178,9 +178,12 @@ DATA: 11/03/24
 - Uma é a inversa da outra
     - n necessariamente o inveso
     - Uma função inversa da outra
-- [Desenho 1 caderno]
+<img src = "imgs/Aula_3_quadro_1 .png">
+
 ### Exercícios
-[imgs exercício marker 2]
+<img src = "imgs/Aula_3_quadro_2_pt1.png">
+<img src = "imgs/Aula_3_quadro_2_pt2;png">
+
 ### A função exponencial
 - modelagem de crescimento algo de algo
 - é basicamente um cálculo para uma das curvas matemáaticas (no caso a exponencial)
@@ -188,15 +191,18 @@ DATA: 11/03/24
 - N é uma reta
     - vai ser uma curva mto loca
 - geralmente a base é fator de crescimento
-[Exemplo marcador 4]
 - Expoente negativo n troca sinal de ngm, mas de fato o resultado é bastante pequeno
 - nunca alcança o zero (expoente precisaria ser -infinito)
-[Exercício marcador 5]
+<img src = "imgs/Aula_3_quadro_4-5.png">
+
 ### Função exponencial natural
+Esse tipo de função pega o valor da constante de euler (2,718281828...) que, assim como pi, nunca finaliza.
 - base é o número de euler
 - f(x) = e^(kz), k!=0 ão usadas como modelos de decaimento exponencial
 - para f(x) = e^x, qql reta tangente, o coeficiente angular sempre tem o valor da ordenada
+
 #### Número de euler
+Por si a constante de euler é bastante usada para cálculos funanceiros e na substituição de bases em logaritmos. 
 - e = 2.71828...
 
 x       | 1+(1/x) | (1+(1/x))^x
@@ -209,9 +215,11 @@ x       | 1+(1/x) | (1+(1/x))^x
 100000  |1.00001  |2.718268237174489668035064824426
 1000000 |1.000001 |2.7182804693193768838197997084544
 
-- lim(inf)(1+(1/x))^x
+- lim(inf)(1+(1/x))^x -> mas isso serão cenas para o futuro
 
 ### Logaritmos
+Mais uma das operações que visam diminuir a dificuldade de cálculos mais complexos.
+Ela é batante usada em cálculos de taxa de juros simples de investimentos.
 Iniciaram simplificando alguns cálculos mais complexos
 - dá pra dimiur os graus de dificuldade das operações
 - lê-se sempre pela linha
@@ -228,21 +236,30 @@ Iniciaram simplificando alguns cálculos mais complexos
 #### condições de existência
 - a > 0
 - b > 0 também
+
 #### exercício
-[Exercicios marcação 6]
+<img src = "imgs/Aula_3_quadro_6.png">
+
 #### Sistemas de logaritmos
-- todos os números reais positivos
+São chamados de sistemas de logaritmos na base **b**. Nesta base, todos os conjuntos gerados de logaritmos são positivos.
+
 ##### sistemas de logaritmos decimais
+- Henry Briggs, 1561-1630, matemático inglês
 - tudo com base 10
 - logaritmos comuns ou de Briggs
 - indicação de log x (base 10)
 - exemplos
-[exemplo marcação 7]
+<img src = "imgs/Aula_3_quadro_7.png">
+
 ##### sistemas de logaritmos naturais ou neperianos
+- Leonhard Euler, 1707-1783
+- John Napier, 1550-1617
+- indicado por ln(x)
 - base com o número de euler
 - podem fzr simplificações com eles mesmos
 - exemplos
-[exemplos marcaçã 8]
+<img src = "imgs/Aula_3_quadro_8.png">
+
 #### propriedades operatórias
 - uma lista aqui
 - logaritmo do produto dá pra abrir na soma
@@ -254,5 +271,29 @@ Iniciaram simplificando alguns cálculos mais complexos
     - log 5/log 3 vai dar a mesma coisa
     - dá pra escolher qql base pra calcular
 - na maioria das operações de usa base euler
+
+Propriedade     | Cálculo
+:--------------:|:--------:
+log do produto  | log_b(ac) = log_b(a) + log_b(c)
+log da potência | log_b(a^m) = m.log_b(a)
+log da divisão  | log_b(a/c) = log_b(a) - log_b(c)
+mudança de base | log_b(a) = log_c(a)/log_c(b)
+
+A última propriedade é particularmente importante devido ao fato de a base diferente entregar o mesmo resultado e podermos trocar tudo por logaritmos naturais.
+
 ### exercícios
-[exercícios marcação 9]
+<img src = "imgs/Aula_3_quadro_9_pt1.png">
+<img src = "imgs/Aula_3_quadro_9_pt2.png">
+
+### Função logaritmica como a inversa da exponencial
+**Teorema:** Se b > 0 e b != 1, então y = b^x e y = log_b(x) são funções inversas.
+
+**Prova:** Se y=b^x, para determinarmos a inversa fazemos x=b^y. Ora, x=b^y é equivalente a log_b(x)=y. Portanto, y=log_b(x) é inversa de y = b^x.
+
+<img src = "imgs/Aula_3_prova_log_inverso_de_potencia.png">
+
+É importante se atentar ao fato de que são inversos ao ponto de terem curvas completamente diferentes umas das outras.
+Tenha em mente que a diferença entre um código ter tempo x² é imensa comparado a outro com log(x) - lembre que nesse caso a base é 2.
+
+<img src = "imgs/Aula_3_diferenca_entre_curvas_log_e_exponencial.png">
+
