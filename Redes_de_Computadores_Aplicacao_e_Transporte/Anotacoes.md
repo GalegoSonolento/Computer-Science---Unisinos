@@ -186,6 +186,18 @@ DATA: 07/Mar/2024
     - evita bastante latência
 
 ## Entidades básicas
+Uma das premissas da rede é que qualquer comunicação entre as máquinas pode ser cliente-servidor para qualquer um dos lados.
+Dessa forma, um dos pontos são os diferentes tipos de servidores:
+
+Tipo           | Função
+:-------------:|:--------
+Arquivos       |  Serviços de armazenamento e acesso às informações
+Banco de dados | BDs e processos de consulta
+Impressão      | Serviços de impressão
+Comunicação    | Procedimentos de acesso à rede e interface com os dispositivos dos usuários
+Gerenciamento  | Tráfego da rede, desempenho, identificação de falhas
+...            | ...
+
 - sempre vai ser comuniação cliente e servidor
 - dá pra saber claramente a rota e os domínios
 - modelo de predomínio na internet
@@ -200,6 +212,8 @@ DATA: 07/Mar/2024
 - aplicação distribuída só significa q a aplicação n tá salva no cliente 
 
 ## Meio de transmissão
+O meio físico é indispensável dentro do esquema da rede, por isso existem algumas diferentes formas de transmissão de informação.
+Usualmente essa comunicação é feita com pulsos elétricos ou raios de luz. 
 - sempre tem um caminho físico
     - guiado
         cabo coaxal, fibra óptica
@@ -207,46 +221,53 @@ DATA: 07/Mar/2024
             - cabos tem distância de garantia de conexão
             - a tensão pdser n chegar
         - transmissão bit/segundo
-        ### cabo coaxial
-        - transmissor de entrana no meio e um outer conducter por fora
-        - tem um isolante no meio
-        - largura depende do tamanho do cabo
-        - cabos de 1km chega a 1 ou 2 Gbps - garantido
-        - bidirecional
-        - substituição por fibra óptica
-        ### cabo de par trançado
-        - UTP Unshielded Twisted Pair
-        - STP (Shielded Twisted Pair)
-        - categoria 3 a 7 (7 é Ethernet de 10Gb)
-        ### cabo de fibra óptica
-        - fibra de vidro ultrafina
-        - pulso de luz (lazer)
-        - Ethernet de 100 Mbps
-        - transmissão de alta velocidade
-        - qualidade deve ser bem alta
-        - situações mto extremas estragam o cabo (ressecamento)
-        - tem um núcleo com uma capa reflexiva (casca) pra n perder sinal
-        - quase na velocidade da luz
-        - normalmente quebra fora da casca
-    - não-guiados
-        - atmosfera ou espaço
-        - satélite, infravermelho, microondas
-        - precisa de um direcionamento das antenas
-        - direcionada
-        - bem menos seguro
-        - usa onde precisa
-            - deserto, pântano, difícil acesso
-        ### satélites
-        - 50Mbps - único problema é a latência
-        ### microondas
-        - ondas de rádio
-        - interferência pacas
-            - em frequências altas
-        - 155Mbps
-        ### infravermelho
-        - desgraça
+### cabo coaxial
+- transmissor de entrana no meio e um outer conducter por fora
+- tem um isolante no meio
+- largura depende do tamanho do cabo
+- cabos de 1km chega a 1 ou 2 Gbps - garantido
+- bidirecional
+- substituição por fibra óptica
+### cabo de par trançado
+Normalmente esse tipo de cabo é usado na última milha - muitas vezes entre o switch/modem de borda a as máquinas.
+- UTP Unshielded Twisted Pair
+- STP (Shielded Twisted Pair)
+- categoria 3 a 7 (7 é Ethernet de 10Gb)
+### cabo de fibra óptica
+- fibra de vidro ultrafina
+- pulso de luz (lazer)
+- Ethernet de 100 Mbps
+- transmissão de alta velocidade
+- qualidade deve ser bem alta
+- situações mto extremas estragam o cabo (ressecamento)
+- tem um núcleo com uma capa reflexiva (casca) pra n perder sinal
+- quase na velocidade da luz
+- normalmente quebra fora da casca
+
+### Não-guiados
+- atmosfera ou espaço
+- satélite, infravermelho, microondas
+- precisa de um direcionamento das antenas
+- direcionada
+- bem menos seguro
+- usa onde precisa
+    - deserto, pântano, difícil acesso
+#### satélites
+- 50Mbps - único problema é a latência
+#### microondas
+- ondas de rádio
+- interferência pacas
+    - em frequências altas
+- 155Mbps
+#### infravermelho
+É tão terrível que nem os controles com funcionalidades em infravermelho funcionam corretamente.
+Para isso ser viável e necessário 
+- desgraça
 
 ## Protocolos
+Regras de comunicação entre os computadores/dispositivos.
+As máquinas precisam de alguma maneira de entender o que aquele conjunto de bits significa, para tal, eles precisam ser organizados de uma certa maneira.
+Essa é uma das premissas de os arquivos terem extensões e cabeçalhos.
 - conjunto de regras de coms
 - o q é o primeiro bit
 - definem formato e ordem de mensagens 
@@ -256,7 +277,7 @@ DATA: 07/Mar/2024
     - protocolos diferentes tem cabeçalhos completamente diferentes
     - n considerada na velocidade efetiva da coms
 
-## camadas de protocolo
+### Camadas de protocolo
 - programação de camadas
 - separação de camadas facilita na hora de atualizar e montar diferentes tipos de camadas
 - melhor maneira de montar sistemas complexos
@@ -264,23 +285,23 @@ DATA: 07/Mar/2024
 - cada camada fala com ela mesma no outro lado
 - camadas de baixo presta serviço pra td mundo
 - o request vai descendo e conforme vai as informações das camadas acumulam, quando chega no destino ele sobe
-### aplicação
+#### Aplicação
 - app
 - ftp, smtp, http
-### transporte
+#### Transporte
 - TCP, UDP
 - transportes entre terminais
 - bota no processo correto
-### rede
+#### Rede
 - IP
 - rota
 - comunicação com máquinas distantes
-### enlace
+#### Enlace
 - PPP, Ethernet
 - lig de 2 pontos
-### física (tá dentro do enlace)
+#### Física (tá dentro do enlace)
 - modulaão de bit no meio
-### hierárquicos
+#### Hierárquicos
 - um monte de etapa vinculada uma com a outra 
 
 DATA: 14/Mar/24
