@@ -271,8 +271,9 @@ A separação de temas e divisão entre os mais técnicos e gerais é importante
 
 DATA: 13/Mar/24
 ### Elicitação de análise de requisitos
+A descoberta de requisitos se baseia bastante no encontro de requisitos por via de diferentes formas das quais é de bom tom não se valer apenas de uma das formas de agrupamento de informações, uma vez que informações podem ficam de fora conforme a situação.
 - é bastante necessário identificar verdadeiramente quais os requisitos e necessidades do customer
-- entrevistas
+#### Entrevistas
     - bastante comum
     - pega um dos funcionários e entrevistar
     - entender o que a pessoa faz e entender o processo
@@ -288,33 +289,33 @@ DATA: 13/Mar/24
         - literalmente um tutorial do processo
         - processo bastante específico do meio do projeto
     - é um problema ter pessoas que falam de mais
-- leitura de documentos
+#### Leitura de documentos
     - entender a dcuentação da empresa
     - manuais de processos
     - normas, leis, recomentações, etc
     - ter acesso à intranet da empresa pode ser batante interessante
     - vai atrás de documentação útil pro ptoblema
-- questionários
+#### Questionários
     - quando precisa atingir muitas pessoas
     - 100 usuários? n dá ra entrevistar todos
-- observação
+#### Observação
     - entendo o processo ao ver o usuário trabalhar
     - santar junto com ele mesmo
     - é realmente bastante tempo investido apenas nisso (desvantagem grande)
-- reutilização de requisitos
+#### Reutilização de requisitos
     - seja cuidadoso e valide antes de mandar pra producção
     - mas economiza tempo
-- prototipação
+#### Prototipação
     - MVP
     - entendimento mútuo do que ambos estão esperando
-- histórias de usuário
+#### Histórias de usuário
     - usuários contam histórias
     - é mais fácil de colocar um contexto
-- caso de uso
+#### Caso de uso
     - execução do sistema em casos específicos
     - quais funiconalidades são necess´raias em casa interaçõa
     - como o sistema responde
-- participação ativa do usuário
+#### Participação ativa do usuário
     - nem todo projeto tem isso
     - deixar o usuário por dentro e deixar ele entender o que tá acontecendo
 #### Classificação e organização de requisistos
@@ -324,15 +325,14 @@ DATA: 13/Mar/24
     - legislações
     - etc
     - regras de negócio basicamente
-#### priorização e neogciação
+#### Priorização e neogciação
 - é bastante difícil n tirar o priorizar requisitos
 - algumas coisas são iteressantes msa n precisam estar presentar na primeira versão
 - a montagem do sistema precisa ter uma ordem lógica de montagem
 - MVP - minimal viable product
 - é interessante usar checklists e tentar buscar os problemas apresentados (evita esquecimento)
-#### especificação de requisitos
+#### Especificação de requisitos
 - utilize algum tipo de padrão
 - wikis jira, confluence - precisa ter tudo em algum lugar 
 - referenciamento de requisitos é bastante importante dentro da documentação
 - glossário de termos facilita o trabalho pra tds terem a mesma linguagem durante o projeto - principalmente pra pessoas novas
-- 
