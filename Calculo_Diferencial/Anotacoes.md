@@ -322,3 +322,13 @@ Tenha em mente que a diferença entre um código ter tempo x² é imensa compara
 ### Exercícios:
 <img src = "imgs/Aula_3_exercicios_pt1.png">
 <img src = "imgs/Aula_3_exercicios_pt2.png">
+
+
+DATA: 18/Mar/24
+### Exercícios
+- [marcação 1 das anotações]
+## Funções definidas por partes: mais de uma lei
+- Nem sempre as funções podem seguir apenas uma lei
+- em alguns momentos elas podem trocar a lei por n razões
+### Exemplos
+[marcação 2 anotações]
