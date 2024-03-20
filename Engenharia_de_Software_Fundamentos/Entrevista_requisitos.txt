@@ -1,0 +1,78 @@
+Universidade do Vale do Rio dos Sinos - Unisinos
+06/Mar/2024
+- Arthur Wild
+- Guilherme de Oliveira
+- Henrique Haag
+- Rafael Pilz
+-----------------------------------------------------------------------------------------------------------------------
+
+
+
+
+1 - Como certificar que o pedido foi recebido -> chave/motoboy
+2 - Como funcionam as mudanças de etapas?
+3 - Como o retaurante recebe o pedido? -> usuário restaurante -> à confirmar
+confirmado/preparando -> entregando
+4 - Teria sistema de denúncia/avaliação? Usuário: 1 a 5 estrelas p/ cliente com comentários
+Ambas as partes podem denunciar
+5 - Quem terá uma conta? usuário
+6 - Vai ter em quais plataformas? Android / Windows / Web
+
+
+
+
+Questionário de requisitos COMO
+
+    Como você vai usar esse recurso?
+    Esse recurso é um processo e, em caso afirmativo, quais são as etapas? Ou, que perguntas posso fazer para verificar os passos?
+    Como podemos atender a essa necessidade comercial?
+    Como podemos pensar sobre esse recurso de maneira um pouco diferente?
+    Como saberemos que isso está completo?
+
+Questionário de requisitos ONDE
+
+    Onde o processo começa?
+    Onde o usuário acessaria esse recurso?
+    Onde o usuário estaria fisicamente localizado ao usar esse recurso?
+    Onde os resultados seriam visíveis?
+
+Questionário de requisitos QUANDO
+
+    Quando esse recurso será usado?
+    Quando você precisa saber sobre…?
+    Quando o recurso falhará?
+    Quando estaremos prontos para começar?
+
+Questionário de requisitos QUEM
+
+    Quem vai usar esse recurso?
+    Quem entregará as entradas para o recurso?
+    Quem receberá as saídas do recurso?
+    Quem vai aprender sobre os resultados de alguém usando esse recurso?
+    Quem posso pedir para aprender mais sobre isso?
+
+Questionário de requisitos O QUE
+
+    O que eu sei sobre esse recurso? Ou, que suposições estou fazendo sobre esse recurso que preciso confirmar?
+    O que esse recurso precisa fazer?
+    Qual é o resultado final de fazer isso?
+    Quais são as partes deste recurso?
+    O que precisa acontecer a seguir?
+    O que deve acontecer antes?
+    E se….? Pense em todos os cenários alternativos e faça perguntas sobre o que deve acontecer se esses cenários forem verdadeiros.
+    O que precisa ser rastreado?
+
+Questionário de requisitos POR QUÊ
+
+Estas perguntas são ótimas, pois ajudam a confirmar que os requisitos que você acabou de eliciar mapeiam de volta para uma necessidade que você identificou quando definiu o escopo do projeto.
+
+    Existe alguma outra maneira de conseguir isso?
+    Esse recurso atende às necessidades de negócios e resolve o problema que estamos tentando resolver?
+    Se fizéssemos XYZ, o que aconteceria?
+    Qual o benefício do XYZ?
+    Como o XYZ muda as coisas?
+    Qual é o seu objetivo? (ou o objetivo)
+    Como o XYZ afetaria você? (boa técnica para mudar a conversa para um não participante)
+    O que mais precisamos pensar se fizermos XYZ?
+    Vamos falar sobre o problema que podemos estar tentando resolver aqui. (sim, muitas vezes é necessário reiterar, apenas reescreva se puder!)
+    Como o seu trabalho do dia-a-dia mudaria se fizéssemos isso?

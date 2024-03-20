@@ -279,3 +279,11 @@ DATA:12/Mar/24
 - normalmente usado por arquiteturas von neuman
 - comandos com tamanhos de bytes diferentes
 - diferentes tempos pra processamento
+
+DATA: 19/Mar/24
+[marcação de anotação 1]
+[marcação de anotação 2]
+[marcação de anotação 3]
+[marcação de anotação 4]
+[marcação de anotação 5]
+[marcação de anotação 6]
