@@ -1,5 +1,53 @@
 Anotações padrão da cadeira
 
+# Trabalho do semestre
+- exercício de construção de software dentro de um caso de uso
+## avaliação
+- sempre por sprint
+- analisando o escopo 
+- se tiver algum ajuste precisa revisar na próxima sprint
+- na 4° a revisão é feita de todas
+## Scrum
+- trabalho por sprints 
+- a lista de coisas à fazer é tratada como backlog
+- o planejamento é feito de sprint em sprint
+- o tamanho das sprints é sempre fixo
+    - fazem divisões por semanas etc
+    - es dentro da sprint n deu pra entregar tudo, entrega igual, mas sempre precisa alguma coisa pra entregar
+- a moral é o usuário sempre ter alguma coisa pra verificar
+    - teste, validação e feedback
+- método ágil **precisa** necessariamente do feedback constante do usuário
+- a mesma equipe sempre trabalha no mesmo projeto, sempre
+- se sobrar tempo puxa do backlog priorizado
+- times autogerenciáveis
+    - em tese n precisaria ter um manager no time
+    - teoricamente
+### papéis
+- product owner (PO)
+    - definição de prioridades
+    - às vezes é papal do cliente
+    - se for alguém da TI ele fica bem próximo do cliente
+- scrum master
+    - ele precisa ajudar a desempenhar as tareds
+    - alguns scrum masters tem vários times embaixo da asa
+- equipe de desenvolvimento
+    - pessoal que produz msm
+    - os peão né
+### cerimônias
+- sprint planning meeting
+    - planejamento do sprint
+- daily meeting
+    - trocar ideia com o pessoal
+    - avisos
+    - pedir ajuda ou compartilhar problemas e implementações
+    - manter o time todo no mesmo pace
+- sprint review
+    - mostrar pro usuário o q foi feito no final da sprint
+- sprint retrospective
+## kambam + scrum
+- a divisão todo, doing e done - basicamente um trello
+- times autogerenciáveis tem acesso à lista de tarefas e elas podem pegá-las por conta pra fzr
+
 # Obersvações pertinentes
  - Não existe Software sem bug
     - em algum lugar eles estão
@@ -336,3 +384,86 @@ A descoberta de requisitos se baseia bastante no encontro de requisitos por via 
 - wikis jira, confluence - precisa ter tudo em algum lugar 
 - referenciamento de requisitos é bastante importante dentro da documentação
 - glossário de termos facilita o trabalho pra tds terem a mesma linguagem durante o projeto - principalmente pra pessoas novas
+
+DATA: 20/Mar/24
+# Prototipação
+- melhor ideia nunca vem de primeira
+## prototipação de sistemas
+- desenvolvimento super rápido
+- é um MVP mesmo, use cutting corners e esquemas
+- demonstração rápida de ideias e feedback ligeiro
+- reduz o risco de falha de comunicação
+- onjetivo é um feedback em cima do protótipo
+    - ele vai ser jogado fora posteriormente
+### evolucionária
+- o mesmo protótipo existe desde o começo e ele vai sendo reaproveitado até sair pra produção
+### descartável
+- protótipo de validação e dps joga fora
+- a maioria dos casos
+- muitas vezes protótipos ficam muito mexidos e manter padrão é mais complicado
+#### níveis de protótipos
+- baixa fidelidade
+    - rascunhão mesmo
+    - dá pra fzr a mão, azar
+    - storyboard ou sketches
+    - Storyboard
+        - foco é nas ideias q precisam ser transmitidas sobre o processo
+        - entendimento de contexto geral e momentos de uso
+    - sketches
+        - já tem algum tipo de interação do usuário
+        - pode ser feito em papel msm azar
+        - usuário se engaja bastante com apicações físicas e lúdicas assim
+- média fidelidade
+    - wireframe 
+    - normalmente feito com ferramentas mais robustas 
+    - sem recursos gráficos de verdades
+    - wireframe
+        - esqueletão da implementação
+        - compnentes e alguns dados já existem
+        - td sem UI ou esquematização de arte
+- alta fidelidade
+    - mockup
+    - validação de layout com o usuário
+    - esquema de cores, componentes, etc
+    - validação de UI
+    - mais complexos de montar
+        - use com equipes de UX/UI
+    - mockups
+        - componentes e uso mais interativo
+        - vários dos componentes já são os finais
+        - ainda são desenhos mais alguns botões já funcionam
+## avaliação de protótipos
+- n precisa ficar guardando
+    - o time de desenvolvimento usa apenas de referência
+- estudo de usabilidade
+    - algumas interações ou componentes podem ser previamente validados ou marcados como pontos de atenção
+    - ambientes simulados pra ver como o user se comporta
+- survey
+    - questionários q os usuários podem responder
+    - n vê o cliente usando de verdade
+        - às vezes o cliente mente
+- focus group
+    - grupos de usuários (especiailistas que conhecem bastante o processo)
+    - n tão grandes, 5 pessoas
+    - ás vezes acontecem discussões de negócio entre os usuários
+    - tome cuidado para ouvir as pessoas q n falam muito
+- feedback de especialistas
+    - sistemas extremamente específicos
+    - e.g.: gerenciamento de usina nuclear
+        - precisa de users efetivos e q sabem o q estão fazendo
+- avaliação comparativa
+    - interessante quando o user n sabe com o q comparar pra achar bom ou ruim
+        - pd ser interessante montar mais de uma versão pra existir um tipo de comparação
+- observação de participantes
+    - mais rara
+    - observação do usuário usando o sistema
+        - às vezes usam câmeras
+    - feito com tarefas específicas a serem executadas dentro do sistema
+## características
+- se demorar muito tá errado
+- deve ser fácil de alterar (em uma reunião mesmo)
+- evite
+    - 1 só pra discussão de ideais -> faça mais de uma para testes
+    - NÃO EXISTE protótipo funcional
+        - n tem consulta, é tudo dado físico
+- o objetivo é fazer perguntas até chegar na resposta
