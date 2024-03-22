@@ -450,3 +450,149 @@ L/50 = 300 000/2.5x10^8
 L = 0.06 Mb
 L = 61,44 kb
 ```
+
+# Camada de aplicação; Protocolo HTTP e FTP
+- por mais q tenha conceitos acima, é sempre cliente e servidor pros dois lados se entenderem
+- os protocolos todos dependem bastante de sockets
+- camada mais próxima dos usuários
+- o servidor DNS usa o protocolo DNS
+- aplicação pede serviçço pra todos
+- protocolo IP n se preocupa em integridade de pacote por exemplo
+- cada protocolo faz uma tarefa só
+- cada aplicação tem um protocolo específco (alguns mais q 1, email, por exemplo)
+    - ficariam complexo e atrasado pra gerenciar
+- essa camada é a razão da rede existir
+- distribuição de no mínimo 2 pontos
+- toda aplicação tem comunicação por troca de mensagem
+    - a rede trata tudo como mensagem transmitida por pacotes
+    - a única mudança é na apresentação
+- ainda não são a aplicação
+    - é só uma parte
+    - quais mensagens são trocadas e como responder as msg
+- o OS n entra mto na jogada pq a organização é uma mensagem entre processos de duas máquinas diferentes
+- primeiramente precisa definir
+    - tipo de mensagem trocada
+        - pedido é diferente de resposta
+- paradigma cliente-servidor
+    - solicitação de serviço e entrega
+- API - Application Program Interface
+    - definição da interface de comunicação pra camada de transporte
+- socket
+    - já é a camada de transporte
+    - = tomada
+    - porta API da internet
+    - aquela porta é do servidor/cliente como a internet
+- precisa existir uma comunicação pra saber qual processo pediu/recebeu
+    - endereço IP do outro processo - IP ADDRESS
+        - IP identifica a interface de conexão, n a máquina
+        - depois precisa identificar qual porta o aplicativo tá usando
+        - normalmente servidores estão na porta 80
+        - nos servidores tem uma porta q fica só ouvindo e assigna pra outras portas a conexão com clientes
+        - dois pontos dps do IP identificam a porta
+## características de trasnporte
+- posso ou n perder dados?
+    - algumas podem
+        - streaming de áudio pode perder dados, ela n mata a aplicação
+    - outras n
+        - operações bancárias n podem ter perda de dados de maneira nenhuma
+- temporização
+    - a latência deveria ser a mínima possível pra n estragar a experiência
+- largura de banda
+    - aplicações de multimídia requerem pouca banda pra funcionar mas é bastante sensível
+    - outras n precisa necessariamente de largura grande, são elásticas, o problema é a velocidade de transmissão
+
+### TCP
+- orientado a conexão
+    - conexão lógica
+    - existem mensagens de estabelecimento de conexão antes da aplicação
+    - comunicação constante
+    - protocolo se responsabiliza pela entrega
+- controle de fluxo
+    - impôe um limite de tratamento de mensagens para as máquinas n terem overload
+    - placas de rede tem buffer
+    - a ordem de entrega precisa ser correta
+    - garante n afogamento dos switcher dentro da rede
+- controle de congestionamento
+    - roteador do meio do caminho tá com buffer cheio e descartando pacote
+        - se mta mensagem estiver sendo lançada, ele obriga a aplicação a segurar pra desengarrafar
+    
+
+### UDP
+- não orientado a conexão
+    - transfer~encia de dados não confiável
+    - sem garantia de nada
+    - rede n tem responsabilidade nenhuma
+        - a aplicação pode ter alguma responsabilidade de garantir a coms com o server
+- a aplicação precisa fzr a bufferização nesse caso
+- se acontecer congestionamento azar
+- temporização e banda mínima n são garantidas
+- O UDP é usando quando precisa de muita velocidade de entrega - fluxos constantes e erros são tradados na aplicação
+
+## HTTP e FTP
+### HTTP
+- HiperText Transfer Protocol
+- WWW
+- criado pelos suiços
+- troca de dados na web é feita por HTTP
+- camada de aplicação
+    - faz uma request e o outro dá uma response
+- http1.0 - 1945 -> versão absurdamente burra (funcionava só no laboratório)
+- http1.1 - 2068
+- usa TCP - orientado a conexão
+- socket é sempre a porta 80
+- processo começa sempre rodando o handshake do TCP (servidor precisa aceitar antes de pedir os pacotes e trocar as mensagens)
+    - depois encerra a conexão azar
+- http é stateless
+    - guardar estado é coisa de browser (cookies)
+    - manter login aberto é coisa de cookie
+    - manutenção de estado é bastante complexo
+#### conexão não-persistente
+- sempre exatamente uma requisição e fecha a conexão
+- se tem 11 objetos tem 11 conexões geradas
+- http ainda n tinha a configuração de uma web page -> geração de problemas
+- as especificações RFC1945 e 2616 dizem como os browsers devem se comportar
+- sempre 2 RTTs pra trazer cada objeto
+- sobrecarrega a rede
+- sempre alocava recurso pra conexão nova
+- browsers costumavam abrir conexões paralelas
+    - alocava muito do sistema operacional
+#### RTT
+- Round Trip Time -> tempo de iniciar a conexão e fechar uma conxão
+- 1 RTT estabeleceu meu handshake
+- tem uma sobrinha no RTT de informação por causa do atraso de transmissão
+- o cálculo é sempre em RTT + tempo de transmissão
+#### Conexão persistente
+- deixa a porta aberta por um certo período de tempo
+    - na aplicação, se n rolar um novo pedido em 30s pd fechar
+- ao invés de abrir uma conexão toda vez ele pede tudo de uma vez só
+- 2 RTTs pra tudo
+- http usa tudo de uma vez só
+- ainda permitia paralelismo
+    - chamava o index uma vez só, mas todos os objetos em paralelo
+    - padrão no http
+#### Tipos de mensagem HTTP
+### WWW
+- tudo q precisar puxar de outra pasta dentro do código é um objeto
+    - td q tiver dentro do endereço do ip
+- o agente é o browser
+- servidor web é o www - normalmente montados em apache
+## Portas
+- comunicçaão de 2 host
+- 4 informações
+    - IP origem
+    - IP destino
+    - Porta origem
+    - Porta destino
+- no pedido o cliente sempre manda IP e porta dele junto
+- esses dados formam uma tupla
+- o q muda de verdade é a porta destino
+- sempre indique a porta de origem
+- n dá pra adivinhar a porta q o servidor usa
+    - existem algumas well-known ports
+        - http é 80 por exemplo
+        - protocolos básicos tem portas definidas
+        - 1023 primeiras portas dos OS já são utilizadas
+        - 1024 até 65535 dá pra usar de boa
+    - sempre tem a porta "listener" - fica escutando os pedidos
+        - dps cria uma thread nova e joga uma porta porta mesmo lá dentro
+    
