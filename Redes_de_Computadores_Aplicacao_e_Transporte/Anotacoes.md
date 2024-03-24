@@ -305,7 +305,8 @@ Essa é uma das premissas de os arquivos terem extensões e cabeçalhos.
 - um monte de etapa vinculada uma com a outra 
 
 DATA: 14/Mar/24
-## MOdelo de camadas
+## Modelo de camadas
+<img src = "imgs/Modelo_de_camadas_OSl.png">
 - Modelo OSI (de referência)
 - criado por universidades européias
     - modelagem acadêmica
@@ -319,6 +320,10 @@ DATA: 14/Mar/24
 - n necessariamente precisa usar todas as camadas
     - n tem roteamento em LAN
     - rede n deve exigir todas as camadas
+A divisão da rede em camadas é uma ideia absolutamente interessante e deve ser levada em conta; todavia, colocar camadas demais, que seja necessário utilizar banda pra dizer que elas não serão utilizadas, pode ser um problema.
+Mas esse é um modelo teórico, o mais utilizado hoje (desde sempre, afinal foi o mais prático de implementar e foi feito pelos "inventores" da internet) é o modelo de 4 camadas.
+<img src = "imgs/Modelo_de_4_camadas.png">
+
 ### nível físico
 - transmissão de bits pelo meio físico
 - detém o controle de acesso ao meio 
@@ -364,14 +369,15 @@ DATA: 14/Mar/24
 - físico
     - bit no cabo
 
-### coms
+### Coms
 - cada camada consegue ver o q a outra camada fez
     - comunicação horizontal
 - Overhead é o cabeçalho da informaçao e vem de cima
     - comunicação vertical
 - roteador só abre a rede pra saber onde precisa mandar
 
-### camadas e protocolos de dados
+### Camadas e protocolos de dados
+<img src = "imgs/Comunicacao_entre_camadas.png">
 - comunicação é sempre com socket
     - são as portas entre as camadas
 - dados gerados são mensagens
@@ -383,32 +389,42 @@ DATA: 14/Mar/24
     - enlace precisa do sabeçalho dele pra fzr validação de erros - quadro 
 - aplicação cuida da camada de sessão
 
-## atrasos
+## Atrasos
+Sempre existirá atraso/latência, é fisicamente impossível viver sem isso.
+Assim sendo, a maior parte do trabalho é voltado para diminuir o tempo de transmissão, já que isso é relacionado à largura de banda.
 - pra cada enlace
-    - 5 tipos diferentes de atrasos
-        - dproc - processamento nodal
-            - precisa abrir todos os cabeçalhos e identificar pra onde precisa mandar
-            - pequeno hoje em dia
-        - dqueue - enfileiramento
-            - filas podem ser grandes no buffer
-            - pode ser 0 se n tiver ngm na fila
-        - dtrans - transmissão
-            - tempo pra colocar os bit no enlace
-            - tempo pra colocar o fluxo de bits dentro da rede
-            - Taxa R - largura de banda
-                - Ethernet - 10Mbps, taxa de R=10 Mbps
-            - aumenta com uma taxa de transmissão menor
-            - L = taxa de bits
-            - L/R -> tempo de transmissão (pacote completo)
-        - dprop - propagação
-            - tempo q o bit leva pra chegar da máquina té o access point
-            - velocidade pelo espaço
-            - sempre na mesma velocidade
-            - D(distância)/S(velocidade) -> tempo de propagação
-            - luz trafega a ~2.10^8m/s dentro da rede
-        - dnodal - nodal total
-            - soma de todos
-### descarte de pacote
+- 5 tipos diferentes de atrasos
+<img src = "imgs/Tipos_de_atrasos.png">
+
+### dproc - processamento nodal
+- precisa abrir todos os cabeçalhos e identificar pra onde precisa mandar
+- pequeno hoje em dia
+### dqueue - enfileiramento
+Aqui é importante dizer que essas filas existem para entregar os pacotes da maneira correta no ponto de destino. Eles precisam estar organizados para que possam ser lidos propriemente.
+Quando um link está congestionado, quase certamente o buffer de dados está completamente cheio e aquele não é mais um caminho interessante, apesar de ser batante rápido.
+Além disso, não adianta ter uma alta capacidade de banda se o roteador/roteador de borda não consegue acompanhar
+- filas podem ser grandes no buffer
+- pode ser 0 se n tiver ngm na fila
+### dtrans - transmissão
+- tempo pra colocar os bit no enlace
+- tempo pra colocar o fluxo de bits dentro da rede
+- Taxa R - largura de banda
+    - Ethernet - 10Mbps, taxa de R=10 Mbps
+- aumenta com uma taxa de transmissão menor
+- L = taxa de bits
+- L/R -> tempo de transmissão (pacote completo)
+### dprop - propagação
+- tempo q o bit leva pra chegar da máquina té o access point
+- velocidade pelo espaço
+- sempre na mesma velocidade
+- D(distância)/S(velocidade) -> tempo de propagação
+- luz trafega a ~2.10^8m/s dentro da rede
+### dnodal - nodal total
+- soma de todos
+
+### Descarte de pacote
+Conforme a necessidade de tráfego aumenta a quantidade de pacotes perdidos também cresce.
+Normalmente n é muito perceptível pois não muitos pacotes se perdem, mas é notável quando uma página normalmente rápida demora a carregar ou uma música em streaming começa a cortar o áudio e criar gaps.
 - pacote pode se perder
     - n chegar no destido ou ser descartado
 - se a fila ficar cheia é morte
@@ -451,6 +467,7 @@ L = 0.06 Mb
 L = 61,44 kb
 ```
 
+DATA: 21/Mar/24
 # Camada de aplicação; Protocolo HTTP e FTP
 - por mais q tenha conceitos acima, é sempre cliente e servidor pros dois lados se entenderem
 - os protocolos todos dependem bastante de sockets
