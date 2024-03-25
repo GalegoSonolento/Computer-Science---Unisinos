@@ -328,7 +328,16 @@ DATA: 18/Mar/24
 ### Exercícios
 - [marcação 1 das anotações]
 ## Funções definidas por partes: mais de uma lei
+Essas funções definidas por mais de uma lei usualmente tem mais de um tipo de função nelas.
+Não são deveras complexas, mas devem ser tratadas com cuidado já que é necessário desenhar as funções e identificar os limites.
 - Nem sempre as funções podem seguir apenas uma lei
 - em alguns momentos elas podem trocar a lei por n razões
 ### Exemplos
 [marcação 2 anotações]
+
+### Exercícios
+<img src = "imgs/Exercicios_aula4_1.png">
+<img src = "imgs/Exercicios_aula4_2.png">
+<img src = "imgs/Exercicios_aula4_3.png">
+<img src = "imgs/Exercicios_aula4_4.png">
+<img src = "imgs/Exercicios_aula4_5.png">
