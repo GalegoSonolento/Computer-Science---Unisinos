@@ -93,6 +93,19 @@ Anotações padrão da cadeira
 - http://trello.com
 - free
 - extremamente simples pra acompanhar trabalho de administração de recursos e tempo
+### Pencil
+- desktop e open-source
+- https://pencil.evolus.vn
+### Justinmind
+- desktop free
+- https://www.justinmind.com
+### MockFlow
+- ferramenta web, versão free limitada
+- https://mockflow.com
+### Figma
+- web
+- versão free com algumas limitações
+- https://www.figma.com
 
 
 DATA: 27/Fev/24
@@ -387,8 +400,12 @@ A descoberta de requisitos se baseia bastante no encontro de requisitos por via 
 
 DATA: 20/Mar/24
 # Prototipação
+A ideia toda da prototipação é colocar todos os envolvidos no projeto na mesma página.
+De nada vai adiantar uma porrada de reuniões se ninguém conseguir se entender efetivamente.
 - melhor ideia nunca vem de primeira
 ## prototipação de sistemas
+Os protótipos são versões inacabadas e completamente toscas do que seria o produto final.
+Eles não têm nenhuma intenção se não **imitar** o que talvez virá a ser o final do processo.
 - desenvolvimento super rápido
 - é um MVP mesmo, use cutting corners e esquemas
 - demonstração rápida de ideias e feedback ligeiro
@@ -396,12 +413,17 @@ DATA: 20/Mar/24
 - onjetivo é um feedback em cima do protótipo
     - ele vai ser jogado fora posteriormente
 ### evolucionária
+Esse aqui é um caso interessante.
+Apesar da Internet ter sido montada nesse estilo, normalmente não é recomendado usar esse tipo de processo, já que os tipos de organização variam com o tempo e provavelmente o que era acordado no início será mudado no final. Sem contar que para ficar uma bagunça é dois toques.
 - o mesmo protótipo existe desde o começo e ele vai sendo reaproveitado até sair pra produção
 ### descartável
+Mais rápido e fácil de montar. Sem contar que a culpa de alguns tipos de teste é inexistente.
 - protótipo de validação e dps joga fora
 - a maioria dos casos
 - muitas vezes protótipos ficam muito mexidos e manter padrão é mais complicado
 #### níveis de protótipos
+São diferentes tipos para diferentes ocasiões.
+É bastante comum mais de um tipo ocorrer durante o desenvolvimento do software.
 - baixa fidelidade
     - rascunhão mesmo
     - dá pra fzr a mão, azar
@@ -414,7 +436,6 @@ DATA: 20/Mar/24
         - pode ser feito em papel msm azar
         - usuário se engaja bastante com apicações físicas e lúdicas assim
 - média fidelidade
-    - wireframe 
     - normalmente feito com ferramentas mais robustas 
     - sem recursos gráficos de verdades
     - wireframe
@@ -460,6 +481,8 @@ DATA: 20/Mar/24
         - às vezes usam câmeras
     - feito com tarefas específicas a serem executadas dentro do sistema
 ## características
+Bons protótipos representam ideias, não soluções.
+Atente-se sempre para não dar com a lingua nos dentes ou pular processos importantes na hora de elaborar um software. Mantenha as soluções simples e faça propostas o quanto antes, os processos andam mais dessa maneira.
 - se demorar muito tá errado
 - deve ser fácil de alterar (em uma reunião mesmo)
 - evite
