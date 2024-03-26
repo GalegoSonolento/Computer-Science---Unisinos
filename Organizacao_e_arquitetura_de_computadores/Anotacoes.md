@@ -281,9 +281,5 @@ DATA:12/Mar/24
 - diferentes tempos pra processamento
 
 DATA: 19/Mar/24
-[marcação de anotação 1]
-[marcação de anotação 2]
-[marcação de anotação 3]
-[marcação de anotação 4]
-[marcação de anotação 5]
-[marcação de anotação 6]
+<img src = "imgs/Anotacao_1_aula_3.png">
+<img src = "imgs/Anotacao_2_aula_4.png">
