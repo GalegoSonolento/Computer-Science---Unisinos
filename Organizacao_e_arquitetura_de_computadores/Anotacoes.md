@@ -16,6 +16,21 @@
 - o tamanho do barramento de memória n depende tanto assim da arquitetura
     - a qunatidade de memória RAM possível de ser endereçada varia conforme a quantidade de endereços que o sistema pode dar
 - 'end' são as marcações de endereço que estou buscando
+- o parelismo de instruções depende de quantas vezes dá pra dividir o processador (divido em 100, tenho 100 paralelos)
+    - o problema disso é q se acontece alguma lentidão a gente mata umas 50-70 instruções (hazards)
+    - processadores bem projetados n devem ter hazards estruturais
+- a forwarding unit vai fzr o controle do chaveamento do *bypass* pra conflito de dados
+    - se n é estall ou espera
+- processo de declaração de variáveis
+    done    halt                            end of program
+    five    .fill   5
+    neg1    .fill   -1
+    stAddr  .fill   start                   will contain the address of start (2)
+    - esses .fill marcam as viariáveis
+- lables são marcações (como start) - permitem marcações dinâmicas (variáveis mesmo)
+- Em processadores MIPS o R0 sempre é uma constante de zero
+- os melhores desempenhos de hardware são quando existe implementação de forwarding e especulação de hazard de controle
+- 
 
 DATA: 27/Fev/2024
 # Revisão de sistemas digitais, circuitos sequencias e fsm, Simulador de Computador
@@ -283,3 +298,15 @@ DATA:12/Mar/24
 DATA: 19/Mar/24
 <img src = "imgs/Anotacao_1_aula_3.png">
 <img src = "imgs/Anotacao_2_aula_4.png">
+
+### O conceito de speed up
+- ganho de desempenho de máquina multiciclo vs pipeline
+- T_pipeline = T_sempipeline/num estágios da pipeline -> isso é teórico
+    - teórico porque na prática existe uma equalização de execuções, já q a pipeline precisa paralelizar as instruções.
+    - às veses isso come tempo
+
+DATA: 26/Mar/24
+# Hazards
+- conflitos na execuçã
+- problemas q causam a próxima instrução a pular um ciclo de clock
+[inserir anotação 1]
