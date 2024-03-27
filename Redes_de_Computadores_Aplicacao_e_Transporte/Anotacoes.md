@@ -469,6 +469,9 @@ L = 61,44 kb
 
 DATA: 21/Mar/24
 # Camada de aplicação; Protocolo HTTP e FTP
+Existem poucos protocolos para a camada de redes, mas diversos pra aplicação. A diversidade de aplicações deve ser comportada por vários protocolos diferentes que, muitas vezes, são específicos de uma aplicação x ou y.
+Como dito antes, as comunicações entre as camadas de rede se dá por *portas* ou *sockets*. Eles podem chegar a casas de 60 mil, mas algumas dessas portas já são conhecidas e reservadas pelo OS para determinados protocolos de aplicação. Algumas das mais famosas são a 80 (http), 443 (https) ou 108 (IBM Systems Network Architecture (SNA) gateway access server).
+O endereçamento, claro, é feito com endereços IPv4.
 - por mais q tenha conceitos acima, é sempre cliente e servidor pros dois lados se entenderem
 - os protocolos todos dependem bastante de sockets
 - camada mais próxima dos usuários
@@ -507,6 +510,9 @@ DATA: 21/Mar/24
         - nos servidores tem uma porta q fica só ouvindo e assigna pra outras portas a conexão com clientes
         - dois pontos dps do IP identificam a porta
 ## características de trasnporte
+Algumas vezes é aceitável ter uma perda maior de dados em favor de uma maior velocidade de funcionamento de uma aplicação, como em streamings, em outras, a qualidade e confiabilidade tem mais valor, como em transações bancárias.
+<img src = "imgs/Permissividade_de_perda_de_dados_ou_vagareza_na_operacao_por_tipo_de_conexao.png">
+
 - posso ou n perder dados?
     - algumas podem
         - streaming de áudio pode perder dados, ela n mata a aplicação
@@ -535,8 +541,9 @@ DATA: 21/Mar/24
     
 
 ### UDP
+Apesar de parecer inútil, esse protocolo é bem mais rápido e viabiliza o streaming de áudio e vídeo (por isso a qualidade é ruim grande parte das vezes).
 - não orientado a conexão
-    - transfer~encia de dados não confiável
+    - transferência de dados não confiável
     - sem garantia de nada
     - rede n tem responsabilidade nenhuma
         - a aplicação pode ter alguma responsabilidade de garantir a coms com o server
@@ -544,6 +551,7 @@ DATA: 21/Mar/24
 - se acontecer congestionamento azar
 - temporização e banda mínima n são garantidas
 - O UDP é usando quando precisa de muita velocidade de entrega - fluxos constantes e erros são tradados na aplicação
+<img src = "imgs/Aplicacoes_e_tipo_de_protocolo.png">
 
 ## HTTP e FTP
 ### HTTP
