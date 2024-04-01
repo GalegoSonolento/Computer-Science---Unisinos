@@ -1,0 +1,45 @@
+Uiversidade do Vale do Rio dos Sinos
+Organização e Arquitetura de Computadores
+02/Abr/2024
+Henrique Vinicius Haag
+----------------------------------------------------------------------------------------------------------------
+=== Quantidade de steps com forwarding e Speculate and Squach ===
+13 steps.
+      lw 0 1 b
+      lw 0 2 c
+      lw 0 3 d
+      lw 0 4 e
+      add 1 2 5
+      add 3 4 6
+      add 5 6 7
+      halt
+b     .fill -1
+c     .fill 10
+d     .fill 1
+e     .fill 5
+
+=== Quantidade de steps apenas com forwarding ===
+13 steps.
+Nesse caso, o forwarding apenas serve, já que não existem control hazards
+
+=== Quantidade de steps apenas com Speculate and Squash (também serve como apenas com controle do usuário) ===
+20 steps.
+      lw 0 1 b
+      lw 0 2 c
+      lw 0 3 d
+      lw 0 4 e
+      noop
+      noop
+      add 1 2 5
+      noop
+      add 3 4 6
+      noop
+      noop
+      noop
+      noop
+      add 5 6 7
+      halt
+b     .fill -1
+c     .fill 10
+d     .fill 1
+e     .fill 5
