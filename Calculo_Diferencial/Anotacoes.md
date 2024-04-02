@@ -15,6 +15,11 @@ Anotações gerais da cadeira
 - 0^0 é uma indeterminação matemática
 - tempo zero é sempre o tempo onde a aplicação começa a ser considerada
 - é interessante sempre manter o padrão e usar logaritmo natural pra troca de bases
+- limites de polinômios
+    - eles são sempre contínuos
+    - o limite de tendência sempre será o valor no ponto
+- limite de uma constante é sempre a constante
+- limite de uma soma é a soma dos limites
 
 # Formuletas interessantes:
 - f(x) = ax + b
@@ -341,3 +346,70 @@ Não são deveras complexas, mas devem ser tratadas com cuidado já que é neces
 <img src = "imgs/Exercicios_aula4_3.png">
 <img src = "imgs/Exercicios_aula4_4.png">
 <img src = "imgs/Exercicios_aula4_5.png">
+
+# Operações com limites
+- a ideia é entender o comportamento da função quando x
+- entender comportamento ou tendência com o passar do tempo
+- "limite de f(X) quando x tende ou se aproxima de a"
+    - se aproxima tanto quanto ele puder
+    - igual ou não realmente não importa
+    - as aproximações podem ser de qualquer um dos lados
+    - valores da função tendem a 2 (eixo y)
+    - limite n se importa com bolas abertas ou fechadas
+    - limite só existe se a aproximação vem dos dois lados
+- resultados sempre vem pelo eixo y
+- limite é sempre uma questão de aproximação
+    - chegam o mais perto possível 
+- [marcação 1]
+## estudo de limites
+- por que estudar tendências ao infinito?
+    - muito usados
+    - testes de freio
+    - testes de força-peso
+    - extrapolar uma marcação e gerar margens de segurança
+## noção intuitiva, análise via gráfico e notação
+- evite usar aproximações numéricas
+    - não são confiáveis em funções com limites (saltos entre as funções) muito pequenos
+- [marcação 2]
+## limites laterais
+- para consideração de onde está vindo a comparação (limites laterais muitas vezes são distintos)
+    - nessses casos o limite limite não existe
+- sempre existem
+    - só tem limite limite quando os dois são iguais
+- a laterlidade não funciona muito bem com limites ao infinito
+    - eles só podem vir pelo lado contrário mesmo
+- as marcações são com uma "potência + ou - no valor do limite"
+### exercícios
+- [marcação 3]
+- se existe uma oscilação constante (e amplitude) não dá pra indicar o limite, ou seja, ele não existe
+- [marcação 4]
+- [marcação 5]
+## limites - técnicas para calcular
+- é preciso testar valores próximos o suficiente para quse chegar no limite
+    - mas isso não necessariamente dá o resultado
+    - por mais que seja prático, não necessariamente é o método mais confiável
+- [marcação 6 - colocar as tabelas e gráficos das tendências básicas]
+- [marcação 7]
+### Propriedades dos limites
+- limite da soma
+    - soma dos limites
+- limite da constante
+    - constante
+- limites da diferença
+    - diferença entre os limites
+- limite do produto
+    - produto entre os limites
+- limite do quociente
+    - quociente dos limites
+    - desde que o denominador seja diferente de zero
+- limite da potência
+    - calcula o limite da interna e dps eleva
+- limite da raiz
+    - igual potência
+- tudo isso também vale pra limite lateral
+- vale pra um número qualquer de funções
+- só se calcula as partes variáveis
+#### exemplo 
+- [marcação 8 - polinômio com todas as propriedades]
+#### exercícios
+- [marcação 9]
