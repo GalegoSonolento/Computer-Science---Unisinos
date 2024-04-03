@@ -2,6 +2,7 @@ Anotações padrão da cadeira
 
 # Trabalho do semestre
 - exercício de construção de software dentro de um caso de uso
+- https://trello.com/b/hxuWNBab/trabalho-engenharia-de-software-fundamentos -> link do trello
 ## avaliação
 - sempre por sprint
 - analisando o escopo 
