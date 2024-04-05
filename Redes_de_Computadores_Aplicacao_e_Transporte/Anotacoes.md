@@ -620,4 +620,73 @@ Apesar de parecer inútil, esse protocolo é bem mais rápido e viabiliza o stre
         - 1024 até 65535 dá pra usar de boa
     - sempre tem a porta "listener" - fica escutando os pedidos
         - dps cria uma thread nova e joga uma porta porta mesmo lá dentro
-    
+
+DATA: 04/Abr/24
+## Cookies
+- idea de estado na conexão
+- o browser segura algumas informações
+    - ou o servidor mesmo
+- se ainda n tiver cookies ele manda tu aceitar
+    - manda um cabeçaho com set cookie 
+    - depois o cookie sempre via ser armazenado
+- carrinho de compra, login, preferências do site, etc
+- servidor sempre verifica se já tem cookies
+    - a resposta pede um set-cookie e um código praquele usuário
+    - o servidor pega as informações específicas do banco de dados
+    - a relação é do browser com o server
+
+## cache www
+- proxy
+- aproximar cliente do servidor
+- era proxy de rede
+    - servidor na entrada da rede
+- antes de entrar no site vai no proxy ver as informações q precisa tão lá
+    - economiza uma viagem longa de server
+- alguns browsers tem um proxy interno pra facilitar ainda mais (f5 pra buscar versões novas)
+- sites bastante acessados evitam fluxo de informações com servidores de proxy antes de chegar no servidor principal
+    - às vezes a informação do proxy são meio defasadas
+- é valido colocar na entrada da rede pra evitar problema
+
+## GET condicional
+- vai no proxy e o proxy mandar uma msg pra ver a última modificação
+- se tem GET condicional ele **precisa** verificar com o server origem
+- verifica com base na data do último pacote
+
+## FTP - transferência de arquivos
+- servidores remotos p/ arquivos
+- server é só um hospedeiro
+- porta 21
+- vai ter user interface ou linha de comando
+- usa TCP -> conexão de controle
+    - persistente
+    - p/ interface gráfica
+    - dá pra dx o dia inteiro aberto q n usa banda pra nada
+- em baixo tem uma conexão na porta 20 pra mandar os arquivos
+    - não-persistente
+    - ela dura durante a execução de um comando de contrle
+- google drive é em FTP por exemplo 
+    - dá pra baixar as parada pelo menos
+
+# Sockets
+- Todas as linguagens de programação usam sockets
+- sempre usam sockets quando precisa de redes
+- aplicações normalmente usam a rede
+    - ou seja, elas precisam cair na camada de transporte
+- uma interface de habilitação de porta
+- só precisa entregar pro OS e tá livre
+    - quem cuida do resto e como o TCP entrega é o OS e azar
+- linguagens de mais baixo nível pegam diretamente em sockets
+- pra comunicação acontecer o server precisa estar de pé
+- o server escolhe uma porta pra rodar
+- preciso saber o IP do customer e do server
+- quando cria o socket ele cria uma conexão TCP (caso seja TCP msm)
+- com um firewall levantado n vai deixar passar
+    - deixa o firewall levantado pelo amor de Deus
+
+## Exercícios
+1 - Por que o HTTP e o FTP rodam sobre TCP e não sobre UDP?
+**Porque são protocolos de informação e precisam de garantia de entrega.**
+2 - Por que se diz que o FTP envia informações de contrle "fora da banda"?
+**Porque ele mantém uma conexão intermitende pela porta 21 entre servidor e cliente, ou seja, os dados de controle não são enviados juntos com os pacotes na porta 20**
+3 - Descreva como o cache WWW pode reduzir o atraso na recepção de um objeto desejado. O cache Web produzirá o atraso para todos os objetos requisitados por um usuário ou somente para alguns objetos? Por quê?
+**Sim, o cache Web auxilia no atraso na recepção uma vez que ele mantém as informações mais próximas do cliente, que agora não precisa mais ir até o servidor de origem pegar os dados todos. Claro, o cahce Web vai manter as informações depois que elas passarem por ele apenas, então o atraso da primeira vez ainda existe caso você seja o pioeniro, mas seu coleguinha vai ter o benefício, enquanto a informação durar no cache Web pelo menos. Mas o benefício é apenas para alguns objetos, já que volta e meia uma requisição GET condicional obriga o cache a perguntar para o servidor origem se alguma atualização existe, se sim, os pacotes novos são requisitados pelo cache e existe um atraso para o pioneiro denovo.**
