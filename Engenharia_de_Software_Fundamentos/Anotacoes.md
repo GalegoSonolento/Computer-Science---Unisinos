@@ -74,6 +74,8 @@ Anotações padrão da cadeira
     - o customer pode chegar na empresa e pedir pra excluir tds os dados dele dos sistemas
     - é uma lei, n necessariamente seguida
 - MVP - minimal viable product
+- a organização de personas pode ser feita de muitas maneiras
+    - tanto igual um perfil no insta quanto um txt sozinho com as informações descritas formalmente
 
 ## Ferramentas:
 ### Astah
@@ -490,3 +492,61 @@ Atente-se sempre para não dar com a lingua nos dentes ou pular processos import
     - NÃO EXISTE protótipo funcional
         - n tem consulta, é tudo dado físico
 - o objetivo é fazer perguntas até chegar na resposta
+
+DATA: 27/Mar/24
+# Personas
+- uma das maneiras de ajudar o cliente a montar uma soluação de software
+- é necessário entender o que o cliente realmente precisa
+- ainda é nosso papel pensar em uma solução decente (como desenvolvedores de sistemas)
+- Allan Copper, 90's
+- É uma ferramenta de construção de pessoas fictícias
+    - vários projetos são concetrados nas necessidades do usuario
+    - ter um exemplo palpável é sempre interessante para saber o lugar para correr
+    - algumas equipes de marketing trabalham com personas (malditos marketeiros)
+- Personas **não** são completamente inventadas
+    - a criação delas é baseada nas informações retiradas do grupo de pessoas alvo
+    - a montagem é com base em dados demográficos/sexo/renda/personalidade/hábitos/etc...
+- fique atento para n ser preconceituoso (complexo)
+    - a criação de personas é um estilo de user, não um esteriótipo
+    - isso deve ser cuidado por quem cria tanto por quem lê o material
+## coleta de dados
+- pega os dados em mãos ou usa todas as técnicas de adquirir dados externos
+    - survey, entrevistas com x usuários, etc
+## proto-persona
+- são personas criadas pelas visões pessoais dos integrantes do projeto
+- faz sentido em inícios de projeto ou para discussões internas antes de realmente desenvolver o software
+- a equipe ainda n usa dados reais (bem mais fácil de ter preconceitos inseridos kkkkkkk)
+## refinamento das informações
+- precisa rolar uma peneira de dados pra retirar o q realmetne seja interessante
+
+# Histórias de usuário
+- como criar especificações que possam ser lidas por qualquer nível dos envolvidos no desenvolvimento do sistema?
+    - todos precisam entender (pré-requisito)
+- boas histórias de usuário não envolvem absolutamente nada da arquitetura do sistema
+## Conceito 3C
+- cartão
+- conversação
+- confirmação
+- um modelo pra identificar exatamente o que precisa ser implementado e confirmar pontos
+## modelo INVEST
+- outro modelo de montagem de software
+- Independent
+- Negotiable
+- Valuable
+- Estimable
+- Small
+- Testable
+## padrão de escrita
+- COMO [<papel>]
+- DESEJO [objectivo]
+- PARA QUE [razão]
+- implementações precisam ter um motivo
+    - mas n dá pra seguir as regras segamente
+    - sabendo o q tá acontetendo dá pra discutir a solução antes de implementar de verdade
+## critérios de aceitação
+- complementos das histórias de usuário
+- BDD (Behavior Driven Development)
+    - uma das técnicas de aceitação
+- normalmente as histórias caem sobre situações-chave
+- dado que ... o sistema faz ...
+- 
