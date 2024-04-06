@@ -30,7 +30,8 @@
 - lables são marcações (como start) - permitem marcações dinâmicas (variáveis mesmo)
 - Em processadores MIPS o R0 sempre é uma constante de zero
 - os melhores desempenhos de hardware são quando existe implementação de forwarding e especulação de hazard de controle
-- 
+- hazards estruturais nunca deveriam existir
+    - resolvidos na organização do processador
 
 DATA: 27/Fev/2024
 # Revisão de sistemas digitais, circuitos sequencias e fsm, Simulador de Computador
@@ -310,3 +311,5 @@ DATA: 26/Mar/24
 - conflitos na execuçã
 - problemas q causam a próxima instrução a pular um ciclo de clock
 [inserir anotação 1]
+
+DATA: 02/Abr/2024
