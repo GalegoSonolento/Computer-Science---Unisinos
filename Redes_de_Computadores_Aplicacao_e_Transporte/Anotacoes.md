@@ -571,7 +571,8 @@ Apesar de parecer inútil, esse protocolo é bem mais rápido e viabiliza o stre
     - guardar estado é coisa de browser (cookies)
     - manter login aberto é coisa de cookie
     - manutenção de estado é bastante complexo
-#### conexão não-persistente
+
+#### Conexão não-persistente
 - sempre exatamente uma requisição e fecha a conexão
 - se tem 11 objetos tem 11 conexões geradas
 - http ainda n tinha a configuração de uma web page -> geração de problemas
@@ -581,11 +582,15 @@ Apesar de parecer inútil, esse protocolo é bem mais rápido e viabiliza o stre
 - sempre alocava recurso pra conexão nova
 - browsers costumavam abrir conexões paralelas
     - alocava muito do sistema operacional
+
 #### RTT
+Esse modo de contar o tempo de uma conexão TCP é interessante. Quanto menos RTTs se usa pra gerar uma conexão, normalmente significa que ela "trava" menos, devido ao menor custo de pacotes e banda.
+
 - Round Trip Time -> tempo de iniciar a conexão e fechar uma conxão
 - 1 RTT estabeleceu meu handshake
 - tem uma sobrinha no RTT de informação por causa do atraso de transmissão
 - o cálculo é sempre em RTT + tempo de transmissão
+
 #### Conexão persistente
 - deixa a porta aberta por um certo período de tempo
     - na aplicação, se n rolar um novo pedido em 30s pd fechar
@@ -595,13 +600,15 @@ Apesar de parecer inútil, esse protocolo é bem mais rápido e viabiliza o stre
 - ainda permitia paralelismo
     - chamava o index uma vez só, mas todos os objetos em paralelo
     - padrão no http
-#### Tipos de mensagem HTTP
+
 ### WWW
 - tudo q precisar puxar de outra pasta dentro do código é um objeto
     - td q tiver dentro do endereço do ip
 - o agente é o browser
 - servidor web é o www - normalmente montados em apache
+
 ## Portas
+<img src='imgs/well_known_ports.png'>
 - comunicçaão de 2 host
 - 4 informações
     - IP origem
@@ -622,7 +629,38 @@ Apesar de parecer inútil, esse protocolo é bem mais rápido e viabiliza o stre
         - dps cria uma thread nova e joga uma porta porta mesmo lá dentro
 
 DATA: 04/Abr/24
+## Tipos de mensagem HTTP
+- Existem 2 tipos:
+    - pedido
+    - resposta
+- Essas mensagens são transmitidas em ASCII (legível por humanos)
+- As mensagens de requisição seguem um protocolo parecido com o seguinte:
+*protocolo de GET*
+<img src='imgs/esqueleto_protocolo_pedido_http.png'>
+<img src='imgs/exemplo_protocolo_pedido_http.png'>
+
+*protocolo de GET response*
+<img src='imgs/esqueleto_protocolo_GET_pedido_http.png'>
+<img src='imgs/exemplo_protocolo_GET_pedido_http.png'>
+
+### POST
+- usado em páginas com formulários de entrada
+- dados preenchidos e enviados pelo browser para o servidor
+- normalmente associado à páginas de login
+
+## Códigos de status https
+https tem vários códigos de status para indicar a situação da conexão, alguns deles são:
+• 200 OK: Sucesso. Objeto pedido segue mais adiante nesta mensagem.
+• 301 Moved Permanently: Objeto pedido mudou de lugar, nova localização especificado mais
+adiante nesta mensagem (Location:)
+• 400 Bad Request: Mensagem de pedido não entendida pelo servidor.
+• 404 Not Found: Documento pedido não se encontra neste servidor.
+• 505 HTTP Version Not Supported:Versão de http do pedido não aceita por este servidor.
+
 ## Cookies
+Pra isso funcionar o server manda um set-cookie a pega os dados do user. Ele os guarda dentro do servidor mesmo e entrega um ID pro browser. A validação mais simples é de esse ID ser o mesmo entregue na hora da coleta dos cookies, aí dá show.
+<img src='imgs/cookie_process.png'>
+
 - idea de estado na conexão
 - o browser segura algumas informações
     - ou o servidor mesmo
@@ -635,7 +673,10 @@ DATA: 04/Abr/24
     - o servidor pega as informações específicas do banco de dados
     - a relação é do browser com o server
 
-## cache www
+## Cache www
+A ideia desse cache é diminuir o tempo de acesso à alguma informação requisitada.
+Funciona em sua totalidade quando muitos usuários de uma rede acessam determinado tipo de conteúdo (veja que esse servidor de cache normalmente fica na boa da conexão da rede com a internet externa)
+
 - proxy
 - aproximar cliente do servidor
 - era proxy de rede
@@ -647,7 +688,9 @@ DATA: 04/Abr/24
     - às vezes a informação do proxy são meio defasadas
 - é valido colocar na entrada da rede pra evitar problema
 
-## GET condicional
+### GET condicional
+Funciona como um pedido pra atualizar o servidor de cache WWW
+
 - vai no proxy e o proxy mandar uma msg pra ver a última modificação
 - se tem GET condicional ele **precisa** verificar com o server origem
 - verifica com base na data do último pacote

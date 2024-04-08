@@ -496,6 +496,13 @@ Atente-se sempre para não dar com a lingua nos dentes ou pular processos import
 
 DATA: 27/Mar/24
 # Personas
+As personas precisam de um conjunto básico de dados para poderem funcionar, normalmente com:
+– Dados demográficos (idade, sexo, renda, localização)
+– Características de personalidade
+– Comportamentos e hábitos
+– Necessidades e objetivos
+já se está de bom tamanho
+
 - uma das maneiras de ajudar o cliente a montar uma soluação de software
 - é necessário entender o que o cliente realmente precisa
 - ainda é nosso papel pensar em uma solução decente (como desenvolvedores de sistemas)
@@ -511,24 +518,44 @@ DATA: 27/Mar/24
     - a criação de personas é um estilo de user, não um esteriótipo
     - isso deve ser cuidado por quem cria tanto por quem lê o material
 ## coleta de dados
+Coleta de dados precisa ser feita de uma maneira ou de outra, do contrário talvez algum pré-conceito ou imaginário dos desenvolvedores fale mais alto que alguns dos fatos.
+Usualmente os processos normais de adquirir informações são usados (entrevistas, consultas, serveys, etc)
+
 - pega os dados em mãos ou usa todas as técnicas de adquirir dados externos
     - survey, entrevistas com x usuários, etc
+- Tenha certeza que sua solução funciona para todos os grupos de pessoas com deficiências
+- devem ser easy-to-read
 ## proto-persona
+A mesma coisa que uma persona comum, mas sem a parte da pesquisa.
+
 - são personas criadas pelas visões pessoais dos integrantes do projeto
 - faz sentido em inícios de projeto ou para discussões internas antes de realmente desenvolver o software
 - a equipe ainda n usa dados reais (bem mais fácil de ter preconceitos inseridos kkkkkkk)
-## refinamento das informações
+
+## Refinamento das informações
+É bastante comum de se adquirir mais informações que o necessário ou ter algumas inúteis.
+Não que conseguir informações demais seja o problema, muito pelo contrário, pegue o máximo delas. A razão aqui é gerar informações úteis, até porque dado que não importa só polui e não auxilia desenvolvimento.
+
 - precisa rolar uma peneira de dados pra retirar o q realmetne seja interessante
 
 # Histórias de usuário
+Pegue as personas/usuários e crie situações que o produto final **será** utilizado.
+Essa ferramenta serve apenas de contexto geral para liderar o desenvolvimento do projeto.
+
 - como criar especificações que possam ser lidas por qualquer nível dos envolvidos no desenvolvimento do sistema?
     - todos precisam entender (pré-requisito)
 - boas histórias de usuário não envolvem absolutamente nada da arquitetura do sistema
+
+### Exemplo
+- O usuário pode pesquisar vagas.
+- A empresa pode divulgar novas vagas de emprego
+
 ## Conceito 3C
 - cartão
 - conversação
 - confirmação
 - um modelo pra identificar exatamente o que precisa ser implementado e confirmar pontos
+
 ## modelo INVEST
 - outro modelo de montagem de software
 - Independent
@@ -537,6 +564,7 @@ DATA: 27/Mar/24
 - Estimable
 - Small
 - Testable
+
 ## padrão de escrita
 - COMO [<papel>]
 - DESEJO [objectivo]
@@ -544,10 +572,15 @@ DATA: 27/Mar/24
 - implementações precisam ter um motivo
     - mas n dá pra seguir as regras segamente
     - sabendo o q tá acontetendo dá pra discutir a solução antes de implementar de verdade
+
 ## critérios de aceitação
+Esses critérios são baseados no contexto do projeto e variam bastante. Normalmente são formulados com acordos entre os desenvolvedores e clientes.
+
 - complementos das histórias de usuário
 - BDD (Behavior Driven Development)
     - uma das técnicas de aceitação
 - normalmente as histórias caem sobre situações-chave
 - dado que ... o sistema faz ...
-- 
+
+### Exemplo
+<img src='imgs/historia de usuario e criterios de aceitacao.png'>
