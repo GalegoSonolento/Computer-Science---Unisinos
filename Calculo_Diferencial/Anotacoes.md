@@ -20,6 +20,9 @@ Anotações gerais da cadeira
     - o limite de tendência sempre será o valor no ponto
 - limite de uma constante é sempre a constante
 - limite de uma soma é a soma dos limites
+- limites são resultados de y, de uma função, caso ele exista
+- se o limite n zera o denominador ou mata algum dos radicandos, é só substituir pelo limite
+- problemas de limites acontecem nas descontinuidades
 
 # Formuletas interessantes:
 - f(x) = ax + b
@@ -413,3 +416,26 @@ Não são deveras complexas, mas devem ser tratadas com cuidado já que é neces
 - [marcação 8 - polinômio com todas as propriedades]
 #### exercícios
 - [marcação 9]
+
+DATA: 08/Abr/2024
+## Derivada: noção intuitiva, definição, propriedades e derivada de 𝑦 = 𝑥𝑛
+- principais técnicas pra cálculo de racionais
+- e ainda infinito e menos infinito
+    - infinito n é número, portanto tem uma técnica diferente
+    - infito e só um limite
+
+## Limites de funções quando x->a
+- quocientes de 2 polinômios
+- f(x) = P(x)/Q(x)
+- Se Q(a) = 0
+
+### importante
+- se o resultado do limite é 0/0 é uma indeterminação
+- pra resolver precisa de limite matmático -> regra de octal
+    - basicamente resolve as indeterminaões
+- f(x) = a(X-r_1)(X-r_2) -> encontrar as raízes q zeram a função
+    - essa fatoração é uma manipulação algébrica gigante pra conseguir simplificar algumas situações
+
+### exercícios
+[marcação 1]
+[marcação 2]
