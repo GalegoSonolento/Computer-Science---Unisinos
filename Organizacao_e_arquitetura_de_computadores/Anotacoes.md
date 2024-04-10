@@ -32,6 +32,22 @@
 - os melhores desempenhos de hardware são quando existe implementação de forwarding e especulação de hazard de controle
 - hazards estruturais nunca deveriam existir
     - resolvidos na organização do processador
+- N dá pra implementar pipeline no Neander/CISC purinho
+    - precisa de um esquema pra simular máquina Harvard/RISC
+- única coisa q muda entre processadores multiciclo e com pipeline é a unidade de controle
+- B | D | E | M | WB -> processos didáticos básicos de um processo pra execução (B-instrução/D-dados/E-execução/M-memória/WB-escrita de resultados)
+- Hazards impedem a execução da próxima instrução de algum modo (somente em pipeline pra mais complexas)
+- escrita nos registradores em WB acontece no começo e leitura (armação) da operação em D é no final, ent dá pra dx as duas no mesmo clock
+- pra ativar o forwarding, o registrador necessário precisa ser o mesmo do destino da operação anterior
+    - Lw (load word) gera o load user hazard - esse dado só sai depois da leitura de memória, a próxima linha nem vai ter acesso pq o dado nem ao menos existe
+        - resolve usando duas técnicas - bypass/forwarding/reordenação + stall
+- instruções inválidas quando a predição falha em hazards de controle, ela continua executando, mas o sistema só n deixa elas escreverem na memória
+    - são essencialmente instruções inúteis
+    - previsão estática
+- previsão dinâmica
+    - só funciona pq códigos repetem muitas instruções
+    - histórico de decisões n é fixo
+    - 
 
 DATA: 27/Fev/2024
 # Revisão de sistemas digitais, circuitos sequencias e fsm, Simulador de Computador
