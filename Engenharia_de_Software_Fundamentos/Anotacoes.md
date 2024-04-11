@@ -584,3 +584,5 @@ Esses critérios são baseados no contexto do projeto e variam bastante. Normalm
 
 ### Exemplo
 <img src='imgs/historia de usuario e criterios de aceitacao.png'>
+
+DATA: 10/Abr/2024
