@@ -23,6 +23,16 @@ Anotações gerais da cadeira
 - limites são resultados de y, de uma função, caso ele exista
 - se o limite n zera o denominador ou mata algum dos radicandos, é só substituir pelo limite
 - problemas de limites acontecem nas descontinuidades
+- derivadas
+    f(x) | f'(x)
+    ------------
+    x²   | 2x
+    x³   | 3x²
+    x^4  | 4x³
+    x^20 | 20x^19
+    x^-3 | -3x^-4
+    1/x7 | x^-7
+  -7/x^8 | -7x^-8
 
 # Formuletas interessantes:
 - f(x) = ax + b
@@ -33,6 +43,8 @@ Anotações gerais da cadeira
 - Xv = -b/2a
 - Yv = -delta/4a -> -(b² - 4ac)/4a
 - f(x) = e^x -> aparece bastante na natureza
+- a = (f(X_0+h)-f(X_0))/h
+- lim(x->0) = (f(X_0+h)-f(X_0))/h
 
 DATA: (26/Fev/24)
 # Estudo de Funções
@@ -350,7 +362,10 @@ Não são deveras complexas, mas devem ser tratadas com cuidado já que é neces
 <img src = "imgs/Exercicios_aula4_4.png">
 <img src = "imgs/Exercicios_aula4_5.png">
 
+DATA: 01/Abr/2024
 # Operações com limites
+Operações com limites são feitas para facilitar a montagem de testes.
+Normalmente as operações são levadas ao infinito.
 - a ideia é entender o comportamento da função quando x
 - entender comportamento ou tendência com o passar do tempo
 - "limite de f(X) quando x tende ou se aproxima de a"
@@ -363,7 +378,9 @@ Não são deveras complexas, mas devem ser tratadas com cuidado já que é neces
 - resultados sempre vem pelo eixo y
 - limite é sempre uma questão de aproximação
     - chegam o mais perto possível 
-- [marcação 1]
+
+<img src="Aula_6_marcacao_1.png">
+
 ## estudo de limites
 - por que estudar tendências ao infinito?
     - muito usados
@@ -371,10 +388,24 @@ Não são deveras complexas, mas devem ser tratadas com cuidado já que é neces
     - testes de força-peso
     - extrapolar uma marcação e gerar margens de segurança
 ## noção intuitiva, análise via gráfico e notação
+Os limites são barreiras das quais os valores não podem passar ou nem ao menos podem chegar.
+o limite vai ser sempre *quase* o resultado direto, mas não será.
+
+<img src="Aula_6_grafico_simples_limite.png">
+
 - evite usar aproximações numéricas
     - não são confiáveis em funções com limites (saltos entre as funções) muito pequenos
-- [marcação 2]
+
+<img src="Aula_6_marcacao_2.png">
+
 ## limites laterais
+Negativo vem da esquerda e positivo vem da direita.
+As associações de lateralidade são com os sinais mesmo na notação do limite.
+Vale lembrar que em limites infinitos a lateralidade vem apenas de um dos lados, portanto, o limite é o lateral que sobra.
+Se os limites lateriais forem diferentes um do outro o limite **não existe**. Caso sejam iguai, tá tudo certo.
+
+<img src="Aula_6_lateralidade.png">
+
 - para consideração de onde está vindo a comparação (limites laterais muitas vezes são distintos)
     - nessses casos o limite limite não existe
 - sempre existem
@@ -382,17 +413,28 @@ Não são deveras complexas, mas devem ser tratadas com cuidado já que é neces
 - a laterlidade não funciona muito bem com limites ao infinito
     - eles só podem vir pelo lado contrário mesmo
 - as marcações são com uma "potência + ou - no valor do limite"
+
 ### exercícios
-- [marcação 3]
+
+<img src="Aula_6_marcacao_3.png">
+
+É importante lembrar que não dá pra determinar um limite quando temos uma onda constante à infinito porque não é possível determinar onde ela vai estar mais próxima de na posição infinito.
 - se existe uma oscilação constante (e amplitude) não dá pra indicar o limite, ou seja, ele não existe
-- [marcação 4]
-- [marcação 5]
+
+<img src="Aula_6_marcacao_4.png">
+
+<img src="Aula_6_marcacao_5.png">
+
 ## limites - técnicas para calcular
+Em alguns momentos será impossível determinar o limite, como na função f(x) = sen(pi/x) -> gera uma senoide praticamente infinita em cima de x=0 ,ou seja, não se aproxima de nenhum limite.
 - é preciso testar valores próximos o suficiente para quse chegar no limite
     - mas isso não necessariamente dá o resultado
     - por mais que seja prático, não necessariamente é o método mais confiável
-- [marcação 6 - colocar as tabelas e gráficos das tendências básicas]
-- [marcação 7]
+
+<img src="Aula_6_propriedades_basicas_1.png">
+<img src="Aula_6_propriedades_basicas_2.png">
+<img src="Aula_6_propriedades_basicas_3.png">
+
 ### Propriedades dos limites
 - limite da soma
     - soma dos limites
@@ -412,10 +454,16 @@ Não são deveras complexas, mas devem ser tratadas com cuidado já que é neces
 - tudo isso também vale pra limite lateral
 - vale pra um número qualquer de funções
 - só se calcula as partes variáveis
+
+<img src="Aula_6_propriedades_dos_limites.png">
+
 #### exemplo 
-- [marcação 8 - polinômio com todas as propriedades]
+Dá pra trabalhar com os limites quase como trabalhamos com logaritmos.
+
+<img src="Aula_6_propriedades_exemplo.png">
+
 #### exercícios
-- [marcação 9]
+<img src="Aula_6_exercicios.png">
 
 DATA: 08/Abr/2024
 ## Derivada: noção intuitiva, definição, propriedades e derivada de 𝑦 = 𝑥𝑛
@@ -439,3 +487,55 @@ DATA: 08/Abr/2024
 ### exercícios
 [marcação 1]
 [marcação 2]
+
+DATA: 15/Abr/24
+# Derivadas de polinômios, funções trigonométricas, 𝑦 = 𝑒𝑥 e 𝑦 = 𝑙𝑛 (𝑥)
+- Derivadas são simplesmente variações
+    - velocidade, preço, etc
+- é importante saber o quanto cresce/descresce
+- dá a velocidade de crescimento de situação/gráfico
+- vamos medir ângulos de inclinação de curvas
+    - num ponto vai ser a mesma inclinação de uma reta tangente àquele ponto
+    - y = ax + b -> coeficiente angular (a) mostra o ângulo
+    - coeficiente angular da reta tangente naquele ponto -> **derivada**
+- derivada de uma função em outra função dá uma média só
+    - a derivada dá o valor instantâneo
+- a derivada é um limite pra encontrar o valor *a* de uma tangente pra achar o valor imediato de uma curva
+### derivada
+- crecsimento é dado por uma inclinação e a medição é pela tangente no ponto (X_0, f(X_0))
+    - pega um outro ponto na curva e monta a = (f(X_0+h)-f(X_0))/h
+    - se a gente usar o limite 0 como o X_0, dá pra usar isso pra igualar essa fução e usar o limite
+    - lim(x->0) = (f(X_0+h)-f(X_0))/h
+- dy/dx -> também é uma derivada (notação de Newton)
+    - deltay/deltax
+- y' e f' indicam derivadas
+## Interpretações de derivada
+- derivadas com taxa de variação positiva - cresce - se negativa - decresce
+### exemplos
+[marcação 1]
+
+## Técnicas de derivação
+- são técnicas de determinação
+### derivada de uma constante
+- derivada vai ser zero 
+- f(x) = x^n ---> f'(x) = nx^(n-1)
+### derivada de função potência
+- d/dx[x^n ] = n.x^(n-1)
+- root(x^5) = x^(5/2) ---> (5/2)^(3/2)
+- 1/rootcub(x) = x^((-1)/3) ---> -1/3x^(-4/3)
+#### exemplos
+[marcação 2]
+
+### constante vezes uma função
+- a constante permanece, só se deriva a função mesmo
+#### exemplo
+[marcação 3]
+
+### soma ou diferença de 2 funções
+- a derivada vem do limite
+- é o cálculo da derivada de cada termo
+#### exemplo
+[marcação 4]
+
+### Exercícios
+[marcação 5]
