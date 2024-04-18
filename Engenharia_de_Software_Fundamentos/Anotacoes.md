@@ -595,4 +595,44 @@ DATA: 17/Abr/24
     - sucessso é tudo dar certo
     - existem mais casos de fracasso q sucesso
     - precisamos entender todos os passos onde podem surgir problemas
-- 
+## Casos de uso resumido
+- Um um parágrafo dá pra entender completamente o que a funcionalidade faz
+## Casos de uso informal
+- pega o caminho feliz e coloca alguns dos cenários alternativos
+## Caso de uso completo
+- várias informações
+- várias condições precisam ser atendidas
+- dentre eles:
+    - **Identificação/Nome do caso de uso**
+    • Ator principal
+    • Requisito funcional
+    • Interessados e interesses
+    • **Pré-condições**
+        - o q ter já pronto no sistema no momento de usar a funcionalidade
+    • **Garantia de sucesso (pós-condições)**
+        - ao final do caso de uso, oq deve ser alcançado?
+        - se tudo der certo
+    • Cenário de sucesso (fluxo principal)
+    • Extensões (fluxos alternativos)
+    • Requisitos especiais
+    • Lista de variantes tecnológicas e de dados
+    • Problemas em aberto
+- os marcados normalmente são os mais utilizados
+- existem vários sublistas dentro dessa lista
+- procure utilizar a forma numerada para demonstração de passos
+- a situação feliz é o fluxo principal
+- fluxos alterantivos são outros caminhos q o usuário pode seguir e ainda chega no mesmo lugar
+- fluxos de exceção acontecem por n atender à alguma regra de negócio
+    - são caminhos indesejados
+    - esses fluxos são indesejados mas precisam existir a fim de que o sistema seja completo
+- variantes e requisitos extras dessa especificação em específico podem ser colocadas junto
+## Boas práticas
+- use verbos no infinitivo para criação das especificações
+- atores atuantes apenas são os necessários
+    - n é pra criar histórias fora do sistema, é dó da interação do ator com o sistema
+    - como ele pega os dados pra preenchimento, uso, azar, não importa, n está dentro do sistema
+- coloque passos firmes e exatos
+    - **NUNCA** coloque opções lá dentro
+        - se precisar disso provavelmente é questão de existir um fluxo alternativo
+- ou o passo do caso de uso começa com o sistema ou com o nome do agente
+- se a organização do fluxo pedir muitos alternativos, provavelmente a arquitetura da solução tem algum problema
