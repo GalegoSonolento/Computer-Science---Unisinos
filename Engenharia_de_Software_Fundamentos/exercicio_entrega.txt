@@ -1,0 +1,16 @@
+Usuáiros podem
+- Acessar o gerenciador na web
+- Acessar o aplactivo no celular
+- autenticar-se
+- visualizar pedidos que chegam
+- atualizar os pedidos
+- atribuir o pedido à um entregador
+- cadastrar novos usuários
+- visualizar os pedidos atribuídos à ele
+- acessar um mapa para se orientar na entrega
+- alterar a situação do pedido para entregue
+
+Tipos de usuários
+- Gerente
+- Atendente
+- Entregador

@@ -586,3 +586,13 @@ Esses critérios são baseados no contexto do projeto e variam bastante. Normalm
 <img src='imgs/historia de usuario e criterios de aceitacao.png'>
 
 DATA: 10/Abr/2024
+
+DATA: 17/Abr/24
+# Especificação do modelo de caso de uso
+- baseado bastante em cenários de execução
+    - sequências de ações
+- casos completos demonstram casos de sucesso e fracasso
+    - sucessso é tudo dar certo
+    - existem mais casos de fracasso q sucesso
+    - precisamos entender todos os passos onde podem surgir problemas
+- 
