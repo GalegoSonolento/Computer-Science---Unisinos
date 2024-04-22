@@ -77,6 +77,8 @@ Anotações padrão da cadeira
 - MVP - minimal viable product
 - a organização de personas pode ser feita de muitas maneiras
     - tanto igual um perfil no insta quanto um txt sozinho com as informações descritas formalmente
+- https://dannorth.net/introducing-bdd/
+- Blog OneDayTesting - Gherking: Introduzindo seus conceitos e benefícios - https://blog.onedaytesting.com.br/gherkin/
 
 ## Ferramentas:
 ### Astah
@@ -547,8 +549,13 @@ Essa ferramenta serve apenas de contexto geral para liderar o desenvolvimento do
 - boas histórias de usuário não envolvem absolutamente nada da arquitetura do sistema
 
 ### Exemplo
+Existem alguns grandes exemplos para histórias de usuário, mas a mais famosa está na imagem abaixo.
+Usualmente se coloca um desses templates como o padrão para uso e depois um ou mais critérios de avaliação, conforme o template abaixo.
 - O usuário pode pesquisar vagas.
 - A empresa pode divulgar novas vagas de emprego
+
+<img src="imgs/Exemplo_padrao_histporias_de_usuario.png">
+<img src="imgs/hist_e_criterios_de_avaliacao.png">
 
 ## Conceito 3C
 - cartão
@@ -586,6 +593,8 @@ Esses critérios são baseados no contexto do projeto e variam bastante. Normalm
 <img src='imgs/historia de usuario e criterios de aceitacao.png'>
 
 DATA: 10/Abr/2024
+# Casos de uso
+Componentes de casos de uso auxiliam durante as fases de *Requisitos* e *Análise e Design* do desenvolvimento de software
 
 DATA: 17/Abr/24
 # Especificação do modelo de caso de uso
@@ -636,3 +645,15 @@ DATA: 17/Abr/24
         - se precisar disso provavelmente é questão de existir um fluxo alternativo
 - ou o passo do caso de uso começa com o sistema ou com o nome do agente
 - se a organização do fluxo pedir muitos alternativos, provavelmente a arquitetura da solução tem algum problema
+
+
+
+
+
+## Referências:
+● Introdução do BDD (Ana Carolina Hermann)
+    – Disponível em: https://www.slideshare.net/inovacaoDBServer/semana-da-mulher-na-tecnologia-introducao-ao-bdd
+● Gherkin: Introduzindo seus conceitos e benefícios
+    – https://blog.onedaytesting.com.br/gherkin
+● Gherkin Syntax (Cucumber Docs)
+    – Disponível em: https://cucumber.io/docs/gherkin

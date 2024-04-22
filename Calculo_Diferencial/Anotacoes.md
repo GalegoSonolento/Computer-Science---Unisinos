@@ -464,6 +464,9 @@ Dá pra trabalhar com os limites quase como trabalhamos com logaritmos.
 
 #### exercícios
 <img src="Aula_6_exercicios.png">
+<img src="imgs/Aula_6_exercicios_1.png">
+<img src="imgs/Aula_6_exercicios_2.png">
+<img src="imgs/Aula_6_exercicios_3.png">
 
 DATA: 08/Abr/2024
 ## Derivada: noção intuitiva, definição, propriedades e derivada de 𝑦 = 𝑥𝑛
@@ -487,6 +490,49 @@ DATA: 08/Abr/2024
 ### exercícios
 [marcação 1]
 [marcação 2]
+
+## Limites de funções racionais quando x -> *a*
+Quando se usa um limite com x -> *a* e é uma função (racionalidade), *a* precisa necessariamente ser != de 0.
+Caso Q(a) = 0, tal limite não existe.
+
+### Observações importantes:
+- Caso no fim das contas a razão fique 0/0 (indeterminação matemática), use a **Regra de L'Hospital**
+- se a função envolve radicais, exponenciais, logaritmos ou funções trigonométricas use:
+lim_(x -> *a*) f(x) = f(*a*), desde que *a* pertença a f(x)
+
+### Exemplos
+
+<img src="imgs/Aula_7_exemplo_dividendo_zerando.png">
+<img src="imgs/Aula_7_exercicios_dividendo_zerando.png">
+
+## Limites de x^n (*n* natural quando *x* -> infinito ou *x* -> -infinito)
+Alguns polinômios como x, x² e x³ tem comportamentos de tendência ao infinito.
+via de regra:
+- Considere X^n
+infinito    | resultado
+------------|-----------
+positivo    | infinito positivo
+negativo    | infinito positivo se *n* é par
+negativo    | infinito negativo se *n* é ímpar
+
+## Limites de polinômios quando *x* -> +infinito ou *x* -> -infinito
+Sempre atente-se ao termo de maior grau, é ele quem vai resolver a questão.
+Confira os exemplos:
+<img src="imgs/Aula_7_exemplo_limite_para_infinito.png">
+
+## Limites de funções racionais quando *x* -> +infinito ou *x* -> -infinito
+Aqui será os casos onde existem razões dentro dos limites, confira as regtras de execução:
+<img src="imgs/Aula_7_exemplo_limite_para_infinito_razao.png">
+
+## Limites de funções definidas por partes
+Esses limites devem ser usados dentro das limitações das múltiplas partes das funções.
+Atente-se sempre ao valor e sinal dos limites.
+
+### Exercícios
+<img src="imgs/Aula_7_exercicios_1.png">
+<img src="imgs/Aula_7_exercicios_2.png">
+<img src="imgs/Aula_7_exercicios_3.png">
+<img src="imgs/Aula_7_exercicios_4.png">
 
 DATA: 15/Abr/24
 # Derivadas de polinômios, funções trigonométricas, 𝑦 = 𝑒𝑥 e 𝑦 = 𝑙𝑛 (𝑥)
