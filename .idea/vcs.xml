@@ -2,5 +2,6 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Redes_de_Computadores_Aplicacao_e_Transporte/Projeto_uno_na_rede/uno" vcs="Git" />
   </component>
 </project>
