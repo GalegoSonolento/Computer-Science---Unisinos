@@ -535,7 +535,11 @@ Atente-se sempre ao valor e sinal dos limites.
 <img src="imgs/Aula_7_exercicios_4.png">
 
 DATA: 15/Abr/24
-# Derivadas de polinômios, funções trigonométricas, 𝑦 = 𝑒𝑥 e 𝑦 = 𝑙𝑛 (𝑥)
+# A derivada
+A derivada está relacionada à projeção futura de situações.
+Ela utiliza usos de 
+
+## Derivadas de polinômios, funções trigonométricas, 𝑦 = 𝑒𝑥 e 𝑦 = 𝑙𝑛 (𝑥)
 - Derivadas são simplesmente variações
     - velocidade, preço, etc
 - é importante saber o quanto cresce/descresce
@@ -558,7 +562,7 @@ DATA: 15/Abr/24
 ## Interpretações de derivada
 - derivadas com taxa de variação positiva - cresce - se negativa - decresce
 ### exemplos
-[marcação 1]
+<img src="imgs/Aula_8_exemplo_formula_derivada.png">
 
 ## Técnicas de derivação
 - são técnicas de determinação
@@ -569,19 +573,56 @@ DATA: 15/Abr/24
 - d/dx[x^n ] = n.x^(n-1)
 - root(x^5) = x^(5/2) ---> (5/2)^(3/2)
 - 1/rootcub(x) = x^((-1)/3) ---> -1/3x^(-4/3)
-#### exemplos
-[marcação 2]
+
+normal  | derivada
+--------|----------
+X²      | 2x¹
+x^20    | 20^19
+x^-2    | -2x^-3
 
 ### constante vezes uma função
 - a constante permanece, só se deriva a função mesmo
-#### exemplo
-[marcação 3]
 
 ### soma ou diferença de 2 funções
 - a derivada vem do limite
 - é o cálculo da derivada de cada termo
-#### exemplo
-[marcação 4]
 
 ### Exercícios
-[marcação 5]
+
+<img src="imgs/Aula_8_exercicio_da_aula.png">
+<img src="imgs/Aula_8_exercicio_da_aula_2.png">
+<img src="imgs/Aula_8_exercicio_da_aula_3.png">
+
+DATA: 29/04/2024
+## Estudar Derivada das funqöes trigonométricas, y = ex e y = In(x)
+<img src="imgs/Aula_9_referencia_1.png">
+
+- agora o *x* representa ãngulo, agora ele n vai mais simplesmente ser cortado nesse momento
+- **não se mexe no ângulo de função trigonométrica**
+- provavelmente não vai simplificar tão facilmente
+- não tem função trigonométrica sem ângulo
+    - se for usar calculadora precisa saber bem as relações dos ângulos
+    - n tem mtas calculadores com cossecante fácil de fazer (1 botão)
+- cos^-1 *não é secante* pra calculadora. Isso é uma função inversa
+    - 1/cos aí sim é uma secante
+    - a função inversa não é necessariamente igual ao inverso da função
+
+### exemplos
+<img src="imgs/Aula_9_marcacao_1.png">
+[marcação 2]
+
+## Derivadas das funções exponenciais e logaritmicas
+- derivada da função exponencial é ela mesma
+    - a velocidade de crescimento dela praticamente acompanha a função
+- no caso q tenha e^x
+    - y' = e^x * ln e * x' = e^x
+    - melhor tipo de função
+    - e^x puro
+
+### derivada da função logaritmica
+- a derivada segue a mesma lógica de acompanhar a função
+- se y = ln x então y' = 1/x* ln *e* = 1/x.
+    se lim_x->0 a derivada fica praticamente uma reta
+
+### exercícios
+[marcação 3]
