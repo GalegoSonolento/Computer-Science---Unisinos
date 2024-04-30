@@ -598,17 +598,29 @@ Componentes de casos de uso auxiliam durante as fases de *Requisitos* e *Anális
 
 DATA: 17/Abr/24
 # Especificação do modelo de caso de uso
+Funciona como uma sequência de informações que demonstram os passos que o usuário teria conforme usa o programa.
+Em algumas implementações de cenários são necessários *desvios*, possibilidades dentro daquele cenário de que o previsto para o caso de sucesso não aconteça.
+Os casos alternativos são também chamados de fluxos alternativos para os cenário principal (fluxo principal) 
+
 - baseado bastante em cenários de execução
     - sequências de ações
 - casos completos demonstram casos de sucesso e fracasso
     - sucessso é tudo dar certo
     - existem mais casos de fracasso q sucesso
     - precisamos entender todos os passos onde podem surgir problemas
+
 ## Casos de uso resumido
 - Um um parágrafo dá pra entender completamente o que a funcionalidade faz
+
 ## Casos de uso informal
+Esse tipo de caso de uso é bem livre e só precisa das possibilidades listadas nos fluxos
+
 - pega o caminho feliz e coloca alguns dos cenários alternativos
+
 ## Caso de uso completo
+
+**PAREI AQUI A REVISÃO**
+
 - várias informações
 - várias condições precisam ser atendidas
 - dentre eles:
@@ -635,6 +647,7 @@ DATA: 17/Abr/24
     - são caminhos indesejados
     - esses fluxos são indesejados mas precisam existir a fim de que o sistema seja completo
 - variantes e requisitos extras dessa especificação em específico podem ser colocadas junto
+
 ## Boas práticas
 - use verbos no infinitivo para criação das especificações
 - atores atuantes apenas são os necessários

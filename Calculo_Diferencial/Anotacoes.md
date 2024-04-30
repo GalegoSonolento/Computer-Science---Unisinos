@@ -593,6 +593,9 @@ x^-2    | -2x^-3
 <img src="imgs/Aula_8_exercicio_da_aula_2.png">
 <img src="imgs/Aula_8_exercicio_da_aula_3.png">
 
+### Exercícios extras
+<img src="imgs/Aula_8_Exercicios_extras.png">
+
 DATA: 29/04/2024
 ## Estudar Derivada das funqöes trigonométricas, y = ex e y = In(x)
 <img src="imgs/Aula_9_referencia_1.png">
