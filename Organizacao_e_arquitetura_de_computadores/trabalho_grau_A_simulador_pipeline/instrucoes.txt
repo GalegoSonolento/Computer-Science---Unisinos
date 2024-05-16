@@ -1,0 +1,17 @@
+addi R0 R1 -1
+addi R0 R2 10
+addi R0 R3 100
+j
+j
+add R2 R1 R2 loop
+j
+j
+beq R2 R0 16
+j
+j
+j
+beq R0 R0 5
+j
+j
+j
+halt done
