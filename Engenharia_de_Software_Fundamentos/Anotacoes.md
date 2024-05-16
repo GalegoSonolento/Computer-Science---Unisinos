@@ -618,8 +618,9 @@ Esse tipo de caso de uso é bem livre e só precisa das possibilidades listadas 
 - pega o caminho feliz e coloca alguns dos cenários alternativos
 
 ## Caso de uso completo
-
-**PAREI AQUI A REVISÃO**
+Casos de uso geralmente detém exceções, pequenos elses que podem ocorrer no meio do processo principal (em tese o correto/melhor saída).
+Determinadas informações como os problemas em aberto e variações podem gerar caminhos alternativos que podem voltar ao fluxo original, servindo apenas como um pequeno desvio, ou tomar um rumo diferente e acabarem em si.
+Outro ponto importante de se lembrar é que apenas entram no fluxo partes do processo feitas dentro do sistema, ou seja, se uma, por exemplo, autenticação for executada por fora do sistema, como pelo Facebook, ela **não** vai entrar na conta do caso de uso.
 
 - várias informações
 - várias condições precisam ser atendidas
@@ -659,7 +660,19 @@ Esse tipo de caso de uso é bem livre e só precisa das possibilidades listadas 
 - ou o passo do caso de uso começa com o sistema ou com o nome do agente
 - se a organização do fluxo pedir muitos alternativos, provavelmente a arquitetura da solução tem algum problema
 
-
+### Checklist
+( ) Como uma ajuda na hora de crias os casos, pode ser interessante utilizar esse checklist:
+( ) O nome do caso de uso inicia com um verbo no infinitivo?
+( ) Todos os passos do fluxo são afirmações?
+( ) Todos os fluxos alternativos representam um caminho que
+o usuário pode seguir por conta própria e substituem um
+passo no fluxo principal?
+( ) Todos os fluxos de exceção são um erro imprevisto, onde
+o usuário não escolheu seguir?
+( ) Todos os fluxos alternativos e de exceção indicam para
+onde vão após serem executados? Ou voltam para um
+determinado passo do fluxo principal ou finalizam o caso
+de uso.
 
 
 
@@ -670,3 +683,5 @@ Esse tipo de caso de uso é bem livre e só precisa das possibilidades listadas 
     – https://blog.onedaytesting.com.br/gherkin
 ● Gherkin Syntax (Cucumber Docs)
     – Disponível em: https://cucumber.io/docs/gherkin
+● Utilizando UML e Padrões (Craig Larman) 3ª. Edição.
+● Princípios de Análise e Projeto de Sistemas com UML. 2ª. Edição. Eduardo Bezerra.
