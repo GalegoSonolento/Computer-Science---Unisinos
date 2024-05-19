@@ -601,6 +601,8 @@ DATA: 29/04/2024
 ## Estudar Derivada das funqöes trigonométricas, y = ex e y = In(x)
 <img src="imgs/Aula_9_referencia_1.png">
 
+Esse tópico é bastante interessante a partir do momento que a maioria das resoluções de derivadas das funções trigonométricas não detém muita regre e são todas já resolvidas. Sim, recebemos uma tabela para usar durante as aulas.
+
 - agora o *x* representa ãngulo, agora ele n vai mais simplesmente ser cortado nesse momento
 - **não se mexe no ângulo de função trigonométrica**
 - provavelmente não vai simplificar tão facilmente
@@ -629,4 +631,6 @@ DATA: 29/04/2024
     se lim_x->0 a derivada fica praticamente uma reta
 
 ### exercícios
-[marcação 3]
+
+<img src="Aula_10_exercicios_extras_1.png">
+<img src="Aula_10_exercicios_extras_2.png">
