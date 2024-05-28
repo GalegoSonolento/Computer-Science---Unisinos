@@ -33,6 +33,7 @@ Anotações gerais da cadeira
     x^-3 | -3x^-4
     1/x7 | x^-7
   -7/x^8 | -7x^-8
+- sen² x + cos² x é sempre 1 - regra matemática
 
 # Formuletas interessantes:
 - f(x) = ax + b
@@ -615,7 +616,6 @@ Esse tópico é bastante interessante a partir do momento que a maioria das reso
 
 ### exemplos
 <img src="imgs/Aula_9_marcacao_1.png">
-[marcação 2]
 
 ## Derivadas das funções exponenciais e logaritmicas
 - derivada da função exponencial é ela mesma
@@ -634,3 +634,26 @@ Esse tópico é bastante interessante a partir do momento que a maioria das reso
 
 <img src="Aula_10_exercicios_extras_1.png">
 <img src="Aula_10_exercicios_extras_2.png">
+
+
+DATA: 27/05/2024
+## Derivada do produto de duas funções
+- derivada é uma taxa de variação
+    - coeficiente da reta angular num ponto
+- derivida de um polinômio é um polinômio
+    - derivada de uma portência é uma potência
+    - mas de logaritmo é 1/x (fodase)
+- deriva a primeira e mantém a segunda somando mantém a segunda e deriva a primeira
+[img da regra de expressão]
+- essa regra dos polinômios foi montada pra derivadas de entidades trigonométricas principalmente
+
+## Derivada do quociente de duas frações
+- as funções estão em formato de quocientes e g(x) != 0 sempre
+- ainda segue as mesmas regras básicas das funções
+
+## Regra da cadeia
+- trata um polinômio potencializado como um x solitário
+- só precisa pegar a derivada da função interna e multiplar com o resultado
+- em geral se passa as constantes pra frente
+[marcação - exemplos de aplicação do teorema]
+- 
