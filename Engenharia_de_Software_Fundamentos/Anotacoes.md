@@ -675,6 +675,42 @@ determinado passo do fluxo principal ou finalizam o caso
 de uso.
 
 
+DATA: 29/MAIO/2024
+## Casos de uso 2.0
+- a primeira aparição do conceito da ideia de caso de uso é bastante antiga
+    - á princípio na conferẽncia OOPSLA de 1987
+- manifesto ágil veio em 2001 e foi implementado em diversas empresas
+    - onboarding ficou mais rápido
+    - até então existiam outros modelos preditivos (normalmente as empresas trabalhavam no modelo cascata)
+    - ainda assim existiam outras metodologias ágeis
+        - eXtreme Programming
+        - etc
+    - a rapaziada que montou já participava disso e tinha vários braços em outros segmentos de modelagem de software
+    - um problema do manifesto ágil é que o pessoal **não documentava** -> sistemas viram legado com menos de 1 ano de idade e qualquer manutenção é terrível
+- a versão 2.0 é diferenciada
+    - se baseia em pequenas entregas
+    - quebra sistemas maiores em peças bem menores e divide em diversas entregas para o cliente
+    - a vantagem de entregas de fatias é receber feedback constante do usuário
+    - outro ponto é obrigar a montar o sistema em encrementos
+        - pode facilitar para montar sistemas modulares e em cascas
+        - manutenção e montagem de documentação é bastante facilitada
+- a manutenção de diagramas é bastante chata e trabalhosa
+    - e no fim das contas ninguém olha artefatos de diagramas
+    - bem mais simples ler textos e mandar ver
+    - óbvio que isso depende da equipe, elas funcionam de maneiras diferentes
+- todos os casos de uso também são quebrados em partes menores
+    - as entregas são divididas
+    - imagino que sempre exista algum tipo de "oraganização" entre os times para não existir retrabalho de recursos
+- aquele mesmo esquema do fluxo principal e dos fluxos alternativos possíveis dentro de um caso de uso
+- eventualmente os casos de uso terão implementações futuras
+    - por exemplo um novo tipo de modo de autenticação
+    - se preocupe em entregar algo e ter alguma coisa funcionando
+        - outras implementações e recursos podem ser adicionados no futuro
+- caso de uso pode ser bem interessante para testes
+    - uma vez que o cenário entrega um norte padrão
+    - os testes derivam do fluxo principal
+- 
+
 
 ## Referências:
 ● Introdução do BDD (Ana Carolina Hermann)
