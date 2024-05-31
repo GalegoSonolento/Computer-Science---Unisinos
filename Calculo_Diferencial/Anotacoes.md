@@ -646,14 +646,19 @@ DATA: 27/05/2024
 - deriva a primeira e mantém a segunda somando mantém a segunda e deriva a primeira
 [img da regra de expressão]
 - essa regra dos polinômios foi montada pra derivadas de entidades trigonométricas principalmente
+- d/dx[f(x).g(x) ] = g(x).f'(x) + f(x).g'(x)
 
 ## Derivada do quociente de duas frações
 - as funções estão em formato de quocientes e g(x) != 0 sempre
 - ainda segue as mesmas regras básicas das funções
+- d[f(x)/g(x) ]/dx = (g(x).f'(x)-f(x).g'(x))/[g(x) ]²
 
 ## Regra da cadeia
+A moral dessa regra é usar o polinômio como x e multiplicá-lo logo após (derivados, se possivel)
+À princípio não é necessário reduzir as multiplicações se possível
 - trata um polinômio potencializado como um x solitário
 - só precisa pegar a derivada da função interna e multiplar com o resultado
 - em geral se passa as constantes pra frente
-[marcação - exemplos de aplicação do teorema]
-- 
+- é o *encadeamento* de funções uma dentro da outra
+
+<img src="imgs/Aula_11_regras_genericas_de_derivacao.png">
