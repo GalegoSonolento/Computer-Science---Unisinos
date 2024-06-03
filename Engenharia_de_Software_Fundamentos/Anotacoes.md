@@ -677,6 +677,22 @@ de uso.
 
 DATA: 29/MAIO/2024
 ## Casos de uso 2.0
+A parada aqui é que todo projeto e implementação (tanto de engenharia e software) requere duas coisas: segurança, agilidade e documentação (a documentação entra mais no caso que lidamos com software, mas podemos colocá-la junto da segurança, já que uma boa documentação permite implementações mais amigáveis no futuro e uma manutenção mais rápida).
+O ponto é que, no mundo real, para criarmos soluções rápidas, deixamos a segurança de lado. Para criarmos soluções seguras, deixamos a rapidez e agilidade de lado. É óbvio que podemos ter as duas coisas, mas a pergunta certa é: você tem o **dinheiro** necessário para criar algo seguro e feito rapidamente? (Obrigado pela visão, Lito, do Aviões e Músicas).
+Casos de uso 2.0 querem o seguinte:
+1. Keep it simple by telling stories.
+2. Understand the big picture.
+3. Focus on value.
+4. Build the system in slices.
+5. Deliver the system in increments.
+6. Adapt to meet the team's needs.
+Acontece? Algumas vezes, mas como todo processo, quando mais longe da origem, mais diferenciado fica (foggy).
+Em casos de uso é bastante interessante ter em mente a quantidade deles. Saiba que sistemas grandes usam em torno de 12 casos de uso, o que já considerado muito segundo Ivar Jacobson. Sistemas pequenos, com funcionalidades focadas, podem ter uns 2 ou 3 casos de uso. Mas não se engane, mesmo com 1 caso de uso, o sistema ainda pode ser bastante complexo. Esses casos ajudam a manter o norte à vista e gerar definições de objetivo.
+
+<img src="img/Use_cases_map.png">
+
+Tudo isso é bastante interessante, mas agora os casos de uso acabaram de ficar um pouco mais complicados. O problema é: raramente os casos são utilizados em sua plenitude, serão agora que ficaram mais complexos? (FINITO - Use Case 2.0: Você precisa dele? (11/01/2012))
+
 - a primeira aparição do conceito da ideia de caso de uso é bastante antiga
     - á princípio na conferẽncia OOPSLA de 1987
 - manifesto ágil veio em 2001 e foi implementado em diversas empresas
@@ -709,7 +725,6 @@ DATA: 29/MAIO/2024
 - caso de uso pode ser bem interessante para testes
     - uma vez que o cenário entrega um norte padrão
     - os testes derivam do fluxo principal
-- 
 
 
 ## Referências:
