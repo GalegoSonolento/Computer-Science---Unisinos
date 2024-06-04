@@ -662,3 +662,43 @@ A moral dessa regra é usar o polinômio como x e multiplicá-lo logo após (der
 - é o *encadeamento* de funções uma dentro da outra
 
 <img src="imgs/Aula_11_regras_genericas_de_derivacao.png">
+
+DATA: 03/Junho/2024
+[exercícios extras de regra da cadeia]
+
+## Formas indeterminadas e Regra de L'Hôpital
+- Limites indeterminados ou transcendentes podem n ser necessariamente resolvidas com álgebra
+- lim_(x->2) (x²-4)/(x-2)
+    - verifica se 2 zera denominador
+    - se zera tenta manipular pra n zerar
+        - aí substituia e continuava o limite
+    - se 0/0 L'Hôpital ajuda agr
+- lim_(x->inf.) (x²-4)/(x³+1)
+    - as regras anteriores ainda fuincionam
+    - mas por serem polinomiais podem gerar alguma complexidade
+- lim_(x->0) x/sen(x)
+    - zero no denominador zera
+    - não dá pra fatorar
+        - sem continuidade
+    - a regra de L'Hôpital foi criada pra resolver esse tipo de problema
+
+### Teorema
+- x->+-inf. ou 0/0 ou inf/inf
+- lim_(x->c) f(x)/g(x) = lim_(x->c) f'(x)/g'(x)
+- isso só vale pra situações **indeterminadas**
+    - necessariamente
+
+[exemplos resolvidos - 1]
+- dá pra aplicar a regra de L'Hôpital tantas vezes quanto forem necessárias
+
+### Lembrete
+- Regra de L'Hôpital precisa **necessariamente** vir a partir de uma indeterminação
+- **não** é **só** o denominador zerar pra poder fazer L'Hôpital
+- ainda existem outras indeterminações em matemática
+    - 0*inf / 1^inf / inf⁰ e inf-inf / 0⁰
+[marcação 2]
+- algumas são determinadas:
+    - inf+inf = inf
+    - -inf-inf = -inf
+    - 0^inf = 0
+    - 0^-inf = inf
