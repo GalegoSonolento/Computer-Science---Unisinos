@@ -733,3 +733,115 @@ Funciona como um pedido pra atualizar o servidor de cache WWW
 **Porque ele mantém uma conexão intermitende pela porta 21 entre servidor e cliente, ou seja, os dados de controle não são enviados juntos com os pacotes na porta 20**
 3 - Descreva como o cache WWW pode reduzir o atraso na recepção de um objeto desejado. O cache Web produzirá o atraso para todos os objetos requisitados por um usuário ou somente para alguns objetos? Por quê?
 **Sim, o cache Web auxilia no atraso na recepção uma vez que ele mantém as informações mais próximas do cliente, que agora não precisa mais ir até o servidor de origem pegar os dados todos. Claro, o cahce Web vai manter as informações depois que elas passarem por ele apenas, então o atraso da primeira vez ainda existe caso você seja o pioeniro, mas seu coleguinha vai ter o benefício, enquanto a informação durar no cache Web pelo menos. Mas o benefício é apenas para alguns objetos, já que volta e meia uma requisição GET condicional obriga o cache a perguntar para o servidor origem se alguma atualização existe, se sim, os pacotes novos são requisitados pelo cache e existe um atraso para o pioneiro denovo.**
+
+DATA: 06/Jun/2024
+# Camanda de transporte
+- Sempre identifique host e aplicação
+- porta destino precisa ser identificada pra entender onde entregar a parada
+- essa camada é logo abaixo da aplicação
+    - 3° camada
+- na identificação de conexão é trabalho do cliente mandar os dados
+
+# UDP
+- modelo mais básico de transporte
+    - nem se encaixa no modelo OSI
+    - não é confável
+    - até identifica erros mas não corrige nada
+- não estabelece conexão lógica
+- sabe identificar a mensagem e dizer qual das aplicações precisa da mensagem
+    - mensagens pequenas normalmetne usam UDP porque não é tão caro mandar denovo
+- precisa lidar com quase todas as características de confiabilidade
+    - como o UDP não avisa nada, todo o trabalho deve ser feito nas costas do programador
+    - se vira aí pra ver se a mensagem chegou e se tem erro de conexão
+- datagrama/pacote é streamado na rede formando um cabeçalho
+- tudo desenhado com 32bits
+
+0             16|16            31
+----------------|----------------
+Porta Origem    | Porta Destino 
+Tamanho         | Checksum
+Dados           |   Dados
+
+- tamanho total do pacote (cabeçalho mais dados)
+    - relacionado a contagem de octetos (bytes)
+    - menor pode ser 8 (64bit - tamanho do cabeçalho - divide por 8 = 8)
+- checksum
+    - existem vários tipos de técnicas pra verificação de erros
+    - pra verificar se o datagrama contém erros
+
+
+- dados
+    - a mensagem basicamente
+
+- encapsulamento
+    - pegar os dados e jogar os cabeçalhos encima
+    - UDP
+    - IP
+    - Ethernet
+    - vai tudo pra rede saber qual porta passar e etc
+
+- multiplexação
+    - acrescentado dados de mais camadas
+    - adicionando informações
+- demultiplexação
+    - olha e retira os dados adicionados para saber onde entregar
+    - retira os cabeçalhos de camada e entrega os dados puros
+- Erro ICMP - port unreacheable - Porta Inalcansável
+- não ter sequenciamento de mensagens faz bastante falta
+
+- só entrega mesmo
+- aplicações como Voz sobre IP (VoIP) precisa desse tipo de simplicidade
+- quando se fala em segurança é a garantia de chegar no outro lado, não de ser facilmente invadida
+
+## checksum
+- ideia do UDP é ter pouco overhead
+    - checksum é opcional
+    - só meter uns zeros se n quiser usar
+- aumenta o número de dados transmitidos
+    - pega um pseudocabeçalho
+    - aumenta o número de valores do cálculo durante a repetição
+    - não é enviado pela rede, só é feito o cálculo
+- cálculo do checksum
+    - soma sempre 16bit com 16bit
+    - se estourar o tamanho ele retorna os estourados e soma-os no resultado
+    - ou ele só vai descartando todas as casas que sobram
+    - mete um complemento de um
+        - inverte 0 com 1 e vice-versa
+- o destido calcula do checksum denovo com os dados que chegaram
+    - se qualquer coisa for diferente ocorreu uma falha
+    - soma tudo com o complemento de 1 do checksum do destino
+    - somar tudo com o remetente em complemento de 1 vai resultar em zero
+
+# TCP
+- implenta TODAS as funcionalidade q o UDP não faz
+- implementação absurdamente mais complexa
+    - overhead bem maior
+- pensado pra funcionar independente dos erros da camada de enlaçe 
+    - o resto pra baixo *não é confiável*
+- é melhor para tratar grandes volumes de dados
+- orientado a streams
+    - fluxo de bits
+    - eras
+    - durante todo 
+- circuito virtual
+    - sabe onde o pacote está e mantém comunicação constante
+- transmissão bufferizada
+    - ele guarda o que cehgou e joga na fila
+    - sem o buffer ele n guarda as informações enquanto uma interrupção não trigga
+    - cada aplicação transmite o quanto quiser
+    - dá pra dividir da maneira que quiser
+        - se guardar na sequência correta dá pra dividir em vários pedalços de pacote
+    - sempre manda o maior pacote possível dentro do enlace
+- conexão full-duplex
+    - da A -> B e de B -> A
+- funciona com **Confirmação Positiva com Retransmissão**
+    - *Positive Acknowledgement with Retransmission*
+    - o destinatário responde com mensagem de confirmação (ACK)
+- o pacote é enviado com um certo tempo pra retornar o ACK
+    - se n voltar nesse tempo ele manda o pacote denovo
+- se o ACK se perde o TCP manda o pacote denovo
+    - mas do outro lado ele identifica o pacote igual e manda outro ACK
+    - funciona bem em redes com pouco fluxo
+    - com muito fluxo ir e voltar pode ser um problema
+        - sobrecarregamento de rede
+- 
