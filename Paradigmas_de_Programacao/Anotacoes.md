@@ -96,4 +96,31 @@ valor em variável
 - normalmente as funcionalidades utilizam apenas automatização mesmo
 - em alguns contextos o controle manual é bastante necessário
     - sistemas embarcados e de alto desempenho pode ser uma escolha mais bem pensada
+
+
+DATA: 07/Junho/2024
+# Progamação imperativa
+- paradigma de programação
+- precisava cuidar de estados de variável
+- multiprocedural com procedimentos mecânicos
+- primeiro paradigma (shells ão baseados nisso)
+## tempo de vida
+- alocação e liberação é montada pelo desenvolvedor
+- precisa entregar os tempos de vida na hora de escrever os projetos
+    - definição de escopos prioritária
+    - estáticas
+    - dinâmicas da pilha
+        - alocadas em pilhas de memória e tem registros de mudança
+        - libera quando termina de rodar o programa
+    - variáveis do Heap
+        - explícitas
+            - malloc vetor e tamanho dele e free - libera mesmo
+        - implícitas
+            - gerenciamento automático
+            - Garbage Collector
+            - pra alterações aqui precisa de dump e uma mão pra mexer e configurar
+- controle de fluxo é sempre por funções matemáticas
+- 
+
+- A facilidade de encapsulamento é bastante absurda quando expandida a niveis maiores
 - 
