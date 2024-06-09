@@ -664,7 +664,7 @@ A moral dessa regra é usar o polinômio como x e multiplicá-lo logo após (der
 <img src="imgs/Aula_11_regras_genericas_de_derivacao.png">
 
 DATA: 03/Junho/2024
-[exercícios extras de regra da cadeia]
+<img src="imgs/Aula_12_escritasRegraDaCadeia.png">
 
 ## Formas indeterminadas e Regra de L'Hôpital
 - Limites indeterminados ou transcendentes podem n ser necessariamente resolvidas com álgebra
