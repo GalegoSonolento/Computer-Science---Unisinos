@@ -667,6 +667,9 @@ DATA: 03/Junho/2024
 <img src="imgs/Aula_12_escritasRegraDaCadeia.png">
 
 ## Formas indeterminadas e Regra de L'Hôpital
+Para facilitar o entendimento, tenha em mente que L´Hopital é apenas uma maneira mais simples para calcular aguns tipos de limites. Mais especificamente limites com indeterminações mantemáticas.
+Para fins acadêmicos, indeterminações matemáticas são simplesmente situações em que não é possível determinar um resultado "correto" ou minimamente preciso. Tais situações como ∞/∞ ou 0/0 são classificadas assim.
+
 - Limites indeterminados ou transcendentes podem n ser necessariamente resolvidas com álgebra
 - lim_(x->2) (x²-4)/(x-2)
     - verifica se 2 zera denominador
@@ -681,6 +684,9 @@ DATA: 03/Junho/2024
     - não dá pra fatorar
         - sem continuidade
     - a regra de L'Hôpital foi criada pra resolver esse tipo de problema
+
+### Exemplos
+<img src="imgs/Aula_12_exemplosDeRegraLHopital.png">
 
 ### Teorema
 - x->+-inf. ou 0/0 ou inf/inf
@@ -702,3 +708,7 @@ DATA: 03/Junho/2024
     - -inf-inf = -inf
     - 0^inf = 0
     - 0^-inf = inf
+
+### Exercícios
+<img src="imgs/aula_12_exercicios_propostos_1.png">
+<img src="imgs/aula_12_exercicios_propostos_2.png">
