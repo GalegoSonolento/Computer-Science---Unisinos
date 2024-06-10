@@ -328,4 +328,14 @@ DATA: 26/Mar/24
 - problemas q causam a próxima instrução a pular um ciclo de clock
 [inserir anotação 1]
 
-DATA: 02/Abr/2024
+DATA: 28/Maio/2024
+# Memória
+A hierarquia de memória funciona de forma piramidal, sendo que as memórias mais rápidas (e caras) ficam mais perto do topo (cache). As memórias secundárias (HD e/ou SSD) são as mais lentas quando comparados às memórias de cache (e bastante mais baratas também).
+
+<img src="imgs/hierarquia_de_memorias.png">
+
+Normalmente existem dois lvl de cache, um dentro do processador (L1, L2, etc) e outra na parte de fora, mais perto da memória principal (DRAM)
+Existe uma unidade para medir a taxa de acertos das páginas de informação lançadas para as memórias cache. Isso serve como um benchmark importante, já que o pouco espaço precisa de conjuntos mais agregados de memória para execução dos programas. 
+- Siga a fórmula h = número acertos/total de acessos
+    - considere um acerto uma informação já presente em cache
+
