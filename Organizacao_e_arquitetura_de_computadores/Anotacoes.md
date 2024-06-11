@@ -339,3 +339,30 @@ Existe uma unidade para medir a taxa de acertos das páginas de informação lan
 - Siga a fórmula h = número acertos/total de acessos
     - considere um acerto uma informação já presente em cache
 
+- Um princípio interessante é o da localidade
+    - temporal significa que se um espaço de memória foi referenciado ele provavelmene será novamente em um curto espaço de tempo
+    - espacial significa que se uma informação foi referenciada, provavelmente as posições próximas a ela também o serão em um curto espaço de tempo
+
+- memórias cache são montadas com tecnologia SRAM e são bastante caras e pequenas.
+- memória principal (DRAM) tem múltiplos acessos de memória e facilita comunicação rápida
+    - deadlocks podem afetar o tempo de acesso
+- um fato interessante é que, para colocar pipelines na estrutura Von Neumann, foi necessário criar memórias intermediárias para acesso múltiplo (Cache de instruções e Cache de Dados) para as instruções Misc funcionarem propriamente
+- a criação de caches unificadas entre as caches separadas e a memória principal foi criada para diminuir o tempo de acesso e manter as caches primárias no mesmo clock do relógio.
+    - em múltiplos processadores existem múltiplos pares de cache nível 1 ligados a uma mesma memória principal
+
+# Entradas e saídas
+- E/S aborda o problema dos múltiplos padrões de entrada e saída
+- E/S dividem a entrada em linhas de endereço, dados e controle, todas com os próprios canais
+
+<img src="imgs/arquitetura_entrada_e_saida.png">
+
+<img src="imgs/estruturacao_de_coms_es_com_cpu.png">
+
+- a E/S é precisa ser tratada de alguma maneira já que os dados não tem uma entrada constante muitas vezes
+    - é possível tratar programando a CPU para realizar esse check na E/S a cada x tempo e ler o q ela manda
+    - pedir pra colocar um DEMON na E/S e avisar a CPU toda vez que algo entrar na fila para ser escrito
+    - ou ainda usar um DMA, que vai fzr todo o trabalho e só mandar o dado mastigado pra CPU
+        - é importante deixar anotado que o DMA sevre muito bem como um intermediário entre a CPU e os dispositivos de E/S, pq ele permite a CPU trabalhar em outras tarefas enquanto ele lida com os dados entrando ou saíndo
+        - ´bom ter em mente que ele ainda precisa de um canal de comunicação de dados diretamente com a CPU no barramento, ent arquiteturas com barramento único serão prejudicadas com interrupções mais frequentes
+            - as arquiteturas mais modernas já montam barramento especificamente pra entrada e saída que são geridos pelos DMAs
+            - assim só a comunicação entre DMA e CPU pega no barramento principal
