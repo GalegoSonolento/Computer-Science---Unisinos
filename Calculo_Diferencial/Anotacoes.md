@@ -712,3 +712,36 @@ Para fins acadêmicos, indeterminações matemáticas são simplesmente situaç�
 ### Exercícios
 <img src="imgs/aula_12_exercicios_propostos_1.png">
 <img src="imgs/aula_12_exercicios_propostos_2.png">
+
+DATA: 10/Maio/2024
+## Derivada de ordem superior
+- as derivadas podem ter graus
+- se uma derivada pode ter mais derivações podemos fazer uma derivada segunda (y'') ou uma terceira (y''') e por aí vai
+    - à partir da ordem 3 é feito com y^(4), pra diferenciar de potência (e não era mto bom ficar colocando um monte de linha)
+- dá pra derivar um polinômio infinitamente (vai chegar uma parte q vai dar zero)
+    - e^x vai ser e^x toda a vida
+    - seno e cosseno também é cíclico
+- todas tem interpretações
+### derivada primeira
+- taxa de variação da função
+- velocidade de crescimento em cada ponto
+- crescimento ou decrescimento
+
+### derivada segunda
+- cuida do jeito que a função cresce/decresce
+- variação da velocidade
+- aceleração
+    - interpretação mais básica da derivada segunda
+
+### exemplos
+[marcação 1]
+
+## Taxas de variação nas derivadas
+- é uma contextualizção das derivadas
+- aplicação das mesmas em situações
+
+### exercícios em aula
+[marcação 2] - exercício 1
+[marcação 3] - exercício 2
+[marcação 4] - exercício 3
+[marcação 5] - exercício 4
