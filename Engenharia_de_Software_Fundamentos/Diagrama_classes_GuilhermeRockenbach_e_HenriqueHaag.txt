@@ -1,0 +1,31 @@
+Universidade do Vale do Rios dos Sinos - Unisinos
+2024/1 - Engenharia de Software: Fundamentos
+Guilherme Rockenbach
+Henrique Haag
+---------------------------------------------------------------------------------------------------
+/*O diagrama abaixo foi feito na ferramenta online do PlantUML e pode ser visualizada com imagens
+dentro da mesma*/
+
+
+class Comissao{
+- membrosComissao: ArrayList
+- tarefasParaAvaliacao: ArrayList
+- JulgarTarefa (): boolean
+/*julgarTarefa tem a verificação 
+interna de todos os membros da 
+lista para avaliação*/
+}
+class Equipe{
+- membrosEquipe: ArrayList
+- listaTarefas: ArrayList
+- EnviarTarefa(): Tarefa
+}
+class Tarefa{
+- descricao: String
+- concluida: boolean
+- justificativaDeConslusao: String
+}
+Comissao <|-- Tarefa
+Equipe<|-- Tarefa
+Aluno - Equipe
+Professor - Comissao
