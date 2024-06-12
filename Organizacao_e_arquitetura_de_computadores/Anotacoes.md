@@ -366,3 +366,71 @@ Existe uma unidade para medir a taxa de acertos das páginas de informação lan
         - ´bom ter em mente que ele ainda precisa de um canal de comunicação de dados diretamente com a CPU no barramento, ent arquiteturas com barramento único serão prejudicadas com interrupções mais frequentes
             - as arquiteturas mais modernas já montam barramento especificamente pra entrada e saída que são geridos pelos DMAs
             - assim só a comunicação entre DMA e CPU pega no barramento principal
+
+DATA: 11/Junho/2024
+# Arquiteturas paralelas
+- máquinas escalares produzem uma instrução por ciclo de máquina
+- máquinas superescalares (pipelines) mais de uma instrução por ciclo de máquina
+    - umas 2 instruções mais ou menos
+    - tem mais de uma ULA dentro do processador e vai buscando as instruções conforme o número de ULAs
+    - mais de u fluxo de instruções
+    - os cores são virtuais tbm -> normalmente são dois fluxos por processador
+- o limite de clock da tecnologia de silício existente hj são 5GHz (literalmente)
+    - até dá pra ultrapassar mas precisa cuidar mto pra n queimar e perder informações
+
+## Processamento Paralelo
+- 2 ou mais processadores simultaneamente reslvendo o mesmo problema
+    - n só montar 2 pc na rede
+- em computadores matriciais (GPUs) - SIMD (Single Instruction Stream, Multiple Data Streams)
+    - uma única instrução consegue manipular vários dados ao mesmo tempo
+## MIMD (Multiple Instruction Stream, Multiple Data Stream)
+    - vários fluxos e vários processadores (processadores independentes) pra solução do mesmo problema
+    - compartilhada
+        - controle
+        - un. processamento
+        - isso em todos os pares
+        - todas compartilham a msm memória
+        - vai ser uma arquitetura multicore maior
+        - várias unidades de controle gerenciada por 1 OS
+    - distribuída
+        - máquinas completas alimentando o mesmo banco de dados
+        - interligadas por sistemas de comunicação
+        - em cima do OS tem mais uma camada de gerenciamento das máquinas
+        - é um cluster basicamente
+- processadores tem aplicações distintas em diferentes situações
+    - o desempenho pode ser problemático se n usar a ferramenta certa para o trabalho
+- multiprocessamento simétrico precisa de todos os processadores iguais numa msm interconexão
+    - tbm na msm memória
+    - SMP
+    - todos enxergam os mesmo endereços de memória
+        - o endereçamento é único pra tds
+    - arquitetura comummente encontrada em sistemas de end-user
+    - sem processador especializado
+    - UMA - Uniform Memory Access
+        - todo mundo leva um tempo x pra acessar posições de memória
+    - barramento de tempo compartilhado
+        - a estrutura ainda continua a mesma de um processador
+        - evita conflito de dados
+        - os processadores ocupam o barramento pra usar o slot de tempo
+    - o mais difundido é o barramento compartilhado com cache
+- Acesso não-uniforme na memória (UMA)
+    - único espaço de memória
+    - processadores em nós
+        - própria cache e principal no barramento
+    - conceitos de memória local e global
+    - tudo dentro de uma mesma placa de silício
+    - nã são exatamente comuns
+        - usadas em aplicações científicas e supercomputadores
+        - modelagem, previsão do tempo ,...
+- clusters
+    - máquinas separadas
+    - nós de integração ao cluster
+    - podem ser um recurso de comp unificado
+    - resolvendo o msm problema
+    - massa única de processamento
+    - conectados em interface de rede
+    - escalabilidade absoluta
+    - incremental 
+        - dá pra ficar adicionando mais nós no cluster
+    - disponibilidade
+        - se alguns nós falharem o sistema completo não cai
