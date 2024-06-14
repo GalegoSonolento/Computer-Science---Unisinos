@@ -844,4 +844,60 @@ Dados           |   Dados
     - funciona bem em redes com pouco fluxo
     - com muito fluxo ir e voltar pode ser um problema
         - sobrecarregamento de rede
-- 
+## janela variável 
+- o tcp diferencia o tamanho dos pacotes dependendo da rede q ele está
+- fragmentação de pacotes funciona dentro da TCP - ainda precisa entregar os pacotes fragmentados tds juntos 
+
+## Pacote TCP
+- segmento ou pacote - unidade
+- o ack pode ser retornado com um piggyback e a informação necessária/pedida
+    - quando n demora tanto pra acessar a informação
+- cabeçalho e dados
+- header de TCP é bastante maior que o anterior
+- porta origem e destino (16bit)
+- sequênca (num pacote) - 32bit e ACK
+- tem uma parte reservada pra uso futuro (ainda n foi usado)
+- tem algumas flags e montagens de opções do header ainda pra poder ordenar o esquema
+- tamanho do cabeçalho é em palavras de 32bit
+    - tem no mínimo 5 se opção nenhuma
+    - o tamanho do cabeçalho diz quando chega na parte de informações
+
+## Opções TCP
+- opções tem 1 octeto de possibilidades
+    - pode mostrar e arrumar o tamanho mínimo de pacote (ou máximo)
+    - MTU - TAmanho de Pacote Máximo
+        - capacidade de rede
+        - o link de conexão já faz a checagem do menor link de rede
+        - o máximo tem a capacidade do menor
+        - maior pacote possível q caiba e tds os links
+        - ainda pode dar errado e os pacotes mudarem de path
+            - existe fragmentação
+- Go-back-N - substituido pela retransissão seletiva
+- retransmissão seletiva - pode guardar pacotes e todos os pacotes tem ACK
+    - tds tem timer
+    - 2 lados com janela
+    - buffer no lado receptor
+    - ainda vai mandar todos mas eles ficam esperando o atrasado chegar
+
+## abertura de conexão
+- handshake dos dois lados
+- controle de conexão
+    - estabelecer
+        - handshanke de 3 vias
+        - msg c/ flag SYN
+        - retorno SYN e ACK
+        - ACk de confirmar a conexão
+    - transmissão
+        - 
+    - encerramento
+        - encerra de um lado antes e o outro ainda funciona enquanto a onexão precisar disso
+        - normalmente termina com 4 mas sem dados pra serem transmitidos dá pra ser com 3 tbm
+    - aqui ele usa o RST pra restartar se necessári
+
+## Política de transmissão
+- buffer sempre diz o tamanho da janela q ele tem possível e confima as parada
+
+## Síndrome de Janela Boba
+- manda atualização de janela minúsculas
+- resolve mandando o MSS ou o tamanho da metade do buffer quando for liberada
+    - é o maior pacote q ele pode mandar
