@@ -123,4 +123,33 @@ DATA: 07/Junho/2024
 - 
 
 - A facilidade de encapsulamento é bastante absurda quando expandida a niveis maiores
+
+# Programação Funcional
+- esquemas matemáticos
+- suportado por várias linguagens (aplicativas)
+- Linguagens normalmente implementam mais de um paradigma
+- início da década de 60
+    - atualmente a pilha é linguagem natural
+- tapa o buraco da programação imperativa
+- LISP - mcCarthy - 1960
+    - fácil de sair programando
+- mais confiáveis por serem mais fáceis de ler mesmo
+    - manutenção também é facilitada
+    - significados independentes de contexto
+- função lamba (Java)
+    - parâmetros de uma função
+    - chama a função lambda e passa parâmetros pra ela
+- é bastante interessante por ser otimizável, fácil de ler, fácil manutenção, baixa especialidade
+    - fazer mais com menos linhas facilita
+
+# Programação lógica
+- declarativa
+- operações e alfabeto, junto com tds os assets são entregues no começo da programação
+- precisa declarar os objetivos alcançáveis do código
+- cria uma lógica dentre as declarações
+    - pode ser usada em árvores de decisão
+    - criação de lógicas pra contextos específicos e montagem de árvores pode gerar caminhos diferentes de tomada de decisão
+- IA usa algoritmos lógicos e pode gerar respostas diferentes dependendo de como os tokens são arranjados
+    - não -deterministico
+- SQL é uma linguagem lógica por exemplo
 - 
