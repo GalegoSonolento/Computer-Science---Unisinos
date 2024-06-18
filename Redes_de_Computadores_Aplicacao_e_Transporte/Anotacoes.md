@@ -736,8 +736,12 @@ Funciona como um pedido pra atualizar o servidor de cache WWW
 
 DATA: 06/Jun/2024
 # Camanda de transporte
+Essa camada lida com as aplicações e dados.
+Usualmente os dados devem já estar tratados na camada de enlace, mas a de transporte age como última instância e auxilia os dados a serem estruturados.
+Não se preocupa com *qual* terminal a mensagem deve ser entregue, esse é o trabalho da camada de Rede.
+Um dos trabalhos dessa camada é entender onde (qual aplicação) os pacotes devem ser entregues.
 - Sempre identifique host e aplicação
-- porta destino precisa ser identificada pra entender onde entregar a parada
+- porta destino precisa ser identificada pra entender onde entregar o pacote
 - essa camada é logo abaixo da aplicação
     - 3° camada
 - na identificação de conexão é trabalho do cliente mandar os dados

@@ -46,6 +46,7 @@ Anotações gerais da cadeira
 - f(x) = e^x -> aparece bastante na natureza
 - a = (f(X_0+h)-f(X_0))/h
 - lim(x->0) = (f(X_0+h)-f(X_0))/h
+ y - y_0 = f'(x_0)(x - x_0)
 
 DATA: (26/Fev/24)
 # Estudo de Funções
@@ -745,3 +746,62 @@ DATA: 10/Maio/2024
 [marcação 3] - exercício 2
 [marcação 4] - exercício 3
 [marcação 5] - exercício 4
+
+
+DATA: 17/Junho/2024
+## Aplicações da Derivada - Coeficiente angular da reta tangente
+- para ter a equação da reta tangente n dá só pra ter o coeficiente angular (derivada)
+    - ainda precisa do resto
+- pra isso serve a equação da reta tangente a f(x) em (X_0, Y_0)
+    - y - y_0 = f'(x_0)(x - x_0)
+- tangente não necessariamente toca apenas em um ponto 
+    - tangente ao ponto sempre
+
+### exemplos
+[marcação 1]
+[marcação 2]
+[marcação 3]
+[marcação 4]
+
+## Crescimento, decrescimento e concavidade
+- intervalo de crescimento e descrescimento é intervalo de tempo
+- pontos críticos são os pontos onde a função pode trocar de crescente pra decrescente e vice-versa
+    - é a derivada igualada a zero
+    - verifica um ponto antes e depois e faz a análise
+    - usando a derivada primeira
+- derivada segunda
+    - cuida da forma do gráfico
+    - dos jeitos
+    - concavidades
+    - mexe nas concavidades da função
+
+### exemplo
+[marcação 5]
+- a função apenas troca o sentido (crescimento ou descrescimento) nos pontos críticos
+[marcação 6]
+
+### Concavidade
+- baseada na derivada segunda
+- se positiva
+    - concavidade pra cima
+- se negativa
+    - concavidade pra baixo
+- tem alterações a depender dos pontos de inflexão
+- exatamente no ponto de inflexão a função tem os dois comportamentos, logo, tem nenhum
+    - pode-ser assumir que os valores são 0 mesmo
+
+#### exemplos
+[marcação 7]
+[marcação 8]
+
+### Extremos relativos
+- classificação de pontos críticos basicamente
+- são sempre neles que as funções invertem
+    - isso não significa que a função vai realmente trocar ali
+- é aqui que se aplica o teste da derivada primeira
+
+#### exemplos
+[marcação 9]
+- sempre faça os testes já que ela pode não inverter mesmo
+- ponto de inflexão (derivada 2°) de fato troca a concavidade
+[marcação 10]
