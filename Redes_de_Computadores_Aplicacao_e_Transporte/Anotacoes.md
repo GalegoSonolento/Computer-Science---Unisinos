@@ -45,6 +45,7 @@ Anotações da cadeira
 - o controle das informações da rede é feito completamente pela rede - os OS n tem nada a ver com isso
 - Um 'ack' é uma confirmação de resposta do par de dados enviados
 - checksum tá em basicamente todas as camadas
+- pseudoheader não percorre a rede
 
 
 DATA: 29/02/24
@@ -747,6 +748,9 @@ Um dos trabalhos dessa camada é entender onde (qual aplicação) os pacotes dev
 - na identificação de conexão é trabalho do cliente mandar os dados
 
 # UDP
+Protocolo de rede mais básico e menos confável no sentido de garantir a entrega da mensagem. Mas ele não corrige nenhum dos erros possíveis dentro da rede e deixa a mensagem quebrar se acontecer. Ele até pode avisar, mas o trabalho de reenvio e verficiação de erros deve ser feito nas costas do programador.
+Vale lembrar que apesar de ser um protocolo pouco confiável, ele é ótimo para realização de streaming de qualquer tipo. 
+
 - modelo mais básico de transporte
     - nem se encaixa no modelo OSI
     - não é confável
@@ -766,6 +770,14 @@ Porta Origem    | Porta Destino
 Tamanho         | Checksum
 Dados           |   Dados
 
+<img src="imgs/pseudocabecalho_UDP.png">
+
+*Cabeçalho da mensagem de verdade*
+
+O arquivo fica dividido em blocos de palavras de 16bits como mostrado na imagem.
+Os dados ficam abaixo desse pseudocabeçalho e existe uma flag no final que indica o começo dos dados de verdade.
+Um dos pontos interessantes aqui é a presença de Checksum, que faz uma verificação simplista da integridade dos dados. Ou seja, o UDP até pode avisar que os dados estão meio quebrados, mas não faz nada quanto a recuperá-los.
+
 - tamanho total do pacote (cabeçalho mais dados)
     - relacionado a contagem de octetos (bytes)
     - menor pode ser 8 (64bit - tamanho do cabeçalho - divide por 8 = 8)
@@ -777,17 +789,21 @@ Dados           |   Dados
 - dados
     - a mensagem basicamente
 
-- encapsulamento
+## Encapsulamento
+O UDP ainda usa a lógica de encapsulamento uma vez que permanece dentro da logica das camadas de rede:
+<img src='imgs/encapsulamento.png'>
+
+Mutiplexação e demultiplexação são baseados nisso
     - pegar os dados e jogar os cabeçalhos encima
     - UDP
     - IP
     - Ethernet
     - vai tudo pra rede saber qual porta passar e etc
 
-- multiplexação
+### Multiplexação
     - acrescentado dados de mais camadas
     - adicionando informações
-- demultiplexação
+### Demultiplexação
     - olha e retira os dados adicionados para saber onde entregar
     - retira os cabeçalhos de camada e entrega os dados puros
 - Erro ICMP - port unreacheable - Porta Inalcansável
@@ -797,7 +813,12 @@ Dados           |   Dados
 - aplicações como Voz sobre IP (VoIP) precisa desse tipo de simplicidade
 - quando se fala em segurança é a garantia de chegar no outro lado, não de ser facilmente invadida
 
+<img src="imgs/pseudocabecalho_UDP_pra_checksum.png">
+
 ## checksum
+- se todos os valores forem zero é a marcação pra não usar
+- o cálculo do checksum é feito com base no pseudocabeçalho (que não é transmitido, só usa pra calcular checksum)
+    - soma o cabeçalho + cabeçalho + dados UDP
 - ideia do UDP é ter pouco overhead
     - checksum é opcional
     - só meter uns zeros se n quiser usar
@@ -815,13 +836,20 @@ Dados           |   Dados
     - se qualquer coisa for diferente ocorreu uma falha
     - soma tudo com o complemento de 1 do checksum do destino
     - somar tudo com o remetente em complemento de 1 vai resultar em zero
+- Checksum é todo feito com somas e complemento de um pra ser o mais leve e mais rápido de calcular possível
+    - soma é a operação de execução mais rápida de das ULAs (consequentemente dos processadores)
 
 # TCP
+TCP foi muito importante na história das redes pra definição de processos mais seguros e livres de erros
+Todas as validações de segurança são garantidas, inclusive recuperação de dados de pacotes.
+A utilização de Buffers auxilia na manutenção da ordem de entrega dos pacotes (evita engasgos ou reloads em jogos online, por exemplo). Conexão full duplex (A -> B e B -> A)
+O funcionamento básico dos ACKS consiste em timers mesmo, se mandar e não obtiver resposta dentro de um tempo específico, vapo neles e manda outro.
+
 - implenta TODAS as funcionalidade q o UDP não faz
 - implementação absurdamente mais complexa
     - overhead bem maior
 - pensado pra funcionar independente dos erros da camada de enlaçe 
-    - o resto pra baixo *não é confiável*
+    - o resto pra baixo *não é confiável* - pelo menos nos ealy days
 - é melhor para tratar grandes volumes de dados
 - orientado a streams
     - fluxo de bits
