@@ -401,11 +401,14 @@ DATA: 11/Junho/2024
     - o desempenho pode ser problemático se n usar a ferramenta certa para o trabalho
 - multiprocessamento simétrico precisa de todos os processadores iguais numa msm interconexão
     - tbm na msm memória
-    - SMP
+    - SMP - simetrical multi processor
     - todos enxergam os mesmo endereços de memória
         - o endereçamento é único pra tds
     - arquitetura comummente encontrada em sistemas de end-user
     - sem processador especializado
+    - Crossbar - matriz com os múltiplos caminhos de acesso
+        - a memória se fragmenta mas ainda é um único espaço de endereço
+        - bastante cara
     - UMA - Uniform Memory Access
         - todo mundo leva um tempo x pra acessar posições de memória
     - barramento de tempo compartilhado
@@ -413,7 +416,7 @@ DATA: 11/Junho/2024
         - evita conflito de dados
         - os processadores ocupam o barramento pra usar o slot de tempo
     - o mais difundido é o barramento compartilhado com cache
-- Acesso não-uniforme na memória (UMA)
+- Acesso não-uniforme na memória (NUMA)
     - único espaço de memória
     - processadores em nós
         - própria cache e principal no barramento
@@ -422,6 +425,7 @@ DATA: 11/Junho/2024
     - nã são exatamente comuns
         - usadas em aplicações científicas e supercomputadores
         - modelagem, previsão do tempo ,...
+    - endereçamento contínuo
 - clusters
     - máquinas separadas
     - nós de integração ao cluster
@@ -434,3 +438,117 @@ DATA: 11/Junho/2024
         - dá pra ficar adicionando mais nós no cluster
     - disponibilidade
         - se alguns nós falharem o sistema completo não cai
+
+## Cluster
+- Divisão de tarefas entre máquinas completas
+- as máquinas são nós
+- em tese n tem limite de nós
+    - apesar de haver pontos ótimos para determinadas tarefas
+    - tradeoff
+- redes de Ethernet são bastante úteis pra esse tipo de arquitetura
+    - dá pra usar USB ou outros tipos de comunicações
+- importante baixa latência
+    - normalmente geograficamente concentrados
+- exigem custos menores que supercomputadores
+- essa arquitetura ficou pra grandes datacenters de cloud
+- hradware no cluster pode ser heterogênio - tem uma camada por cima
+    - tds as máquinas precisam ter o msm OS pro software de gerenciamento funcionar
+- clusters precisam do mínimo de paralelismo pra fazer sentido =
+- clusters são bastante propensos à problemas com temperatura
+
+### Cluster de alto desempenho
+- aplicações exigentes em processamento
+- rapidez
+- resultados em tempo hábil
+- processamento no talo
+- todo o recurso computacional pra resolver a tarefa assignada
+
+### CLuster de alta disponibilidade
+- sempre estar disponível para uso
+- 99.99% disponível no ano
+- ele pode ter variação em seu desempenho durante o período de tempo ligado
+    - a única necessidade é sempre oferecer acesso
+
+### Cluster de balanceamento de carga
+- mais comuns
+- distribuir tarefas uniformemente
+- fazer tds os computadores atenderem e executarem
+- ERP
+- geralmente tem um *buster* de balanceamento por baixo
+- divide as tarefas baseado nas capacidades das máquinas presentes no cluster e dividir de forma proporcional
+
+### funcionamento de cluster
+- composição de hardware normal
+- com nós compartilhados o cluster está disponível enquanto n tiver outra tarefa
+    - ao invés de ficar osioso ele é utilizado por algum lugar ou alguém
+    - geralmente geograficamente distribuído
+    - máquinas podem entrar e sair
+    - nunca se sabe a capacidade total verdadeira
+- nós especializados só tem máquinas dedicadas àquele cluster
+- dá pra ter mais de um OS (nós compartilhados) mas é mais complicado de delegar as tarefas
+- precisa de um middleware de gerenciaento (camada) - enxerga tds os nós como uma massa de processamento
+- MPI (Message Passing Interface)
+    - Mecanismo básico de *Sockets*
+- middleware fica no nó mestre e o ostros tem demons de monitoramento
+
+### CLuster Beowulf
+- NASA, 1994
+
+- MOSIX
+    - UNIX e Linux
+    - dá suporte pra GPUs
+    - permite heterogeneidade
+- faz uma diferenciação de máquinas com GPU e somente CPU
+    - middleware não aleatoriza suas decisões
+- OpenSSI
+    - ambientes Linux
+    - entrega uma visão única de uma grande máquina virtual
+    - alto desempenho e disponibilidade
+- Kerrighed
+    - parece um SSI
+
+### vantagens e desvantagens
+- bom custo enefício
+- n precisa depender de só um fornecedor (supercomputadores dependem da manutenção de apenas um fornecedor)
+- facilmente escalável
+- bem customizável
+- FPGA - hardware reconfigurável - precisa reconfigurar pra atuar como diversos tipos diferentes de componentes
+    - processadores são acoplanos nisso aqui
+    - dependendo da demanda ele reconfigura o hardware pra atender melhor os tipos de aplicação
+- difícil das máquinas estarem geograficamente distribuídas
+- se a rede é ruim o desempenho cai
+- cluster n é a solução pra tudo
+    - Hash n se usa cluster pro exemplo
+
+# Virtualização
+
+## Máquinas virtuais
+- usa os recursos da máquina hospedeira
+- pode ser outro OS - elas são isoladas
+- compartilhamento de recursos
+
+### hipervisor tipo 1
+- software implementado no bare-metal em cima do hardware
+- em cima ficam as máquinas virtuais
+- sem oS na máquina Host
+- implementado em alguns clusteres
+- kernel da VM passa pelo hypervisor
+- complexos de configuração
+
+### hipervisor tipo 2
+- funciona em cima do sistema operacional da máquina
+- VM's rodam aqui por cima
+- podem ter OS's diferentes
+
+### Contâiners
+- funções simplificadas de kernel
+- permissões diferentes
+- implementação leve de uma VM
+- ganha bastante espaço no OS
+- Docker
+    - manipulação de contâiners
+- Kubernets (K8s)
+    - gerenciamento de contâineres
+    - escalonamento
+    - contâiners funcionam como clusteres
+- é insatalado e já pode sair rodando
