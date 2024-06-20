@@ -79,6 +79,7 @@ Anotações padrão da cadeira
     - tanto igual um perfil no insta quanto um txt sozinho com as informações descritas formalmente
 - https://dannorth.net/introducing-bdd/
 - Blog OneDayTesting - Gherking: Introduzindo seus conceitos e benefícios - https://blog.onedaytesting.com.br/gherkin/
+- Selenium é bastante útil pra montar testes automatizados pra páginas web
 
 ## Ferramentas:
 ### Astah
@@ -725,6 +726,60 @@ Tudo isso é bastante interessante, mas agora os casos de uso acabaram de ficar 
 - caso de uso pode ser bem interessante para testes
     - uma vez que o cenário entrega um norte padrão
     - os testes derivam do fluxo principal
+
+DATA: 19/Junho/2024
+# Modelagem ágil
+- n é sinônimo de rapidez
+    - é fazer no momento certo o q precisa fazer
+    - faça lento para fazer direito
+        - faça direito para fazer bem
+            - faça bem para ser ágil
+                - faça lento para fazer ágil
+                - krl chutei o Agile Modeling kkkkkkkkk
+- mantenha tudo simples
+    - evite criar dificuldades desnecessárias no produto
+    - n coloca o framework da moda no produto se n precisa
+- nunca de disposal pro user
+    - seja humildão e sempre valide as informações e pergunte pros usuários
+    - comportamentos podem falar mais do que entregas
+- modelagens precisam de requisitos mínimos, não dá pra simplesmente liberar qualquer coisa
+    - n vamo passar trabalho pra fazer coisa minúscula
+- pequenas interações pra validação é tipo montar o código em pequenas partes e ir testando
+- código n é pra ser a única atividade
+- é bom tomar a decisao se vai manter o descartar a documentação montada pro sistema
+    - se precisar atuaizar muita documentação vai ser um problema pra tds as atualizações
+- código fonte n deveria ser a única fonte de informação existente
+- é ruim ter apenas uma pessoa modelando um projeto
+    - necessariamente em grupo
+- pequenso exemplos trazem segurança pra implementar projetos com ferramentas novas
+- todas as pessoas precisa participar das implementações e conversar
+    - decisões e discussões precisam estar no grande grupo
+    - e nada deve ser nomeado, as produções são do time - todos trabalham na mesma cooisa
+
+## Diagrama de atividades
+- também é diagrama de UML
+- representa fluxos de trabalho
+    - fala mais do que apenas o sistema
+- dividão de tarefas em um fluxo - *workflow*
+- dá pra modelar negócio
+- BPMN - Business Process Modeling Notation
+    - bem mais recursos que o diagrama de atividades
+    - automação de processos
+    - RPA - Robot Process Automation
+        - automação robótica
+    - maioria das ferramentas de automação de processos
+- foco em fluxo e representações simples
+- condição entre "estados" em colchetes
+- usualmente n saem duas setas
+    - se usa um losango pra até 3 opções de caminho
+- a barra bloqueia a próxima atividade
+    - tudo que está acima precisa estar concluído antes
+    - JOIN (o FORK é uma barra que separa)
+- dá pra fzr subatividades (símbolo dentro de um subfluxo)
+- RAIAS - Swimlane
+    - papéis específicos por raias
+    - é pra ser conciso
+    - o fluxo anda pelas raias
 
 
 ## Referências:
