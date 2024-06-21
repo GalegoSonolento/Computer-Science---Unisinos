@@ -152,4 +152,36 @@ DATA: 07/Junho/2024
 - IA usa algoritmos lógicos e pode gerar respostas diferentes dependendo de como os tokens são arranjados
     - não -deterministico
 - SQL é uma linguagem lógica por exemplo
-- 
+
+
+DATA: 21/Junho/2024
+# Concorrência
+- sistema pode montar threads
+- interação de resposta e capacidade entre as interfaces
+- dá sempre pra largar várias threads em várias pipelines pra rodar os processos mais rapidamenteo
+- precisa cuidar da latência
+    - web principalmente
+    - enquanto mexe na máquina somente é de boa
+    - threads podem aumentar e estourar o processamento em provisioning na nuvem
+    - pode ser q dispare mta thread pra uma aplicação que precisa de pouco em em local com rede de baixa banda
+- algumas aplicações podem ter concorrência à nível de I/O no código mesmo
+    - I/O é bem mais lento que acessos à memória
+    - dá pra usar API nos bancos mas elas competem por acesso
+    - frontend só com SQL mata o sistema
+        - precisa mudar as consultas todas se mudar alguma coisa
+        - usa as API pra facilidar na escalabilidade
+- os programas podem concorrer por recursos da máquina e concorrer em background
+## condições de corrida
+- mais trheads tentam usar dados compartilhados ao mesmo tempo
+    - a informações pode estar desatualizada
+    - se o programa usar threads, trate os erros propriamente
+- pra evitar esses problemas, podemos usar Locks nas variáveis
+- libera (release) depois de terminar a operação
+
+# Tratamentos de Exceções e Eventos
+- Tratamento de Exceções - Try, Catch e Finally
+- Exceções durante a execução de um código podem ser comuns por diversos fatores, tais quais instabilidade de rede, erro em algum PATH, dados incoerentes, divisão por zero, acesso a um arquivo inexistente, etc;
+O tratamento de erros evita que o programa “quebre” ou “termine” imediatamente se um erro acontecer, permitindo o programa continuar a rodar apesar dos erros;
+O bloco Try engloba o código que pode encontrar uma exceção;
+Catch é o bloco onde a exceção é tratada;
+Finally detém um bloco que sempre será executado, sem se importar com a ocorrência de exceção ou não.
