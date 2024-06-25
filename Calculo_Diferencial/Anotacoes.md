@@ -805,3 +805,19 @@ DATA: 17/Junho/2024
 - sempre faça os testes já que ela pode não inverter mesmo
 - ponto de inflexão (derivada 2°) de fato troca a concavidade
 [marcação 10]
+
+
+DATA: 24/Junho/24
+# Situações de otimização
+- contexto para otimizar um processo ou equação
+- busca do resultado ótimo
+- se existem mais de duas variáveis, existe uma restrição à operação
+- primeiro é a equação para derivação
+- A restrição monta uma equação de vínculo com a principal
+[marcaçao 1]
+[marcação 2]
+[marcação 3]
+[marcação 4]
+[marcação 5]
+[marcação 6]
+[marcação 7]
