@@ -307,7 +307,7 @@ Essa é uma das premissas de os arquivos terem extensões e cabeçalhos.
 
 DATA: 14/Mar/24
 ## Modelo de camadas
-<img src = "imgs/Modelo_de_camadas_OSl.png">
+<img src = "imgs/Modelo_de_camadas_OSI.png">
 - Modelo OSI (de referência)
 - criado por universidades européias
     - modelagem acadêmica
@@ -933,3 +933,27 @@ O funcionamento básico dos ACKS consiste em timers mesmo, se mandar e não obti
 - manda atualização de janela minúsculas
 - resolve mandando o MSS ou o tamanho da metade do buffer quando for liberada
     - é o maior pacote q ele pode mandar
+
+### Exercícios de revisão para prova
+1 - Marque V para as sentenças verdadeiras e F para as falsas. Justifique as que julgar serem falsas
+(cada resposta errada anula uma correta). ATENÇÃO: justificar não significa arrumar a sentença,
+mas sim explicar o motivo de estar errada.
+a. [ V ] O Modelo OSI possui 7 camadas e é amplamente utilizado nas redes de
+computadores.
+b. [  ] São protocolos da Camada de Aplicação: HTTP, FTP, SMTP, TCP, POP e IMAP.
+c. [ ] A utilização do GET Condicional diminui o tráfego na Internet.
+d. [ ] O POP é um protocolo utilizado por usuários nômades, que acessam seus emails em
+computadores diferentes, possibilitando que seus emails não fiquem "divididos" em
+várias máquinas.
+e. [ ] Cookies servem para informar ao usuário quando um vírus está presente no anexo
+do email.
+f. [ ] O HTTP Persistente com paralelismo é um pouco mais lento que o HTTP Não-
+persistente.
+g. [ ] As mensagens que trafegam pela rede sofrem atrasos. A ordem que os atrasos (os
+mais importantes) acontecem é PROCESSAMENTO, FILA, PROPAGAÇÃO e
+TRANSMISSÃO.
+h. [ ] Uma rede do tipo WAN abrange uma área maior do que uma rede do tipo MAN.
+i. [ ] O FTP possui 2 conexões TCP persistentes, uma para controle e uma para dados. Por
+esta razão, é dito um protocolo que trabalha "fora de banda".
+j. [ ] Para enviar anexos nas mensagens de email, o protocolo POP utiliza uma extensão
+chamada MIME.

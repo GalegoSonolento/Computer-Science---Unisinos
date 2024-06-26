@@ -90,7 +90,7 @@ public class UnoRede
                         input = doCliente.readLine();
                     /*} while (!input.isEmpty() );*/
                     // The choices were incremented to make them seem more natural (i.e not starting with 0)
-                    choiceIndex = Integer.parseInt(input.strip()) - 1;
+                    //choiceIndex = Integer.parseInt(input.strip()) - 1;
 
                     // Taking action
                     if (choiceIndex == playerdeck.size() ) {
