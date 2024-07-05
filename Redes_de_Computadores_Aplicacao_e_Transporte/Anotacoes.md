@@ -938,22 +938,344 @@ O funcionamento básico dos ACKS consiste em timers mesmo, se mandar e não obti
 1 - Marque V para as sentenças verdadeiras e F para as falsas. Justifique as que julgar serem falsas
 (cada resposta errada anula uma correta). ATENÇÃO: justificar não significa arrumar a sentença,
 mas sim explicar o motivo de estar errada.
-a. [ V ] O Modelo OSI possui 7 camadas e é amplamente utilizado nas redes de
+a. [ F ] O Modelo OSI possui 7 (6) camadas e é amplamente (poucamente) utilizado nas redes de
 computadores.
-b. [  ] São protocolos da Camada de Aplicação: HTTP, FTP, SMTP, TCP, POP e IMAP.
-c. [ ] A utilização do GET Condicional diminui o tráfego na Internet.
-d. [ ] O POP é um protocolo utilizado por usuários nômades, que acessam seus emails em
+Modelo OSI possui 6 camadas (Aplicação, Apresentação, Sessão, Transporte, Rede, Enlace/Física) e foi uma tentativa europeia para disputar com o TCP/IP, não funcionou muito.
+
+b. [ F ] São protocolos da Camada de Aplicação: HTTP, FTP, SMTP, TCP(Transporte), POP e IMAP.
+TCP é um protocolo da camada de Transporte. O resto são protocolos de aplicação.
+
+c. [ V ] A utilização do GET Condicional diminui o tráfego na Internet.
+Sim, partindo do princípio que os servidores de Proxy estarão ativos e guardarão a informação do GET usual mais perto dos usuários e o GET Condicional vai atualizar esse servidor.
+
+d. [ F ] O POP é um protocolo utilizado por usuários nômades, que acessam seus emails em
 computadores diferentes, possibilitando que seus emails não fiquem "divididos" em
 várias máquinas.
-e. [ ] Cookies servem para informar ao usuário quando um vírus está presente no anexo
+O protocolo POP é realmente um protocolo para troca de emails; todavia, ele baixa a imagem do servidor no computador e não deixa uma cópia dentro do servidor. Ótimo para segurança, mas ruim para os usuários nômades que precisam acessar em mais de um dispositivo.
+
+e. [ F ] Cookies servem para informar ao usuário quando um vírus está presente no anexo
 do email.
-f. [ ] O HTTP Persistente com paralelismo é um pouco mais lento que o HTTP Não-
+Cookies servem para salvar o estado de uma página no servidor, relacionado ao usuário. 
+Podem ser usadas para autenticação, carrinho de compras, alguma mensagem por fazer, etc.
+Salvam estados, não relacionada com vírus em email.
+
+f. [ F ] O HTTP Persistente com paralelismo é um pouco mais lento que o HTTP Não-
 persistente.
-g. [ ] As mensagens que trafegam pela rede sofrem atrasos. A ordem que os atrasos (os
+O HTTP persistente vai ser mais rápido a partindo do princípio que ele não precisa enviar várias mensagens para estabelecer conexão e envia todos os pacotes de uma vez só. Sendo paralelo envia ainda mais rápido.
+HTTP não-persistente ainda gasta tempo demais para estabelecer a conexão necessária toda vez que precisa de mais um pacote.
+
+g. [ F ] As mensagens que trafegam pela rede sofrem atrasos. A ordem que os atrasos (os
 mais importantes) acontecem é PROCESSAMENTO, FILA, PROPAGAÇÃO e
 TRANSMISSÃO.
-h. [ ] Uma rede do tipo WAN abrange uma área maior do que uma rede do tipo MAN.
-i. [ ] O FTP possui 2 conexões TCP persistentes, uma para controle e uma para dados. Por
+À princípio, saindo da máquina, a ordem dos atrasos (com os nomes) correta é: nodal (processamento), enfileiramento (fila), transmissão, propagação.
+
+h. [ V ] Uma rede do tipo WAN abrange uma área maior do que uma rede do tipo MAN.
+WAN é Wide Area Network (pode ser o mundo todo) - MAN é Metropolitan Area Network - dentro de uma cidade
+
+i. [ F ] O FTP possui 2 conexões TCP persistentes, uma para controle e uma para dados. Por
 esta razão, é dito um protocolo que trabalha "fora de banda".
-j. [ ] Para enviar anexos nas mensagens de email, o protocolo POP utiliza uma extensão
+Portas 20 e 21. Porta 21 é para Controle, essa é persistente.
+Porta 20 é para dados, não-persistente
+A porta de controle *controla* o sistema, ela pede a abertura da 21 se necessário.
+
+j. [ F ] Para enviar anexos nas mensagens de email, o protocolo POP utiliza uma extensão
 chamada MIME.
+Essa extensão MIME é utilizada como parte do SMTP (recursos adicionais).
+Permite mensagens não ASCII, arquivos binários, vídeos e dados de áudio por email.
+
+
+
+2. Um grupo de estudantes precisa criar um site na Internet para realizar um trabalho da
+faculdade. No servidor, os alunos possuem uma conta (usuário e senha) e transferem (de
+maneira remota) os arquivos sempre que precisam atualizar a página (cerca de uma vez por
+semana). Considerando o cenário descrito, quais protocolos da camada de Aplicação e
+Transporte serão acionados desde o momento em que se necessita fazer uma atualização até
+o momento em que a página é visualizada no browser? Explique onde cada protocolo entra no
+processo e a camada (da pilha de protocolos TCP/IP) em que se encontra.
+HTTPS - Aplicação - HTTP seguro para conseguirem logar no servidor e vencer a criptografia de rede (segurança da informação)
+FTP - Aplicação - Para realizarem a troca de arquivos e atualização dos dados do site à partir do momento em que estão logados no servidor.
+TCP - Transporte - Para o envio dos pacotes dos dados dos computadores locais dos estutantes até o servidor do site.
+
+Para visualização no browser:
+HTTP (ou HTTPS) - Aplicação - Aqui tanto faz, depende da segurança do site, mas à princípio seria o HTTP
+TCP - Transporte - Para envio dos dados para a rede. Nesse caso as informações precisam chegar do outro lado; confiabilidade na entrega dos dados é necessária
+
+
+
+3. A Internet oferece 2 tipos de serviço: orientado à conexão e não-orientado à conexão. Qual a principal diferença entre eles? Cite no mínimo 2 aplicações para cada um destes tipos de serviço.
+Orientado à conexão: 
+- confiabilidade da entrega dos dados
+- um estabelecimento de conexão entre cliente e servidor
+- controle de fluxo de dados para evitar "afogamento"
+- controle de congestionamento - a rede tem uma administração quando fica muito carregada
+
+- Interessante para carregar páginas da web e aplicativos de banco
+
+Não Orientado à conexão:
+- transferência de dados não é confiável
+- não cria uma conexão cliente-servidor, sem confiabilidade, controle de congestionamento, fluxo ou garatia temporal e de banda mínima
+
+- interessante para jogos online (evita engasgos) e streaming de dados (áudio e vídeo)
+
+
+4. Considere dois hosts X e Y, conectados por um único enlace com taxa de 150 Mbps. Estes dois hosts estão separados por 50 quilômetros, e a velocidade de propagação neste enlace é de 2,5 x 108 metros por segundo. O host X tem que enviar um pacote de 4 Mbits ao host B. Para qual distância d temos dprop igual a dtrans?
+R (banda do enlace) = 150Mbps
+d (distância) = 50km
+s (velocidade) = 2,5.10^8 m/s
+L (tamanho do pacote) = 4Mbits
+
+dprop = dtrans
+d/s = L/R
+d/2,5.10^8 = 4/150
+d = 4/150 * 2,5.10^8
+d = 6.666.666,667 m = 6.666,667 km -> distância necessária para dprop e dtrans serem iguais para esse tamanho de pacote e essa banda de rede
+
+
+5. Diferencie meios de transmissão guiados dos meios de transmissão não-guiados. Quais são os 3 meios de transmissão guiados mais comuns em redes? Qual destes 3 é o mais rápido?
+Os meios de transmissão guiados utilizam cabos e fibras. Os tipos mais comuns são cabos coaxais, cabos de fibra ótica e cabos de par trançado.
+
+Os meio de de transmissão não-guiados envolvem uso de ondas não passando por guias (cabos). Microondas, infravermelho, wi-fi, são todos meios não-guiados.
+
+Dos 3 meios de transmissão guiados citados, o mais rápido (e mais recente) é a fibra óptica, uma vez que utiliza a luz (maior velocidade conhecida) para realizar a comunicação binária.
+
+
+
+### Exercícios: Camada de transporte
+1. Qual a vantagem de usar UDP?
+Evita engasgos em dados que precisam ser constantemente enviados (como streaming)
+
+2. Quais os campos do cabeçalho do UDP? Descreva-os.
+Porta origem - 16bits, valor da porta de origem
+Porta destino - 16bits, valor da porta de destino
+Tamanho - contagem de octetos - diz o tamanho total do pacote incluindo cabeçalho e dados
+Checksum - soma de verificação (cabeçalho e dados) - verifica mas não recupera dados
+
+3. Como é calculado o checksum?
+Some todas as palavras (cabeçalho e dados) na origem e faça um complemento de 1.
+No destino, se a soma de todas as palavras (cabeçalho, dados e checksum) resultar em zero, pacote tá com tudo certo (pela verificação do checksum ao menos)
+
+4. Simule o envio de 3 mensagens utilizando TCP, sem a ocorrência de erros.
+SYN -------------------> Recebe SYN
+Recebe SYN e ACK <------ Envia ACK
+
+Envio pacote 1 e ACK --> Recebe pacote 1
+Recebe ACK 1 <---------- Envio do ACK 1
+
+Envio pacote 2 --------> Recebe pacote 2
+Recebe ACK 2 <---------- Envio ACK 2
+
+Envio pacote 3 --------> Recebe pacote 3
+Recebe ACK 3 <---------- Envio ACK 3
+
+FIN -------------------> Recebe FIN
+Recebe ACK e FIN <------ Envia FIN
+Envia ACK -------------> Recebe ACK
+
+5. Simule o envio de 3 mensagens utilizando TCP, onde a segunda mensagem chegou errada ao destino.
+SYN -------------------> Recebe SYN
+Recebe SYN e ACK <------ Envia ACK
+
+Envio pacote 1 e ACK --> Recebe pacote 1
+Recebe ACK 1 <---------- Envio do ACK 1
+
+Envio pacote 2 ---X----> Recebe pacote 2
+
+Envio pacote 3 --------> Recebe pacote 3 (descartado)
+Recebe ACK 3 <---------- Envio ACK 3
+
+Envio pacote 2 --------> Recebe pacote 2
+Recebe ACK 2 <---------- Envio ACK 2
+
+Envio pacote 3 --------> Recebe pacote 3 (descartado)
+Recebe ACK 3 <---------- Envio ACK 3
+
+FIN -------------------> Recebe FIN
+Recebe ACK e FIN <------ Envia FIN
+Envia ACK -------------> Recebe ACK
+
+6. Simule o envio de 3 mensagens utilizando TCP, onde o ACK da segunda mensagem não chegou ao destino.
+SYN -------------------> Recebe SYN
+Recebe SYN e ACK <------ Envia ACK
+
+Envio pacote 1 e ACK --> Recebe pacote 1
+Recebe ACK 1 <---------- Envio do ACK 1
+
+Envio pacote 2 --------> Recebe pacote 2
+Recebe ACK 2 <----X----- Envio ACK 2
+
+Envio pacote 2 --------> Recebe pacote 2 (descartado)
+Recebe ACK 2 <---------- Envio ACK 2
+
+Envio pacote 3 --------> Recebe pacote 3
+Recebe ACK 3 <---------- Envio ACK 3
+
+FIN -------------------> Recebe FIN
+Recebe ACK e FIN <------ Envia FIN
+Envia ACK -------------> Recebe ACK
+
+
+Considere 2 hosts A e B, com uma conexão TCP já estabelecida. Considere que o host A deseja enviar 17 mensagens para o host B. Sendo os pacotes numerados de 1 a 17 (considere, neste exemplo, que os números de sequência e ACKs são valores inteiros) e uma janela de tamanho 4, desenhe os diagramas para ilustrar o envio das mensagens:
+
+-> Utilizando Go-Back-N, sem erros de envio
+Host A                   Host B
+SYN -------------------> Recebe SYN
+Recebe SYN e ACK <------ Envia ACK
+
+Envio pacote 1 e ACK --> Recebe pacote 1
+Envio pacote 2 --------> Recebe pacote 2
+Envio pacote 3 --------> Recebe pacote 3
+Envio pacote 4 --------> Recebe pacote 4
+
+Recebe ACK 1 <---------- Envio do ACK 1
+Recebe ACK 2 <---------- Envio ACK 2
+Recebe ACK 3 <---------- Envio ACK 3
+Recebe ACK 4 <---------- Envio ACK 4
+
+Envio pacote 5 --------> Recebe pacote 5
+Envio pacote 6 --------> Recebe pacote 6
+Envio pacote 7 --------> Recebe pacote 7
+Envio pacote 8 --------> Recebe pacote 8
+
+Recebe ACK 5 <---------- Envio ACK 5
+Recebe ACK 6 <---------- Envio ACK 6
+Recebe ACK 7 <---------- Envio ACK 7
+Recebe ACK 8 <---------- Envio ACK 8
+
+...
+
+FIN -------------------> Recebe FIN
+Recebe ACK 17 <---------- Envio ACK 17
+Recebe ACK e FIN <------ Envia FIN
+Envia ACK -------------> Recebe ACK
+
+
+-> Utilizando Retransmissão Seletiva, sem erros de envio
+Host A                   Host B
+SYN -------------------> Recebe SYN
+Recebe SYN e ACK <------ Envia ACK
+
+Envio pacote 1 e ACK --> Recebe pacote 1
+Envio pacote 2 --------> Recebe pacote 2
+Envio pacote 3 --------> Recebe pacote 3
+Envio pacote 4 --------> Recebe pacote 4
+
+Recebe ACK 1 <---------- Envio do ACK 1
+Envio pacote 5 --------> Recebe pacote 5
+
+Recebe ACK 2 <---------- Envio ACK 2
+Envio pacote 6 --------> Recebe pacote 6
+
+Recebe ACK 3 <---------- Envio ACK 3
+Envio pacote 7 --------> Recebe pacote 7
+
+Recebe ACK 4 <---------- Envio ACK 4
+Envio pacote 8 --------> Recebe pacote 8
+
+Recebe ACK 5 <---------- Envio ACK 5
+Envio pacote 9 --------> Recebe pacote 9
+
+Recebe ACK 6 <---------- Envio ACK 6
+Envio pacote 10 --------> Recebe pacote 10
+
+Recebe ACK 7 <---------- Envio ACK 7
+Envio pacote 11 --------> Recebe pacote 11
+
+Recebe ACK 8 <---------- Envio ACK 8
+Envio pacote 12 --------> Recebe pacote 12
+
+...
+
+FIN -------------------> Recebe FIN
+Recebe ACK 17 <---------- Envio ACK 17
+Recebe ACK e FIN <------ Envia FIN
+Envia ACK -------------> Recebe ACK
+
+
+
+-> Utilizando Go-Back-N, com erro na mensagem 6
+Host A                   Host B
+SYN -------------------> Recebe SYN
+Recebe SYN e ACK <------ Envia ACK
+
+Envio pacote 1 e ACK --> Recebe pacote 1
+Envio pacote 2 --------> Recebe pacote 2
+Envio pacote 3 --------> Recebe pacote 3
+Envio pacote 4 --------> Recebe pacote 4
+
+Recebe ACK 1 <---------- Envio do ACK 1
+Recebe ACK 2 <---------- Envio ACK 2
+Recebe ACK 3 <---------- Envio ACK 3
+Recebe ACK 4 <---------- Envio ACK 4
+
+Envio pacote 5 --------> Recebe pacote 5
+Envio pacote 6 ---x----> Recebe pacote 6
+Envio pacote 7 --------> Recebe pacote 7 (descartado)
+Envio pacote 8 --------> Recebe pacote 8 (descartado)
+
+Recebe ACK 5 <---------- Envio ACK 5
+Recebe ACK 7 <---------- Envio ACK 7
+Recebe ACK 8 <---------- Envio ACK 8
+
+Recebe ACK 6 <---------- Envio ACK 6
+Recebe ACK 7 <---------- Envio ACK 7
+Recebe ACK 8 <---------- Envio ACK 8
+Recebe ACK 9 <---------- Envio ACK 9
+
+Recebe ACK 6 <---------- Envio ACK 6
+Recebe ACK 7 <---------- Envio ACK 7
+Recebe ACK 8 <---------- Envio ACK 8
+Recebe ACK 9 <---------- Envio ACK 9
+
+...
+
+FIN -------------------> Recebe FIN
+Recebe ACK 14 <---------- Envio ACK 14
+Recebe ACK 15 <---------- Envio ACK 15
+Recebe ACK 16 <---------- Envio ACK 16
+Recebe ACK 17 <---------- Envio ACK 17
+Recebe ACK e FIN <------ Envia FIN
+Envia ACK -------------> Recebe ACK
+
+
+
+
+-> Utilizando Retransmissão Seletiva, com erro na mensagem 6
+Host A                   Host B
+SYN -------------------> Recebe SYN
+Recebe SYN e ACK <------ Envia ACK
+
+Envio pacote 1 e ACK --> Recebe pacote 1
+Envio pacote 2 --------> Recebe pacote 2
+Envio pacote 3 --------> Recebe pacote 3
+Envio pacote 4 --------> Recebe pacote 4
+
+Recebe ACK 1 <---------- Envio do ACK 1
+Envio pacote 5 --------> Recebe pacote 5
+
+Recebe ACK 2 <---------- Envio ACK 2
+Envio pacote 6 ---X----> Recebe pacote 6
+
+Recebe ACK 3 <---------- Envio ACK 3
+Envio pacote 7 --------> Recebe pacote 7
+
+Recebe ACK 4 <---------- Envio ACK 4
+Envio pacote 8 --------> Recebe pacote 8
+
+Recebe ACK 5 <---------- Envio ACK 5
+Envio pacote 9 --------> Recebe pacote 9
+
+Envio pacote 6 --------> Recebe pacote 6
+
+Recebe ACK 7 <---------- Envio ACK 7
+
+Recebe ACK 8 <---------- Envio ACK 8
+
+Recebe ACK 9 <---------- Envio ACK 9
+Envio pacote 10 --------> Recebe pacote 10
+
+...
+
+FIN -------------------> Recebe FIN
+Recebe ACK 17 <---------- Envio ACK 17
+Recebe ACK e FIN <------ Envia FIN
+Envia ACK -------------> Recebe ACK
