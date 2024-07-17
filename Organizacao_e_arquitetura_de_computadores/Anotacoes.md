@@ -378,6 +378,19 @@ DATA: 11/Junho/2024
 - o limite de clock da tecnologia de silício existente hj são 5GHz (literalmente)
     - até dá pra ultrapassar mas precisa cuidar mto pra n queimar e perder informações
 
+## Taxonomia de Flynn
+A classificação de Flynn (1972) é a mais utilizada. Ele se
+baseia nas possíveis unicidade e multiplicidade dos fluxos de
+instruções e de dados para definir quatro tipos de arquiteturas:
+- SISD (Single Instruction Stream, Single Data Stream):
+computadores sequenciais
+- SIMD (Single Instruction Stream, Multiple Data Streams):
+computadores vetoriais e matriciais
+- MISD (Multiple Instruction Streams, Single Data Stream):
+não existem (HENNESSY et al., 2003; STALLINGS, 2002)
+- MIMD (Multiple Instruction Streams, Multiple Data Streams):
+arquiteturas com múltiplos processadores independentes
+
 ## Processamento Paralelo
 - 2 ou mais processadores simultaneamente reslvendo o mesmo problema
     - n só montar 2 pc na rede
