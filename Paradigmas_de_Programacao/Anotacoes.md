@@ -100,11 +100,18 @@ valor em variável
 
 DATA: 07/Junho/2024
 # Progamação imperativa
+Esse paradigma foi um dos primeiros a serem estruturados na computação e, logicamente, desenvolvem sequencialmente.Tanto que esses programas também podem ser chamados de *procedurais*.
+
 - paradigma de programação
 - precisava cuidar de estados de variável
 - multiprocedural com procedimentos mecânicos
 - primeiro paradigma (shells ão baseados nisso)
-## tempo de vida
+
+## Tempo de vida
+As variáveis aqui também tem tempo de vida relacionado à memória. Esses tempos estão relacionados à alocação e liberação do espaço de memória utilizado para guardar determinada variável.
+Algumas variáveis podem ser vinculadas à uma unidade de memória antes do programa rodar (*estáticas*) e outras surgem dentro do porgrama e morrem logo após o término da execução do programa (*dinâmicas da pilha*).
+
+
 - alocação e liberação é montada pelo desenvolvedor
 - precisa entregar os tempos de vida na hora de escrever os projetos
     - definição de escopos prioritária
@@ -115,14 +122,22 @@ DATA: 07/Junho/2024
     - variáveis do Heap
         - explícitas
             - malloc vetor e tamanho dele e free - libera mesmo
+            - alocadas e liberadas por comandos específicos
         - implícitas
+            - a linguagem faz tudo para o programador
             - gerenciamento automático
             - Garbage Collector
             - pra alterações aqui precisa de dump e uma mão pra mexer e configurar
 - controle de fluxo é sempre por funções matemáticas
-- 
-
 - A facilidade de encapsulamento é bastante absurda quando expandida a niveis maiores
+- Esse tpo de linguagem é algumas vezes incluso nas linguagens declarativas ou de OOO.
+- operadores podem ser único operando, binário, dois operandos,
+ou ternário, três operandos
+    - O perl funciona como exceção, tendo alguns operandos pré-fixados (prefix)
+- Nessas linguagens os operadores podem ter mais de uma função dependendo do contexto (como o '+')
+- funções imperativas podem ter estados, retorno limitado de tipos, controle de fluxo, etc. sendo bem mais expansíveis que funções matemáticas
+- um dos problemas é a manutenabilidade e dificuldade em explicar *o que* as funções fazem
+- São Turing completas se suportarem inteiros, operadores aritméticos básicos, atribuições, sequenciamento, laços e desvios condicionais
 
 # Programação Funcional
 - esquemas matemáticos
