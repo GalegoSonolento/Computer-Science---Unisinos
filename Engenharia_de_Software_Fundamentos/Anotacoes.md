@@ -727,6 +727,44 @@ Tudo isso é bastante interessante, mas agora os casos de uso acabaram de ficar 
     - uma vez que o cenário entrega um norte padrão
     - os testes derivam do fluxo principal
 
+DATA: 12/Junho/2024
+# Diagrama de Estados
+Objetos dentro do software se encontram em *estados* particulares, assim como objetos no mundo real (um semáforo ou uma jarra de suco).
+Ações externas a esse objeto o fazem mudar de estado por meio de *transições*.
+Essas relações podem ser desenhadas para um software utilizando o *diagrama de transição de estados* (DTE) - escrito em UML.
+
+## Estado
+Um estado é uma condição regular do sistema dada uma determinada situação.
+O estado tem algumas características simples:
+<img src='imgs/Diagrama_de_estados_simples.png'>
+
+## Transições
+É uma linha de conexão entre os estados e se dá por meio de um parâmetro e um evento associado.
+
+### Eventos
+Podem ser dos mais diversos tipos, com alguns exemplos sendo:
+– Evento de chamada: recebimento de uma mensagem de outro objeto.
+– Evento de sinal: recebimento de um sinal.
+– Evento temporal: passagem de um intervalo de tempo predefinido.
+– Evento de mudança: uma condição que se torna verdadeira.
+
+## Condição de guarda
+Coloca um parâmetro (ou *treshold*) para evitar o disparo desenfreado a transição.
+Essa condição pode ser baseada nos parâmetros passados no evento.
+Uma transição sem esse guarda sempre ativa quando a situação surge.
+
+## Ações e atividades
+Assim como as classes em prog OOO, aqui os estados também podem ter ações e/ou atividades (usos do estado mesmo)
+- Ação - não pode ser intorrompida no meio
+- Atividade - sempre acontece, precisa ser interrompida para o programa continuar com a execução
+
+## Ponto de junção
+É uma bifurcação dos fluxos de diagrama - ao depender da resposta de uma condição da transiçao, o programa pode tomar caminhos diferentes.
+
+## Resumo da notação
+<img src='imgs/Resumo_da_notacao_de_diagrama_de_estados.png'>
+Cabe lembrar que é sempre um bom começo ir para os casos de uso antes de montar um diagrama de estados e que nem todas as classes do programa precisam de um diagrama, apenas aquelas com um comportamento muito dinâmico.
+
 DATA: 19/Junho/2024
 # Modelagem ágil
 - n é sinônimo de rapidez
