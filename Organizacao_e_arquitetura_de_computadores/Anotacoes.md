@@ -453,6 +453,16 @@ arquiteturas com múltiplos processadores independentes
         - se alguns nós falharem o sistema completo não cai
 
 ## Cluster
+É um grupo de computadores completos/autônomos
+(usualmente chamados nós) interconectados, que podem
+trabalhar juntos, como um recurso de computação unificado,
+criando a ilusão de uma máquina única.
+Os nós são geralmente conectados através de uma porta de E/S
+(geralmente interfaces de rede) de alto desempenho.
+Atualmente eles são utilizados com sistemas gerenciadores de
+bancos de dados, com servidores WEB e, principalmente, para
+processamento. paralelo.
+
 - Divisão de tarefas entre máquinas completas
 - as máquinas são nós
 - em tese n tem limite de nós
@@ -565,3 +575,7 @@ arquiteturas com múltiplos processadores independentes
     - escalonamento
     - contâiners funcionam como clusteres
 - é insatalado e já pode sair rodando
+
+
+### Referências
+- D. A. Patterson e J.L. Henessy, Computer Organization and Design: The Hardware/Software Interface, Morgan Kauffman, 5° edição, 2013.
