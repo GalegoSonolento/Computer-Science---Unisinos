@@ -156,6 +156,11 @@ ou ternário, três operandos
     - chama a função lambda e passa parâmetros pra ela
 - é bastante interessante por ser otimizável, fácil de ler, fácil manutenção, baixa especialidade
     - fazer mais com menos linhas facilita
+- paradigma bastante utilizado para computação de inteligência artificial
+- Brevidade na aprendizagem e escrita (manual curtíssimo)
+- geração de programas mais legíveis e confiáveis
+- **Heskell** é uma linguagem funcional bastante difundida
+- linguagem C implemente funcionalidade
 
 # Programação lógica
 - declarativa
@@ -167,6 +172,13 @@ ou ternário, três operandos
 - IA usa algoritmos lógicos e pode gerar respostas diferentes dependendo de como os tokens são arranjados
     - não -deterministico
 - SQL é uma linguagem lógica por exemplo
+- bastante utilizado em LLM's
+## Backtracking
+1.Escolha: Selecione uma opção ou faça uma escolha que parece ser promissora.
+2.Exploração: Tente expandir essa escolha e ver se leva a uma solução completa.
+3.Verificação: Verifique se a escolha atual levou a uma solução viável.
+4.Retrocesso: Se a escolha atual não leva a uma solução viável, retroceda para a
+escolha anterior e tente uma alternativa diferente.
 
 
 DATA: 21/Junho/2024
