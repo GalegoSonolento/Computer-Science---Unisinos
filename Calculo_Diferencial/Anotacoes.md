@@ -755,6 +755,7 @@ Tenha em mente que a notação pode se alterar (y', y'', y''', y^4, ...)
 
 DATA: 17/Junho/2024
 ## Aplicações da Derivada - Coeficiente angular da reta tangente
+Em tese a derivada serviria para entrgar o ponto na tangente de um gráfico que formaria uma reta. Reza a lenda que Newton utilizou isso para cálculos de movientos planetários
 - para ter a equação da reta tangente n dá só pra ter o coeficiente angular (derivada)
     - ainda precisa do resto
 - pra isso serve a equação da reta tangente a f(x) em (X_0, Y_0)
@@ -763,12 +764,16 @@ DATA: 17/Junho/2024
     - tangente ao ponto sempre
 
 ### exemplos
-[marcação 1]
-[marcação 2]
-[marcação 3]
-[marcação 4]
+<img src="imgs/Aula_15_exemplo_tangente_1.png">
+<img src="imgs/Aula_15_exemplo_tangente_3.png">
+<img src="imgs/Aula_15_exemplo_tangente_5.png">
 
-## Crescimento, decrescimento e concavidade
+## Aplicações da derivada em crescimento, decrescimento e concavidade
+Um dos pontos de estudo aqui é a taxa de variação instantânea (que Newton usava de delta).
+As definições dependem do espaço da função, em tese ela pode ser todas ao mesmo tempo, em pontos diferentes.
+
+**Definição:** Sendo x a variável independente da função f, denominamos *ponto crítico* (mudança de direção) o ponto do domínio de f em que f'(x) = O ou f não é diferenciável. Em particular, se o ponto crítico x é tal que f'(x) = O, dizemos que x é um *ponto estacionário* (realmente não é possível definir apenas uma reta) de f.
+
 - intervalo de crescimento e descrescimento é intervalo de tempo
 - pontos críticos são os pontos onde a função pode trocar de crescente pra decrescente e vice-versa
     - é a derivada igualada a zero
@@ -781,11 +786,15 @@ DATA: 17/Junho/2024
     - mexe nas concavidades da função
 
 ### exemplo
-[marcação 5]
+<img src="imgs/Aula_15_exemplo_direcao_1.png">
 - a função apenas troca o sentido (crescimento ou descrescimento) nos pontos críticos
-[marcação 6]
 
 ### Concavidade
+**Teorema**: Seja f duas vezes diferenciável em um intervalo aberto I.
+a) Se f"(x) > O para cada valor de x em I, então f é côncava para cima em I.
+b) Se f"(x) < O para cada valor de x em I, então f é côncava para baixo em I.
+Sim, os resultados precisam de derivada de nível 2.
+
 - baseada na derivada segunda
 - se positiva
     - concavidade pra cima
@@ -795,22 +804,28 @@ DATA: 17/Junho/2024
 - exatamente no ponto de inflexão a função tem os dois comportamentos, logo, tem nenhum
     - pode-ser assumir que os valores são 0 mesmo
 
-#### exemplos
-[marcação 7]
-[marcação 8]
+#### Ponto de inflexão
+- É o ponto onde a concavidade inverte.
+- semelhante aou ponto crítico
 
 ### Extremos relativos
+**Definição**: Dizemos que uma função f tem um máximo relativo em X_0 se houver um intervalo aberto I contendo X_0 no qual f(X_0) é o maior valor, isto é, f(X_0) f(x) para todo x em I.
+Analogamente, dizemos que f tem um mínimo relativo em X_0 se houver um intervalo aberto I contendo X_0 no qual f(X_0) é o menor valor, isto é, f(X_0) f(x) para todo x em I. Quando f tiver um máximo ou mínimo relativo em X_0, se diz que f possui um extremo relativo em X_0.
+
 - classificação de pontos críticos basicamente
 - são sempre neles que as funções invertem
     - isso não significa que a função vai realmente trocar ali
 - é aqui que se aplica o teste da derivada primeira
 
 #### exemplos
-[marcação 9]
+<img src="imgs/Aula_15_teste_da_derivada_primeira.png">
 - sempre faça os testes já que ela pode não inverter mesmo
 - ponto de inflexão (derivada 2°) de fato troca a concavidade
-[marcação 10]
 
+### Exercícios
+<img src="imgs/Aula_15_exercicios_1.png">
+<img src="imgs/Aula_15_exercicios_2.png">
+<img src="imgs/Aula_15_exercicios_3.png">
 
 DATA: 24/Junho/24
 # Situações de otimização
