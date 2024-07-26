@@ -767,6 +767,15 @@ Cabe lembrar que é sempre um bom começo ir para os casos de uso antes de monta
 
 DATA: 19/Junho/2024
 # Modelagem ágil
+Tenha em mente que a modelagem ágil foi montada com o intuito não de ser super rápida, mas sim de evitar problemas constantes em outros tipos de modelos.
+Lembre-se de que não necessariamente fazer algo lentamente é lerdo, o problema real está em fazer rápido e de qualquer jeito, que resulta em mais manutenção posteriormente.
+
+- valores
+    - comunicação
+    - simplicidade
+    - feedback
+    - coragem
+    - humildade
 - n é sinônimo de rapidez
     - é fazer no momento certo o q precisa fazer
     - faça lento para fazer direito
@@ -795,6 +804,9 @@ DATA: 19/Junho/2024
     - e nada deve ser nomeado, as produções são do time - todos trabalham na mesma cooisa
 
 ## Diagrama de atividades
+Apesar de ser bastante semelhante à um diagrama de estados, o diagrama de atividades se concentra mais em mostrar como chegar nos estados que nos estados em si.
+Mas sim, a montagem é bastante semelhante.
+
 - também é diagrama de UML
 - representa fluxos de trabalho
     - fala mais do que apenas o sistema
@@ -829,3 +841,16 @@ DATA: 19/Junho/2024
     – Disponível em: https://cucumber.io/docs/gherkin
 ● Utilizando UML e Padrões (Craig Larman) 3ª. Edição.
 ● Princípios de Análise e Projeto de Sistemas com UML. 2ª. Edição. Eduardo Bezerra.
+● AMBLER, Scott W. **Agile modeling: effective practices for extreme programming and the unified process**. New York: John Wiley & Sons, 2002. xvi, 384 p. ISBN 0-471-20282-7
+● **Agile Modeling** 
+    - http://agilemodeling.com
+● The Values of Agile Modeling (AM) 
+    – http://agilemodeling.com/values.htm
+● An Introduction to Agile Modeling 
+    – http://agilemodeling.com/essays/introductionToAM.htm
+● Agile Modeling: Where Do I Start? 
+    – http://agilemodeling.com/essays/whereDoIStart.htm
+● The Principles of Agile Modeling 
+    – http://agilemodeling.com/principles.htm
+● Material Prof. Ricardo Roberto de Lima, UNJPE
+● Meterial Prof. Ricardo Melo Bastos, PUC-RS
