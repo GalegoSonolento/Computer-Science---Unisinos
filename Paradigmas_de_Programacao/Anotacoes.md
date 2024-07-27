@@ -183,9 +183,12 @@ escolha anterior e tente uma alternativa diferente.
 
 DATA: 21/Junho/2024
 # Concorrência
+Concorrências podem ser tanto físicas (mais de um processador) quanto lógicas (várias threads acontecendo no mesmo processador)
+Várias vezes é possível notar que concorrência é uma boa escolha de design pois, além de aumentar a velocidade de execução de programas no geral, permite que vários rodem em paralelo, permitindo *multitasking*
+
 - sistema pode montar threads
 - interação de resposta e capacidade entre as interfaces
-- dá sempre pra largar várias threads em várias pipelines pra rodar os processos mais rapidamenteo
+- dá sempre pra largar várias threads em várias pipelines pra rodar os processos mais rapidamente
 - precisa cuidar da latência
     - web principalmente
     - enquanto mexe na máquina somente é de boa
@@ -198,17 +201,30 @@ DATA: 21/Junho/2024
         - precisa mudar as consultas todas se mudar alguma coisa
         - usa as API pra facilidar na escalabilidade
 - os programas podem concorrer por recursos da máquina e concorrer em background
-## condições de corrida
+- podem ocorrer em:
+    - instrução (várias instruções simultâneas) - pipelining
+    - sentença (duas ou mais sentenças da linguagem fonte simultaneamente)
+    - unidade (2 ou + unidades do mesmo programa ao mesmo tempo)
+    - programa (2 ou + programas simultâneos)
+## Condições de corrida
+A competição pelo uso do mesmo recurso pode resultar em condições de corrida, as quais tendem a gerar erros de atualização de variáveis ou de elementos.
+Em um exemplo simples, uma variável de soma somada por x threads, pode chegar em um resultado inesperado, pois as threads podem simplesmente reescreer a mensagem uma da outra.
+Uma solução simples para esse problema é a utilização de locks/travas para evitar usos indevidos em momentos inoportunos.
+
 - mais trheads tentam usar dados compartilhados ao mesmo tempo
     - a informações pode estar desatualizada
     - se o programa usar threads, trate os erros propriamente
 - pra evitar esses problemas, podemos usar Locks nas variáveis
 - libera (release) depois de terminar a operação
+### Deadlocks
+- tipos interessantes de condições de corrida que, por criarem uma série de dependências umas com as outras, impedem as primeiras de continuarem executando
+- sistema inteiro travado
+- uma das maneiras de garantir a prevenção é utilizar uma lista de hierarquias entre as funções (threads)
 
 # Tratamentos de Exceções e Eventos
 - Tratamento de Exceções - Try, Catch e Finally
 - Exceções durante a execução de um código podem ser comuns por diversos fatores, tais quais instabilidade de rede, erro em algum PATH, dados incoerentes, divisão por zero, acesso a um arquivo inexistente, etc;
-O tratamento de erros evita que o programa “quebre” ou “termine” imediatamente se um erro acontecer, permitindo o programa continuar a rodar apesar dos erros;
-O bloco Try engloba o código que pode encontrar uma exceção;
-Catch é o bloco onde a exceção é tratada;
-Finally detém um bloco que sempre será executado, sem se importar com a ocorrência de exceção ou não.
+- O tratamento de erros evita que o programa “quebre” ou “termine” imediatamente se um erro acontecer, permitindo o programa continuar a rodar apesar dos erros;
+- O bloco Try engloba o código que pode encontrar uma exceção;
+- Catch é o bloco onde a exceção é tratada;
+- Finally detém um bloco que sempre será executado, sem se importar com a ocorrência de exceção ou não.
