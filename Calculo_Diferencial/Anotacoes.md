@@ -829,15 +829,16 @@ Analogamente, dizemos que f tem um mínimo relativo em X_0 se houver um interval
 
 DATA: 24/Junho/24
 # Situações de otimização
+Ao nível matemático esses problemas pretendem mostrar os extremos valores que uma dada situação pode resultar em um determinado período de tempo.
+É basicamente um sistema matemático com extra-steps.
+
+<img src="imgs/Aula_16_exemplo_otimizacao.png">
+
 - contexto para otimizar um processo ou equação
 - busca do resultado ótimo
 - se existem mais de duas variáveis, existe uma restrição à operação
 - primeiro é a equação para derivação
 - A restrição monta uma equação de vínculo com a principal
-[marcaçao 1]
-[marcação 2]
-[marcação 3]
-[marcação 4]
-[marcação 5]
-[marcação 6]
-[marcação 7]
+
+### Exercícios
+<img src="imgs/Aula_16_exercicios.png">
