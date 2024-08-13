@@ -3,6 +3,12 @@
 
 DATA: 12/Aug/24
 # Introdução - Complexidade de algoritmos, Recursos e Utilização de recursos por algoritmos
+Algoritmos são *scripts*, ou passos, para a resolução de um problema qualquer (alguns são conhecidos e outros não).
+Os algoritmos precisam resover problemas, certo, mas classificar um problema geralmente é um tanto complicado, por isso eles são quebrados em *instâncias*, e é nelas que os algoritmos irão agir.
+Usualmente, para um algoritmo ser bem sucedido em sua função, ele precisa ser *correto* (resolve o problema da melhor forma para todas as instãncias), *eficiente* (usa *espaço* - e.g. memória - e *tempo* - literalmente - de forma decente - e.g. não explode o uso de RAM ou demora anos para finalizar).
+
+--> parei em **propriedades desejáveis**
+
 - normalmente soluções menos eficientes tem mais facilidade de implementação
     - dificilmente acontece o contrário
     - por isso análise de complexidade é necessária
@@ -56,5 +62,5 @@ Contra:
 
 
 ## Perguntas
-- como q faz pra ler esses livros enormes?
-- mesmo que a solução funcione, ela ainda pode ser errada?
+- como q faz pra ler esses livros enormes? - Realmente precisa ler os capítulos. De preferência um por vez.
+- mesmo que a solução funcione, ela ainda pode ser errada? - Sim, caso ela não seja efetiva em todos os casos, assim como exposto em aula sobre as necessidades básicas de um algortimo.
