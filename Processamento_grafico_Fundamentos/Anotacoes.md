@@ -1,5 +1,6 @@
 -> anotações da cadeira
 
+DATA: 13/Aug/24
 -> Procure baixar o OpenGL 3.3 -> Blender
 
 - A disciplina vai ser baseada em OpenGL para fins de aprendizado e resolução de pequenos problemas
