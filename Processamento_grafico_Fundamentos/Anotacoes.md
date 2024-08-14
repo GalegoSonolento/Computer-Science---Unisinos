@@ -1,5 +1,7 @@
 -> anotações da cadeira
 
+-> Procure baixar o OpenGL 3.3 -> Blender
+
 - A disciplina vai ser baseada em OpenGL para fins de aprendizado e resolução de pequenos problemas
   - mais para frente o correto seria usar o Vulkan
 - OpenCV é um tanto mais amigável que o OpenGL
@@ -26,4 +28,25 @@
   - em visão computacional o input é a imagem e o output são as informações para tratamento
     - aqui entra em parte na realidade aumentada
     - fica mais próximo de design de interação
+
+# Computação gráfica
+- CG
+- representação de objetos e modelos usam vértices/pontos -> coordenadas no espaço
+  - normalmente associados no modelo 3D, mas o 2D tbm usa obviamente
+- a junção dessas coordenadas formam os polígonos
+  - normalmente a primitiva é na forma de um triângulo
+  - rotacionamento e planos são formados com esses elementos
+  - álgebra linear é usada conceitualmente
+- a origem do sistema cartesiano é 0,0,0 -> canto do sistema
+- é interessante atrelar as unidades dos operadores 3D (como o Blender) pra unidades reais (e.g. metros) para coerência
+- em geral para os cálculos, arestas não são tão utilizadas
+  - em processamento gráfico em algumas situações as arestas podem ser úteis
+- no contexto de CG, polígono e face é a mesma coisa
+- o fato de triângulos serem o polígono com menor número de vértices, ele é bastante usado para implementações efetivas (mais estáveis e baratas computacionalmente)
+  - algoritmos mais efetivos utilizam malhas triangularizadas de polígonos
+- técnica de subdivisão de superfícies
+  - aumenta a quantidade de polígonos e procura quadruplicar a quantidade de polígonos
+  - fica cada vez mais *smooth*
+  - só precisa cuidar pra não explodir a quantidade de polígonos no modelo
+## Pipeline gráfico
 - 
