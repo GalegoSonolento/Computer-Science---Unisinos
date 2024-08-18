@@ -1,4 +1,6 @@
 -> anotações da cadeira
+-> **Repositório de exemplos:** https://github.com/fellowsheep/PG2024-2
+Será extremamente importante e de boa venturança usar esse repositório
 
 DATA: 13/Aug/24
 -> Procure baixar o OpenGL 3.3 -> Blender
@@ -18,6 +20,18 @@ DATA: 13/Aug/24
 • https://github.com/fellowsheep/PG2024-2 -> esse é um repositório ótimo com alguns tutoriais pra settar o ambiente de desenvolvimento
 
 # Processamento gráfico
+**"É o processamento de informações visuais, tanto para geração de imagens, quanto obtenção de dados.**
+Processamento gráfico (ou PG) está presente em diversas áreas da computação moderna (e baseia a maior parte dos games e entretenimento modernos).
+É bastante possível identificar duas grandes áreas:
+- Processamento de imagens - tratamento e visão computacional
+- Computação gráfica - síntese e *pipeline* (processo/cadeia de *renderização* tanto 2D quanto 3D).
+Tenha em mente a diferença fundamental entre processamento e tratamento
+- *Processamento* - extração de dados de uma imagem
+  - passa por um processamento computacional de análise dos pontos da imagem a fim de (tentar) compor dados à partir dela - detecção facial, placas de veículos, etc.
+  - esse processamento é chamado de visão computacional a partir do momento que as informações da imagem são "enxergadas" pelo computador
+  - identificação de marcações também permitem tecnologias de realidade aumentada (AR) - sim, os filtros de instagram são AR
+- *Tratamento* - alteração e composição da imagem, sem retirar dados (Photoshop)
+
 - Processamento pra gerar ou extrair info de imagens (grande área)
 - usado pra placas de carro por exemplo
 - as áreas de processamento gráfico mudam conforme a expressão
@@ -31,6 +45,21 @@ DATA: 13/Aug/24
     - fica mais próximo de design de interação
 
 # Computação gráfica
+O processo de *computação gráfica* *(CG) é basicamente sintetizar todos os dados para geração de uma imagem. Se forçar um pouco a barra, dá para dizer que é o processo inverso do processamento gráfico.
+Uma modelagem em CG tem algumas *primitivas* básicas. Sempre será uma coordenanda de 3 pontos. Tenha em mente que CG utiliza o espaço 3D para modelagem das figuras e, para tanto, tem 3 eixos (x, y, z), sempre nessa ordem. Seguindo nessa ideia, podemos montar polígonos com esses pontos de coordenada e montar malhas (*Mesh*) a fim de gerar as figuras.
+Um fato interessante é que preferencialmente se gera figuras com triângulos, já que possui menos pontos para gerá-lo (ferramentas inclusive mostram opções de "trianguloficar" os modelos 3D).
+- *Frame buffer*: É uma porção de memória usada para criar o
+pixel map que será enviado para o monitor.
+- *Double buffering*: técnica que utiliza um buffer auxiliar
+para criar imagem enquanto um buffer é desenhado
+(alternância). Usado para evitar o flicker (tremer a
+imagem)
+*Game loop* é um conceito de pipeline que sempre *atualiza*, *renderiza* e *sincroniza* dados e processamento de imagem para lançar ao I/O (normalmente o monitor) - mais sobre isso na sequência.
+
+## Renderização
+- Essa técnica utiliza cálculos (normalmente vetoriais) para transposição do que seria um ambiente 3D (se for uma renderização 3D) para um plano 2D (tela do monitor - matriz - e o processamenmto de uma GPU). Todo o cálculo de luz e como ela interage com o ambiente, além da tradução para a vizualização em matriz, é feita nessa fase.
+
+
 - CG
 - representação de objetos e modelos usam vértices/pontos -> coordenadas no espaço
   - normalmente associados no modelo 3D, mas o 2D tbm usa obviamente
@@ -51,3 +80,8 @@ DATA: 13/Aug/24
   - só precisa cuidar pra não explodir a quantidade de polígonos no modelo
 ## Pipeline gráfico
 - 
+
+
+### Referências
+- Real-time rendering - 4th ed. / 2018 - ( Livro eletrônico ) 
+  - https://pdfroom.com/books/real-time-rendering/XDkgVjmNg9B -> aparentemente o leitor de PDF funciona
