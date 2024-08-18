@@ -85,3 +85,5 @@ imagem)
 ### Referências
 - Real-time rendering - 4th ed. / 2018 - ( Livro eletrônico ) 
   - https://pdfroom.com/books/real-time-rendering/XDkgVjmNg9B -> aparentemente o leitor de PDF funciona
+ wow
+ 
