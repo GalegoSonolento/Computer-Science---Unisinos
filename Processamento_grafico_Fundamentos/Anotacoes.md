@@ -78,7 +78,44 @@ imagem)
   - aumenta a quantidade de polígonos e procura quadruplicar a quantidade de polígonos
   - fica cada vez mais *smooth*
   - só precisa cuidar pra não explodir a quantidade de polígonos no modelo
+  - os pontos não podem ser colineares
+### game loop
+- desenho do processo gráfico
+- processamento mais simples das entradas dos usuários - detecção de eventos
+- render é a fase onde o processamento realmente acontece - faz parte do gameloop para computar as alterações realizadas no programa
+### Renderização
+- render
+- ainda é informação visual sem a transposição pra pixel
+- imagens são dados bidimensionais
+- wireframe view - aramado - estrutura básica poligonal
+- solid view - geometria sobre os polígonos com shadding (shaders - sombreamento)
+- rendering - iluminação e pós-processamento - mais próximo da imagem final - ainda aparece debugs
+- render usa vetores dos objetos para a tela e calcular o direcionamento dos raios de luz
+  - inclusive, alguns tipos de material precisam guardar informações de outros objetos - a maioria dos cálculos são feitos na hora - dependendo da complexidade da imagem, uma renderização pode levar horas
+
+
+DATA: 20/Agosto/24
 ## Pipeline gráfico
+- sequência de etapas com entrada de dados - processamento por etapas
+- idealmente os processos podem ser paralelizados (como em uma pipeline padrão de processador)
+- o gargalo (bottleneck) da pipeline é o processo mais lento - uma peça de hardware mais fraca pode desacelerar o processo
+- estágio de aplicação ainda está contido no código - a maioria das informações e bufferizações acontece aqui
+- processamento geométrico monta os vértices e começa a geração de polígonos
+- depois de todo o posicionamento correto na cena, entra a rasterização
+  - tamanho da imagem
+  - resolução
+  - posicionamento à partir da posição da câmera
+  - aplica algoritmos específicos para diferentes fases
+  - os prépixels (fragmentos) são settados
+  - input - vértice montados
+  - output - fragmentos
+- pixel processing pega os fragmentos e processa
+  - variando com as informações passadas À ele, ele gera a imagem de verdade
+  - dá pra ter mais de um frag pra mesma posição de pixel
+    - aqui ele dá um blend e entende a cor final do pixel
+- aí dá o resultado final - frame buffer 
+  - dá pra meter uns efeito em cima ainda
+  - isso aqui é o pós-processamento
 - 
 
 
@@ -86,4 +123,8 @@ imagem)
 - Real-time rendering - 4th ed. / 2018 - ( Livro eletrônico ) 
   - https://pdfroom.com/books/real-time-rendering/XDkgVjmNg9B -> aparentemente o leitor de PDF funciona
  wow
- 
+
+ ## Perguntas
+ - o ray tracing é uma camada a mais no processo de rendering?
+ - o pipeline é do rendering? cada vez que se renderiza se usa o pipeline grafico?
+ - 
