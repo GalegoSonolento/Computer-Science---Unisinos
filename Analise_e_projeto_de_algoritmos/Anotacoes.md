@@ -1,5 +1,6 @@
 -> Anotações da cadeira
 -> disciplina baseada no livro do CORMEN - Algoritmos: teoria e prática
+-> Professora: Andriele Busatto do Carmo
 
 DATA: 12/Aug/24
 # Introdução - Complexidade de algoritmos, Recursos e Utilização de recursos por algoritmos
@@ -77,6 +78,100 @@ Contra:
 ## Perguntas
 - como q faz pra ler esses livros enormes? - Realmente precisa ler os capítulos. De preferência um por vez.
 - mesmo que a solução funcione, ela ainda pode ser errada? - Sim, caso ela não seja efetiva em todos os casos, assim como exposto em aula sobre as necessidades básicas de um algortimo.
+
+
+DATA:19/Aug/24
+# Introdução à Análise de Algoritmos: modelos RAM, análise de melhor, pior e caso médio, análise assintótica, propriedades de notações assintóticas e taxas de crescimento de funções e relações de dominância
+- dependendo da forma de implementar, mesmo sendo o mesmo algoritmo
+    - linguagens diferentes
+    - ambientes diferentes
+    - hardware diferente
+    - todos afetam o tempo de execução do algoritmo
+## Modelo RAM
+- Random Memory Access
+- computador hipotético
+- não vincula a informação à uma máquina real
+- operações simples
+    - soma
+    - subtração
+    - atribuição
+    - ...
+    - 1 unidade de tempo na máquina hipotética
+- laços e subrotinas são compósitos de operações simples
+- armazenar 100 ou 1000 elementos
+    - é o mesmo processo, mas o espaço usado é diferente
+- não diferencia tipos de acesso de memória (RAM, disco, cache, etc)
+- memória infinita
+- conta a quantidade de operações relizadas
+    - pode ser uma label mesmo
+- análise de algoritmo não é implementação
+    - é apenas o algoritmo
+- por isso máquinas RAM não representam a realidade, só o comportamento do algoritmo
+- nesse modelo tenta-se olhar para todas as instâncias (impossível)
+    - só 3 importam
+    - pior, melhor e médio caso
+- analise dos tipos de caso precisa de alguns específico
+    - para algoritmos de ordenação
+        - já ordenado
+        - invesamente ordenado (ao contrário)
+        - aleatório
+- normalmente se monta um gráfico com a cresente do número de passos
+- análise sempre para o tamanho de N
+- se pega alguns casos médios para traçar no gráfico e a análise ser mais completa
+- a análise é sempre feita em cima do pior caso
+    - se ele for razoável, estamos bem
+    - mais *reliable* para implementações
+- sempre relacionado à instâncias do problema
+
+### Pior caos
+- executa *todas* as instruções que o compõe
+
+### Melhor caso
+- algoritmo pula alguns passos
+
+### Caso médio
+- a média de execução mesmo
+- pega o melhor e o pior e faz a média
+
+## Análise assintótica - Big Oh Notation
+- trabalhando em termos de limites
+- limites inferior e superior
+- o comportamento do algoritmo oscila bastante
+    - ele pode se comportar de formas diferentes dependendo do tamanho da entrada
+    - dificulta nomenclatura específica dos piores casos
+- n_0 = N suficientemente grande
+    - a partir daqui se mostram as curvas upper bound e lower bound
+    - a partir de n_0 a análise segura para N tendendo ao infinito
+    - é a partir de onde o upper ou lower cobre a curva da função
+- assíntota -> à medida que tende ao infinito o comportamento real e o upper bound se aproximam
+- ignora constantes multiplicativas
+- tempo constante é o que faz o algoritmo funcionar mas não é relacionado ao tamanho da entrada
+- constantes to theta são sempre maiores que zero
+    - no theta é o N_0 que serve pros 2
+- cuide a ordem de apresentação
+    - sempre a função = conjunto
+    - notação é errada matemáticamente (sinal de pertence != do de igual, mas aqui pode, azar)
+- [1 ]
+
+## Propriedades e notação
+- transitividade utiliza uma notação lógica para incluir uma função dentro do domínio de outra
+
+## Taxa de crescimento e funções e relação de dominância
+- não existe resposta ideal na vida real
+- a notação O tem uma relação de dominância dentro de um grupo
+    - quadráticas
+    - logaritmicas
+    - ...
+- tempos logarimicos normalmente estão em pesquisa binária
+- 
+
+## Pergutas
+- Não existem algoritmos que mudam o bigO dependendo da entrada/execução? - não, existe um bigO para cada ponto da função
+- O theta é a média do upper e do lower? - não, theta é a aplicação dos dois e no cenário que ambos funcionam
+- Existem valores de O não citados na aula, certo? Eles são muito específicos para serem referenciados ou por que os exemplos (ordenação) caem nos citados? - Existem, mas eles são um pouco mais complexos e não são tão pertinentes nessa altura do campeonato
+- a definição é dada olhando o algoritmo mesmo
+- constantes normalmente são maiores do que 1 (principalmente c)
+- 
 
 
 ### Referências
