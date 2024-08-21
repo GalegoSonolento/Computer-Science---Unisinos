@@ -116,7 +116,6 @@ DATA: 20/Agosto/24
 - aí dá o resultado final - frame buffer 
   - dá pra meter uns efeito em cima ainda
   - isso aqui é o pós-processamento
-- 
 
 
 ### Referências
