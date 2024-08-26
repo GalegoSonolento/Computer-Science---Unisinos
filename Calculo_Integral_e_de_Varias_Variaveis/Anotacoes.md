@@ -73,6 +73,15 @@ S [f(x) - g(x)]dx = F(x) - G(x) + C
 
 DATA: 21/Agosto/2024
 # Integração por substituição
+Todo o objetivo dessa substituição é para facilitar o cáculo. Pense que integrais muito verbosas (e.g.: S(2x+7)(x²+7x+3)^(4/3)dx) são mais complexas de vizualizar resoluções (apesar de ser possível se você for o bichão memo).
+A substituição não vai alterar a integral para sempre, apenas momentaneamente para que o cáculo seja facilitado.
+Esse processo é análogo ao da regra da cadeia, uma vez que mais processos de derivação são adicionados para chegar à um resultado.
+"Fazendo u = g(x), du = g′(x)dx e substituindo na equação acima, temos:
+∫ f (g(x)).g′(x)dx = ∫ f (u)du = F(u)+ C
+Note que o integrando tem dois fatores, um sendo a função composta e outro sendo a derivada g′(x) da função interna da composição.
+Na prática, devemos então definir uma função u = g(x) conveniente, de tal forma que a integral
+obtida seja mais simples."
+
 - Na regra da cadeia básica deriva os de fora e vai multiplicando as derivações de dentor
 - integração pega a derivada grande vai dar as funções das derivadas "aninhadas"
 - precisa identificar alguém como sendo *u* -> essa deriviação faz uma integral em função de u - aí integra normalmente
@@ -82,4 +91,3 @@ DATA: 21/Agosto/2024
 - normalmente se escolhe para *u* o que está elevado ao expoente (se houver)
 - o objetivo é uma integral mais fácil
     - se dificultar a escolha do *u* foi errada
-- 
