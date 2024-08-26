@@ -257,13 +257,162 @@ n/f(n)        | lg n     | n        | n lg n    | n2         | 2n            | n
 <img src="imgs/Anotacoes_e_exercicios_aula_2_2.png">
 <img src="imgs/Anotacoes_e_exercicios_aula_2_3.png">
 
+DATA:26/Agosto/2024
+### Exercícios
+1. Analise os trechos de código abaixo, e estime o tempo de execução para o melhor e
+pior caso de cada um:
+
+a) busca do maior valor em um array unidimensional
+1. funcao maiorValor(array[] : int) {
+2.      maior = array[0];
+3.      para i = 1 até tamanho(array)
+4.          se(maior < array[i])
+5.              maior = array[i];
+6.      retorna(maior);
+7. }
+Melhor cenário -> elemento estar na primeira posição
+Pior cenário -> elemento estar na última posição
+'#| operação | melhor caso | pior caso
+--|----------|-------------|----------
+2 | op1      | 1           | 1
+3 | op2      | n           | n
+4 | op3      | n - 1       | n - 1
+5 | op1      | 0           | n - 1
+6 | op4      | 1           | 1
+melhor caso -> T(n) = op1 + nop2 + (n-1)op3 + op4 = op1 + n(op2+op3) - op3 + op4
+pior caso -> T(n) = op1 + nop2 + (n-1)op3 + (n-1)op1 + op4 = n(op1 + op2) + (n-1)op3 + op4
+
+b) trecho de cálculo
+1. int aux1 = 1;
+2. int aux2 = 1;
+3. aux1 = aux1 * aux2;
+4. aux2 = aux2 + 1;
+5. aux2 = aux1 + 1;
+6. aux2 = aux2 + aux1;
+melhor cenário -> desimportante
+pior cenário -> desimportante
+'#| operação | melhor caso | pior caso
+--|----------|-------------|----------
+1 | op1      | 1           | 1
+2 | op1      | 1           | 1
+3 | op1,2    | 1           | 1
+4 | op1,3    | 1           | 1
+5 | op1,3    | 1           | 1
+6 | po1,3    | 1           | 1
+melhor caso -> T(n) = 6op1 + op2 + 3op3
+pior caso -> T(n) = 6op1 + op2 + 3op3
+
+c) busca sequencial em um array unidimensional
+1. funcao buscaSequencial(array[] : int, valor : int) {
+2.      achou = false;
+3.      i = 0;
+4.      posicao = -1;
+5.      enquanto i < tamanho(array) && achou == falso
+6.          se(valor == array[i]) {
+7.              achou = true;
+8.              posicao = i;
+9.          }
+10.     retorna (posicao);
+11. }
+melhor caso -> elemento procurado estar na primeira posição
+pior caso -> elemento procurado estar na última posição
+'#| operação | melhor caso | pior caso
+--|----------|-------------|----------
+2 | op1      | 1           | 1
+3 | op1      | 1           | 1
+4 | op1      | 1           | 1
+5 | op2      | 2           | n+1
+6 | op3      | 1           | n
+7 | op1      | 1           | 1
+8 | op1      | 1           | 1
+10| op4      | 1           | 1
+mehor caso -> T(n) = 5op1 + 2op2 + op3 + op4
+pior caso -> T(n) = 5op1 + (n+1)op2 + nop3 + op4 = 5op1 + n(op2 + op3) + op2 + op4
+
+d) somatório de valores em um array unidimensional
+1. funcao somatorioArray(array[] : int) {
+2.      soma = 0;
+3.      i = 0;
+4.      enquanto i < tamanho(array)
+5.          soma = soma + vetor[i];
+6.      retorna(soma);
+7. }
+melhor caso = pior caso -> ele precisa percorrer o vetor inteiro
+'#| operação | melhor caso | pior caso
+--|----------|-------------|----------
+2 | op1      | 1           | 1
+3 | op1      | 1           | 1
+4 | op2      | n+1         | n+1
+5 | op1,3    | n           | n
+6 | op4      | 1           | 1
+melhor caso -> T(n) = (n+2)op1 + (n+1)op2 + nop3 + op4 = n(op1 + op2 + op3) + 2op1 + op2 + op4
+pior caso -> T(n) = (n+2)op1 + (n+1)op2 + nop3 + op4 = n(op1 + op2 + op3) + 2op1 + op2 + op4
+
+e) somatório de valores de um array bidimensional (matriz de dimensões nxn)
+1. funcao somatorioMatriz(matriz[][] : int) {
+2.      soma = 0;
+3.      i = 0;
+4.      enquanto i < tamanho_linha(matriz[][]) {
+5.          j = 0;
+6.          enquanto j < tamanho_coluna(matriz[][]) {
+7.              soma = soma + matriz[][];
+8.              j = j + 1;
+9.          }
+10.         i = i + 1;
+11.     }
+12.     retorna(soma);
+13. }
+melhor caso = pior caso -> ele precisa percorrer a matriz inteira
+'#| operação | melhor caso | pior caso
+--|----------|-------------|----------
+2 | op1      | 1           | 1
+3 | op1      | 1           | 1
+4 | op2      | n+1         | n+1
+5 | op1      | n           | n
+6 | op2      | n²+n        | n²+n
+7 | op1,3    | n²          | n²
+8 | op1,3    | n²          | n²
+10| op1,3    | n           | n
+12| op4      | 1           | 1
+melhor caso -> T(n) = (2n²+2n+2)op1 + (n²+2n+1)op2 + (2n²+n)op3 + op4 = n²(2op1 + op2 + 2op3) + n(2op1 + 2op2 + op3) + 2op1 + op2 + op4
+pior caso -> T(n) = (2n²+2n+2)op1 + (n²+2n+1)op2 + (2n²+n)op3 + op4 = n²(2op1 + op2 + 2op3) + n(2op1 + 2op2 + op3) + 2op1 + op2 + op4
+
+#### Exercício extra
+1. Analise o trecho de código abaixo, e estime o tempo de execução para o melhor e
+pior casos:
+a) algoritmo de ordenação por inserção
+1. função OrdenaPorInserção(vetor[]:int) {
+2.      para j = 1 até tamanho(vetor) {
+3.          chave = vetor[j]
+4.          i = j - 1
+5.          enquanto i >= 0 e vetor[i] > chave { -> essa linha é um somatório
+6.              vetor[i + 1] = vetor[i]
+7.              i = i – 1
+8.          }
+9.          vetor [i + 1] = chave
+10.     }
+11. }
+melhor caso -> vetor já ordenado
+pior caso -> vetor inversamente ordenado
+'#| operação | melhor caso | pior caso
+--|----------|-------------|----------
+2 | op1      | n           | n
+3 | op2      | n-1         | n-1
+4 | op2,3    | n-1         | n-1
+5 | op4      | n-1         | n²+n
+6 | op2      | 0           | n²
+7 | op2,3    | 0           | n²
+9 | op2      | n-1         | n-1
+melhor caso -> T(n) = nop1 + 3(n-1)op2 + (n-1)op3 + (n-1)op4 = n(op1 + 3op2 + op3 + op4) - 3op2 - op3 - op4
+pior caso -> T(n) = nop1 + (2n²+3n+3)op2 + (n²+n-1)op3 + (n²+n)op4 = n²(2op2 + op3 + op4) + n(3op2 + op3 + op4) + 3op2 - op3
+
+
 ## Pergutas
 - Não existem algoritmos que mudam o bigO dependendo da entrada/execução? - não, existe um bigO para cada ponto da função
 - O theta é a média do upper e do lower? - não, theta é a aplicação dos dois e no cenário que ambos funcionam
 - Existem valores de O não citados na aula, certo? Eles são muito específicos para serem referenciados ou por que os exemplos (ordenação) caem nos citados? - Existem, mas eles são um pouco mais complexos e não são tão pertinentes nessa altura do campeonato
 - a definição é dada olhando o algoritmo mesmo
 - constantes normalmente são maiores do que 1 (principalmente c)
-- 
 
 
 ### Referências
