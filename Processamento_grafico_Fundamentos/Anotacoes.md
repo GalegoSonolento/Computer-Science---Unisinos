@@ -117,6 +117,18 @@ DATA: 20/Agosto/24
   - dá pra meter uns efeito em cima ainda
   - isso aqui é o pós-processamento
 
+DATA: 27/Agosto/24
+- Pixel Shader == Fragment Shader
+
+### Shaders
+- programas (pequenos) que implementam/definem/processam info para serem desenhados (geometrias/fragmentos) para o desenho (render) junto com a API gráfica
+  - são compilados especificamente pra rodar na placa gráfica (GPU)
+- Shading != shaders (pero no mucho)
+  - shading (fazer o sombreamento na solid view) utiliza shaders pra conseguir rodar, mas o *shading* serve como um processo maior conceitualmente
+- o compilador do código de shader é a própria API gráfica do OpenGL (GLSL) - nessa caso, se estiver utilizando outra biblioteca gráfica ela vai dar conta do recado à sua maneira
+  - GLSL é uma linguagem de Shader
+- 
+
 
 ### Referências
 - Real-time rendering - 4th ed. / 2018 - ( Livro eletrônico ) 
