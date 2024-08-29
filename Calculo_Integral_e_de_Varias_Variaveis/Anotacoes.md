@@ -91,3 +91,52 @@ obtida seja mais simples."
 - normalmente se escolhe para *u* o que está elevado ao expoente (se houver)
 - o objetivo é uma integral mais fácil
     - se dificultar a escolha do *u* foi errada
+
+DATA: 28/Aug/24
+# Integral definida e integral deinida por substituição
+- sempre um númer
+    - área de região ou líquida com sinal
+- arrumar o problema de uma área de função aleatória com um eixo
+- antes era o método de exaustão
+    usar figuras conhecidas pra chegar perto da área real
+    - usualmente se chega em um resultado apropriado
+    - somatório n i=1 f(Ci)deltax
+    - a ideia é inserir zilhões de subintervalos pra chegar o mais próximo possível da área
+    - [1 ]
+    - a integral definida é uma soma de áreas
+- quando função positiva o resultado é a área
+    - se negativa em alguns momentos - o resultado é uma área líquida
+        - dá o resultado da soma das duas áreas -> não é o tamanho da área compreendida
+            - pra isso precisa colocar o negativo em módulo
+- sempre dá pra resolver se a função for contínua no intervalo dado
+    - intervalo fechado
+
+## propriedades
+- limites iguais -> integral = zero
+- a -> b sempre (sentido positivo)
+    - com limites trocados o resultado é o oposto (resultado negativo)
+- propriedades das indefinidas ainda se mantém
+- se existir um ponto c entre a e b (c) posso separar a integral em 2
+- sempre que for positiva - resultado positivo
+- com duas funções do mesmo intervalo segura a com maior área
+- funções ímpares tem valores opostos se inverter o sinal do input
+- funções pares mantém o sinal mesmo que inverta o imput
+
+## Teorema fundamental do cálculo
+- função contínua dentro do intervalo
+- acha a primitiva
+- depois troca os limites de integração nela 
+    - começa pelo superior e subtrai o result do inferior
+- a constante de integração se cancela algebricamente
+
+-> Área
+- toda positiva
+    - resultado integral definida do intervalo respresenta a área
+- parte pos e parte negativa
+    - área é a integral do módulo da função dentro do intervalo de a até b
+    - integral de a -> c + c -> b
+- [2 ]
+
+## Integrais definidas por substituição
+- existem duas formas de resolver
+[3 ] - exemplos
