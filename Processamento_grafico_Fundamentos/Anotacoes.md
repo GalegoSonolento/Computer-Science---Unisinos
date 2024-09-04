@@ -127,6 +127,7 @@ GLEW/GLAD são bibliotecas alcançadas em tempo de execução do código e utili
 Temos 4 estágios dentro da pipeline programável da OpenGL:
 • Estágio de Vertex shading
   – Processa cada vértice separadamente
+  - antes de rasterizar (achatar) a geometria pra 2D
 • Estágio de Tesselation shading -> opcional
   – Gera geometria dentro do pipeline (com código)
 • Estágio de Geometry shading -> opcional
@@ -146,11 +147,29 @@ Existem 3 tipos/estágios de Shaders:
   – Cor
   – Z-depth
   – Alpha value
+  - processamento de pixeis
+  - em alguns momentos os fragmentos de sobrepõe e ocupam o mesmo pixel (normalmente ficam ocultos)
+  - *Depth testing* evita reduência de fragmentos no mesmo pixel
+  - todas as cores são em RGBA normalizadas
+  - aqui existem alguns comandos úteis para usar
+    - points (só os pontos)
+    - lines (vértices)
+    - line_strip (conecta linhas desconectadas)
+    - line_loop (criação de triângulo)
+    - triangles (gerar mais de um triângulo na tela)
+    - triangle_strip (preencher espaços entre os triângulo - agrupar)
+    - triangle_fan (faz um catavento de triângulos)
 • Processados paralelamente
   – Um para cada vértice de um modelo
   – Um para cada fragmento
 
-A pipeline toda vai rodar em paralelo usando diversos núcleos de processadores da GPU. O paralelismo nesse caso é real. Nesse sentido, dá pra escolher um shader que tenha nosso objetivo e faça uma diferença bastante clara no resultado final do resultado do processamento. Animação e diferenciação do objeto acontecem nessa área - todos esses processos na GPU são *pipeline do hardware*
+A pipeline toda vai rodar em paralelo usando diversos núcleos de processadores da GPU. O paralelismo nesse caso é real. Nesse sentido, dá pra escolher um shader que tenha nosso objetivo e faça uma diferença bastante clara no resultado final do resultado do processamento. Animação e diferenciação do objeto acontecem nessa área - todos esses processos na GPU são *pipeline do hardware*.
+O paralelismo da execução dos shaders é montado especificamente pra execução em telas e rodagem em GPU's (ou melhor, GPU's foram montadas para processamento matricial, necessário em computação gráfica). Essa execução, principalmente de shaders, necessita de *shader cores*; se uma imagem necessita de 200 deles, 200 serão usados ao mesmo tempo.
+Os shader cores processam um número fixo de primitivas por vez pelo *buffer VAO* - já que eles os fazem, por isso é interessante manter o número de malhas usadas *baixo* - já que todas essas execuções são feitas em paralelo.
+  As primitivas desse buffer são chamadas pelas *drawcalls* - quanto mais delas, mais malhas e mais buffers - podendo sobrecarregar a GPU.
+Tenha atenção para a programação dos shaders, já que eles dependem da versão utilizada do OpenGL. Dito isso, ele vai com certeza ter alguns tipos diferentes para realizar as chamadas.
+Sempre separe os shaders em arquivos de texto separados - como uma boa prática
+
 
 
 - programas (pequenos) que implementam/definem/processam info para serem desenhados (geometrias/fragmentos) para o desenho (render) junto com a API gráfica
@@ -165,8 +184,11 @@ A pipeline toda vai rodar em paralelo usando diversos núcleos de processadores 
 - Real-time rendering - 4th ed. / 2018 - ( Livro eletrônico ) 
   - https://pdfroom.com/books/real-time-rendering/XDkgVjmNg9B -> aparentemente o leitor de PDF funciona
  wow
+- LearnOpenGL - Anton's OpenGL 4 Tutorials
+- Slides sobre CG dos professores: Christian Hofsetz,
+Cristiano Franco, Marcelo Walter, Soraia Musse, Leandro
+Tonietto e Rafael Hocevar
 
  ## Perguntas
  - o ray tracing é uma camada a mais no processo de rendering?
  - o pipeline é do rendering? cada vez que se renderiza se usa o pipeline grafico?
- - 
