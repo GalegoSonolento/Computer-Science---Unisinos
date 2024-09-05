@@ -166,3 +166,18 @@ Um dos métodos (o mais simples e direto) usa o mesmo esquema da substituição 
 <img src="imgs/Aula_3_27_08_exemplos_e_exercicios_2.png">
 <img src="imgs/Aula_3_27_08_exemplos_e_exercicios_3.png">
 <img src="imgs/Aula_3_27_08_exemplos_e_exercicios_4.png">
+
+DATA: 04/Setembro/2024
+# Área entre curvas
+- é literalmente a área entre duas curvas
+- divide o intervalo em subintervalos
+- a ideia inicial é igual a exaustão    
+    - meter um monte de retângulo entre as curvas e somar todas as áreas
+    - somatório da diferença da função de cima menos a de baixo
+- da mesma forma, esse somatório vai virar uma integral definida
+- precisamo de algum apoio gráfico pra saber qual função é a de cima e qual a de baixo
+[1 ]
+- em casos que não existem limites claros, os limites são pontos (os pontos de intersecção das duas curvas)
+    - podem existir um ou mais
+    - é preciso igualar as duas funções para saber seus limites (os pontos para o cálculo da integral)
+- 
