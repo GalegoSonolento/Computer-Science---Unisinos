@@ -169,15 +169,16 @@ Os shader cores processam um número fixo de primitivas por vez pelo *buffer VAO
   As primitivas desse buffer são chamadas pelas *drawcalls* - quanto mais delas, mais malhas e mais buffers - podendo sobrecarregar a GPU.
 Tenha atenção para a programação dos shaders, já que eles dependem da versão utilizada do OpenGL. Dito isso, ele vai com certeza ter alguns tipos diferentes para realizar as chamadas.
 Sempre separe os shaders em arquivos de texto separados - como uma boa prática
-
-
-
 - programas (pequenos) que implementam/definem/processam info para serem desenhados (geometrias/fragmentos) para o desenho (render) junto com a API gráfica
   - são compilados especificamente pra rodar na placa gráfica (GPU)
 - Shading != shaders (pero no mucho)
   - shading (fazer o sombreamento na solid view) utiliza shaders pra conseguir rodar, mas o *shading* serve como um processo maior conceitualmente
 - o compilador do código de shader é a própria API gráfica do OpenGL (GLSL) - nessa caso, se estiver utilizando outra biblioteca gráfica ela vai dar conta do recado à sua maneira
   - GLSL é uma linguagem de Shader
+
+### Buffer
+A definição mais básica de *buffer* é que ele é uma unidade de memória separada para guardar informações. Esses dados são colocados em um dispositivo de saída, um *frame buffer*.
+
 
 
 ### Referências
