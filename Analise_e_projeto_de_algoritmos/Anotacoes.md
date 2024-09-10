@@ -417,6 +417,11 @@ pior caso -> T(n) = nop1 + (2n²+3n+3)op2 + (n²+n-1)op3 + (n²+n)op4 = n²(2op2
 
 DATA: 02/Setembro/2024
 # Análise da Complexidade de Algoritmos Iterativos
+Somatórios servem de implementações de *for loops* para situações onde a quantidade de iterações varia conforme a progressão da execução.
+A explicação mais simples de como um somatório funciona é realmente um *for*. O valor de baixo é a variável declarada, acima é a condição de limite e sempre vai ser i++.
+A notação do somatório pode ser um tanto complexa, veja: 
+<img src="imgs/exemplo_de_somatorio.png">
+
 - somatório 
     - a quantidade de iterações dos laços internos mudam conforme o codigo roda 
 ## Somatórios
@@ -426,7 +431,7 @@ DATA: 02/Setembro/2024
 - todo laço de repetição é um somatório (iteração)
     - recursividade é um somatório tbm
 - x tem todos os valore iguais
-[1 ]
+<img src="img/Aula_3_definicoes_de_somatorio.png">
 
 ### propriedades
 - Associatividade
@@ -445,7 +450,6 @@ DATA: 02/Setembro/2024
     - dá pra tirar um dos termos do somatório e somar por fora (dá no mesmo)
     - precisa cuidar o intervalo do somatório
 - reindexação
-    - 
 
 ### formas/fórmula fechadas
 - não tem forma padrão de montar
@@ -470,6 +474,9 @@ DATA: 02/Setembro/2024
 ### exercícios
 [2 ]
 
+DATA:09/Set/2024
+### exercícios
+[1 ]
 
 ### Referências
 - The Algorithm Design Manual (Skiena) 
