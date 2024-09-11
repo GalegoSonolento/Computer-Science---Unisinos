@@ -179,6 +179,49 @@ Sempre separe os shaders em arquivos de texto separados - como uma boa prática
 ### Buffer
 A definição mais básica de *buffer* é que ele é uma unidade de memória separada para guardar informações. Esses dados são colocados em um dispositivo de saída, um *frame buffer*.
 
+DATA: 10/Setembro/2024
+# Sistema de coordenadas
+- Sistemas de projeções e de janelas
+- sempre exite o cálculo da transposição da câmera para o recalculo
+- no momento q largar o objeto define a posição dele em relação ao sistema de coordenadas
+- as coordenadas "originais" são de -1 a 1 (pelo menos no OpenGL) e se não ouver definição do objeto no espaço ele vai estar dentro desse espaço
+- o primeiro mapeamento entre o *world space* ou o espaço de mundo/universo. -> relacionado á câmera, claro (que também é um objeto)
+- no Blender, por exemplo, se coloca a câmera na cena para ter uma noção de composição de cena
+  - colocar no ponto de vista
+  - *view point* -> ponto de vista da câmera (de render)
+  - as ferramentas de processamento gráfico (Blender, Unity, etc) todas permitem alterações das configurações base das pipelines gráficas
+  - dá pra mexer sem medo, as ferramentas só dão uma facilitada
+- o objeto central começa na origem do plano cartesiano (origem do mundo)
+- ainda precisa definir duas matrizes (transformações) - rotações, translaçoes e escalas
+- a matriz passa para o *view space* e a matriz de projeção passa para o *clip space* para aí escalar no *screen space*
+  - Tudo é montado no processo de *vertex shader*
+- a aplicação pode ter mais de uma viewport
+  - elas podem ter visões completamente diferentes
+- *viewpoint* se refere a tela
+  - porções que serão exibidas pelo CG
+- *Window* é um resultado das operações de view e projection - ainda não foi normalizado para os pixeis
+  - podem existir viewports diferentes para a mesma window
+- *aspect ratio* - razão de aspecto - definição de largura e altura
+  - valor 1 entrega um quadrado - valores maiores que um mostram cenas achatadas e menores alongadas
+- a projeção é montada do pbservador até o plano de projeção
+  - se a distância do observador for infinita a projeção é paralela
+  - caso não sempre vai ter alguma *perspectiva*
+    - projeção perpendicular
+
+## Projeções
+- cônicas
+  - todos os pontos de fuga se reúnem
+  - mais naturalidade à cena
+  - objetos aumentam conforme proximidade do observador
+- paralelas
+  - exclui a característica de distância
+  - perserva tamanhos e projeções dos objetos
+  - desconsidera o observador
+  - pode ser útil na composição de cena (evita enganos de perspectiva)
+  - gera perda de informação de profundidade
+- a modelagem gera as imagens com multiplicações de matrizes (facilita pra GPU)
+  - 4x4 - mat4 -> operações matriciais de 4x4 facilitam pela representação das coordenadas
+  - uma das bibliotecas mais simples é GLM - só os cabeçalhos pra colocar no OpenGL  
 
 
 ### Referências
