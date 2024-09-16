@@ -492,3 +492,14 @@ DATA:09/Set/2024
         - Seção 2.2 -> Analyzing Algorithms
     - Capítulo 3
         - Seção 3.1 -> Asymptotic Notation
+
+
+DATA: 16/Setembro/2024
+# Recorrências
+- equações recorrentes
+- é tipo uma recursão
+- necessário um conhecimeto parcial sobre o resultado
+- vai formar um sistema de equações
+- sempre identifique n, o caso base, o tempo do caso base e o termo geral 
+    - caso base e geral ficam juntos
+- 
