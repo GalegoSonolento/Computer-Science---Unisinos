@@ -502,4 +502,7 @@ DATA: 16/Setembro/2024
 - vai formar um sistema de equações
 - sempre identifique n, o caso base, o tempo do caso base e o termo geral 
     - caso base e geral ficam juntos
-- 
+- precisa validar a equação enconrada com o caso base
+    - depois olha pro caso indutivo
+    - joga o n lá dentro
+    - 
