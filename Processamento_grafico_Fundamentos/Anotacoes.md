@@ -223,6 +223,12 @@ DATA: 10/Setembro/2024
   - 4x4 - mat4 -> operações matriciais de 4x4 facilitam pela representação das coordenadas
   - uma das bibliotecas mais simples é GLM - só os cabeçalhos pra colocar no OpenGL  
 
+DATA:17/Setembro/24
+# Transformações
+- nos objetos
+- precisar usar trigonometria pra fazer os giros (claramente já que é o espaço)
+- 
+
 
 ### Referências
 - Real-time rendering - 4th ed. / 2018 - ( Livro eletrônico ) 

@@ -505,4 +505,3 @@ DATA: 16/Setembro/2024
 - precisa validar a equação enconrada com o caso base
     - depois olha pro caso indutivo
     - joga o n lá dentro
-    - 
