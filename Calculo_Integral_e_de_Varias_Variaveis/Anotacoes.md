@@ -210,3 +210,20 @@ DATA: 11/Setembro/2024
 - [3 ]
 - uma função por volume em x não necessariamente é igual para y
     - os sólidos gerados são diferentes, ou seja, ele necessariamente precisam ser iguais
+
+
+DATA:18/Setembro/2024
+# Integração por partes
+- resolve os problemas que a substituição não consegue
+    - eventualmente ainda usa substituição
+- baseado em regra da cadeia e função composta
+- envolve produto de funções
+    - regra da derivada de produto (em parte)
+- tem uma fómula de utilização
+- considere duas funções diferenciáveis
+- mantém a primeira e multiplica pela derivada da segunda e soma com o inverso
+- íntegrando a derivada pega a própria função
+- nas integrais novas se simplifica os dx e se tem uma integral com duas variáveis
+- [1 ]
+- a integral u dv sempre precisa ser mais simples
+- a mesma lógica se aplica para áreas e volumes
