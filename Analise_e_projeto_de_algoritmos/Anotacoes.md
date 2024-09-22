@@ -417,6 +417,8 @@ pior caso -> T(n) = nop1 + (2n²+3n+3)op2 + (n²+n-1)op3 + (n²+n)op4 = n²(2op2
 
 DATA: 02/Setembro/2024
 # Análise da Complexidade de Algoritmos Iterativos
+Em alguns casos não é possível simplesmente fazer o método da contagem e esperar pelo melhor, volta e meia temos algoritmos que diferenciam seu tamanho dependendo da iteração, fator que gera somatórios.
+
 Somatórios servem de implementações de *for loops* para situações onde a quantidade de iterações varia conforme a progressão da execução.
 A explicação mais simples de como um somatório funciona é realmente um *for*. O valor de baixo é a variável declarada, acima é a condição de limite e sempre vai ser i++.
 A notação do somatório pode ser um tanto complexa, veja: 
@@ -473,6 +475,8 @@ A notação do somatório pode ser um tanto complexa, veja:
 
 ### exercícios
 [2 ]
+<img src="imgs/Anotacoes_e_exercicios_aula_4.png">
+<img src="imgs/Anotacoes_e_exercicios_aula_4_2.png">
 
 DATA:09/Set/2024
 ### exercícios
