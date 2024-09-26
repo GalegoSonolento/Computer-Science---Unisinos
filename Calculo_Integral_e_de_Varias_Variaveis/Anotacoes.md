@@ -234,3 +234,15 @@ DATA:18/Setembro/2024
 - [1 ]
 - a integral u dv sempre precisa ser mais simples
 - a mesma lógica se aplica para áreas e volumes
+
+DATA: 25/Setembro/24
+# Integração com frações parciais
+- grau denominador maior q o numerador -> fração própria
+    - se n for precisa converter
+- fatoração de denominador - máximo possível
+    - fatores lineares de preferência
+    - se não quadráticos
+- as stuações variam com a forma das ráizes
+- fração original e a sma de fatores mais simples
+- [1 ] -> exemplos -> incluir pipeline de resolução
+
