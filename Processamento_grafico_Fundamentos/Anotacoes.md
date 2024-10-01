@@ -181,6 +181,13 @@ A definição mais básica de *buffer* é que ele é uma unidade de memória sep
 
 DATA: 10/Setembro/2024
 # Sistema de coordenadas
+• Coordenadas locais (local space)
+• Coodenadas de Universo (world space) – Sistema de Referência do Universo
+(SRU)
+• Coordenadas de camera (view space)
+• Espaço de Recorte (clip space)
+• Coordenadas de Tela (screen space) – Sistema de Referência de Tela (SRT)
+
 - Sistemas de projeções e de janelas
 - sempre exite o cálculo da transposição da câmera para o recalculo
 - no momento q largar o objeto define a posição dele em relação ao sistema de coordenadas
@@ -227,7 +234,8 @@ DATA:17/Setembro/24
 # Transformações
 - nos objetos
 - precisar usar trigonometria pra fazer os giros (claramente já que é o espaço)
-- 
+
+
 
 
 ### Referências
