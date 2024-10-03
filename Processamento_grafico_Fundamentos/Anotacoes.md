@@ -188,6 +188,8 @@ DATA: 10/Setembro/2024
 • Espaço de Recorte (clip space)
 • Coordenadas de Tela (screen space) – Sistema de Referência de Tela (SRT)
 
+A diferença mais básica entre uma **window** e uma **viewport** é que a *window* determina a porção/área da cena que será mostrada; enquanto que a *viewport* determina a *forma* dessa porção - além de montar a escala e o mapeamento de rederização.
+
 - Sistemas de projeções e de janelas
 - sempre exite o cálculo da transposição da câmera para o recalculo
 - no momento q largar o objeto define a posição dele em relação ao sistema de coordenadas
@@ -216,6 +218,20 @@ DATA: 10/Setembro/2024
     - projeção perpendicular
 
 ## Projeções
+As projeções planares paralelas e perspectivas diferem com relação a distância do plano de projeção ao centro de projeção:
+– se a distância é finita, a projeção é **perspectiva**, e
+– se a distância é infinita, a projeção é **paralela**
+  • Projeção ortogonal (ou ortográfica): as linhas
+  projetadas são perpendiculares ao plano da
+  projeção.
+  – Isso mantém a escala uniforme em todas as
+  direções.
+  • Projeção oblíqua: As linhas projetadas podem
+  estar em um ângulo, mas ainda permanecem
+  paralelas.
+
+-> tenha em mente que *perspectivas* demonstram pontos de fuga
+
 - cônicas
   - todos os pontos de fuga se reúnem
   - mais naturalidade à cena
@@ -230,8 +246,46 @@ DATA: 10/Setembro/2024
   - 4x4 - mat4 -> operações matriciais de 4x4 facilitam pela representação das coordenadas
   - uma das bibliotecas mais simples é GLM - só os cabeçalhos pra colocar no OpenGL  
 
+## GLM
+Essa é a biblioteca para trabalhar com matemática dentro do OpenGL
+
+## Matriz de view
+Define a matriz do viewport - posicionamento da Câmera
+Isso aqui vai multiplicar duas matrizes com os vetores de posicionamento e vai formar a orientação da câmera
+
+## Projeção ortográfica
+– *𝑙* (left): coordenada da borda esquerda do plano de corte.
+– *𝑟* (right): coordenada da borda direita do plano de corte.
+– *𝑏* (bottom): coordenada da borda inferior do plano de corte.
+– t (top): coordenada da borda superior do plano de corte.
+– n (near): distância ao plano de corte mais próximo (em Z).
+– f (far): distância ao plano de corte mais distante (em Z)
+– 𝑟 − 𝑙 e 𝑡 − 𝑏: controlam a escala horizontal e vertical do volume de visualização.
+– 𝑓 − 𝑛: controla a escala no eixo Z
+– − 𝑜+𝑙
+𝑜−𝑙 e − 𝑜+𝑏
+𝑜−𝑏 : deslocam a posição da câmera, permitindo que o centro do volume
+de visualização não esteja na origem
+
+Essa ortogonalidade vai modificar toda a representação ortográfica da cena e alterar o tamanho e composição de cena.
+
+## Scrolling
+Aqui a câmera é settada para seguir o personagem e as dimensões de mundo são maiores que a viewport.
+Logicamente precisa setar um objeto como o personagem e lockar a câmera nele
+Em 2D e uma câmera sem perspectiva
+
+
 DATA:17/Setembro/24
 # Transformações
+Todas as transformações e rotações utilizam matrizes para os cálculos.
+Além disso, precisam ainda transferir o objeto para a origem e depois ainda colocar na posição necessária.
+
+▪ vec2: ponto 2D (x,y) ou coordenada de textura (s,t)
+▪ vec3: ponto ou direção 3D (x,y,z)
+▪ vec4: ponto 4D (x,y,z,1.0) ou direção 4D (x,y,z,0.0)
+▪ Lembre-se que uma matriz 4x4 só pode ser transformada
+por um vetor 4D e uma matriz 3x3 por um vetor 3D
+
 - nos objetos
 - precisar usar trigonometria pra fazer os giros (claramente já que é o espaço)
 
@@ -246,6 +300,8 @@ DATA:17/Setembro/24
 - Slides sobre CG dos professores: Christian Hofsetz,
 Cristiano Franco, Marcelo Walter, Soraia Musse, Leandro
 Tonietto e Rafael Hocevar
+- Cohen, M., & Manssour, I. H. (2006). OpenGL: uma abordagem prática e objetiva. Novatec editora
+- 
 
  ## Perguntas
  - o ray tracing é uma camada a mais no processo de rendering?

@@ -246,3 +246,14 @@ DATA: 25/Setembro/24
 - fração original e a sma de fatores mais simples
 - [1 ] -> exemplos -> incluir pipeline de resolução
 
+DATA: 2/Outubro/2024
+# Integrais impróprias
+- não dá pra usar o teorema fundamental do cálculo
+- quando tem limites infinitos ou descotinuidade da função
+    - nesse momento não se utiliza as com descontinuidade
+- [1 ]
+- o resultado de uma integral com infinito é o limite do resultado dela 
+- alguns resultados podem ser indeterminados (indeterminação matemática)
+    - integral diverge (divergente)
+- se o resultado é um número real ela converge (convergente)
+- [2 ]
