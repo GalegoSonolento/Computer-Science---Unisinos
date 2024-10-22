@@ -509,3 +509,37 @@ DATA: 16/Setembro/2024
 - precisa validar a equação enconrada com o caso base
     - depois olha pro caso indutivo
     - joga o n lá dentro
+
+DATA: 21/Outubro/2024
+# àrvores de recorrência
+- representação de problema rescursivo
+- no problema ele pega logaritmos
+    - fatoração por logaritmo
+    - log(n!) <= nlog(n)
+- aqui precisa se dividir o problema em partes menores e montar uma árvore de recursão dos dados
+- não necessariamente o limite está bem representado nos limites do algoritmo
+    - limite justo é o theta
+- com tantas chamadas de recursão se abre tantas branches na árvore
+- o custo é cumulativo com a quantidade de brnaches
+- sempre que houver aumento de expoente se usa logaritmo (aqui se usa log como log_2)
+
+# Teorema mestre
+- é um formato de equação pra encontrar comportamento assintótico
+- só funciona pra divisão e conquista
+    - se identifica por divisões dentro das fórmulas
+- se n der inteiro arredonda pra baixo ou pra cima
+    - geralmente é pra cima
+- essa equação mestre é só um arranjo da equação recursiva
+- nesses casos se calcula theta, dessa forma, se chega em big O e ômega
+
+## Técnicas de projetos de algoritmos
+## Divisão e conquista
+- quebra o problema em partes menores para resolver - divisão
+- ao resolver se conquista - conquista
+- junta tudo no final - combinação
+- dá pra repetir as mesmas iterações não importando o tamanho da instância
+- decisão de divisão e tomada de ações precisa ser padrão para toda instãncia
+- usa recursividade
+- geralmente é com recursividade, mas depende
+    - quando é necessário descer muitos níveis de recursão se evita utiliza pra n dar stackoverflow
+- 
