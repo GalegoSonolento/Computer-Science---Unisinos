@@ -567,6 +567,12 @@ T(n + 1) = T(n - 1) + d
          = dn + c - d + d
          = dn + c
 
+### Exercícios
+<img src="img/2024-09-16-exercicios.png">
+<img src="imgs/2024-09-16-exercicios_2.png">
+<img src="imgs/2024-09-16-exercicios_3.png">
+<img src="imgs/2024-09-16-exercicios_4.png">
+
 
 DATA: 21/Outubro/2024
 # àrvores de recorrência
