@@ -217,6 +217,9 @@ DATA: 11/Setembro/2024
 - [3 ]
 - uma função por volume em x não necessariamente é igual para y
     - os sólidos gerados são diferentes, ou seja, ele necessariamente precisam ser iguais
+<img src="imgs/2024-09-11_Volumes_exercicios.png">
+<img src="imgs/2024-09-11_Volumes_exercicios_2.png">
+<img src="imgs/2024-09-11_Volumes_exercicios_3.png">
 
 
 DATA:18/Setembro/2024
