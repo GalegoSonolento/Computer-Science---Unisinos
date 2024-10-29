@@ -252,6 +252,19 @@ Importante ressaltar que é mais fácil resolver tomando *dv* como o termo mais 
 
 DATA: 25/Setembro/24
 # Integração com frações parciais
+Nesse tipo de integração, utilizamos algumas técnicas para resolver integrações de funções polinomiais.
+Ela consiste de alguns passos importantes, conforme vou descrever aqui
+
+**Passo 1: Identifique se a fração N(x)/D(x) (onde N(x) é numerador e D(x) é denominador) é imprópria**
+Uma fração será imprópria se o grau do numerador for maior que o do denominador. Como em (x³+3)/x².
+Divida o numerador pelo denominador. O resultado da divisão fica de fora e será somado ao resultado no final de todos os passos para obtermos o resdultado final.
+Quanto ao resto da divisão, ela agora é o novo numerador. Utiliza-se o denominador antigo.
+-> N(x)/D(x) => divisão => = (polinômio resultado) + N_1(x)/D(x) -> sendo N_1(x) resto da divisão.
+
+**Passo 2: Fatore completamente o denominador**
+
+
+
 - grau denominador maior q o numerador -> fração própria
     - se n for precisa converter
 - fatoração de denominador - máximo possível
