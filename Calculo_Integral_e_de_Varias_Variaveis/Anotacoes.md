@@ -245,6 +245,11 @@ Importante ressaltar que é mais fácil resolver tomando *dv* como o termo mais 
 - a integral u dv sempre precisa ser mais simples
 - a mesma lógica se aplica para áreas e volumes
 
+<img src="imgs/2024-09-18_integracao_por_partes.png">
+<img src="imgs/2024-09-18_integracao_por_partes_2.png">
+<img src="imgs/2024-09-18_integracao_por_partes_3.png">
+<img src="imgs/2024-09-18_integracao_por_partes_4.png">
+
 DATA: 25/Setembro/24
 # Integração com frações parciais
 - grau denominador maior q o numerador -> fração própria
