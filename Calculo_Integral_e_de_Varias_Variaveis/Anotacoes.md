@@ -224,6 +224,13 @@ DATA: 11/Setembro/2024
 
 DATA:18/Setembro/2024
 # Integração por partes
+Essa forma de resolução é útil principalmente com funções muito complexas ou com fatores que fogem um pouco das normas pré-estabelecidas de cálculos.
+Ela se baseia na derivada de um produto e basicamente nos auxilia a separar a equação em duas e resolver ambas as partes separadamente, juntando-as ao final.
+O teorema básico é, considerando uma função contínua:
+**∫udv = uv - ∫vdu**
+
+Importante ressaltar que é mais fácil resolver tomando *dv* como o termo mais complexo (e que pode ser integrado). Sendo assim, *u* sobraria como uma derivada simples.
+
 - resolve os problemas que a substituição não consegue
     - eventualmente ainda usa substituição
 - baseado em regra da cadeia e função composta
