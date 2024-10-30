@@ -319,6 +319,49 @@ x' = (x - xp).cos(θ) – (y – yp).sin(θ) + xp
 y' = (x - xp).sin(θ) + (y – yp).cos(θ) + yp
 -> esse é o chamado pivot da rotação.
 
+## Outras transformações
+Ainda existem algumas outras mais situacionais, como:
+
+### Reflexão
+Eixo X
+x’ = x
+y’ = -y
+
+Origem
+x’ = -x
+y’ = -y
+
+Eixo Y
+x’ = -x
+y’ = y
+
+### Shearing (deslizamento)
+xs = x + Sx
+ys = y + Sy
+
+Isso é uma manipulação de um dos lados de um polígono
+
+## Homogeneização de matrizes e vetores
+Isso vale tanto para objetos 2D quanto 3D.
+Se rezume a completar o vetor um um 3° elemento para homogeneizá-lo. Já que os cálculos matriciais e vetoriais necessitam de operações *completas*, ou seja, uma matriz precisa *necessariamente* ser quadrática, essa homogeinização adiciona o valor **1** para completar.
+Esse multiplicação e usabilidade é possível a partir do momento que o OpenGL ainda guarda as informações de matrizes vetorizadas e precisa calcular para matriciá-las e jogá-las na placa de vídeo.
+
+DATA 24/Setembro - 1°/Outubro/2024
+# Texturas
+As texturas surgiram para fazer uma "imitação" do que seria tal elemento com todos os polígonos presentes. Subtitui a necessidade de utilizar diversos polígonos enquanto ainda causa a ilusão de uma superfície.
+Tudo que precisamos fazer é informar ao OpenGL os "cantos" do polígono, ou melhor, a região que tal textura precisa ficar que o **fragment shader** cuida da **interpolação** (preenche o resto).
+Utilizando como coordenadas básicas de 0 a 1, um possível código para "placement" de uma textura poderia ser:
+
+```C++
+GLfloat texCoords[] = {
+0.0f, 0.0f, // Inferior esquerdo
+1.0f, 0.0f, // Inferior direito
+1.0f, 1.0f, // Superior direito
+0.0f, 1,0f // Superior esquerdo
+};
+```
+
+
 DATA: 22-29/Outubro/2024
 # Sistemas de cores e Introdução ao Processamento de Imagens
 Processamento gráfico trabalha com imagens puras e o processamento de imagens ainda segue as normas previamente vistas.
@@ -359,3 +402,4 @@ Tonietto e Rafael Hocevar
 - Notas de aula do professor Bruno Carvalho (UFRN)
 - FOLEY, J.D. et al. Computer graphics: principles and practice. Reading: Addison-Wesley, 1990.
 - TONIETTO, Leandro; WALTER, Marcelo. Análise de Algoritmos para Chroma-key. Unisinos, 2000.
+- https://learnopengl.com//#!Getting-started/Transformations
