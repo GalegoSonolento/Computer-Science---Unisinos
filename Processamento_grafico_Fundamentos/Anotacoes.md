@@ -360,6 +360,55 @@ GLfloat texCoords[] = {
 0.0f, 1,0f // Superior esquerdo
 };
 ```
+## Texture Wrapping
+Entre os pontos, o OpenGL pode fazer algumas coisas:
+– GL_REPEAT: comportamento padrão, que repete a imagem de textura
+– GL_MIRRORED_REPEAT: mesmo que GL_REPEAT mas espelha a imagem a cada repetição.
+– GL_CLAMP_TO_EDGE: “prende”as coordenadas entre 0 e 1. Os valores mais altos ficam presos às arestas.
+– GL_CLAMP_TO_BORDER: coordenadas for a do intervado recebem uma cor de borda.
+
+Existem algumas maneiras de settar, mas as coordenadas s e t são necessárias; trate como x e y:
+```C++
+glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_MIRRORED_REPEAT);
+glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_MIRRORED_REPEAT);
+```
+
+## Texture Filtering
+Ou **Texture smoothing**. Esse processo serve para consertar problemas causados por compressão ou aumento muito grande de imagem (as texturas). Algumas técnicas podem ser usadas:
+
+### Neares Neighbor Filtering
+Se falta pixel pega a cor do vizinho mais próximo
+```C++
+glTexParameter(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
+glTexParameter(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
+```
+A imagem tem tendência de ficar pixelada e bastante forte.
+
+### Linear Filtering
+Faz uma média de todos os vizinhos; os pixels faltantes tem uma cor mediana.
+Normalmente geram imagens mais *fuzzy* ou pouco nítidas.
+```C++
+glTexParameter(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+glTexParameter(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+```
+
+## Minimaps
+O OpenGL pode gerar imagens menores de uma textura automaticamente.
+A biblioteca faz divisões lineares (divisões por 2) diversas vezes e armazena versões *miniaturizadas* das mesmas imagens.
+Existe um método padrão, mas é possível especificá-lo com:
+– GL_NEAREST_MIPMAP_NEAREST: usa o mipmap mais próximo do tamanho do pixel e usa o método de interpolação do vizinho mais próximo para amostrar a textura
+– GL_LINEAR_MIPMAP_NEAREST: usa o mipmap mais próximo do tamanho do pixel e usa o método de interpolação linear para amostrar a textura
+– GL_NEAREST_MIPMAP_LINEAR: faz a interpolação linear dos dois mipmaps mais próximos ao tamanho do pixel e usa o método de interpolação do vizinho mais próximo para amostrar a textura
+– GL_LINEAR_MIPMAP_LINEAR: faz a interpolação linear dos dois mipmaps mais próximos ao tamanho do pixel e usa o método de interpolação linear para amostrar a textura
+ 
+```C++
+glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR_MIPMAP_LINEAR);
+glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+```
+
+## Mapeamento UV em modelos 3D
+É um mapeamento do objeto 3D. Como se fosse uma planta baixa mesmo. Igual quando montávamos bonecos de papel os quais formavam cubos.
+Tem algumas etapas, mas a principal delas é o **mapeamento de textura**. A mesma planta baixa, mas com as texturas aplicadas. É consideravelmente mais simples aplicar texturas em polígos simples que em poliedros.
 
 
 DATA: 22-29/Outubro/2024
