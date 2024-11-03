@@ -304,6 +304,22 @@ Sempre lembre-se de simplificar ao máximo os integrandos antes de qualquer oper
 
 DATA: 2/Outubro/2024
 # Integrais impróprias
+Na definição geral, temos que uma integral tem um espaço de aplicação contínuo e finito, como em ∫^b_a f(x)dx.
+Todavia, quando o caso é uma integral com um dos limites infinitos, a coisa muda um pouco de figura. Como não podemos provar que não exitem infinitas descontinuidades em um espaço infinito dado, precisaremos utilizar limites para completarmos o cálculo.
+Para calcular uma integral imprópria, podemos trocar o limite infinito por um dado finito (b se superior e a se inferior), calcular a integral, e colocar o resultado dentro de um limite de b->∞ ou a->-∞ e aplicar o limite
+
+**Definição**
+1. Se f é contínua no intervalo [a, ∞), então
+∫^∞_a f(x)dx = lim_(b->∞)∫^b_a f(x)dx
+
+2. Se f é contínua no intervalo (-∞, b], então
+∫^b_-∞ f(x)dx = lim_(a->-∞)∫^b_a f(x)dx
+
+3. Se f é contínua no intervalo (-∞, ∞), então
+∫^∞_-∞ f(x)dx = ∫^c_-∞ f(x)dx + ∫^∞_c f(x)dx em que c é qualquer número real (normalmente utiliza-se 1 - é considerado a "metade dos infinitos" - é meio arbitrário mesmo).
+Observe que: "Em cada caso, se o limite existir, a integral imprópria converge; caso contrário, a integral diverge. No terceiro caso, a integral à esquerda do sinal de igualdade diverge se uma das integrais impróprias à direita diverge."
+
+
 - não dá pra usar o teorema fundamental do cálculo
 - quando tem limites infinitos ou descotinuidade da função
     - nesse momento não se utiliza as com descontinuidade
