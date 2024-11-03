@@ -559,6 +559,25 @@ glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
 glBindVertexArray(0);
 ```
 
+# Camads de sprites e cenários 2D
+Cada ciclo do *Game Loop* vai gerar um sprite diferente. Lembre-se de que o game loop sempre passa pelo renderer um update e um sync.
+Os sprites estão presentes dentro de uma **Spritesheet**, como uma contendo os estágios de animação de um personagem.
+Tal personagem pode possuir uma SpriteSheet com o loop de caminhada que se repete toda vez que ele caminha, dessa forma, o game loop também "caminha" pela spritesheet mostrando as fases.
+O posicionamento das imagens é baseado em x, y e z.
+Para que o sprite exista, ele precisa estar associado a um quadrilátero qualquer, para que o sprite sirva como uma "textura".
+Todas as imagens vem pelo *shader*. Veja uma implementação simples:
+```C++
+glEnable(GL_DEPTH_TEST);
+glDepthFunc(GL_ALWAYS);
+
+glClear(GL_COLOR_BUFFER_BIT |
+GL_DEPTH_BUFFER_BIT);
+
+// Para existir transparência, use:
+glEnable(GL_BLEND);
+glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+```
+
 
 DATA: 22-29/Outubro/2024
 # Sistemas de cores e Introdução ao Processamento de Imagens
