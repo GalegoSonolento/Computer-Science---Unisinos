@@ -577,6 +577,111 @@ GL_DEPTH_BUFFER_BIT);
 glEnable(GL_BLEND);
 glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 ```
+## Recorte de imagens - Spritesheet
+A spritesheet funciona basicamente como uma matriz mesmo.
+Divide-se o "papel" onde ela está em diferentes segmentos os quais correspondem a estágios da animação. Assim sendo, tudo que o programa faz é navegar pelos diferentes estágios dessa matriz que é a spritesheet.
+Uma implementação de uma spritesheet deve levar em conta, agora, os frames de animação presentes. Para isso, uma implementação necessária é:
+```C++
+iFrame = (iFrame+1) % nFrames
+```
+
+Os **Offsets** serão basicamente coordenadas para puxar determinado sprite.
+Tenha como exemplo:
+```C++
+// Na inicialização do sprite
+dx = 1.0 / (float)nFrames;
+dy = 1.0 / (float)nAnimations;
+float vertices[] = {
+// positions // colors // texture coords
+0.5f, 0.5f, 0.0f, 1.0f, 0.0f, 0.0f, dx, dy, // top right
+0.5f, -0.5f, 0.0f, 0.0f, 1.0f, 0.0f, dx, 0.0f, // bottom right
+-0.5f, -0.5f, 0.0f, 0.0f, 0.0f, 1.0f, 0.0f, 0.0f, // bottom left
+-0.5f, 0.5f, 0.0f, 1.0f, 1.0f, 0.0f, 0.0f, dy // top left
+};
+
+// Na atualização do sprite
+GLint offsetLoc = glGetUniformLocation(shader->Program, "offset");
+glUniform2f(offsetLoc, iFrame * dx, iAnimation * dy);
+iFrame = (iFrame + 1) % nFrames;
+
+// No shader
+#version 450 core
+in vec2 TexCoord;
+out vec4 color;
+// pixels da textura
+uniform sampler2D tex1;
+//Texture coords offsets for animation
+uniform vec2 offset;
+void main()
+{
+color = texture(tex1, TexCoord+offset);
+}
+
+// Dentro do gameloop, ainda é necessário implementar algum tipo de timer para coordenar os sprites
+//GAME LOOP
+while (!glfwWindowShouldClose(window))
+{
+timer.start();
+//faz as chamadas de update e desenho...
+
+// E ainda uma classe timer
+#include <chrono>
+#include <thread>
+#include <ctime>
+class Timer
+{
+public:
+Timer();
+void start() { begin = std::chrono::system_clock::now(); }
+void finish() { end = std::chrono::system_clock::now(); }
+double getElapsedTimeMs()
+{
+std::chrono::duration<double> elapsed_seconds = end - begin;
+return elapsed_seconds.count() * 1000;
+}
+double getElapsedTime()
+{
+std::chrono::duration<double> elapsed_seconds = end - begin;
+return elapsed_seconds.count();
+}
+double calcWaitingTime(int fps, double elapsedTime) {
+double wt = 1000 / (double)fps - elapsedTime;
+return wt;
+}
+protected:
+// Using time point and system_clock
+std::chrono::time_point<std::chrono::system_clock> begin,
+end;
+};
+```
+
+Ainda é necessário implementar um **waiting time**. Caso ele não exista, a animação funciona, mas ela fica descompassada e não-natural.
+É bastante interessante usar um waiting time a fim de, por exemplo, colocar uma velocidade diferente do personagem correndo e andando (de animação no caso).
+```C++
+double calcWaitingTime(int fps, double elapsedTime) {
+  double wt = 1000 / (double)fps - elapsedTime;
+  return wt;
+}
+
+//GAME LOOP
+while (!glfwWindowShouldClose(window))
+{
+  timer.start();
+  glfwPollEvents();
+  //...Chama métodos de atualização e desenho dos objetos da cena....
+  //Sincronizando o FPS
+  timer.finish();
+  double waitingTime = timer.calcWaitingTime(60, timer.getElapsedTimeMs());
+  if (waitingTime)
+  {
+  std::this_thread::sleep_for(std::chrono::milliseconds((int)waitingTime));
+  }
+  glfwSwapBuffers(window);
+}
+```
+
+## Camadas e Parallax
+
 
 
 DATA: 22-29/Outubro/2024
