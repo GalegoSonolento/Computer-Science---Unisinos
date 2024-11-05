@@ -681,7 +681,35 @@ while (!glfwWindowShouldClose(window))
 ```
 
 ## Camadas e Parallax
+O efeito de parallaxe não é exatamente simples de ser executado.
+Na realidade, é necessário quebrar quebrar a imagem em algumas camadas (como árvores mais adentro separado de uma casa ao fundo) para ser possível *simular* a realidade.
+Como na invenção de animação do Walt Disney (dê uma olhada https://www.youtube.com/watch?v=YdHTlUGN1zw), as camadas se movem e tem comportamento um tanto diferentes. A magia está no movimento.
+Essa implementação de camadas são os **layers**
+A viewport sendo uma câmera, se comporta tal qual a invenção e um offset é necessário:
+```C++
+layers[i]->setOffsets(offsetx,offsety);
+```
+Considerando que ainda são "texturas", precisamos definir coordenadas x e y, assim como definição de qual layer é.
 
+Uma forma de implementação seria:
+```C++
+for all layers [0..n]
+layers[i]->computeScrollRateX(mainLayer->getWidth());
+layers[i]->computeScrollRateY(mainLayer->getHeight());
+
+for all layers [0..n]
+layers[i]->scroll(forward);
+
+for all layers [0..n]
+layers[i]->plot(viewport); // será alterado para animação
+
+for all layers [0..n]
+layers[i]->computeScrollRateX(mainLayer->getWidth());
+layers[i]->computeScrollRateY(mainLayer->getHeight());
+
+for all layers [0..n]
+layers[i]->scroll(forward);
+```
 
 
 DATA: 22-29/Outubro/2024
@@ -724,3 +752,4 @@ Inclusive, HSV é um dos modelos mais utilizados para editores de imagem.
 - TONIETTO, Leandro; WALTER, Marcelo. Análise de Algoritmos para Chroma-key. Unisinos, 2000.
 - https://learnopengl.com//#!Getting-started/Transformations
 - https://learnopengl.com/Getting-started/Textures
+- https://learnopengl.com/
