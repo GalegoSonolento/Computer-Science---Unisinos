@@ -711,8 +711,27 @@ for all layers [0..n]
 layers[i]->scroll(forward);
 ```
 
+DATA: 15/Outubro/2024
+# Geração de colisão
+Uma implementação de colisão simples é considerar os lados dos polígonos e identificar se eles estão sobrepostos.
+Veja a implementação simples:
+```C++
+bool checkCollision(Sprite &one, Sprite &two)
+{
+  // collision x-axis?
+  bool collisionX = one.getPMax().x >=
+  two.getPMin().x &&
+  two.getPMax().x >= one.getPMin().x;
+  // collision y-axis?
+  bool collisionY = one.getPMax().y >=
+  two.getPMin().y &&
+  two.getPMax().y >= one.getPMin().y;
+  // collision only if on both axes
+  return collisionX && collisionY;
+}
+```
 
-DATA: 22-29/Outubro/2024
+DATA: 22/Outubro - 12/Novembro/2024
 # Sistemas de cores e Introdução ao Processamento de Imagens
 Processamento gráfico trabalha com imagens puras e o processamento de imagens ainda segue as normas previamente vistas.
 Grosso modo  uma *imagem* é, "nas ciências exatas, como a matemática, o termo "imagem" é entendido como representação de um objeto especializado, que exige técnicas e ferramentas especiais." - wikipédia
