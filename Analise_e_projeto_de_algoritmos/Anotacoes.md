@@ -666,6 +666,65 @@ E, uma vez que a expanção da árvore se quebra em dois a cada recursão, tempo
     - quando é necessário descer muitos níveis de recursão se evita utiliza pra n dar stackoverflow
 - 
 
+DATA: 04/Novembro/2024
+# Técnicas de Projeto de Algoritmos: Algoritmos Gulosos
+- Existem algumas técnicas para chegar em tomadas de decisão usando limites e circunstânceas, alg. gulosos é uma delas
+    - a resposta é um conjunto
+- Usualmente surge de algoritmos que precisam guardar tempo ou ainda necessidade de espaço
+- Estrutura geral utiliza S como resposta 
+- Um algoritmo guloso puxa uma heurística e a aplica no conjunto de soluções possíveis e aplica até não conseguir mais
+- Existe um ponto em que ele analisa as possibilidades e quando nenhuma é viável não tem solução
+    - existir um problema depende dos limites colocados na solução
+- dá pra aplicar em várias estruturas de dados, não necessariamente só grafos
+- transformar o problema em uma recursão facilita na hora de enxergar o problema - todavia pode ser que seja interessante fazer o problema iterativo pra não explodir a pilha (varia de ambiente pra ambiente)
+- em problemas de recursao se sai do grande até o base (quebrando o máximo possível)
+- atividades não podem se sobrepor no tempo (exemplo)
+    - precisamos aplicar uma heurística e um algoritmo guloso pra resolver
+    - ordena as atividades que terminam antes e escolhe (alg. guloso)
+    - se escolher a que termina antes sobra mais tempo pras demais
+
+## Àrvore geradora mínima
+- menor caminho para chegar em todos os pontos (cidades, componentes, canais, etc)
+- conexão de pontos
+- é o problema do caixeiro viajante - algoritmo de Dijkistra?
+- representação em grafos - descobrir a cobertura (de rede)
+- grafos não-dirigidos
+- cada aresta tem peso (a soma dos pesos é avaliada na distância)
+- todos os pontos do grafo estão conectados (tem um caminho da origem até qql nodo)
+- **Kruskal** e **Primm** resolvem esse problema
+    - Kruskal é uma decisão gulosa porque escolhe o de menor custo e nunca se arrepende da escolha
+    - a única restrição é não criar ciclo
+    - o conjunto de nós e o peso fazem parte da resposta
+    - partes disjuntas de um mesmo conjunto global - **conjuntos disjuntos**
+- Pesquise sobre **union find**
+
+## Caminho mais curto em um grafo entre dois dados pontos
+- os elementos se conectam
+- pocotes na rede, via de rota pra veículo, etc
+- grafos dirigidos
+- existem pesos associados aos vértices
+- **Dijkstra** - menor caminho entre dois pontos - *single-source shortest path*
+- testa os menores custos das arestas para descobrir o menor custo para ir da origem à qualquer ponto
+- complexidades variam conforme estruturas usadas
+
+# Programação Dinâmica
+- guardar resultados para o caso de ser necessário refazer algum cálculo
+- redução de tempo de execução abrindo mão do espaço
+- precisa de computações repetitivas
+- espaço de resolução de problemas não é muito grande (muita memória)
+- substrutura ótima e problemas coincidentes 
+- **memoização** -> versão recursiva de uma prog. dinâmica
+- **tabulação** -> basicamente uma ideia parecida sem recursão (construindo da base pra cima)
+- todas as instâncias tem uma solução ótima local
+- no problema da piâmide de números pode exitir a possibilidade de ter retrabalho durante o algoritmo
+    - em uma primeira versão o problema é recalculado várias vezes
+- caracterize uma solução ótima
+    - veja se força bruta n funciona
+- divida o problema e veja se uma solução é aplicável em formas recursivas -> problemas podem se repetir
+- aplique um *top-down*
+- 
+
+
 ### Referências
 - The Algorithm Design Manual (Skiena) 
     - Capítulo 1 - Introduction to Algorithm Design
