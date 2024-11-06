@@ -757,6 +757,26 @@ Os modelos mais comuns de uso de cores são o RGB, CMY(K), HSV.
 Cheque mais detalhes em https://pt.wikipedia.org/wiki/RGB, https://pt.wikipedia.org/wiki/CMYK e https://pt.wikipedia.org/wiki/HSV.
 Inclusive, HSV é um dos modelos mais utilizados para editores de imagem.
 
+# Processamento de Imangens & Visão Computacional
+Geração de imagens utiliza algumas técnicas interessantes para leitura de dados. Uma delas é streamlizar em matrizes, pixalizar e aplicar qualquer mudança cabível.
+
+-> Processamento de imagens pega os valores numéricos, trabalha com eles e cuspe novos valores
+  - bastante útil para reconhecimento de padrões e tratamento
+-> Visçao computacional tenta emular a visão humana, puxando uma imagem e cuspindo uma interpretação
+
+A manipulação de imagens tem algumas ideias interessantes.
+Alterações de ruído e tirar *blur*, monitoramento, montagem de interfaces não usuais - treinamento de IA, automação industrial, etc.
+Alguns desses tipos de automações retiram a necessidade de um humano ver o ambiente e analisá-lo mecanicamente.
+
+**Imagem vetorisada** -> utiliza um vetor pre-existente para relacionar os valores de cores e geração de imagens. Dessa forma, a imagem vai evitar distorções durante um upscaling ou downscaling, ao contrário do bitmap. Mas o custo é bastante considerável.
+
+## Representação e Mapa de bits (bitmap)
+Os pixels todos são constituídos de bits, os quais seguram uma quantidade específica de informações.
+As quantidades mais famoses de bit por pixel são 1, 2, 4, 8, 15, 16, 24 e 32
+O pixel é uma estrutura e pode também ser enfileirado e usado como um "stack".
+Os pixels da imagem toda são arrays unidimensionais. 
+
+
 ### Referências
 - Real-time rendering - 4th ed. / 2018 - ( Livro eletrônico ) 
   - https://pdfroom.com/books/real-time-rendering/XDkgVjmNg9B -> aparentemente o leitor de PDF funciona
