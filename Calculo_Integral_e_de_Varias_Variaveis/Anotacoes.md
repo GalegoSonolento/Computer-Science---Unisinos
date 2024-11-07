@@ -346,6 +346,13 @@ Observe que: "Em cada caso, se o limite existe, a integral imprópria converge; 
 <img src="imgs/2024-10-02_Exercicios_2.png">
 <img src="imgs/2024-10-02_Exercicios_3.png">
 
+DATA: 16/Outubro/2024
+# Seções Cônicas e Superfícies
+Todas as seções cônicas existem a partir da segmentação de um cone duplo.
+<img src="imgs/secao_conica.png">
+Assim como em espelhos, parábolas têm vértices, com focos e todos os pontos são equidistantes do dado foco em um dado eixo.
+
+
 DATA: 06/Novembro/2024
 # Integrais duplas
 - É basicamente o volume de um sólido
