@@ -345,3 +345,43 @@ Observe que: "Em cada caso, se o limite existe, a integral imprópria converge; 
 <img src="imgs/2024-10-02_Exercicios.png">
 <img src="imgs/2024-10-02_Exercicios_2.png">
 <img src="imgs/2024-10-02_Exercicios_3.png">
+
+DATA: 06/Novembro/2024
+# Integrais duplas
+- É basicamente o volume de um sólido
+- Ao invés de retângulos temos paralelepípedos
+- Mas a moral é a mesma de cologar vários retângulos pro volume se aproximar do real
+- a soma dos volumes seria o volume do que seria o sólido
+- precisa saber o limite do somatório
+- [1 ]
+
+## Integral dupla em regiões regulares
+- tem uma integral dentro da outra
+- em regiões retangulares a ordem das integrais não altera o resultado diretamente
+- a-b -> integração em x
+- c-d -> integração em y
+- o resultado da integral de dentro vira a nova função da integral de fora
+- [2 ]
+- o resultado também é uma área líquida
+    - se o resultado é negativo a maior parte do sólido está abaixo do plano xy
+- em quadrados a ordem de integração não importa
+- os intervalos acabam sempre mostrando retângulos
+- a amostragem da região de integração (retangular) é facilmente exposta em [a,b ]x[c,d ]
+- [3 ]
+
+## Integral dupla em regiões não-retangulares
+- regiões não definidas
+- pode ser do tipo 1 com limites em x
+    - intervalo em y pelas funções
+- ou tipo 2 com limites em y
+    - intervalo em x pelas funções
+- a ordem dos cálculos muda o resultado
+- se for do tipo 1
+    - intevalo definido em x e por funções em y
+    - integra primeiro em y (funções)
+    - depois integra em x
+- se do tipo 2
+    - intervalo definido em y e por funções em x
+    - integra primeiro em x (funções)
+    - depois integra em y
+- [4 ]
