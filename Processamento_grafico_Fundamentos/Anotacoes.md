@@ -823,6 +823,9 @@ canal ^ 255 # operação XOR
 ```
 Outro ainda é a binarização de uma imagem. Ela precisa estar já em gray-scale, já que mede intensidade e não cor, mas ela diminui a quantidade de dados necessários para guardá-la, o que pode vir a ser bastante útil.
 
+## Redução de ruídos em imagens
+
+
 
 ### Referências
 - Real-time rendering - 4th ed. / 2018 - ( Livro eletrônico ) 
