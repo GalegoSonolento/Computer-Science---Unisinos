@@ -722,8 +722,44 @@ DATA: 04/Novembro/2024
     - veja se força bruta n funciona
 - divida o problema e veja se uma solução é aplicável em formas recursivas -> problemas podem se repetir
 - aplique um *top-down*
-- 
 
+DATA: 11/Novembro/2024
+# Técnicas de Projeto de Algoritmos: Branch and Bound
+- possíveis soluções -> branch
+- poda de enumerações -> bound
+- percorre árvore de enumeração (state-space tree)
+- poda por não ser caminho promissor quando é maior do que o que já foi avaliado
+    - se existe outro caminho com custo menor aquele igual com custo maior é podado
+    - podem existir mais soluções dependendo do jeito que o problema é dado
+- força bruta mais sofisticado
+    - se um caminho entra em algo esquisito ele cai fora
+- no geral usado pra menor custo - minimização
+
+## BB para o Problema da Mochila
+- 0-1 Knapsack
+- é pra carregar a carga mais valiosa respeitando o limite de carga da mochila
+    - valiosa de valor mesmo, inclusive os itens tem pesos diferentes (e tamanhos)
+- nesse caso é o item completo
+- o custo é o valor do item
+- se calcula upper e lower bounds para servirem de parâmetro
+    - não quero nada com um custo maior do que meu upper bound
+    - existem upper bounds locais que atualizam o global
+- aqui é maximização - os valores de cálculo são negativos pra servir como um problema de minimização
+
+# Técnicas de Projeto de Algoritmos: Backtracking
+- força bruta melhorado
+- pega todas as soluções e vai tirando
+- pega um ramo e desce até n funcionar mais - beco sem saída
+    - volta até o nó que permite chegar em uma solução possível
+- um exemplo é um labirinto
+    - precisa definí-lo como um grid pro exemplo
+- precisa guardar os nós já visitados
+
+## N-Queens
+- N rainhas no tabuleiro sem nenhum ser ameaçada
+- cada rainha em uma linha e cada uma em uma coluna diferente
+- uma das abordagens é entregar uma terceira diretriz pra elas não ficarem na diagonal (bounding function)
+    - qualquer solução que jogar uma rainha na diagonal da outra nem começa a ver o ramo
 
 ### Referências
 - The Algorithm Design Manual (Skiena) 
