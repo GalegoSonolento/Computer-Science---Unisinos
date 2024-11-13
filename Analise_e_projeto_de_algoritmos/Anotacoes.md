@@ -664,10 +664,13 @@ E, uma vez que a expanção da árvore se quebra em dois a cada recursão, tempo
 - usa recursividade
 - geralmente é com recursividade, mas depende
     - quando é necessário descer muitos níveis de recursão se evita utiliza pra n dar stackoverflow
-- 
 
 DATA: 04/Novembro/2024
 # Técnicas de Projeto de Algoritmos: Algoritmos Gulosos
+Esse tipo de algorimo tem o objetivo direto de encontrar caminhos e participar de tomadas de decisão. Os problemas **maximizam** ou **minimizão** uma das variáveis do sistema. Claro que para que as decisões sejam tomadas de maneira coerente, restrições devem ser aplicadas ao sistema. 
+
+Problemas de otimização tem diversas formas de serem abordados:
+
 - Existem algumas técnicas para chegar em tomadas de decisão usando limites e circunstânceas, alg. gulosos é uma delas
     - a resposta é um conjunto
 - Usualmente surge de algoritmos que precisam guardar tempo ou ainda necessidade de espaço
