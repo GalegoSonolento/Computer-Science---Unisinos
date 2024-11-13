@@ -350,7 +350,18 @@ DATA: 16/Outubro/2024
 # Seções Cônicas e Superfícies
 Todas as seções cônicas existem a partir da segmentação de um cone duplo.
 <img src="imgs/secao_conica.png">
-Assim como em espelhos, parábolas têm vértices, com focos e todos os pontos são equidistantes do dado foco em um dado eixo.
+Assim como em espelhos, parábolas têm vértices, com focos e todos os pontos são equidistantes do dado foco em um dado eixo. E no estudo delas, uma bissetriz é posta sobre o foco, de modo que a distância entre o foco e a diretriz é 2p. Todas as parábolas em posição padrão tem o vértice no (0,0) e são simetricas ou no x ou no y.
+Uma elipse é um círculo com dois focos ao invés de apenas um, dado que as somas das distâncias entre os pontos que o formam sejam iguais a uma constante dada.
+Uma hipérbole é o conjunto de todos os pontos no plano tais que a diferença de suas distâncias a dois pontos distintos fixados é uma constante positiva dada, menor que a distância entre os dois pontos fixados.
+
+- **Cônicas transladadas**
+As equações de cônicas que estão transladadas de suas posições padrão podem ser obtidas substituindo x por *x - h* e *y* por *y - k* nas equações padrão. Para uma parábolam, isso translada o vértice da origem para o ponto (*h*,*k*); para elipses e hipérboles, isso translada o centro da origem para o ponto (*h*,*k*).
+
+**Superfícies Quadráticas**
+<img src="imgs/superficies_quadraticas.png">
+
+# Funções de Várias Variáveis
+Basicamente uma integral dentro da outra.
 
 
 DATA: 06/Novembro/2024
