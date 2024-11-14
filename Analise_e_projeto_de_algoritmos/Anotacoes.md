@@ -670,6 +670,36 @@ DATA: 04/Novembro/2024
 Esse tipo de algorimo tem o objetivo direto de encontrar caminhos e participar de tomadas de decisão. Os problemas **maximizam** ou **minimizão** uma das variáveis do sistema. Claro que para que as decisões sejam tomadas de maneira coerente, restrições devem ser aplicadas ao sistema. 
 
 Problemas de otimização tem diversas formas de serem abordados:
+- algoritmos gulosos
+- programação dinâmica
+- branch and bound
+- heurísticas
+- algoritmos aproximativos
+
+Uma das formas de identificar um problema como sendo cabível de aplicar um algoritmo guloso é saber se subproblemas do problema original podem ser repetidos diversas vezes para chegar à uma solução para o problema geral.
+Todas as etapas fazem a melhor escolha do momento e não se considera o âmbito total na hora da decisão.
+Pode ser aplicado em algoritmos de troco, seleção de atividades *Minimum Spanning Tree*, *Shortest Path*, etc.
+
+```python
+# Estrutura geral
+
+função AlgoritmoGuloso(C: conjunto) {
+    S ← inicializa como um conjunto vazio
+    enquanto C não estiver vazio e não solução(S) faça
+        x ← seleciona C
+        C ← C - {x}
+        se é viável S∪{x} então
+            S ← S∪{x}
+        fim se
+    fim enquanto
+    se solução(S) então
+        retorne S
+    senão
+        retorne “Não existe solução!”
+    fim se
+fim função
+```
+
 
 - Existem algumas técnicas para chegar em tomadas de decisão usando limites e circunstânceas, alg. gulosos é uma delas
     - a resposta é um conjunto
