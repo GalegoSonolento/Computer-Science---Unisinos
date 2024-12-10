@@ -824,6 +824,18 @@ canal ^ 255 # operação XOR
 Outro ainda é a binarização de uma imagem. Ela precisa estar já em gray-scale, já que mede intensidade e não cor, mas ela diminui a quantidade de dados necessários para guardá-la, o que pode vir a ser bastante útil.
 
 # Filtros de Imagens no OpenCV
+Esse tipo de filtros que estamos falando aqui abordam principalmente a utilização do kernel do openCV (com np.array, do python).
+O funcionamento aqui é utilizar o np.array pra criação de uma matriz que será posta sobre a imagem original. Essas matrizes podem variar de tamanho, indo de 3x3, 5x5 a 19x19 e assim por diante. Elas não necessariamente precisam ser quadráticas, permitindo organizações em 3x5 e etc.
+
+## Filtro de Correlação
+A aplicação do kernel é feita diretamente em cima da imagem; o sistema basicamente coloca o kernel em cima dela e faz uma multiplicação matricial da imagem pela máscara (kernel); resultando em uma correlação. Dessa forma, diferentes tamanhos de kernel resultam em diferentes resultados (mais "fortes" ou "fracos").
+Nesse sentido, a função **filter2D** utiliza a correlação para fazer aplicação no kernel.
+```python
+correlated_image = cv.filter2D(img, -1, kernel)
+```
+
+## Filtro de Convolução
+
 
 
 ### Referências

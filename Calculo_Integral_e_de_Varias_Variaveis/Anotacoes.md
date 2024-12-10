@@ -362,6 +362,11 @@ As equações de cônicas que estão transladadas de suas posições padrão pod
 
 # Funções de Várias Variáveis
 Basicamente uma integral dentro da outra.
+Nesses casos, as terminologias tratarão de notações sempre com *x* e *y* em fórmulas e quais fatores serão integrados dependem diretamente de como e equação é gerada.
+Sem definições explícitas ou claras, qualquer fórmula detém um **Domínio natural**.
+Por definição, qualquer função com *n* variáveis precisa devolver uma resposta que associa um número real com algum conjunto com *n* dimensões; e para que a resposta seja válida, as viaráveis necessitarão de restrições, gerando os espaços de resposta para cada equação. (Aqui valem todas as regras de divisão por zero, logaritmo de número negativo, etc).
+
+## Gráficos de funções de duas variáveis
 
 
 DATA: 06/Novembro/2024
