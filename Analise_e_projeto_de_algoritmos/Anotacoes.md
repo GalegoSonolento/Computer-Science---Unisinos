@@ -700,7 +700,6 @@ função AlgoritmoGuloso(C: conjunto) {
 fim função
 ```
 
-
 - Existem algumas técnicas para chegar em tomadas de decisão usando limites e circunstânceas, alg. gulosos é uma delas
     - a resposta é um conjunto
 - Usualmente surge de algoritmos que precisam guardar tempo ou ainda necessidade de espaço
@@ -717,6 +716,21 @@ fim função
     - se escolher a que termina antes sobra mais tempo pras demais
 
 ## Àrvore geradora mínima
+Consiste na montagem de uma árvore, não necessariamente a menor como o nome pode sugerir, mas sim a com os caminhos mais curtos, mesmo que um número maior de arestas possa ser necessário; essa árvore gera o grafo com o mínimo de arestas com o mínimo de distância entre os vértices.
+G = (V, A) → onde V representa o conjunto de vértices, e A o conjunto de arestas; sendo que cada aresta detém um peso.
+O resultado final é basicamente um somatório: w(s) = ∑_(w(u,v)∈S) w(u,v)
+Existem alguns métodos para abordar esse problema (sendo um deles força bruta), mas os mais famosos são **Kruskal** e **Prim**
+
+### Kruskal
+- Algoritmo guloso
+```txt
+MST-Kruskal(G,*w*)
+1   A = null
+2   for each vertex *v* ∈ *G.V*
+```
+
+
+
 - menor caminho para chegar em todos os pontos (cidades, componentes, canais, etc)
 - conexão de pontos
 - é o problema do caixeiro viajante - algoritmo de Dijkistra?
