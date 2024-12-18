@@ -835,6 +835,30 @@ correlated_image = cv.filter2D(img, -1, kernel)
 ```
 
 ## Filtro de Convolução
+Os filtros desse tipo tem o kernel rotacionado em 180° antes de aplicar em cima da imagem.
+Tem aplicações interessantes em detecção de bordas e realces.
+Existem alguns desse tipo, os mais conhecidos sendo:
+```python
+#Filtro Sobel – bordas horizontais
+sobel_horizontal = cv.Sobel(img, cv.CV_64F, 1, 0, ksize=3)
+
+#Filtro Laplaciano – bordas em todas as direções
+laplacian_image = cv.Laplacian(img, cv.CV_64F)
+```
+
+## Passa baixa - suavização
+Removedores de ruído e suavizadores de imagens (os blurs entram nessa categoria)
+```python
+#Filtro de média (blur)
+smoothed_image = cv.blur(img,(5,5))
+
+#Filtro Gaussiano
+blurred_image = cv.GaussianBlur(img, (5,5), 1.5)
+
+'''Sim existe diferença entre o filtro de média e o Gaussian blur, eles são conceitualmente diferentes.
+Para evitar ficar discutindo aqui, coloquei cada um abaixo'''
+```
+
 
 
 
