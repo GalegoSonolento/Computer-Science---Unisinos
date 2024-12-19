@@ -726,10 +726,17 @@ Existem alguns métodos para abordar esse problema (sendo um deles força bruta)
 ```txt
 MST-Kruskal(G,*w*)
 1   A = null
-2   for each vertex *v* ∈ *G.V*
+2   for each vertex *v* ∈ *G*.*V*
+3       MAKE-SET(*v*)
+4   sort edges of *G.E* into nondecreasing order by weight *w*
+5   for each edge (*u,v*) ∈ *G.E*, taken in nondecreasing order by weitght
+6       if FIND-SET(*u*) != FIND-SET(*v*)
+7           A = A ∪ {(*u,v*)}
+8           UNION(*u,v*)
+9   return A
 ```
-
-
+Sendo que aqui temos a separação dos dados nas linhas 1-4, percorrendo os conjuntos em 5-8, fazendo a escolha gulosa no if (melhor decisão local) e dentro do if atualizando o conjunto de soluções para implementar a escolha.
+Veja que a implementação é feita baseado em uma comparação entre duas partes do algoritmo.
 
 - menor caminho para chegar em todos os pontos (cidades, componentes, canais, etc)
 - conexão de pontos
@@ -746,6 +753,8 @@ MST-Kruskal(G,*w*)
 - Pesquise sobre **union find**
 
 ## Caminho mais curto em um grafo entre dois dados pontos
+Ao contrário de uma escolha mínima, aqui temos um grafo dirigido (não posso andas nas duas direções na mesma aresta).
+
 - os elementos se conectam
 - pocotes na rede, via de rota pra veículo, etc
 - grafos dirigidos
