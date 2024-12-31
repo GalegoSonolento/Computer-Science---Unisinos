@@ -754,6 +754,28 @@ Veja que a implementação é feita baseado em uma comparação entre duas parte
 
 ## Caminho mais curto em um grafo entre dois dados pontos
 Ao contrário de uma escolha mínima, aqui temos um grafo dirigido (não posso andas nas duas direções na mesma aresta).
+O produto mais óbivo dessa dinâmica é o algoritmo de Dijkstra.
+
+### Algoritmo de Dijkstra
+Mentém um conjunto de vértices com os menos caminhos à partir de um vértice inicial s.
+À cada vértice visitado, ele calcula a distância entre o visitado e o anterior e realiza o *relaxamento* - que consiste em verificar se a nova distância leva a outro vértice de maneira mais curta que os dados anteriores mostravam.
+O algoritmo em si é bastante simples:
+```txt
+DIJKSTRA (G, w, s)
+1   Initialize-Single-Source (G,s)
+2   S = ∅
+3   Q = G.V
+4   while Q != ∅
+5       u = Extract-Min(Q)
+6       S = S ∪ {u}
+7       for each vertex v ∈ G.Adj[u]
+8           Relax(u,v,w)
+```
+A inserção de dados desse algoritmo precisa ser de pelo menos 3 (dado que com apenas 2 vértices não tem muito o que se calcular).
+Existem alguns cálculos diferentes (para implementações diferentes) desse algoritmo. Entre as quais:
+– array ordenado pelos vértices: O(V2 + A) → O(V2)
+– binary min-heap: O((V + A)lg V) → O(A lg V)
+– fibonacci heap: O(V lg V + A)
 
 - os elementos se conectam
 - pocotes na rede, via de rota pra veículo, etc
@@ -831,7 +853,13 @@ DATA: 11/Novembro/2024
         - Seção 2.2 -> Analyzing Algorithms
     - Capítulo 3
         - Seção 3.1 -> Asymptotic Notation
+    - Capítulo 16 - Greedy Algorithms
+    - Capítulo 23 - Minimun Spanning Trees
+        - 23.2 - The Algorithms of Kruskal and Prim
+    - Capítulo 24 - Single Source Shortest Paths
+        - 24.3 - Dijkstra's algorithm
 - Lecture Notes on Algorithm Analysis and Computational Complexity (Ian Parberry).
 - CORMEN, Thomas H. et al. Introduction to Algorithms. 3. ed. Cambridge: MIT, 2009.
 - Solving Recurrences. https://web.stanford.edu/class/archive/cs/cs161/cs161.1168/lecture3.pdf
 - Material de aula. Prof. Gilberto Irajá Müller (Unisinos).
+- Material desenvolvido com base nos originais do professor Sandro Rigo (Unisinos).
