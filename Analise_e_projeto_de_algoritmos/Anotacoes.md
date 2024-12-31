@@ -879,3 +879,4 @@ DATA: 11/Novembro/2024
 - Solving Recurrences. https://web.stanford.edu/class/archive/cs/cs161/cs161.1168/lecture3.pdf
 - Material de aula. Prof. Gilberto Irajá Müller (Unisinos).
 - Material desenvolvido com base nos originais do professor Sandro Rigo (Unisinos).
+- Material do professor João Gluz (Unisinos)
