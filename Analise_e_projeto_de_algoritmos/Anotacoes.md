@@ -866,6 +866,9 @@ Lembre-se: o custo aceitável sempre depende do problema
 - aqui é maximização - os valores de cálculo são negativos pra servir como um problema de minimização
 
 # Técnicas de Projeto de Algoritmos: Backtracking
+Esse tipo de algoritmo é um força bruta melhorado. Isso porque o funcionamento de ir testando as respostas funciona da exata mesma forma; todavia, o algoritmo precisa verificar toda hora se alguma das regras previamente impostas pelo problema foi quebrada, se sim, o algoritmo não continua por aquele caminho volta um nodo, e segue para o próximo (sim, também é montado em um esquema de árvore).
+Esse funcionamento é bastante parecido com um algoritmo básico de atravessar um labirinto.
+
 - força bruta melhorado
 - pega todas as soluções e vai tirando
 - pega um ramo e desce até n funcionar mais - beco sem saída
@@ -875,6 +878,7 @@ Lembre-se: o custo aceitável sempre depende do problema
 - precisa guardar os nós já visitados
 
 ## N-Queens
+- Pesquise: **N-queens Problem**
 - N rainhas no tabuleiro sem nenhum ser ameaçada
 - cada rainha em uma linha e cada uma em uma coluna diferente
 - uma das abordagens é entregar uma terceira diretriz pra elas não ficarem na diagonal (bounding function)
@@ -887,6 +891,7 @@ Lembre-se: o custo aceitável sempre depende do problema
         - Seção 2.1 -> The RAM Model of Computatio
         - Seção 2.2 -> The Big Oh Notation
         - seção 2.3 -> Growth Rates and Dominance Relations
+    - Capítulo 7 - Combinatorial Search and Heuristic Methods
 - Introduction to Algorithms (Cormen, et al.)
     - Capítulo 1 - The role of Algorithms in Computing
     - Capítulo 2
