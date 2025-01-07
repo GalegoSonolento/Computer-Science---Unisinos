@@ -854,12 +854,41 @@ smoothed_image = cv.blur(img,(5,5))
 
 #Filtro Gaussiano
 blurred_image = cv.GaussianBlur(img, (5,5), 1.5)
-
-'''Sim existe diferença entre o filtro de média e o Gaussian blur, eles são conceitualmente diferentes.
-Para evitar ficar discutindo aqui, coloquei cada um abaixo'''
 ```
 
+## Passa alta - nitidez
+Mantém componentes com frequência alta (principalmente bordas e texturas)
+```python
+# Filtro Laplaciano
+laplacian_image = cv.Laplacian(img, cv.CV_64F)
 
+# Filtro de Realce (sharpening)
+kernel = np.array([[0, -1, 0],
+                   [-1, 5, -1],
+                   [0, -1, 0]])
+sharpened_image = cv.filter2D(img, -1, kernel)
+```
+
+## Estáticos
+Operações estatísticas em pixels vizinhos, como o suavizados de bordas e média de cores.
+```python
+#Filtro de mediana (útil para reduzir ruído)
+median_filtered_image = cv.medianBlur(img, 5)
+
+#Filtros de realce de áreas claras e escuras
+
+# Carregar a imagem em escala de cinza
+img = cv.imread('baboon.png', cv.IMREAD_GRAYSCALE)
+
+# Definir o kernel (vizinhança)
+kernel = np.ones((3, 3), np.uint8)
+
+# Aplicar filtro de Máximo (Dilatação - aumentar as áreas brilhantes)
+filtro_maximo = cv.dilate(img, kernel)
+
+# Aplicar filtro de Mínimo (Erosão - aumentar as áreas escuras)
+filtro_minimo = cv.erode(img, kernel)
+```
 
 
 ### Referências
