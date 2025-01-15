@@ -380,6 +380,24 @@ Veja que, o número de dimensões de um gráfico é o de variáveis +1, o que si
 # Derivadas parciais
 Já que existem as derivadas e nossas funções agora possuem 2 variáveis, precisamos derivar em função de uma delas - é basicamente isso. Em uma função que possua *x* e *y*, deriva-se um (tratando o outro como constante) e depois o outro.
 
+DATA: 23/Outubro/2024
+# Máximos e Mínimos
+Nesses casos, temos basicamente 3 tipos de pontos:
+- Máximo 
+- Mínimo
+- Ponto de Sela
+
+Logo, uma conclusão lógica, é que os extremos acontecem em pontos em que as derivadas são nulas, uma vez que as tangentes nesses pontos precisam estar perpendiculares uma a outra e em angulção (entre elas) em um 3° plano. Esses são os **pontos críticos da função**.
+Todavia, nem todo extremo é um máximo ou mínimo.
+
+## Método para encontrar pontos de extremo de funções de duas variáveis
+Primeiro, monte um sistema com as derivadas de x e de y da função.
+Depois, monte a identidade da matriz de todas as derivadas segundas à partir de fx e fy. Tendo, basicamente: *D = f_xx(X_0, Y_0)f_yy(X_0, Y_0)-f²_xy(X_0, Y_0)
+Onde:
+- Se D > 0 e f_xx(X_0, Y_0) > 0, então f terá um mínimo relativo em (X_0, Y_0).
+- Se D > 0 e f_xx(X_0, Y_0) < 0, então f terá um máximo relativo em (X_0, Y_0).
+- Se D > 0, então f terá um ponto de sela em (X_0, Y_0).
+- Se D = 0, então nenhuma conclusão pode ser tirada.
 
 
 DATA: 06/Novembro/2024
