@@ -1,4 +1,53 @@
 DATA: 27/Fevereiro/2025
+# Revisão de banco de dados
+- modelo conceitual é o mais abstrato
+    - lógico e físico falam de tables e entidades
+- não-relacionais falam de documento
+    - relacionais falam de colunas
+- ralacionamentos
+- concetual pro lógico cria tables
+    - álgebra relacional é a implementação base do banco (comercialmente conhecido como SQL)
+- SGBD (Sistemas de Gerência de Banco de Dados) - coleção de dados
+    - File system bonita
+    - ainda é uma coleção de arquivos (só é diferente)
+    - SQLite é um arquivo só
+    - HANA DB é distribuído por exempl
+- um banco de dados pode ter diversos schemas para módulos diferente 
+    - até na mesma aplicação!
+- aplicações maiores tem diferentes versões
+    - diferença de recursos
+    - os melhores são pagos (e.g. Oracle Enterprise)
+        - aplicaçoes mais cara permitem Clusters por exemplo
+- DBs surgiram pq manter tudo na mão em arquivos é muito trabalhoso
+    - Excel é um meio termo disso
+    - Excel ainda é muito interessante como um export
+- DB à nível de RAM é uma coisa mais recente
+    - DBs tipo Redis auxiliam a manter cache em RAM pra consulta
+    - buscas mais rápidas que acesso à DB
+- dados não-estruturados são lidos como *streams*
+    - pode ser transformado em dado estruturado posteriormente
+    - pode ser usado em aprendizado de máquina
+- semi-estruturados apresentam diversos tipos de schemas e tem uma relação mais ou menos relacional (muita vezes não-coerente)
+- estruturas ANSI-SPARC dá preferência pra dados de disco distribuídos para evitar problemas
+- VDL - criação de *views* - queries prontas
+    - chamar uma view é muito mais rápido que um select
+    - chace dentro do DB
+- dá pra ter várias camadas dentro do banco
+    - N camadas
+        - hoje é normal Front-end e Back-end, uma com cada DB e um middleware
+        - podem existir mais subcamadas
+    - pode servir como questão de segurança
+
+# Serviços de um SGBD
+- a hora de um DBA é cara pq bancos relacionais corporativos oferecem muitos serviços (mas o trabalho principal é gerenciamento)
+- redundância precisa tolerar falhas mas não pode afetar o processamento do DB
+- bloqueio de recursos é importante (*lock*)
+    - evitar *deadlock* é um dos pontos cruciais de OS também
+- ou tudo acontece ou nada acontece em um script de DB
+- backups **quentes** são com o banco funcionando comercialmente (maluco)
+- controle de integridade é importante
+    - não é por que não é relacional que é a casa da mãe Joana
+
 # Introdução ao Processamento de Consultas
 - Análise de custo dos queries e consegue mostrar onde a consulta está com dificuldade
 - o banco de dados pode fazer uma otimização sozinho
@@ -35,9 +84,22 @@ DATA: 27/Fevereiro/2025
 
 ### Perguntas
 - SAP HANA tem plano de avalização proprietário?
+Sim, em geral os bancos de dados possuem pelo menos o que se chama de “execution plan”, para mostrar os custos de cada parte da query.
+
 - Redis é uma boa engine de DB ainda
+Sim, Redis é muito utilizado, diria até que a grande maioria das empresas que utilizam soluços de cache atualmente usam o Redis.
+
 - O que é o Cloud BigTable?
+É o banco de dados do Google, que funciona em cloud, e é muito utilizado como motor de busca.
+
 - a equivalência menos custosa é necessariamente a mais rápida?
+Sim, pois o caminho para se chegar ao dado é menor, além de evitar problemas de concorrência como  deadlock.
+
 - view substituem a lógica de partições internas da table?
+São conceitos independentes, views são consultas prontas, enquanto o particionamento interno de tabelas serve para buscar os dados mais utilizados mais rapidamente.
+
 - gravação em fita magnética ainda é a mais segura?
+Sim, é uma das formas mais seguros para armazenamento de dados offline e de longo prazo, além do custo-benefício, mas é possível também gravar em HDs e na nuvem, todavia, por exemplo, um cartucho de fita magnética moderna consegue armazenar muitos terabytes por um preço muito baixo em relação a um HD ou nuvem.
+
 - como funciona um banco de dados inconsistente? porquê vale a pena?
+Vamos falar mais sobre isso nas próximas aulas, mas adiantando o assunto, em geral os banco nosql privilegiam e priorizam mais o armazenamento em memória do que tanto em disco, por isso se chama eventualmente consistente, pois o dado pode estar na memória e não foi pro disco ainda, então existe o risco (pequeno mas existe, principalmente em cluster), por outro lado a performance é muito maior.
