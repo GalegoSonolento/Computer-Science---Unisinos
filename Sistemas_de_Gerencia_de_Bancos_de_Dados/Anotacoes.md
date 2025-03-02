@@ -37,6 +37,8 @@ DATA: 27/Fevereiro/2025
         - hoje é normal Front-end e Back-end, uma com cada DB e um middleware
         - podem existir mais subcamadas
     - pode servir como questão de segurança
+- no final das contas, um banco de dados é um grande arquivo (ou vários arquivos) que salvam dados e permitem um controle maior de quem os acesso e como informações são dele retiradas - ele evita problemas de integridade e outros básicos como a condição de corrida (*deadlock*).
+- 
 
 # Serviços de um SGBD
 - a hora de um DBA é cara pq bancos relacionais corporativos oferecem muitos serviços (mas o trabalho principal é gerenciamento)
@@ -103,3 +105,13 @@ Sim, é uma das formas mais seguros para armazenamento de dados offline e de lon
 
 - como funciona um banco de dados inconsistente? porquê vale a pena?
 Vamos falar mais sobre isso nas próximas aulas, mas adiantando o assunto, em geral os banco nosql privilegiam e priorizam mais o armazenamento em memória do que tanto em disco, por isso se chama eventualmente consistente, pois o dado pode estar na memória e não foi pro disco ainda, então existe o risco (pequeno mas existe, principalmente em cluster), por outro lado a performance é muito maior.
+
+- JDBC ou ODBC são drivers de conexão que utilizam determinadas arquiteturas, certo? Por exemplo, uma aplicação Java rodando um banco Oracle utiliza ODBC e outra em Java rodando HANA utilizaria JDBC, certo? Ou esses drivers podem se comunicar e funcionar indiferente do banco e da aplicação?
+
+- Como a rede se comporta nos casos de acesso ao servidor e como a aplicação (BD) deveria se comportar? Ela pausa todas as operações para poder concluir a viajando pela rede?
+
+- Caso tenhamos uma rede muito longa e muitos acessos à um determinado banco, mesmo que tenhamos o Redis para cache, isso significaria lentidão do sistema como um todo?
+
+- A ordenação de execução de operações é sempre a mesma? No sentido da álgebra relacional. Ou ainda temos alterações com outros tipos de banco (i.e. não-relacionais)
+
+- Qual a diferença da fita magnética para o disco magnético?
