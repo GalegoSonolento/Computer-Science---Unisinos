@@ -7,4 +7,15 @@ https://www.youtube.com/watch?v=s1xc1HVsRk0&list=PLalrWAGybpB-L1PGA-NfFu2uiWHEsd
 
 Some tips to Cassandra installation
 - https://stackoverflow.com/questions/51647115/cassandra-nodetool-failed-to-connect-to-127-0-0-17199
-- https://stackoverflow.com/questions/58374661/how-to-fix-active-active-exited-issue-in-cassandra-server
+- https://stackoverflow.com/questions/58374661/how-to-fix-active-active-exited-issue-in-cassandra-server -> Isso aqui salvou, precisa de fato ter o path JVM configurado pra Java 8
+
+
+Sites que possivelmente me ajudaram a arrumar o versionamento do python:
+- https://stackoverflow.com/questions/43354382/how-to-switch-python-versions-in-terminal
+- https://linuxcapable.com/how-to-install-python-3-11-on-ubuntu-linux/
+- https://codelikechamp.com/how-to-downgrade-python-3-12-to-3-11/
+- https://geniusgeeks.com/uninstall-python-ubuntu/
+- https://medium.com/python-mvp/upgrade-python-3-10-to-3-11-on-ubuntu-22-04-2f63e4d326f9
+- https://www.youtube.com/watch?v=jgHAJ29zOfY
+- https://duckduckgo.com/?t=ffab&q=how+to+uninstall+python+3.12+on+ubuntu&ia=web
+- https://linuxcapable.com/how-to-install-python-3-11-on-ubuntu-linux/
