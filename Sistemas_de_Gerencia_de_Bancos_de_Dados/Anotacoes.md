@@ -106,12 +106,20 @@ Sim, é uma das formas mais seguros para armazenamento de dados offline e de lon
 - como funciona um banco de dados inconsistente? porquê vale a pena?
 Vamos falar mais sobre isso nas próximas aulas, mas adiantando o assunto, em geral os banco nosql privilegiam e priorizam mais o armazenamento em memória do que tanto em disco, por isso se chama eventualmente consistente, pois o dado pode estar na memória e não foi pro disco ainda, então existe o risco (pequeno mas existe, principalmente em cluster), por outro lado a performance é muito maior.
 
+- Referente ao trabalho do semestre, serão 15 de apresentação + 5 para perguntas (totalizando 20min) ou teremos 15 e, desses, 5 serão para perguntas (então teríamos 10min para apresentar o trabalho)?
+Total de 20 min (15 min de apresentação + 5 min de perguntas).
+
 - JDBC ou ODBC são drivers de conexão que utilizam determinadas arquiteturas, certo? Por exemplo, uma aplicação Java rodando um banco Oracle utiliza ODBC e outra em Java rodando HANA utilizaria JDBC, certo? Ou esses drivers podem se comunicar e funcionar indiferente do banco e da aplicação?
+Sim, são drivers, utilizados nativamente (ODBC) ou por máquina virtual (JDBC) para habilitar a aplicação “conversar” com o banco de dados, de acordo com a versão do banco e até do sistema operacional.
 
 - Como a rede se comporta nos casos de acesso ao servidor e como a aplicação (BD) deveria se comportar? Ela pausa todas as operações para poder concluir a viajando pela rede?
+Não sei se entendi bem a pergunta, mas nós vamos ver nas próximas aulas como é percorrida a comunicação até encontrado o dado e retornar.
 
 - Caso tenhamos uma rede muito longa e muitos acessos à um determinado banco, mesmo que tenhamos o Redis para cache, isso significaria lentidão do sistema como um todo?
+É preciso analisar cada caso, mas em resumo o Redis evita o acesso ao(s) disco(s) onde estão armazenados os dados, então ele encurta o caminho digamos assim.
 
 - A ordenação de execução de operações é sempre a mesma? No sentido da álgebra relacional. Ou ainda temos alterações com outros tipos de banco (i.e. não-relacionais)
-
+A ordenação pode ser diferente sim, há vários algoritmos e cada banco de dados pode implementar diferente, nós vamos ver esses algoritmos nas próximas aulas.
+ 
 - Qual a diferença da fita magnética para o disco magnético?
+Na fita magnética os dados são armazenados sequencialmente ao longo da fita, em faixas paralelas. Já o disco magnético funciona como um HD, com os dados armazenados em trilhas, divididas em setores, assim o acesso pode ser aleatório, o que torna mais rápida a busca, por outro lado é mais caro que fita magnética. A fita magnética é mais barata por terabyte armazenado, normalmente é utilizada para armazenamento de longo prazo.
