@@ -79,9 +79,61 @@ DATA: 27/Fevereiro/2025
 - HASH e HEAPS são usados aqui também
     - HASH muito usado em Blockchain
         - um bloco aponta pro outro com HASHES - segurança
-- 
 
+DATA: 05/Março/2025
+# Concorrência
+- evitar *deadlocks*
+- controles de *timestamp* para replicação de dados 
+- isolamento é fundamental - é possível com a serialização
+    - *serializable* em Java
+    - objetos compartilhados na rede como um string gigante
+    - mesmo princípio mas com transação
+- em DB se faz isso com locks
+    - ao final da operação o objeto deve ser desbloquado
+    - assegurar serialização e evitar *deadlocks*
+- *deadlock* - impasse eterno
+    - predições em grafos podem auxiliar no encontro de deadlocks - *loops* no grafo
+- serialização tira performance
+- árvores B+ -> árvores balanceadas
+- existem alguns tipos de isolamento, que permitem performances diferentes
+    - da mesma forma que antes, aqui algumas vezes pode ser que o dado não seja 100% coerente
+- *starvation* é deixar a transação morrer de fome por falta de acesso (assim como em OS)
+    - resolver isso é colocar uma fila de prioridade nas operações
+- acessos em árvore caminham entre os nodos com alguma intenção, até chegar no nodo necessário, faz o que precisa fazer e volta
+    - dá uma concorrência maior mas reduz o tempo de resposta
+    - apenas módulos folha de fato são afetados
+- 2PL - two phase locking
+    - impede qualquer outro bloqueio de afetar os locks-X
+    - consegue desbloquar uma leitura mesmo após dar lock-S em uma outra
+- 2PL - Rigoroso
+    - sempre libera apenas ao final de tudo
+- *Timestamps*
+    - permite ordenação e controle de dados pelo tempo
+- versialização também pode controlar pelo acesso e tipagem
+-  a prevenção de *deadlock* utiliza várias ferramentas normais de administração e evita 
 
+## Leitura suja
+- *Dirty read*
+- não acontecem erros e permitimos uma leitura em um momento que uma transação não foi completada
+    - pode ser o caso de o valor ter sido atualizado, lemos, e a operação de alteração se desfaz
+- pra evitar esse tipo de problema, só com serialização
+
+# Recuperação de falhas
+- várias alternativas
+    - principal são sistemas baseados em *log*
+        - *clusters* e **réplicas são todos baseados em ***logs***
+- diversos outros sistemas de recuperação são ainda baseados em logs
+- vale tudo, o que não pode acontecer é perder informação ou consistência
+- **falhas de disco** são mais complexas mas ocorriam bastante em eras anteriores da computação
+- **Logs** precisam ter todas as marcações de aplicação e das fazes da operação
+    - ***traces*** de bancos de dados tem dezenas de informações
+- o mais comum é desfazer e refazer a operação
+    - aqui tem valor anterior e posterior
+    - dá pra rodar 50x q o log ainda é o mesmo
+- se uma operação fica pela metade é melhor dar um rollback e rodar depois
+    - não sabemos se existia alguma operação em memória que ainda n tinha descido pro log
+- ***Dump*** -> manda o banco exportar os dados e larga em um zip ou em um arquivo específico (criação de tables, etc) - restauração à frio
+- **sempre teste seu backup**
 
 
 ### Perguntas
