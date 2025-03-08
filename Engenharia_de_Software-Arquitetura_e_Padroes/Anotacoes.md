@@ -48,3 +48,25 @@ DATA: 26/Fevereiro/2025
 - precisam ter vários compoenentes
 - sempre vemos todos quando montamos o software
 - tds tem papéis específicos
+
+DATA: 08/Março/2025
+# Dimensões da Arquitetura
+● Características arquiteturais
+– Esta dimensão descreve quais aspectos do sistema a arquitetura precisa suportar:
+escalabilidade, testabilidade, disponibilidade, etc.
+● Decisões arquiteturais
+– Esta dimensão inclui decisões importantes que têm implicações significativas ou de
+longo prazo para o sistema. Por exemplo, o tipo de banco de dados que ele usa, o
+número de serviços que ele tem e como esses serviços se comunicam entre si.
+● Componentes lógicos
+– Esta dimensão descreve os blocos de construção da funcionalidade do sistema e
+como eles interagem entre si. Por exemplo, um sistema de comércio eletrônico pode
+ter componentes para gerenciamento de estoque, processamento de pagamentos, etc.
+● Estilo arquitetural
+– Esta dimensão define a forma física geral e a estrutura de um sistema de software da
+mesma forma que uma planta de construção define a forma geral e a estrutura da sua
+casa.
+
+Tenha em mente que uma escolha de arquitetura depende de vários fatores para que ela tenha algum sucesso.
+Ter qualquer um dos aspectos como garantido pode gerar um gargalo ou até impedir completamente o funcionamento do sistema.
+Entenda seu ambiente e trate como tal.
