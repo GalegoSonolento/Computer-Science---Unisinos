@@ -81,6 +81,54 @@ DATA: 27/Fevereiro/2025
         - um bloco aponta pro outro com HASHES - segurança
 
 DATA: 05/Março/2025
+# Transações
+- inserção e alteração de dados
+- conjunto deoperações feitas no modo **tudo ou nada**
+    - ou faz todas de uma vez só
+    - ou reverte tudo pro estado original
+- acontece com duas ou mais alterações
+- fita magnética é muito boa, mas tem um acesso sequencial que diminui a velocidade de informação
+    - isso é importante pra guardar informação a longo prazo
+    - disco também é importante e mais seguro atualmente, mas ainda não ganha da fita pra longo prazo
+    - a memória RAM é ainda mais rápida e o Redis é bastante utilizado aqui
+        - nuvem, local, etc
+        - mensageria e cache (consultas rápidas)
+        - evita sobrecarregar os HDs
+- backups são sempre feitos em disco por segurança
+- RAID - distruibuição de arquivos entre vários discos
+    - se um falhar os dados nos outros discos podem reconstruir a parte que falhou
+    - precisa de um OS específico para construção de servers
+- consistência é o vai ou racha
+- transação pode ficar inconsistente
+    - quando algum fator externo acontece (e.g. falta de luz) a inconsistência aparece
+- COMMIT; server para confirmar uma operação a nível de DB (transação) - permite ***rollback***
+- DBs mais famosos são relacionais justamente pela confiabilidade nos dados
+    - muitos sistemas corporativos usam DB's e precisam de mais garantia de integralidade que rapidez
+    - não necessariamente o mais usado é o melhor
+- é mais complexo montar Clouds com bancos de dados relacionais
+    - eles são mais lentos
+    - não necessariamente compatíveis com as expectativas cloud
+- **execuções simultâneas** melhora bastante o tempo de execução
+    - vários cores e bastante *output*
+- **ACID** é usado em bancos relacionais
+    - em hipótese alguma uma transação deve interferir na outra
+        - mesmo com paralelismo
+    - se desligar e consultar depois o dado precisa estar lá ainda
+- O ***failover*** usa a gravação de disco automática e permite dar *rollbacks* pra estados anteriores daquele banco
+- ***ghosts*** causam consulta e geração de dados errados
+    - acontecem com transações simultâneas
+- schdules não podem estar cascateadas (uma dependendo da outra)
+    - gera *aborts* em sequência
+- leituras nunca geram interferência
+    - o cuidado é necessário com leituras e escritas
+    - escritas sempre devem ser postas antes e commitadas
+- serialização pode ser testado pelo grafo de precedência
+    - se quando passar pra T2, voltar imediatamente pra T1, tem risco de confiabilidade de dados
+    - isso é um grafo cíclico
+        - arriscado pra execução
+        - isso é visto dentro do execution plan
+    - em grafos acíclicos a ordem de execução é montada em outro lugar e o execution plan toma conta
+
 # Concorrência
 - evitar *deadlocks*
 - controles de *timestamp* para replicação de dados 
