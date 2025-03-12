@@ -72,4 +72,17 @@ Mas ela basicamente funciona como no abaixo:
     - fator de quantização faz isso
 - Códigos em Java de FDCT e IDCT estão nesse documento
 - Uma imagem fica em foco quando existem altas frequências
+
+DATA: 11/Março/2025
+# Introdução à VAO e VBO - Shaders
+- OpenGL não para por debug de estado
+    - é importante gerar algum tipo de log de erro
+- informação é sempre estruturada no sentido horário
+- sempre visualiza o front-face
+    - normalmente se usa essa ideia com 3D
+    - processamento de visão angulada
+    - não precisa processar tudo de uma vez
+        - não precisa processar o que a câmera não vê
+- shader é basicamente um programinha que forma o pipeline gráfico do OpenGL
+- cada programa é vinculado à um vértice por vez (shader)
 - 
