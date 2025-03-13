@@ -20,7 +20,7 @@ A experiência do usuário quando se fala de UX é mais do que apenas o produto.
 - maioria dos sistemas serve a uma função (a n ser q seja entretenimento)
 
 DATA: 10/Março/2025
-Slides 14 a 
+Slides 14 a 53
 # Experiência de Usuário (UX)
 - início de processo de desenvolvimento
     - ficava limitado a funcinalidades do sistema

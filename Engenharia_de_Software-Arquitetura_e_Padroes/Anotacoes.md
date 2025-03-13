@@ -70,3 +70,78 @@ casa.
 Tenha em mente que uma escolha de arquitetura depende de vários fatores para que ela tenha algum sucesso.
 Ter qualquer um dos aspectos como garantido pode gerar um gargalo ou até impedir completamente o funcionamento do sistema.
 Entenda seu ambiente e trate como tal.
+
+DATA: 12/Março/2025
+### Continuação Dimensões de Arquitetura
+- atualmente os estilos arquiteturais já estão mais ou menos estabelecidos
+- visão de domínio sempre precisa do contexto bem definido
+- monolitos são mais simples de entender, desenvolver e fazer onboard
+    - infraestrutura é mais simples
+    - comunicação é toda interna
+    - a confiabilidade é maior por ser uma comunicação totalmente interna
+        - ao mesmo tempo que ela pode ser baixa - se o sistema cai ele cai completamente
+    - alterações, escalabilidade e evolução desse tipo de sistema é muito mais complexa
+- o modelo distribuído trabalha nos *pain-points* do sistema monolítico
+    - testabilidade, tolerância, escalabilidade, modularidade e implação são todas ridicularmente mais rápidas
+    - mantendo a mesma interface de comunicação entre os sistemas, o teste e alterações são absurdamente mais ligeiras
+    - menos performance 
+        - o fator rede (latência, disponibilidade, etc) atrasam o processamento
+        - muito mais rápido usar recursos do mesmo servidor
+    - depuração e manutenção é bem mais difícil
+        - sistemas diferentes comunicam diferente e tem processos de *troubleshoot* diferente
+
+# Estilos arquiteturais
+- usar a mesma solução sem contexto não faz sentido
+- Camadas
+    - MVC
+        - Model View Controler
+        - padrão de projeto
+        - não necessariamente precisa apresentar pro sistema inteiro
+    - diferentes tipos de arquivos e processos
+        - não necessariamente microsserviços
+        - camadas diferentes simulam diferenças físicas
+        - ainda pode ser monolítico
+    - sistemas web normalmente utilizam 3 camadas
+    - dispositivos móveis normalmente tem pequenos bancos de dados junto do celular
+        - SQLite ou No-SQL
+    - é bantante complexo manter um sistema em camadas puro
+        - novos membros precisam entrar na arquitetura
+        - sem bloqueios forçados é mais difícil ainda
+- monolito modular
+    - **não é** todos falando com todos
+    - basicamente microsserviços mas tudo no mesmo servidor
+    - dentro de cada módulo (negócio) dá pra fazer todas as camadas MVC (técnicas)
+- microkernel
+    - principal caso são OS'
+    - alguns apps desktop usam
+    - *core* é um software com o mínimo de funções vitais
+        - o resto é plugin conectado no microkernel
+        - integração à nível de código mesmo
+    - o kernel passsa serviços
+        - chamadas, conexões, etc
+        - maioria é solicitação (kernel não pede muita coisa)
+- serviço é toda e qualquer funcionalidade do meu software que outro pode pedir/usar
+    - o microsserviço tem uma responsabilidade menor que o serviço e pode ser, por exemplo, um  parte de um serviço maior
+- todo microsserviço é dono do próprio dado
+- microsserviços
+    - precisa ser coeso e responder direito
+    - precisa conseguir cumprir com suas responsabilidades
+    - monitoramento e identificação de trechos mais utilizados que outros é bastante importante
+        - trechos maiores e mais utilizados podem facilitar a vida
+    - funções críticas separadas permitem mais estratégias e padrões de projeto
+        - redundâncias nesses serviços e tolerância a falhas
+    - por mais de se quiser separar - para manter integridade - é necessário juntar serviços
+    - dados dependentes faz valer a pena fazer um microsserviço maior
+    - serviços que sempre usam outros sreviços ou que sejam usados juntos
+        - é interessante juntar e manter a orquestração *in-house*
+- decisões de negócio normalmente valem mais que as técnicas
+- Orientada a eventos
+    - EDA
+        - Event Driven Architecture
+    - serviços apresentam e lançam um evento - quem precisar fazer uma ação vai realizar uma ação
+    - serviços lançam eventos e não esperam por nenhuma confirmação
+    - comunicação paralela e assíncrona
+        - existe a possibilidade das respostas não chegarem ao mesmo tempo
+    - os serviços que recebem podem falhar outros serviços precisam escutar e fazer o necessário
+    - tudo é publicado como evento - sem esperar resposta
+    - 
