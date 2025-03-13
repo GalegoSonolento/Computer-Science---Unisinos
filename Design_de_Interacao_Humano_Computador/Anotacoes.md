@@ -45,6 +45,10 @@ Slides 14 a 53
     - outros qualitativos estão mais relacionados com a pessoa usando o produto
         - mais complexos de atingir
     - uma coisa é o projeto (**utilizável**) outra é a experiência (**conveniência**)
+- Muito da comunicação de design se baseia na ideia do designer e na mensagem que ele pretende passar para quem for utilizar o que foi feito por ele
+    - o designer tem livre escolha do que ele quer fazer, não necessariamente um produto por ele desenhado precisa ser de fato funcional
+    - se algo é inutilizável de propósito e quer passar uma mensagem, o designer teve absoluto sucesso em sua criação
+        - o problema é se o resultado é diferente do que ele esperava, como algo inútil ter utilidade e algo preteciosamente útil não o ser.
 
 # Interface de Usuário (UI)
 - camada audiovisual
