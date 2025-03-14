@@ -184,9 +184,134 @@ DATA: 05/Março/2025
 - **sempre teste seu backup**
 
 DATA: 13/Março/2025
-# Hashing
-- 
+# índice
+- ordenação de registros
+- identificação
+- otimização de consultas
+- a ideia é seguir o mesmo princípio de um sumário de livro
+    - ou índice remissivo
+    - livros grandes, assim como bases de dados, precisam de uma pesquisa sequencial
+    - ter índices permite pesquisar por termos ou assuntos e chegar á informação de forma mais rápida (deveras)
+- **cheaves primárias** levam diretamente ao registro
+    - ou levam pra blocos de informação
+- busca de arquivos tem a msm ideia de um *SGBD*
+- buscam que se baseiam em chaves de pesquisa
+    - where em campos indexados auxiliam na pesquisa dos dados
+    - sem indexação o banco precisa fazer um ***full scan*** na table inteira pra encontrar o dado
+- ***Primary key*** -> sim, sempre
+    - nunca pode ser nula
+- ***Unique Key*** -> não é PK mas é única pra cada *record*
+    - pode ser uma combinação de campos
+    - SGBD n deixa outro registro ter o mesmo *set-up*
+    - pode ser nula - a não ser que declarado *not null*
+- ***Foreign Key*** -> PK de outra table
+- pq não colocar índice em todos os campos?
+    - espaço gasto pra nada (não se usam todos os campos)
+    - índice é uma estrutura a parte que serve de referência
+        - se já existe um termo que leva pra informação não tem porque ter uma redundância nesse sentido
+    - leva tempo pra atualizar a estrutura de índices
+        - com muitos registros demora bem mais
 
+## índices Denso e Esparsos
+- aparecem em concursos e construção de bancos
+- indices primários
+    - problemas com inseções no bloco de índices 
+    - fica em RAM
+    - a busca é sequencial ali dentro
+- secundário
+    - campo não-ordenado
+    - pode ser ou não UK
+    - seria um segundo valor de filtro quando muito utilizado (em *where*)
+    - pode ser implementado com denso ou esparso, assim como o primário
+    - é possível ter uma chave primária sequencial que aponta para uma secundária esparsa que consegue acessar blocos de registros
+        - em diferentes tables
+- índices de múltiplos níveis
+    - buscas complexas com índices muito grandes
+    - índice do índice
+    - quebra a estrutura em alguns níveis pra conseguir manter em memória
+    - todas as altearções vão demorar mais 
+        - SGBD precisa recriar os múltiplos níveis
+    - entram as árvores balanceadas
+        - conceito de organização de arquivos
+    - quando se cria um descompasso de índices, o sistema quebra ele com o ***overflow***
+
+### Denso
+- colocado pra cada valor distinto
+- existem um apontamento pra cada valor diferente
+- Compos com muitas buscas
+
+### Esparso
+- criado apenas para alguns valores
+- **clusterização** - blocos de registros - paginação
+- acessa o bloco e dentro do bloco faz uma pesquisa sequencial
+    - isso já deixa a pesquisa bastante mais rápida por quebrar tables grandes em páginas
+
+## Estrutura de Indexação Árvores B (B-Trees)
+- árvore "binária" balanceada
+    - 2 filhos e repartição de pesquisa pelo meio
+    - o número de filhos é a quantidade de registros na página +1
+- evitar desperdício em blocos de nó
+- usado em casos com muitas inserções e remoções
+- caso da rede social e IoT
+    - normalmente são muitas inserções e não tem muita mudança ou pesquisa
+    - preocupação com espaço também não existe
+    - privilégio de inserção e consulta
+    - *Wide Column*
+    - tem DML, select, etc - estrutura, mas privilegia inserções
+    - isso mesmo, IoT coleta dados (seus inclusive) - ´ra quem ele manda, depende
+- árvore é rebalanceada a cada alteração
+    - ocupação mínima de 50%
+- nós são páginas
+    - busca paginada
+- poucas páginas pra poucos registros
+    - todas as folhas no mesmo nível
+- sempre constrói pra cima e deixa espaço para novos registros
+- sempre 50% de uso
+    - manter poucos acessos pra chegar no resultado
+    - no pior dos cados é uma busca logaritmica (na base do tamanho da página)
+- mas é uma árvore que de fato precisa de uma manutenção maior e alterações demoram mais tempo
+    - detrimento disso em rapidez de *select*
+- mas em *betweens* ele precisa de vários acessos
+
+### Árvores B+ (Bplus-tree)
+- busca de valores encadeados
+- **todos os ramos terão o mesmo comprimento**
+- na raiz existem apontamentos para os próximos valores em sequência
+    - na folha aparessem todos os valores da árvore (inclusive os da raíz)
+    - também existem apontamentos entre os blocos
+- isso permite busca sequencial
+    - só precisa usar as folhas como uma lista normal
+
+## Hashing
+- *blockchain* usa encadeamento por funções de *hash*
+- transforma uma chave em um endereço - busca rápida por chave
+- mapa de chave-valor
+- apontamentos de **blocos** (*buckets*)
+- estaticidade
+    - números de blocos pequeno faz com que ele cresca pros lados
+        - **cadeias de *overflow***
+    - hashing dinâmico permite aumentar o número de *buckets* - árvores B+
+- ***Hashing* extensível** tem um logaritmo de 2 na pior das hipóteses - talvez de ~69%
+
+## Bitmap
+- mapa de bits
+- array de bits
+- ligar os valores das posições
+- consultas de vários campos
+    - AND, OR, ect
+- bit-a-bit
+    - Oracle utiliza bastante
+- marca as linhas que tem determinado valor com um número binário (indexa) e aplica operações AND, OR, etc com esses números binários 
+    - o resultado é a linha onde está no valor
+- muito utilizado para colunas que repetem valores
+- pode crescer bastante por lado, mas é um bit, então é menor que a maioria das estruturas  
+    - operação muito leve (binária apenas)
+
+# Indexação por função
+- Oracle utiliza
+- índice específico para determinado tipo de consulta
+- utilizar índices pra consultas com *where* de campos não-indexados
+    - *where* muito utilizado, claro
 
 ### Perguntas
 - SAP HANA tem plano de avalização proprietário?
