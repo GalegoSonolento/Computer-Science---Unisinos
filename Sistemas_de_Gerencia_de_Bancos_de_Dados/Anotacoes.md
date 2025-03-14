@@ -183,6 +183,10 @@ DATA: 05/Março/2025
 - ***Dump*** -> manda o banco exportar os dados e larga em um zip ou em um arquivo específico (criação de tables, etc) - restauração à frio
 - **sempre teste seu backup**
 
+DATA: 13/Março/2025
+# Hashing
+- 
+
 
 ### Perguntas
 - SAP HANA tem plano de avalização proprietário?
