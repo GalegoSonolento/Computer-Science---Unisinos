@@ -49,6 +49,7 @@ Slides 14 a 53
     - o designer tem livre escolha do que ele quer fazer, não necessariamente um produto por ele desenhado precisa ser de fato funcional
     - se algo é inutilizável de propósito e quer passar uma mensagem, o designer teve absoluto sucesso em sua criação
         - o problema é se o resultado é diferente do que ele esperava, como algo inútil ter utilidade e algo preteciosamente útil não o ser.
+- UI/UX precárias podem causar risco à usabilidade do produto, segurança operacional e até para a saúde do usuário
 
 # Interface de Usuário (UI)
 - camada audiovisual

@@ -85,4 +85,29 @@ DATA: 11/Março/2025
         - não precisa processar o que a câmera não vê
 - shader é basicamente um programinha que forma o pipeline gráfico do OpenGL
 - cada programa é vinculado à um vértice por vez (shader)
-- 
+- sistemas mais modernos já tem mais utilidades ligadas com o OpenGL e já o tem de forma nativa
+- saiba o que está desenhando e como está desenhando
+    - tenha um mapeamento do que vai ser posto em tela antes de qualquer outro passo
+- pode existir mais de um fragment shader por pixel a nível que eles se sobrepõem
+- os shaders serão programinhas pra cada um dos vértices da GPU (os quais serão expostos em tela)
+- sempre muito importante verificar o versionamento do shader utilizado antes de começar a programar
+- Buffers são vetores de memória para armazenar dados temporariamente
+    - quando se muda uma cena ou se faz alguma atualizalção de fato, os buffers precisam ser limpos e preenchidos novamente para a nova composição de cena
+- A GPU precisa manter a maior quantidade possível de dados
+    - em VBO's, precisamos mandar a maior quantidade possível de vértices para evitar retrabalho
+    - mandamos um vértice a cada 3 valores (composição de vértice em espaço, sem cor)
+    - ou a cada 6 (composição de vértice em 3D com valores RGB)
+- Como um exemplo, uma cor por vértice de um triângulo
+    - faz com q os shaders façam um degradê entre as cores
+
+## Programa gráfico em 5 passos:
+1. Inicialização do sistema (já vimos nos slides iniciais… glfwInit,
+createWindow, …)
+2. Passagem de dados CPU ➔ GPU (VBO e VAO)
+3. Definição de shaders (vertex shader e fragment shader)
+4. Compilação de shader e link do programa que será
+executado no pipeline da OpenGL/GPU.
+5. Loop de desenho e execução do pipeline.
+‣ Passagem de variáveis globais
+‣ Execução do pipeline (glDrawArrays) para cada objeto
+(VAO).

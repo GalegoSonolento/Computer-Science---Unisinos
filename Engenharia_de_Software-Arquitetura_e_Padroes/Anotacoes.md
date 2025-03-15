@@ -144,4 +144,10 @@ DATA: 12/Março/2025
         - existe a possibilidade das respostas não chegarem ao mesmo tempo
     - os serviços que recebem podem falhar outros serviços precisam escutar e fazer o necessário
     - tudo é publicado como evento - sem esperar resposta
-    - 
+- à depender de quem fala mais alto (implementação ou negócio) teremos diferentes montagens e esquematizações de produto
+- normalmente dispositivos móveis precisam de soluções embarcadas
+    - nunca se sabe quando aquele dispositivo vai ficar sem internet
+- se vamos aumentar ou diminuir um microsserviço depende bastante da granularidade que queremos com aquele determinado serviço e se faz sentido mantê-lo quebrado ou não 
+    - serviços que sempre funcionam juntos podem ser, bom, juntos em um único serviço para evitar complexidade
+    - ao passo que um serviço grande que só tem uma parte do código utilizada em casa chamada, pode ser quebrado em 2, por exemplo
+- 
