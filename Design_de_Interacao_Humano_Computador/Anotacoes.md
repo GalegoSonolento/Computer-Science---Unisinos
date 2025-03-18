@@ -88,4 +88,71 @@ Slides 14 a 53
     - pouca informação e inferir que o usuário sabe o que está fazendo também é problemático
 - UIs ruins geram riscos operacionais e dificuldades de manutenção à sistemas já existentes
     - um esquema monocromático com muito texto já é horrível quando descansado, imagina mexer nisso depois de dormir 3 horas?
-- mapeamentos, consistência 
+- mapeamentos, consistência
+- Um *affordance* é um *trade off*, um detrimento de um ponto em favor de outro
+
+DATA: 17/Março/2024
+# Princípios de Design
+- produtos e elementos precisam de devido cuidado
+
+## Visibilidade
+- as funções principais devem ser as mais óbvias
+- consistência é importante
+    - escrita de nomes e definição fica por cima ou dentro
+- não deixar visívle o que n tem sentido em determinada situação
+
+## *Affordances*
+- Grau de compreensão das pessoas sobre a finalidade do objeto
+- entendimento e reconhecimento
+    - sem explicação
+    - bastante semiótica
+    - padrões culturais
+- aqui entram os processos de localização
+    - de linguagem, espaçamento, etc
+- produto pode ter várias funções
+    - mas precisa mostrar a principal de forma absurdamente óbvia
+- podem existir conflitos
+    - algo escrito não é aquilo mesmo
+    - LOWER CASE escrito em upper case
+- entra em anomalias de visão pra composição de imagem
+    - ilusões de ótica
+    - olho humano é terrível
+- se precisa de rótulo, o design é ruim
+    - ele pode ser bom em uma região e não em outra (localização)
+- affordances explícitas ajudam usuários que não são muito familiarizados a entenderem a funcionalidade e utilizarem o produto de maneira mais eficiente
+    - formatos de botões podem ser explícitas também
+- o convencional é o padrão
+    - ***hyperlink*** padrão de link desde os primórdios da internet
+- affordances ocultas só aparecem com algum tipo de alteração no ambiente pra funcionarem
+    - *mouse hover* por exemplo
+    - interfaces mais agradáveis
+    - o risco aqui é o usuário não saber que aquilo existe
+- a metafórica traz um ícone que trás uma semelhança, metáfora mesmo
+- interações não-permitidas
+    - *affordance* de cor que indica possível problema e impedimento de função
+
+## Restrição
+- evitar erros do usuário
+
+## Bom modelo conceitual
+- evita problemas quando as coisas dão errado
+- forma intuitiva de utilização do produto
+- tem coisas semelhantes 
+- um modelo conceitual ruim faz o usuário aprender por tentativa e erro
+- funções e controles não relacionados
+    - sem precisar de um manual
+
+## Mapeamento
+- interface condiz com a espacialidade da realidade
+- interface corresponde com a função de alguma maneira
+    - formato
+    - disposição
+
+## Feedbacks
+- mostrar ao user o que está acontecendo
+- saber a etapa atual e as próximas diminui a ansiedade do usuário
+- como o processo está se desenrolando
+- barra de carregamento é um exemplo clássico
+- cores, formatos, ícones
+    - consistência de feedback
+    - informações do sistema pro usuário
