@@ -99,6 +99,8 @@ DATA: 11/Março/2025
     - ou a cada 6 (composição de vértice em 3D com valores RGB)
 - Como um exemplo, uma cor por vértice de um triângulo
     - faz com q os shaders façam um degradê entre as cores
+- manter o programa organizado com as VBOs é importante quando se tem aplicações maiores
+- 
 
 ## Programa gráfico em 5 passos:
 1. Inicialização do sistema (já vimos nos slides iniciais… glfwInit,
@@ -111,3 +113,25 @@ executado no pipeline da OpenGL/GPU.
 ‣ Passagem de variáveis globais
 ‣ Execução do pipeline (glDrawArrays) para cada objeto
 (VAO).
+
+DATA: 18/Março/2025
+## Conceitos de programação GPU
+- 46 programinhas rodando em paralelo nos slots da GPU
+- Rasterização preenche as informações dos vértices associados
+- o pipeline programável são gerados para cada placa gráfica
+- existem ações da pipeline já definidas que não podem ser alteradas
+    - preenchimento de buffer
+        - não se altera o comportamento desse tipo de função
+- as composições do pipeline gráfico todos tem shaders e sua composição é usada para gerar a imagem
+- glDrawArrays() -> não é programável
+- é possível computar vários vértices em paralelo
+
+## Shader Language OpenGLSL
+- GLSL (quando se usa OpneGL)
+- bastante parecida com C
+- vinculado um vértice atual pra processar o mesmo vértice
+
+- Modo de desenho muda diretamente a maneira que o dado é interpretado pelo openGL
+- todas as operações em Comp_Graf é tudo matriz
+    - tudo multiplicação de matrizes
+- 
