@@ -150,4 +150,67 @@ DATA: 12/Março/2025
 - se vamos aumentar ou diminuir um microsserviço depende bastante da granularidade que queremos com aquele determinado serviço e se faz sentido mantê-lo quebrado ou não 
     - serviços que sempre funcionam juntos podem ser, bom, juntos em um único serviço para evitar complexidade
     - ao passo que um serviço grande que só tem uma parte do código utilizada em casa chamada, pode ser quebrado em 2, por exemplo
-- 
+
+DATA: 19/Março/2025
+### Continuação estilos arquiteturais
+- Peer-to-peer
+    - sistemas mais específicos
+    - desenvolvidos
+    - todos os clientes são servidores
+    - descentralizado - completamente
+- pipe N' filter
+    - sistema tem várias fuções quebradas (filtros)
+    - entram num pipe e passam por uma sequ~encia de funções
+    - filtros são autocontidos
+        - bastante claridade
+    - processamento de texto usa arquitetura em filtros
+    - com muitos passos encadeados compromete desempenho
+    - fluxos complexos dificultam a manutenção
+    - sistemas desktop são mais comuns
+- Blackboard
+    - repositório de dados compartihados
+        - entre os programas todos
+    - pedaços de aplicação que colaboram para determinado resultado
+    - manpulam os mesmos dados
+        - é uma *pool*
+    - coordenar todas as funções é complexo
+    - troubleshoot de origem é complicado
+- Pub/Sub
+    - publish / Subscribe
+    - subscribers ficam observando quando algum publisher larga uma e responde
+    - mais liberdade que o orientado a eventos
+- MapReduce
+    - mapeia dados de entrada
+    - jogam num Hash e consulta em uma lista menor
+- Broker
+    - mediador de comunicação
+    - sair do problema do pub/sub que não sabe quem recebeu de verdade
+    - armazenamento temporário
+
+# Notação e Documentação
+- as pessoas não lembram o que elas fazem
+- decisões impactam o desenvolvimento do sistema    
+    - informações importantes e porquês precisam ser anotados para o bem do projeto e evitar esquecimento
+
+## Trade-off
+- decisões que precisam de análise de todo o contexto
+- facilita um lado e dificulta o outro
+- uma troca entre positivos e negativos
+    - ganhar em um lugar e perder em outro
+- é uma gangorra
+- os mais significativos são de arquitetura
+
+## Como documentar?
+- UML ainda é bastante utilizado
+    - tem uma porrada de modelos
+- deve ser uma referência pra equipe toda
+- dá pra mostrar o funcionamento completo de um serviço usando um diagrama de sequência
+
+## Architectural Decision Records (ADR)
+- descrição de uma arquitetura específica
+- decisões arquiteturais
+    - baseadas nos requisitos 
+    - guarda descartes
+    - pode ser alterado dependendo de mudanças de contexto
+    - precisa descrever mudanças, por quês e padrões e decisões
+- documentar o motivo de algo ter sido abandonado é importante pra evitar voltar pro mesmo lugar
