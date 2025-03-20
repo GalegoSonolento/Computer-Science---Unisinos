@@ -92,6 +92,7 @@ Slides 14 a 53
 - Um *affordance* é um *trade off*, um detrimento de um ponto em favor de outro
 
 DATA: 17/Março/2024
+*Slides 53-101*
 # Princípios de Design
 - produtos e elementos precisam de devido cuidado
 
@@ -130,6 +131,9 @@ DATA: 17/Março/2024
 - a metafórica traz um ícone que trás uma semelhança, metáfora mesmo
 - interações não-permitidas
     - *affordance* de cor que indica possível problema e impedimento de função
+- quando a pessoa vai montar um design novo ela não necessariamente pensa no que as outras pessoas vão pensar sobre ele.
+    - aplicações de design são meros reflexos das aplicações que o designer já viu
+    - normalmente reflexos de designs reais, analógicos
 
 ## Restrição
 - evitar erros do usuário
