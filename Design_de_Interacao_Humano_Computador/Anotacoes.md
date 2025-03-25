@@ -90,6 +90,7 @@ Slides 14 a 53
     - um esquema monocromático com muito texto já é horrível quando descansado, imagina mexer nisso depois de dormir 3 horas?
 - mapeamentos, consistência
 - Um *affordance* é um *trade off*, um detrimento de um ponto em favor de outro
+    - qualidade de algo mostrar seu uso
 
 DATA: 17/Março/2024
 *Slides 53-101*
@@ -103,6 +104,7 @@ DATA: 17/Março/2024
 - não deixar visívle o que n tem sentido em determinada situação
 
 ## *Affordances*
+- qualidade de algo mostrar seu uso
 - Grau de compreensão das pessoas sobre a finalidade do objeto
 - entendimento e reconhecimento
     - sem explicação
@@ -160,3 +162,36 @@ DATA: 17/Março/2024
 - cores, formatos, ícones
     - consistência de feedback
     - informações do sistema pro usuário
+
+DATA: 24/Março/2025
+# Fatores humanos em IHC
+- qql coisa pode mudar a forma que a pessoa lembra de algo
+- heurísticas se baseiam em padrões sociais pra desenho de interface
+    - elementos básicos pra reter o usuário
+- psicologia e tecnologia se influenciam mutuamente
+- o entendimento humano é bastante precido com a montagem feita para pra um sistema
+    - a memória de trabalho humana guarda umas 7 informações - evite colocar mais informações que isso na tela do user
+    - informações que fazem mais sentido ficam na memória de longo prazo
+- alguns padrões são inventados posteriormente pelas interfaces
+- aprendizagem de forma passiva tem a tendência de uma absorção menor de informação que aprendizagem ativa
+- usuário precisa de mais de uma fonte de informação pra ele reter a informação
+    - pedir pra refazer o processo, perguntar se entendeu, etc 
+    - isso tudo auxilia na aprendizagem do sistema
+    - videogame usa isso muitas vezes
+        - processo de aprendizagem por atapas
+        - mas ele vai direto pra prática - isso diz muito sobre
+- sistema de visão ainda é o que trás mais resultado
+- sempre auxilie o usuário à lembrar de ações e entender o que está ativo no sistema
+    - não tem porque deixar o usuário lembrar de tudo por conta dele
+- interfaces devem ser desenhadas o melhor possível pro usuário ser o mais ágil possível
+- é mais fácil lembrar de imagens que nomes
+- pra nomes de arquivos, erros, métodos e variáveis, sempre coloque nomes significativos
+    - SEMPRE, PORRA
+    - uma vírgula salva
+- informações essenciais são separadas em etapas (modularização)
+- pseudocódigo nesse contexto é metáfora ou imaginação (no sentido de criar imagens pra ações)
+- estabeleça um padrão entre o sistema inteiro
+    - e espelhe outros que serão usados juntos com o sistema
+    - interface digital é uma mímica do mundo real
+- colocar opções de confirmação de ação antes de deixar o usuário fazer algo irreverssível
+- 
