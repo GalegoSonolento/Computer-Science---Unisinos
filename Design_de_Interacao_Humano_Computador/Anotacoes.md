@@ -194,4 +194,42 @@ DATA: 24/Março/2025
     - e espelhe outros que serão usados juntos com o sistema
     - interface digital é uma mímica do mundo real
 - colocar opções de confirmação de ação antes de deixar o usuário fazer algo irreverssível
-- 
+
+DATA: 31/Março/2024
+# Cores
+- interessante pra análise e psicologia das cores
+    - varia de cultura pra cultura
+    - algumas abstrações são genéricas
+    - culturas associam cores à comportamentos diferentes
+- cores são frequências de ondas radiativas que o ser humano enxerga
+    - sequência nanométrica
+    - é minúscula, o olho humano é um dos piores da natureza
+- a definição é sempre pelo comprimento de onda
+    - e pela velocidade da luz
+- cores têm composição e se torna importante para apresentar características
+    - o ser humano passou muito tempo deparado com cores
+    - sobrevivência passou por identificar esses comprimentos de onda específico que geraram conhecimento específico
+- muita cor pode dificultar tarefas
+    - jogo de cor e luz precisam ter uma intenção
+    - interação de mais ou de menos afeta no resultado final da tarefa
+- os dos recursos mais comuns de composição é o **Disco de Newton**
+    - combina primárias, secundárias e terceárias
+- cores quentes normalmente chamam atenção
+- frias acalmam
+- **Cores complementares** mostram informações por meio de contraste
+    - harmonia bastante utilizada em marketing
+    - vermelho e verde é um clássico
+- paletas **triádicas** requerem composições mais complexas
+    - cores que não se contrastam tanto que podem se sobrepor
+    - normalmente usadas com vários elementos que ainda precisam ser percebidos como separados
+- armonias **análogas** são usadas em ambientes que precisam ser harmônicos e transicionais
+    - uma cor principal é escolhida
+    - degradês utilizam bastante
+- a teoria das cores "morre" quando se chega na construção de cores digitalmente
+    - vermelho, verde e azul (RGB) vira o caminho
+    - CMYK pra cores impressas (ciano, amarelo, magenta e, sim, K de preto)
+        - mostra as cores não-absorvidas
+
+## Teoria das cores
+- relaces devem ser por cores e não sublinhados
+- fundos coloridos precisam de contraste
