@@ -134,4 +134,82 @@ DATA: 18/Março/2025
 - Modo de desenho muda diretamente a maneira que o dado é interpretado pelo openGL
 - todas as operações em Comp_Graf é tudo matriz
     - tudo multiplicação de matrizes
+
+DATA: 25/Março/2025
+# Transformações
+- usamos transformações lineares
+    - concatenação de multiplicação de matrizes
+    - menos oneroso do computador
+- matricial
+- cálculos de matrizes quadradas apenas (3x3 ou 4x4)
+    - homogêneas
+- matrizes identidade facilitam cálculos
+    - base pra saber a orientação de um objeto
+- deslocamentos são distorções de objetos
+- incluem vetorização
+- translada o cara na origem
+    - gira
+    - volta pra posição anterior
+    - cada uma das operações é uma isolada
+    - ordem das operações importa
+        - origem, translado, move pro local
+- operações são sempre feitas em coordenadas polares
+- multiplicação é de um vetor com uma matriz (não é tão demandante assim)
+- não precisa passar pra VBO's ou VAO's
+    - passa só vetores pros shaders
+    - passa as operações com as palavras reservadas pro shader
+- glm passa algumas operações prontas
+    - passa alguns métodos feitos pra nós
+    - dá pra trabalhar com sobrecarga
+- operações precisam sempre ser feitas da direira pra esquerda
+
+## Coordenadas homogêneas
+- manutenção de padrão de geração de objetos
+- jogar pra ser 3x3
+    - preenche com 1 (não afeta multiplicações)
+        - essa normalização pode ser alterada para criar a impressão de perspectiva
+    - 2D 3x3 e 3D 4x4
+    - adiciona uma dimensão na matriz só
+- transalação acontece em quase qualquer programa
+- pensamos sempre nas linhas para os fatores de transalação, escala e rotação
+
+DATA: 01/Abril/2025
+## Primitivas gráficas 2D
+- representação analítica trabalha com início e final
+    - mais fácil de renderizar
+    - *rasterização* discreta essa amostra e mostra uma linha que *parece* natural
+    - só acontece em renderização
+- em OpenGL tudo é renderizado com triângulo
+    - se um objeto ficou mto triangular faltou objeto
+
+### anti-aliasing
+- **aliasing** é um cerrilhado
+- **anti-aliasing** é um borrador pra evitar cerrilhado
+    - suaviza a borda só
+    - pixels vizinhos tem a mesma cor em diferentes intencidades
+- algoritmos de *anti-aliasing* precisam borrar a borda de maneiras diferentes
+    - esses códigos não são open source 
+
+# Câmera virtual
+- movimentação de FOV dentro de um cenário
+- projeções cônicas precisam de interação de pontos de fuga
+- existe um espaço chamado de **frustum** que define o que vai ser processado pela GPU
+- o *fator h* agora é o fator de perspectiva que define o FOV
+    - ângulo de abertura da câmera
+- Z sempre cresce pra fora da tela
+- teste de profundidade cria um ambiente 3D e descarta objetos que estão atrás de outros
+- **z-buffer** - guarda informação de produndidade da tela inteira
+    - pra definir o que aparece na frente
+    - precisa habilitar o tsete e limpar em todos os passos de renderização
+- a câmera olha em um vetor direção normalizado
+    - esse é o target da câmera
+    - lado de cima da câmera é definido no começo do projeto
+        - descrição de lateral e à cima
+- criação da câmera é uma matriz criada em openGL
+    - precisa passar as posições de target só
+- FOV se calcula em radianos
+- objetos precisam ser desenhados face-a-face
+- matriz model e comportamento do objeto no mundo
+    - model ainda pode transladar
+    - matriz view refere à câmera e pega os translados
 - 
