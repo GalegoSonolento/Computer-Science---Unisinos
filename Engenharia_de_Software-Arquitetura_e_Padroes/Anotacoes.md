@@ -214,3 +214,30 @@ DATA: 19/Março/2025
     - pode ser alterado dependendo de mudanças de contexto
     - precisa descrever mudanças, por quês e padrões e decisões
 - documentar o motivo de algo ter sido abandonado é importante pra evitar voltar pro mesmo lugar
+
+DATA: 2/Abril/2025
+# Padrões de Projeto
+- padrões espalhados por diversas aplicações
+- existem diversos padrões de projeto prontos
+- não tem pq reinventar a roda toda vez que implementar algum software
+- padrões de projeto são cobrados em entrevistas técnicas bastante
+    - alguns softwares precisam manter esses padões para evitarem um código macarrônico
+- padrões de projeto são absolutamete práticos
+    - uma ideia de uma solução
+    - não existem códigos prontos
+    - a implementação varia
+- algoritmo não é um padrão de projeto
+- aprender os padrões é importante para entender a fluidez e manter uma linguagem comum entre os desenvolvedores
+    - o desenvolvimento de uma linguagem comum, **jargões** são comuns em diversas profissões
+- esses padrões são catalogados em linguagem padrão nas linguagens
+- o foco deve ser em problemas novos - padrões já descobertos estão para usarmos
+- ter uma variável global com mudanças dentro do código é complicado
+    - mas variáveis globais ainda são úteis se temos algum valor constante
+    - tipo a gravidade (9,8 m/s)
+- ideias e implementações precisam nascer com a ideia de padrões 
+    - é como se fosse um reflexo de exercícios
+    - na loucura do dia a dia é necessário ter pensamento rápido com os padrões para a implementação
+
+# Anti-partterns
+- *balas de prata* comuns em códigos que não são exatamente as formas mais eficientes de resolver um problema
+- são implementações legado que vão ficar infinitamente 
