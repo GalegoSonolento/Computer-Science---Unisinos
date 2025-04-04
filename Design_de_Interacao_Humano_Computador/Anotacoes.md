@@ -233,3 +233,11 @@ DATA: 31/Março/2024
 ## Teoria das cores
 - relaces devem ser por cores e não sublinhados
 - fundos coloridos precisam de contraste
+- RGBs são usados por emissores de luz porque nossos bastonetes oculares enxergam nesses determinados pontos de luz (ou comprimentos de onda)
+- CMYK é um sistema de cores baseado não em emissão, mas absorção de luz (tanto que a mistura total gera o preto)
+- constraste de cores em cenários e personagens ajuda não só a diferenciá-los, mas também a compor uma cena e gerar interesse.
+- silhuetas marcantes também auxiliam na hora de representar caractrerísticas e personagens
+    - itens e símbolos passam por aqui
+    - a placa de PARE talvez seja o exemplo mais prático - formato exagonal permite identificação mesmo que ela esteja ao contrário
+        - identificar algo comumente entre diversas pessoas sem precisar entregar muitos detalhes de um objeto é crucial
+- 
