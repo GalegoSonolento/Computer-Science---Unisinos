@@ -240,4 +240,14 @@ DATA: 31/Março/2024
     - itens e símbolos passam por aqui
     - a placa de PARE talvez seja o exemplo mais prático - formato exagonal permite identificação mesmo que ela esteja ao contrário
         - identificar algo comumente entre diversas pessoas sem precisar entregar muitos detalhes de um objeto é crucial
+
+# Composição de interfaces
+- Esse estudo se relaciona com o excesso (ou falta) de componentes visuais
+- páginas não só apenas blocos de texto
+    - elementos coloridos e de destaque existem para levar a atenção do usuário para os pontos chave do contexto
+- esse tipo de hierarquia visual evita do usuário ficar perdido e fazer algo que não deve
+    - isso é um dos *failsafes* para qualquer sistema
+- Um dos parâmetros utilizados aqui é a proporção áurea
+    - por algum motivo essa proporção é encontrada em diversos materiais produzidos pela natureza e garante construções estáveis
+    - utiilzá-la em nossos materiais traz, também, uma sensação de boa construção
 - 
