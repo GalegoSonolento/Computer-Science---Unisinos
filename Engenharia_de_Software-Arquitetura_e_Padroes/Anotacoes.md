@@ -182,6 +182,7 @@ DATA: 19/Março/2025
 - MapReduce
     - mapeia dados de entrada
     - jogam num Hash e consulta em uma lista menor
+    - esse mesmo esquema é utilizado pra compressão de aruivos
 - Broker
     - mediador de comunicação
     - sair do problema do pub/sub que não sabe quem recebeu de verdade
