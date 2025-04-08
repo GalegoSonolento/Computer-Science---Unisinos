@@ -241,6 +241,7 @@ DATA: 31/Março/2024
     - a placa de PARE talvez seja o exemplo mais prático - formato exagonal permite identificação mesmo que ela esteja ao contrário
         - identificar algo comumente entre diversas pessoas sem precisar entregar muitos detalhes de um objeto é crucial
 
+DATA: 7/Abril/20
 # Composição de interfaces
 - Esse estudo se relaciona com o excesso (ou falta) de componentes visuais
 - páginas não só apenas blocos de texto
@@ -250,4 +251,4 @@ DATA: 31/Março/2024
 - Um dos parâmetros utilizados aqui é a proporção áurea
     - por algum motivo essa proporção é encontrada em diversos materiais produzidos pela natureza e garante construções estáveis
     - utiilzá-la em nossos materiais traz, também, uma sensação de boa construção
-- 
+- a maior parte do trabalho aqui parece ser sobre o balanço e o contraste da aplicação
