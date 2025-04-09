@@ -212,4 +212,67 @@ DATA: 01/Abril/2025
 - matriz model e comportamento do objeto no mundo
     - model ainda pode transladar
     - matriz view refere à câmera e pega os translados
-- 
+
+DATA: 08/Abril/2025
+# Computação gráfica 3D
+- normalmente se trabalha em um sistema de coordenadas pela mão direita
+    - a matriz de view é invertida (a câmera vê as coordenadas x invertidas)
+- da direita pra esquerda
+    - M = Rz * Ry * Rx
+- todas as projeções são em 2D
+    - fragment shader - pizelização da imagem
+    - elementos de textura são aplicados aqui
+- câmeras (views) funcionam mais ou menos como câmeras de verdade
+    - elas tem áreas de fooc
+    - N = eye - center(lente)
+    - apesar que aqui o foco é infinito
+        - pra aplicar algum tipo de efeito de câmera precia aplicar no shader mais tarde
+- a definição do vetor *right* é a multiplicação do vetor up e o LookAt
+- coordenadas da câmera ficam na última coluna da matriz de view
+- projeções ortográfica matém as formas
+    - ignora um dos planos
+- a perspectiva deforma formas
+    - precisa de pelo menos um **ponto de fuga**
+- na computação planos de projeção são volumes (espaço entre o Near e o Far) -> o Frustum
+    - o ***curling*** tira objetos que não precisam ser renderizados (atrás de outros, muito longe, fora do frustum)
+    - isso precisa do z-buffer
+        - buffer de armazenamento de profundidade
+        - isso aqui usa pro *curling* e decidir quais descarta
+- Centro da *view* fica dentro da câmera
+- distância pro plano é normalizada pra manter proporções
+- interpolação de cor é calculada por posição de aresta
+    - é tudo vetorizado mais tarde
+
+## Renderização 3D
+- EBOs são tables de vértices (estrutura da dados) pra armazenamento
+    - isso facilita cálculos de simplificação de vértices por distância
+- pra construir uma esfera, pro exemplo, a quantidade de *steps* colocada dita a resolução da esfera, ou do objeto dado
+- uma curva de bezier é uma curva baseada entre 3 pontos
+- a varredura por ***sweep*** curva uma, bom, curva, e a repete em um círculo
+    - usado pra criar molas
+- Octree
+    - ***voxalização*** - cubicalização de um espaço
+    - ressonância magnáticas usam isso pra imprimir cor no espaço dentro do corpo
+    - imagem estruturada por Octree
+    - dá pra descer mais níveis e ver mais voxels
+    - árvore voxel é bastante pesada
+        - a menor unidade é um voxel
+- CSG
+    - dá pra criar qql objeto através de primitivas
+    - cria uma árvore de criação pra um objeto
+    - usa o z-buffer pra operações de interseção, substração, etc
+    - estrutura em árvore de cálculos
+    - as folhas tem primitivas
+    - autoCAD e SolidWorks usam bastante
+    - interceção é com ***ray casting*** (rajada de raio) em relação à câmera
+
+## Texturas
+- imagem colada em superfície
+    - coordenada de textura **UV**
+- a textura "substitui" a coordenada de cor dos vértices
+- o dado da imagem é carregado em um buffer (data) pra GPU
+- Mipmap gera versões diferentes pré-renderizadas
+    - gera níveis pré-definidos pra acelerar o processamento
+- a textura é posta em uma variável q vai direto pro *fragment shader*
+    - dentro dele dá pra aplicar o *texture*
+- durante a renderização precisa passar o bind de textura e jogar dentro do VAO
