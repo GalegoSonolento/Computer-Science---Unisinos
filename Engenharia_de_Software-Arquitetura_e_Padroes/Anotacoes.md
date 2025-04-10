@@ -241,3 +241,26 @@ DATA: 2/Abril/2025
 # Anti-partterns
 - *balas de prata* comuns em códigos que não são exatamente as formas mais eficientes de resolver um problema
 - são implementações legado que vão ficar infinitamente 
+
+DATA: 09/Abril/2025
+# Padrões para Aplicações Corporativas
+- Soluções arquiteturais para empresas
+- mesmo pique dos padrões normais
+- é complixo desenvolver hoje em dia
+- alguns problemas clássicos vêm de bancos relacionais colocados em codigos OOO
+- DTO - Data Transfer Object
+- em aplicações web é importante ser eficiente
+    - dá pra carregar objetos nã completamente
+
+# Frameworks e bibliotecas
+- o objetivo dos frameworks é trazer uma implementação pra atacar problemas semelhantes
+- pedaços prontos de aplicação
+- sempre flexíveis e extensíveis
+- precisa ser fácil de usar
+- frameworks controlam aplicações
+    - ele te permite só preencher os espaços
+    - desenvolvimento mais rápido 
+- bibliotecas são soltas e trazem diversas classes
+    - não tem modelos, só as funções prontas
+    - catálogo de uso
+    - 
