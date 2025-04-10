@@ -313,6 +313,39 @@ DATA: 13/Março/2025
 - utilizar índices pra consultas com *where* de campos não-indexados
     - *where* muito utilizado, claro
 
+DATA: 20/Março/2025
+# Banco de dados distribuído
+- replicação de dados
+- data centers distribuídos
+    - ou o lugar que guarda os dados
+- oposição à bancos de dados distribuídos
+- cobrança é feita a partir do número de cores utilizados para o banco
+    - bancos distribuídos tem o mesmo tipo de cobrança e são potencialmente ainda mais caros (dado a quantidade de nós a mais)
+- ainda é tudo ou nada
+    - vai precisar ainda de um esquema de replicação
+- pra bancos centralizados, o máximo que dá pra fazer é melhorar a máquina 
+    - em distribuídos podemos simplesmente adicionar mais uma máquina na mesma rede
+- apresentado bastante em SaaS e PaaS
+    - IaaS ainda é administrado pelo user, ele só compra as máquinas
+- ***Cloud Services***
+- banco + sistema de controle
+- esses bancos não são necessariamente ligados na mesma *rede* (cabeada, por exemplo)
+    - vai ser uma conezão P2P, ou por rede sem fio
+
+## Replicação em bancos de dados
+- replicação em vários nós
+- segurança q se um dos nós cair o dado não se perde
+- dessentralização
+- poslíticas de backup
+- em tese fica mais tempo no ar que um ambiente centralizado
+
+# Bancos de Dados NoSQL
+- tese do elevador
+    - tu precisa conseguir explicar teu projeto no tempo de uma conversa de elevador
+- schemas não -fixos
+    - soft (relacional sendo *hard*)
+- 49:18
+
 ### Perguntas
 - SAP HANA tem plano de avalização proprietário?
 Sim, em geral os bancos de dados possuem pelo menos o que se chama de “execution plan”, para mostrar os custos de cada parte da query.
