@@ -344,7 +344,29 @@ DATA: 20/Março/2025
     - tu precisa conseguir explicar teu projeto no tempo de uma conversa de elevador
 - schemas não -fixos
     - soft (relacional sendo *hard*)
-- 49:18
+- largar 400MB em um banco relacional é complicado
+    - não é feito pra isso
+- IOT tem papel nesse avanço
+- processamento e velocidade são fatores predominantes para o uso de NoSQL
+- baseado no JSON files
+    - a estrutura do json mesmo é bastante simples
+    - json já é um banco de dados chave-valor
+    - bastante intuitivo inclusive
+- consistência eventual
+    - sistema distribuído nativamente
+- metodos feitos como se fosse orientação a objetos
+- escalabilidade horizontal
+    - mais máquinas, mais nós
+    - scale-out
+    - usada pelo NoSQL
+- escalabilidade vertical
+    - mesma máquina com upgrades
+    - scale-up
+- NÃO É NEWSQL
+    - esse newSQL é pra BigData
+- maioria no mercado atualmente
+- Map/Reduce está de volta
+- código mais complexo
 
 ### Perguntas
 - SAP HANA tem plano de avalização proprietário?
