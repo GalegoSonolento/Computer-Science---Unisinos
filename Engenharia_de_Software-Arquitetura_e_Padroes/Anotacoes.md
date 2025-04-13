@@ -252,6 +252,9 @@ DATA: 09/Abril/2025
 - DTO - Data Transfer Object
 - em aplicações web é importante ser eficiente
     - dá pra carregar objetos nã completamente
+- aplicações corporativas tendem a ser bem mais complexas e diversificadas 
+    - a tarefa de construir software fica mais complexa à medida que o software aumenta de tamanho
+- o uso do termo 'utils' em computação se deu de aplicações corporativas e da necessidade de juntar diversas informações e ítens importantes em apenas uma pasta baixada junto do aplicativo completo
 
 # Frameworks e bibliotecas
 - o objetivo dos frameworks é trazer uma implementação pra atacar problemas semelhantes
@@ -261,7 +264,22 @@ DATA: 09/Abril/2025
 - frameworks controlam aplicações
     - ele te permite só preencher os espaços
     - desenvolvimento mais rápido 
+    - framework já é uma aplicação em si mesma
+        - é el@ que chama os pedaços de código escritos pelo desenvolvedor
 - bibliotecas são soltas e trazem diversas classes
     - não tem modelos, só as funções prontas
     - catálogo de uso
-    - 
+- aqui vai um esclarecimento sobre copiar código vs reutilizar código
+    - o copia e cola consiste em, literalmente, copiar e colar o código de alguma outra fonte (até mesmo algo que você tenha construído, podendo até ser de dentro da mesma aplicação)
+        - esse é um dos maiores problemas com códigos gerados por IA atualmente
+        - outra questão é que isso viola um dos princípios de código limpo, que seria o de se caso o código se repete, deve-se criar uma classe/função/bilioteca, etc. para de fato reutilizar o código
+    - Reutilização consiste em ter uma classe/função/bilioteca, etc. já **localizada** no sistema que é de onde poderemos tirar mais informações e chamá-la mais tarde, caso necessário
+    - perceba, reutilizando, o código fica em um só lugar e o chamamos, copiando e colando, ele aparece várias vezes em pontos diferentes
+- frameworks típicos contém várias implementações de ***Design Patterns***
+
+# Padrão de Projeto - State
+- os estados definem comportamentos da aplicação
+- não necessariamente requer utilização de código mais complexo para definição de ações baseadas em checagem de estado
+- temos uma interface para os estados do sistema e cada um dos estados implementa uma classe
+    - a organização vai puxar a classe necessária 
+- 
