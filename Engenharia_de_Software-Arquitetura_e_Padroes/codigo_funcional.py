@@ -2,10 +2,12 @@ from abc import ABC, abstractmethod
 from datetime import datetime, time, timedelta
 import re
 import time as tm
-import keyboard as kb # type: ignore # -> linha comentada porque nessa pasta nao tenho a biblioteca insalada
+import keyboard as kb # type: ignore # -> linha ignorada porque nessa pasta nao tenho a biblioteca instalada
 
+# Variáveis de controle de tempo de espera na soneca aqui em cima para evitar andar pelo código
 tempo_soneca = 5
 tempo_espera_soneca = 5
+quantidade_de_sonecas = 3
 
 # Classe Context
 class Despertador:
@@ -22,6 +24,7 @@ class Despertador:
         print(f"Estado alterado para: {type(estado).__name__}")
 
     def checar_estado(self):
+        """Devolve o estado atual do despertador."""
         return type(self._estado).__name__
 
     def armar_alarme(self, soneca=False):
@@ -57,27 +60,27 @@ class State(ABC):
 # Estado: Desarmado
 class Desarmado(State):
     def armar_alarme(self, machine: Despertador, soneca=False):
+        # usando 'soneca' como uma flag para definir diferentes abordagens ao settar um alarme - feito para evitar duplicação de código de ativação
         if soneca:
-            # print(f"Estado alterado para: Esperando - Soneca")
             if machine._hora_alarme is None:
                 print("Erro: nenhum alarme configurado")
                 return
-            if machine._sonecas >= 3:
-                print("Limite de sonecas atingido (máximo 3). Alarme desativado.")
+            if machine._sonecas >= quantidade_de_sonecas:
+                print(f"Limite de sonecas atingido (máximo {quantidade_de_sonecas}). Alarme desativado.")
                 machine._sonecas = 0  # Resetar contador
                 machine._hora_alarme = None
                 return
-            # Adicionar 5 minutos para soneca
+            # Adicionar x minutos para soneca
             current_datetime = datetime.combine(datetime.today(), machine._hora_alarme)
             nova_hora_alarme = current_datetime + timedelta(minutes=tempo_soneca)
             machine._hora_alarme = nova_hora_alarme.time()
             machine._sonecas += 1
             print(
-                f"Modo soneca ativado ({machine._sonecas}/3). Novo horário: {machine._hora_alarme.hour:02d}:{machine._hora_alarme.minute:02d}")
+                f"Modo soneca ativado ({machine._sonecas}/{quantidade_de_sonecas}). Novo horário: {machine._hora_alarme.hour:02d}:{machine._hora_alarme.minute:02d}")
             machine.set_estado(Esperando())
             return
 
-        # Configuração normal do alarme
+        # Configuração normal do alarme - implementação com regex para definir a entrada de String para datetime
         print("Defina o horário do alarme (HH:MM, ex: 14:30): ")
         while True:
             horario_user = input("> ")
@@ -104,6 +107,7 @@ class Desarmado(State):
 
 # Estado: Esperando
 class Esperando(State):
+    # Essa chamada em particular nunca vai ser ativada no estado atual da aplicação - acabei fazendo por fazer já que estava aqui
     def armar_alarme(self, machine: Despertador, soneca=False):
         print("Alarme já configurado. Deseja reconfigurar? (s/n)")
         if input("> ").lower() == 's':
@@ -113,8 +117,6 @@ class Esperando(State):
     def checar_alarme(self, machine: Despertador):
         hora_atual = datetime.now().time()
         hora_alarme = machine._hora_alarme
-        """print(f"{hora_atual.hour:02d}:{hora_atual.minute:02d} - hora atual")
-        print(f"{hora_alarme.hour:02d}:{hora_alarme.minute:02d} - hora alarme")"""
         if hora_atual.hour == hora_alarme.hour and hora_atual.minute == hora_alarme.minute:
             machine.set_estado(TocandoAlarme())
             machine.tocar_alarme()
@@ -139,12 +141,12 @@ class TocandoAlarme(State):
 
     def tocar_alarme(self, machine: Despertador, desativar=False):
         print("=" * 10 + " ALARME DISPARADO " + "=" * 10)
-        print("Digite 'd' para desativar, 's' para soneca (5 minutos), ou aguarde 5 segundos para soneca automática.")
+        print(f"Digite 'd' para desativar, 's' para soneca ({quantidade_de_sonecas} minutos), ou aguarde {tempo_espera_soneca} segundos para soneca automática.")
 
         # Dar x segundos para o usuário responder
-        start_time = tm.time()
+        start_time = tm.time()  # Usando checagem com tempo por time já que um simples sleep impedia a verificação de tecla pressionada do teclado
         while tm.time() - start_time < tempo_espera_soneca:
-            if kb.is_pressed('d') or desativar:
+            if kb.is_pressed('d') or desativar: # Implementação feita com a biblioteca 'keyboard' porque input impedia o programa de continuar correndo
                 print("\nAlarme desativado.")
                 machine._sonecas = 0  # Resetar contador de sonecas
                 machine._hora_alarme = None
@@ -181,10 +183,10 @@ if __name__ == "__main__":
             # Simular verificação do alarme em loop
             print("Digite 'd' para desativar o alarme")
             while True:
-                if alarme.checar_estado() == 'Desarmado':
+                if alarme.checar_estado() == 'Desarmado': # chamada para cair fora do loop de checagem
                     break
                 start_time = tm.time()
-                alarme.checar_alarme()
+                alarme.checar_alarme() # essa chamada precisa ser feita - o prosseguimento do sistema está baseado na checagem constante
                 while tm.time() - start_time < 5:
                     if kb.is_pressed('d'):
                         print("O alarme será desativado.")
