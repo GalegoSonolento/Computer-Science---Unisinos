@@ -2,7 +2,7 @@ from abc import ABC, abstractmethod
 from datetime import datetime, time, timedelta
 import re
 import time as tm
-# import keyboard as kb -> linha comentada porque nessa pasta nao tenho a biblioteca insalada
+import keyboard as kb # type: ignore # -> linha comentada porque nessa pasta nao tenho a biblioteca insalada
 
 tempo_soneca = 5
 tempo_espera_soneca = 5
