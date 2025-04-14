@@ -2,11 +2,10 @@ from abc import ABC, abstractmethod
 from datetime import datetime, time, timedelta
 import re
 import time as tm
-import keyboard as kb
+# import keyboard as kb -> linha comentada porque nessa pasta nao tenho a biblioteca insalada
 
-tempo_soneca = 1
+tempo_soneca = 5
 tempo_espera_soneca = 5
-
 
 # Classe Context
 class Despertador:
