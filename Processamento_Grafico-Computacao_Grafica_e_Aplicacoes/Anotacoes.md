@@ -276,3 +276,69 @@ DATA: 08/Abril/2025
 - a textura é posta em uma variável q vai direto pro *fragment shader*
     - dentro dele dá pra aplicar o *texture*
 - durante a renderização precisa passar o bind de textura e jogar dentro do VAO
+
+DATA: 15/Abril/2025
+# Modelagem 3D
+- precisamos saber como tratar as estruturas de dados para gerar objetos 3D
+    - isso precisa ser traduzido pros buffers do OpenGL
+- objetos 3D são conjuntos de vértices alinhados a fim de gerar conjuntos de faces
+    - normalmente forma malhas de triângulos (malhas triangulares)
+    - menor forma de representação de uma face é um triângulo
+        - primitiva convexa
+            - 2 pontos quaisquer
+            - qql reta entre eles  contida dentro da figura
+        - importantes em cálculos físicos e representação de volumes
+        - características mais simples de calcular
+        - blocos de construção
+            - o mais usado é o triângulo mesmo
+- faces dos polígonos possuem **normais** em relação ao vértice ou ao plano
+    - cálculo de volumes e cálculo de luz
+    - **mapa de normais** - cada pixel representa um vetor normal
+        - ajuda a dar aspectos de realismo aos objetos
+            - relevo, rugozidade, ranhura, etc
+    - malhas normalizadas
+        - normais médias de acordo com os vizinhos
+    - normais por face geram objetos mais duros (*flat*) que normais por v;ertices e médias (*smooth*)
+- ***Wireferame***
+    - gera apenas linhas para geração dos objetos
+    - gera dificuldades na hora de calcular volume, luz e etc
+- ***Boundary Representation (B-Rep)***
+    - representação mais simnples de limites de um objeto
+    - é o casco do obhjeto 
+    - serve pro armazenamento de composição de uma superfície
+    - topologia do objeto
+    - mto usado em CAD (conjunto de softwares)
+- ***Quadtrees***
+    - dados espaciais em duas dimensões
+    - pode ser usada pra representar LOD de terreno
+    - pode ter até 4 quadrantes q se subdividem recursivamente
+        - depende do refinamento e da necessidade
+    - pode ter usos em compressão de imagem
+    - é uma árvore grandona
+    - cada quadrante pode gerar até quatro filhos
+        - subdivisões só terminam quando temos ou quadrados cheios ou quadrados vazios (para representação do objeto)
+        - atinge e *folha* - informação final - definição dos critérios de capacidade
+- ***Octree***
+    - basicamente a mesma coisa q a *quadrtrees*
+    - mas em cubos
+    - minecraft é um dos grandes exemplos
+- quanto mais polígonos, menos facetada (quadradona) - mais tempo de processamento
+    - existe um equilíbrio aí nesse meio
+    - nem sempre precisa renderizar o objeto com o máximo de informação
+- ***LOD - Level Of Detail***
+    - dependendo da distância da cena, o modelo perde alguns polígonos
+        - isso aumenta ou diminui conforme o quão perto o objeto está da cena
+    - isso pode gerar o efeito de *poping* - modelos dos objetos mudando muito bruscamente
+        - uma solução é gerar vários modelos de andar entre eles
+            - pode usar mais memória (significativo)
+    - ***LOD* Contínuo**
+        - redução gradativa em tempo real de polígonos
+        - união de pontos e contração de algumas faces
+    - ***LOD* de terrenos**
+        - uma matriz com perturbações em y
+        - dá pra definir manualmente, mas tem como usar uma imagem em preto e branco que puxa um mapa de altura
+            - não é muito efetivo em terrenos extensos e com muito detalhe
+        - terrenos não são totalmente descartados se estão fora do *frustrum*
+        - evite **T vértices** - regiãoes de transição de nível de detalhe - fica muito discrepante
+            - isso gera buracos na malha
+    
