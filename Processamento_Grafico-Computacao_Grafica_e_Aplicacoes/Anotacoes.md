@@ -341,4 +341,3 @@ DATA: 15/Abril/2025
         - terrenos não são totalmente descartados se estão fora do *frustrum*
         - evite **T vértices** - regiãoes de transição de nível de detalhe - fica muito discrepante
             - isso gera buracos na malha
-    
