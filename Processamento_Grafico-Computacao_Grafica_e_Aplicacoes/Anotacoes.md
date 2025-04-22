@@ -341,3 +341,22 @@ DATA: 15/Abril/2025
         - terrenos não são totalmente descartados se estão fora do *frustrum*
         - evite **T vértices** - regiãoes de transição de nível de detalhe - fica muito discrepante
             - isso gera buracos na malha
+
+22/Abril/2025
+### Continuação da aula anterior
+- o terreno deve ser calculado por *bathces* - quadrados
+- precisa existir uma costura entre as diferentes regiôes pra evitar falhas na inserção da textura
+- LODS defínem níveis
+    - serão baseados na quantidade de quadrados (*batches*) - no exemplo são 16*16, poderia ser mais ou menos
+- o método de *skirt* é o utilizado aqui - técnica de criar uma "saia" de triângulos emabixo das bordas dos *batches* pra fazer a costura
+    - pra evitar se gera um vértice extra na borda maior (jeito mais simples) - ou ainda gera triângulos menores entre as bordas
+
+# Formato OBJ - Computação gráfica
+- arquivo pra carregamento de arquivos
+    - representação de malhas de arquivos
+- representa modelos 3D
+- é basicamente um arquivo de texto (open source)
+- cada linha é um objeto
+    - é uma abstração da declaração dentro da main.cpp
+- **g** agrupa faces sobre um mesmo dado nome
+- as linhas compõe os vértices pra criação dos volumes
