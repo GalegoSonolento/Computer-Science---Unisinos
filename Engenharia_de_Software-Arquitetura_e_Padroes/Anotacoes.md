@@ -282,4 +282,79 @@ DATA: 09/Abril/2025
 - não necessariamente requer utilização de código mais complexo para definição de ações baseadas em checagem de estado
 - temos uma interface para os estados do sistema e cada um dos estados implementa uma classe
     - a organização vai puxar a classe necessária 
+
+# Modelagem Ágil
+- comunicação constante e simplicidade
+- soluções o mais siples possivel
+- manter o cliente no loop de updates
+- implementações constantemente verificadas pelo usuário
+    - código a mais sem uso é lixo
+- o usuário não é um imbecil (à princípio)
+    - use esse cara pra te dar informações de como o negócio deveria funcionar
+    - evita problemas com o suporte mais tarde
+- requisitos vão mudar com certeza e precisam de mecanismos de mudança rápida
+    - maioria do tempo é corrigindo melhorando e sustentando sistemas
+- doucmentações precisa ter multiplas visões
+    - ou pelo menos docuemntações pra diferentes equipes
+- testes são feitos desde o início
+- muitas ideias ágeis são baseadas em cima de eXtreme Programming
+- digam quando coisas novas acontecem na daily
+- ADR - salvaguarda as definições de arquitetura de software
+- arquitetos fazem revisões nas entregas principais de código
+    - tudo deve estar de acordo com a entrega
+
+## Architecture Owner
+- Product Owner pra arquitetura
+- precisa de alguém pra encher o saco e puxar essa atividade
+- esse vai ser o mano que vai fazer as definições e guardar tudo
+    - não faz/toma decisão sozinha, é uma referência
+
+- nada é intuitivo
+
+## Arquitetura guiada por requsitos
+- decisões estão sempre baseadas no que o usuário precisa
+- não se pode basear em suposição e na maneira que alguém vai usar alguma ferramenta
+- decisões precisam ser tomadas no último momento responsável
+- atualização precisa ser necessariamente contínua
+
+# DDD - Domain-Driven design
+- a maioria dos softwares tem problema não de lógica, mas de alinhamento com o negócio
+    - a evolução do sistema faz ele parar de atender a necessidade do cliente
+    - sistemas que envelhecem mal
+- a implementação é construída em cima dos modelos de negócio
+    - se eles estiverem errados, a implementação estará errada
+- DDD mantém a arquitetura próxima à necessidade
+    - especialistas de domínio (usuários) trazem informações constantes e mantém o programa perto deles
+
+## Design tático
+- ações pra se adequar ao negócio
+- *Domain Model Patterns*
+- manutenção de vocabulário 
+    - comum entre usuários e desenvolvedores
+- entidades
+    - entidades do negócio mesmo
+    - já podem apresentar métodos aos quais são responsáveis
+- value objects
+    - não é único
+    - é basicamente uma entidade
+    - especialização de dado
+- agregados (aggregates)
+    - aglomerados de entidades e objetos de valor
+    - entidades de vinculação por exemplo
+- repositórios
+    - é o lugar de guardar tudo igual a gente tem com código
+    - aqui se faz um pra cada parte do sistema
+        - não necessariamente pra tudo
+- fábricas (factories)
+    - fábrica de fabricação de objetos e entidades
+- prega a ideia de poder quebrar tudo em eventos
+    - pensando em partes que façam sentido pra aplicação
+- **Camada anticorrupção**
+    - não corromper
+    - classes de serviço (serviço mesmo), adaptadora (adaptação de daods) e de fachada(facade - comunicação externa)
+    - sistema não acessa ngm diretamente
+- dependendo da aplicação existem muitas entidades
+- é muito fácil se perder e achar que temos informação suficiente
+    - nem sempre o user está disponível
+- resistência a mudança
 - 
