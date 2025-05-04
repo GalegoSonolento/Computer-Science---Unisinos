@@ -252,3 +252,15 @@ DATA: 7/Abril/20
     - por algum motivo essa proporção é encontrada em diversos materiais produzidos pela natureza e garante construções estáveis
     - utiilzá-la em nossos materiais traz, também, uma sensação de boa construção
 - a maior parte do trabalho aqui parece ser sobre o balanço e o contraste da aplicação
+- as identidades visuais precisam manter um certo padrão de utilização
+    - não ajuda muito uma aplicação que alterna de interface toda vez que se muda de tela
+- usuários diferentes tem níveis diferentes de entendimento das aplicações
+    - não posso esperar que usuários novos saiam usando meu software com facilidade
+    - mas devo programar tudo para que consiga usar a ferramenta minimamente
+- Personas fazem mais sentido em fases mais iniciais do processo de software
+    - é mais complicado mudar todo o *roadmap* depois que metade já existe
+- a ideia toda de ter protótipos de ***wireframes*** de um projeto é para evitar gastos desnecessários
+    - tanto de tempo quanto de dinheiro
+    - torna o processo de desenvolvimento mais rápido (se sabe o que precisa atingir)
+    - mais simples de manter o cliente no *loop* de desenvolvimento
+- 
