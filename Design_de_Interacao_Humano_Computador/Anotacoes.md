@@ -252,6 +252,7 @@ DATA: 7/Abril/20
     - por algum motivo essa proporção é encontrada em diversos materiais produzidos pela natureza e garante construções estáveis
     - utiilzá-la em nossos materiais traz, também, uma sensação de boa construção
 - a maior parte do trabalho aqui parece ser sobre o balanço e o contraste da aplicação
+<<<<<<< HEAD
 - as identidades visuais precisam manter um certo padrão de utilização
     - não ajuda muito uma aplicação que alterna de interface toda vez que se muda de tela
 - usuários diferentes tem níveis diferentes de entendimento das aplicações
@@ -263,4 +264,43 @@ DATA: 7/Abril/20
     - tanto de tempo quanto de dinheiro
     - torna o processo de desenvolvimento mais rápido (se sabe o que precisa atingir)
     - mais simples de manter o cliente no *loop* de desenvolvimento
+=======
+
+DATA: 28/Abril/2025
+# Projeto de interfaces
+- é a cara tapa do projeto mesmo
+- de fato complexo de mexer ainda mais em empresas pequenas
+- definição de obejtivos e ferramentas disponíveis (inclusive humanas) ficam aqui
+- manutenção de padrão de interface
+- consistência
+    - layout
+    - navegabilidade
+    - foco de atenção
+    - objetividade
+    - simplicidade
+    - comunicação visual clara
+    - feedback constante
+- prototipação é essencial
+- esse projeto é bastante parecido com a engenharia de software
+- defnição de sentimento e ações de cada etapa devem ser mapeados à partir do comportamento dos usuários
+    - existem ferramentas pra identificar o público alvo
+    - sempre dá pra imaginar o usuário (ou encontrar alguém que o seja)
+    - entrevistas são poucas (depende do tempo existente)
+    - formulários entregam visões gerais
+        - análises quantitavas
+            - precisam de cruzamento com análises qualitativas
+                - subjetivas
+- análises devem ser feitas tanto com jogadores (por exemplo) acostumados com um tipo de jogo e outros não acostumados
+    - se o cara q n gosta ou e novato gostou tá gigante
+
+## Personas
+- exatamente igual às personas da engenharia de computação
+    - uma pessoa imaginária q utilizaria o sistema
+- existem links interessantes com ferramentas pras perguntas
+- nossa presença interfere a opinião dos usuários
+    - para opiniões mais sinceras, deixe os entrevistados se degladiarem! (com ideias)
+- formas de teste devem mudar
+    - se usar sempre a mesma eventualmente o teste para de mostrar problemas
+    - use diferentes formas de captação de opinião de usuário
+>>>>>>> 2c90feb1d78acd2c13b22b1128e67a5e12f84ab1
 - 
