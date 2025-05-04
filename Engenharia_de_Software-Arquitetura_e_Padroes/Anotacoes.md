@@ -228,7 +228,7 @@ DATA: 2/Abril/2025
     - não existem códigos prontos
     - a implementação varia
 - algoritmo não é um padrão de projeto
-- aprender os padrões é importante para entender a fluidez e manter uma linguagem comum entre os desenvolvedores
+- aprender os padrões é importante para entender a fluidez e manter uma linguagem comum (**Ubíqua**) entre os desenvolvedores
     - o desenvolvimento de uma linguagem comum, **jargões** são comuns em diversas profissões
 - esses padrões são catalogados em linguagem padrão nas linguagens
 - o foco deve ser em problemas novos - padrões já descobertos estão para usarmos
@@ -283,6 +283,7 @@ DATA: 09/Abril/2025
 - temos uma interface para os estados do sistema e cada um dos estados implementa uma classe
     - a organização vai puxar a classe necessária 
 
+DATA: 29/Abril/2025
 # Modelagem Ágil
 - comunicação constante e simplicidade
 - soluções o mais siples possivel
@@ -316,6 +317,7 @@ DATA: 09/Abril/2025
 - não se pode basear em suposição e na maneira que alguém vai usar alguma ferramenta
 - decisões precisam ser tomadas no último momento responsável
 - atualização precisa ser necessariamente contínua
+- O desenvolvimento ágil tem seu ***backbone*** em uma implementação coerente dos princípios de engenharia de requisitos - é de suma importância que os arquitetos ágeis entendam o que estão fazendo, para que e para quem.
 
 # DDD - Domain-Driven design
 - a maioria dos softwares tem problema não de lógica, mas de alinhamento com o negócio
@@ -325,6 +327,7 @@ DATA: 09/Abril/2025
     - se eles estiverem errados, a implementação estará errada
 - DDD mantém a arquitetura próxima à necessidade
     - especialistas de domínio (usuários) trazem informações constantes e mantém o programa perto deles
+- Uso de linguagem Ubíqua
 
 ## Design tático
 - ações pra se adequar ao negócio
