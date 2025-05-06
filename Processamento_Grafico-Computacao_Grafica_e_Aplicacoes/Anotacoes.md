@@ -360,3 +360,6 @@ DATA: 15/Abril/2025
     - é uma abstração da declaração dentro da main.cpp
 - **g** agrupa faces sobre um mesmo dado nome
 - as linhas compõe os vértices pra criação dos volumes
+- isso aqui é basicamente um tipo fixo de arquivo com anotações de vétices e definições dos objetos
+    - ele não preenche nada, na verdade isso depende da renderização
+- 
