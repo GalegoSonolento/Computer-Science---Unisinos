@@ -362,4 +362,5 @@ DATA: 15/Abril/2025
 - as linhas compõe os vértices pra criação dos volumes
 - isso aqui é basicamente um tipo fixo de arquivo com anotações de vétices e definições dos objetos
     - ele não preenche nada, na verdade isso depende da renderização
-- 
+
+DATA: 06/Maio/2025
