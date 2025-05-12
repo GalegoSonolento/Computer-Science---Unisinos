@@ -360,4 +360,85 @@ DATA: 29/Abril/2025
 - é muito fácil se perder e achar que temos informação suficiente
     - nem sempre o user está disponível
 - resistência a mudança
-- 
+
+DATA: 07/Maio/2025
+# GRASP e SOLID
+Elementos de *melhores práticas* de código que vizam gerar códigos mais limpos e, bom, decentes.
+
+## GRASP
+- **G**eneral **R**esponsability **A**ssignment **S**oftware **P**atters
+- Craig Larman - Applying UML and Patterns
+- definição de responsabilidades claras para todas as camadas do projeto e suas respectivas classes
+- Expert (especialista)
+    - quem conhece/detém determinada informação ou processo
+- Creator (criador)
+    - quem cria e envia dados (fábrica de instâncias)
+- Controller (controlador)
+    - tratamento de eventos (pique Kafka)
+- Low Coupling (baixo acoplamento)
+    - as classes e funções devem saber poucas coisas uma da outra
+    - o que for necessário deve ser passado e o processado deve ser devolvido
+- High Cohesion (alta coesão)
+    - uam coisa por função
+    - todos se conversam
+
+## SOLID
+- **S**RP - **Responsabilidade** única
+    - uma coisa por função
+    - isso aqui não é canivete suíço
+- **O**CP - Aberto/Fechado (**Open**-Close)
+    - fácil de expandir e difícil de alterar
+    - não dá pra tirar a pele da pessoa com o casaco junto
+- **L**SP - Substituição de **Liskov**
+    - classe filha não pode afetar (*quebrar*) a classe pai
+    - "Se parece um pato, faz quck igual um pato, mas precisa de bateria - provavelmente você está usando a abstração errada"
+- **I**SP - Segregação de **Interface**
+    - tenha interfaces específicas para cenários específicos
+    - alguém que faz tudo torna muitos pontos dependentes e atrasa o desenvolvimento
+- **D**IP - Inversão de **Dependência**
+    - as classes precisam depender de abstrações, não de classes concretas
+    - tipo, a flecha depende de uma tomada pra entrar na corrente da casa ao invés de soldarmos tudo na mesma rede
+
+# Padrão de Projeto: Adapter
+- Padróes GOF
+
+Criacionais          | Estruturais   | Comportamentais
+---------------------|---------------|----------------
+\- Abstract Factory  | - **Adapter** | - Chain of Responsibility
+\- Builder           | - Bridge      | - Command
+\- Factory Method    | - Composite   | - Interpreter
+\- Prototype         | - Decorator   | - Iterator
+\- Singleton         | - Façade      | - Mediator
+-----                | - Flyweight   | - Memento
+-----                | - Proxy       | - Observer
+-----                |-----          | - Observer
+-----                |-----          | - State
+-----                |-----          | - Strategy
+-----                |-----          | - Template Method
+-----                |-----          | - Visitor
+
+- adaptação para inclusão de padrões diferentes de aplicação quando precisam funcionar juntas
+    - ou puxar alguma chamada externa (aplicação diferente)
+- não faz muito sentido um adapter pra mesma aplicação
+
+# Padrões de Projeto: Facade
+Criacionais          | Estruturais   | Comportamentais
+---------------------|---------------|----------------
+\- Abstract Factory  | - Adapter     | - Chain of Responsibility
+\- Builder           | - Bridge      | - Command
+\- Factory Method    | - Composite   | - Interpreter
+\- Prototype         | - Decorator   | - Iterator
+\- Singleton         | - **Façade**  | - Mediator
+-----                | - Flyweight   | - Memento
+-----                | - Proxy       | - Observer
+-----                |-----          | - Observer
+-----                |-----          | - State
+-----                |-----          | - Strategy
+-----                |-----          | - Template Method
+-----                |-----          | - Visitor
+
+- **Face** externa do sistema para praticamente tudo
+- bastante usado em **bibliotecas**
+- facilita empacotamnto e testes
+- consiste em encapsular grandes partes de um projeto em um lugar só
+    - assim eu só preciso de fato ver alguma chamada ou interação com uma classe ao invés de 10
