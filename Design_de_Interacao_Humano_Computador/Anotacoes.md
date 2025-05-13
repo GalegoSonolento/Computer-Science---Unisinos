@@ -264,7 +264,6 @@ DATA: 7/Abril/20
     - tanto de tempo quanto de dinheiro
     - torna o processo de desenvolvimento mais rápido (se sabe o que precisa atingir)
     - mais simples de manter o cliente no *loop* de desenvolvimento
-=======
 
 DATA: 28/Abril/2025
 # Projeto de interfaces
@@ -302,5 +301,43 @@ DATA: 28/Abril/2025
 - formas de teste devem mudar
     - se usar sempre a mesma eventualmente o teste para de mostrar problemas
     - use diferentes formas de captação de opinião de usuário
->>>>>>> 2c90feb1d78acd2c13b22b1128e67a5e12f84ab1
-- 
+
+DATA: 12/Maio/2025
+## Interfaceamento da interface
+- sem muitos detalhes até chegar nos protótipos (*wireframes* pra frente)
+- sai de uma organização de locais até o interfaceamento real
+- interações de eventos
+- precisa de pelo menos algum nível de teste
+
+## Prototipação
+- já monta algumas interfaces e permite o usuário ter uma noção maior do que está acontecendo
+- já tem coisas mais prontas (pelo menos o desenho da interface)
+- em ferramentas como o **Figma** já dá pra criar um fluxo de telas
+- quanto mais complexo mais caro fica
+
+## Avaliação
+- ainda rola uma avaliação dos usuários depois que o sistema está mais bem estruturado e sistematizado
+- esses feedbacks devem ser dados em um momento que as interfaces ainda não estão fixas
+    - ou ainda são baratas de mudar
+- o usuário ajuda a definir o que dar mais atenção
+    - primeiro é o que o usuário quer
+    - o que, pra ele, vale mais a pena
+- pegar as funcionalidades mapeadas pelas Personas e rankear as funcionalidades
+
+## Ciclo de concepção de interface
+### levantamento de informações
+- personas e outras informações interessantes
+
+### Análise de dados
+- mapeamento de oportunidades
+- funcionalidades
+- necessidades e funções core do produto (interface)
+
+### Plano de Estratégia e plano de escopo
+- como montar e até onde vai o projeto
+- cruzamento entre duas variáveis e mais interesses
+- levantamento de priorização com base nas funções
+
+### Plano estrutural (hierarquia)
+- definição de alternativas e identificação de outros possíveis processos
+- dar algum tipo de pontuação e escolher o que melhor pontuar
