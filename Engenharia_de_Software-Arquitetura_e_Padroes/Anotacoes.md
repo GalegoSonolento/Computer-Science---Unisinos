@@ -442,3 +442,16 @@ Criacionais          | Estruturais   | Comportamentais
 - facilita empacotamnto e testes
 - consiste em encapsular grandes partes de um projeto em um lugar só
     - assim eu só preciso de fato ver alguma chamada ou interação com uma classe ao invés de 10
+
+DATA: 14/Maio/2025
+# Event Storming
+- não é o conhecimento dos especialistas de negócio que vai pra produção, é a interpretação dos desenvolvedores.
+    - em um mundo ideal os desenvolvedores e especialistas todos conhecem o produto e sabem das mesmas coisas
+- precisa de uma porrada de gente pra desenvolver software
+    - td mundo precisa (ou deveria) estar no mesmo pé de entendimento do projeto
+    - às vezes o pessoal entra no meio do camihno do projeto
+        - clássico é o QA não estar no começo e n dizer que um requisito nãp é testável
+- processamento básico de trabalho em equipe (que pessoas da computação n têm aparentemente)
+    - entender o que vai fazer/precisa fazer e só depois começar a projetar a solução
+- entendimento de negócio modelado à eventos
+- 
