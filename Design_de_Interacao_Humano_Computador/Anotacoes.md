@@ -314,6 +314,8 @@ DATA: 12/Maio/2025
 - já tem coisas mais prontas (pelo menos o desenho da interface)
 - em ferramentas como o **Figma** já dá pra criar um fluxo de telas
 - quanto mais complexo mais caro fica
+- maioria desses protótipos é de baixo preço e tem o objetivo de serem absurdos de fáceis de montar
+    - lembre que nessa fase é mais importante entregar e testar do que algo funcional de verdade
 
 ## Avaliação
 - ainda rola uma avaliação dos usuários depois que o sistema está mais bem estruturado e sistematizado
