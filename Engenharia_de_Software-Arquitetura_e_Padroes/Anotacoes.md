@@ -454,4 +454,3 @@ DATA: 14/Maio/2025
 - processamento básico de trabalho em equipe (que pessoas da computação n têm aparentemente)
     - entender o que vai fazer/precisa fazer e só depois começar a projetar a solução
 - entendimento de negócio modelado à eventos
-- 
