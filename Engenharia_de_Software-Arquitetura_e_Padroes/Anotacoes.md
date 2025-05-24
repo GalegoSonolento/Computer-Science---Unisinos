@@ -454,3 +454,20 @@ DATA: 14/Maio/2025
 - processamento básico de trabalho em equipe (que pessoas da computação n têm aparentemente)
     - entender o que vai fazer/precisa fazer e só depois começar a projetar a solução
 - entendimento de negócio modelado à eventos
+- Isso aqui tem o objetivo de manter todos na mesma linha de pensamento e evitar problemas com o projeto mais pra frente.
+
+DATA: 21/Maio/2025
+# Arquitetura e Qualidade
+- todo software construído vai ter degradação ao longo do tempo de vida dele
+    - claro e não forem feita manutençõe adequadas
+- Software Architectural Quality Assurance (SAQA)
+    - Garantia da Qualidade da Arquitetura de Software
+    - estilo de manutenção de aplicações vivas
+- é muito importante etabelecer métricas para que deciões sejam tomadas com a devida necessidade e cautela
+    - não é possível adminitrar aquilo que não é medido
+- Métricas: Complexidade Ciclomática
+    - isso aqui diz respeito a uma parte importante dos softwares: complexidade
+    - uma boa parte dos problemas surgem por falta de testes e algumas vezes a equipe nem sabe que uma situação é possível até alguém chegar lá de algum modo
+    - por isso, muitas estruturas de If/Else, cadeias de escolhas, vários caminhos para um ponto, geram maior complexidade e, assim, maior necessidade de testes
+    - os piores casos são quando *loops* podem ocorrer
+- 
