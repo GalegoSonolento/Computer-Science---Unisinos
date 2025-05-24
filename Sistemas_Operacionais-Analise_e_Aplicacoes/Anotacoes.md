@@ -20,8 +20,16 @@ DATA: 08/Maio/2025
 
 ## Versões e distribuições de Sistemas Operacionais 
 - atualmente já existem bastantes versões dos sistemas operacionais, mas 3 segmento ainda são os principais:
-    - windows
+    - windowsz
     - Linux
     - MacOS
     - Esses 3 competem e têm versões diferentes em si mesmos
+
+DATA: 24/Maio/2025
+# PowerShell
+- PowerShell é a versão de Bash do Windows
+    - dá pra montar script e automação utilizando essa ferramenta
+- apesar de ser windows, PowerShell tem suporte multiplataforma
+- Existe uma lista bem grande com todos os operadores do PowerShell, mas na dúvida é consultar material e perguntar pro GPT
+- ela tem basicamente os mesmos comando que são feitos dentro do Linux, mas precisa de algumas diferenças (código proprietário)
 - 
