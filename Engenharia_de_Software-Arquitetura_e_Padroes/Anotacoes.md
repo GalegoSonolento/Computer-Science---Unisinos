@@ -470,4 +470,3 @@ DATA: 21/Maio/2025
     - uma boa parte dos problemas surgem por falta de testes e algumas vezes a equipe nem sabe que uma situação é possível até alguém chegar lá de algum modo
     - por isso, muitas estruturas de If/Else, cadeias de escolhas, vários caminhos para um ponto, geram maior complexidade e, assim, maior necessidade de testes
     - os piores casos são quando *loops* podem ocorrer
-- 
