@@ -32,4 +32,37 @@ DATA: 24/Maio/2025
 - apesar de ser windows, PowerShell tem suporte multiplataforma
 - Existe uma lista bem grande com todos os operadores do PowerShell, mas na dúvida é consultar material e perguntar pro GPT
 - ela tem basicamente os mesmos comando que são feitos dentro do Linux, mas precisa de algumas diferenças (código proprietário)
+
+DATA: 29/Maio/2025
+# Processos em Sistemas Operacionais
+- Processo é uma instância de um programa rodando dentro do computador com tarefas executadas dentro da CPU
+- As tarefas feitas pelo usuário tem sempre maior prioridade
+    - para alta responsividade
+- Isso em processos pesados né
+- registrador está do lado da ULA e é apoiada pela memória de cache
+    - muitas vezes os dados são jogados pra memória principal já que eles não são necessário imediatamente
+    - quando mais threads, mais competição por espaço
+- diferentes tipos de thread usam diferentes tipos de processamento
+    - por exemplo uma thread do Firefox que esteja tocando um vídeo vai usar bem mais da GPU (fica mais à mostra)
+- threads são criadas para auxiliar o processo principal
+    - o **processo leve** é a própria thread
+- mexer o mouse é uma interrupção do sistema por si
+- todos os processos param ante uma interrupção
+- Tabela de Processos PCB tem todos os processos rodando no sistema
+    - inclusive as permissões dadas a esses processos
+- no Windows, alguns processos em segundo plano ficam visíveis para o usuário e podem ser ativos mais rapidamente
+- **comunicação entre processos** (IPC)
+    - vários tipos de conexão
+    - aqui entram os processos de rede
+- processos leve *threads* podem ser 
+    - single ou multi-thread
+    - varia conforme o programa (**processo pesado**)
+- threads tem *overhead* bem menor
+    - quase nada pra dar *load*
+
+# Bash
+- basicamente um powerShell de unix
+    - tem as mesmas funções
+    - ainda dá pra usar powershell no linux, mas n tem mto fundamento a n ser que seja absolutamente necessario
+- comandos por terminal
 - 
