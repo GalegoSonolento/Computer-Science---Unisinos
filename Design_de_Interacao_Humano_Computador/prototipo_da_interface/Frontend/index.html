@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Protótipo RA e Mapa Interativo - Ajustado</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 10px;
+        }
+
+        /* Container principal simulando um celular */
+        .mobile-container {
+            width: 100%;
+            max-width: 375px;
+            height: 812px;
+            background-color: #fff;
+            border-radius: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Estilo para as seções (telas) */
+        .screen {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transition: transform 0.3s ease;
+        }
+
+        /* Tela de RA */
+        .ar-screen {
+            background-image: url('https://via.placeholder.com/375x812?text=Visualização+RA');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 20px;
+        }
+
+        /* Tela de Mapa */
+        .map-screen {
+            display: flex;
+            flex-direction: column;
+            background-color: #e0e0e0;
+            height: 100%;
+            /* Garante que a tela ocupe toda a altura */
+        }
+
+        .map-container {
+            flex: 1;
+            position: relative;
+            background-color: #ddd;
+        }
+
+        /* Cabeçalho com título, botões de compartilhar, salvar e ícone de modo offline */
+        .map-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px 20px;
+            background-color: #fff;
+            border-bottom: 1px solid #ddd;
+            position: relative;
+        }
+
+        .map-title {
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .header-buttons {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+
+        .header-btn {
+            font-size: 24px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: #333;
+        }
+
+        .offline-icon {
+            font-size: 15px;
+            color: #ff9800;
+        }
+
+        .offline-indicator {
+            position: absolute;
+            top: 10px;
+            left: 20px;
+            z-index: 10;
+        }
+
+        /* Filtros acima do mapa */
+        .map-filters {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            padding: 10px;
+            background-color: #fff;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .filter-btn {
+            background-color: #f5f5f5;
+            border: 1px solid #ccc;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+        }
+
+        .filter-btn:hover {
+            background-color: #e0e0e0;
+        }
+
+        /* Mapa (com imagem grande) */
+        .map-container {
+            flex: 1;
+            position: relative;
+            background-color: #ddd;
+        }
+
+        .map-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Pin no mapa */
+        .map-pin {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 30px;
+            height: 30px;
+            background-color: #ff0000;
+            border-radius: 50%;
+            border: 2px solid #fff;
+            cursor: pointer;
+        }
+
+        /* Resumo rápido ao clicar no pin */
+        .quick-info {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            right: 20px;
+            background-color: rgba(255, 255, 255, 0.95);
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            display: none;
+        }
+
+        .quick-info.active {
+            display: block;
+        }
+
+        .quick-info h3 {
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+
+        .quick-info p {
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 10px;
+        }
+
+        .save-btn {
+            background-color: #4caf50;
+            color: #fff;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+        }
+
+        .save-btn:hover {
+            background-color: #45a049;
+        }
+
+        /* Botões flutuantes na tela de RA e Mapa */
+        .floating-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 70px;
+        }
+
+        .floating-button {
+            width: 50px;
+            height: 50px;
+            background-color: #6b21a8;
+            color: #fff;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+            cursor: pointer;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+            transition: transform 0.2s ease;
+        }
+
+        .floating-button:hover {
+            transform: scale(1.1);
+        }
+
+        /* Botão de Configurações */
+        .settings-btn {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 20px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+        }
+
+        .settings-btn:hover {
+            background-color: #555;
+        }
+
+        /* Navegação entre telas (simulada) */
+        .screen:not(:first-child) {
+            transform: translateX(100%);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="mobile-container">
+        <!-- Tela de RA -->
+        <section class="screen ar-screen">
+            <!-- Nova div para o Modo Offline -->
+            <div class="offline-indicator">
+                <span class="offline-icon">🛜on-line</span>
+            </div>
+            <div class="map-header">
+                <div class="header-buttons">
+                    <button class="header-btn" onclick="alert('Compartilhar!')" title="Compartilhar">🔗</button>
+                </div>
+                <h2 class="map-title">Monumento do Laçador</h2>
+                <button class="header-btn" onclick="alert('Salvo!')" title="Salvar">🔖</button>
+                <a href="review.html">⭐</a>
+            </div>
+            <img src="./maps.png" alt="Mapa">
+            <div class="floating-buttons">
+                <button class="floating-button" onclick="window.location.href='rascreen.html'" title="Captura de Tela">📸</button>
+                <button class="floating-button" onclick="alert('Exibindo fatos rápidos!')" title="Fatos Rápidos">📄</button>
+                <button class="floating-button" onclick="alert('Narração em áudio ativada!')" title="Narração em Áudio">🔊</button>
+            </div>
+            <a href="config.html" class="settings-btn">⚙️</a>
+        </section>
+
+        <!-- Tela de Mapa -->
+        <section class="screen map-screen">
+            <div class="map-header">
+                <div class="header-buttons">
+                    <button class="header-btn" onclick="alert('Compartilhar!')" title="Compartilhar">🔗</button>
+                </div>
+                <h2 class="map-title">Monumento do Laçador</h2>
+                <button class="header-btn" onclick="alert('Salvo!')" title="Salvar">🔖</button>
+            </div>
+            <div class="map-filters">
+                <button class="filter-btn">📍 Proximidade</button>
+                <button class="filter-btn">🗂️ Categoria</button>
+                <button class="filter-btn">⭐ Popularidade</button>
+            </div>
+            <div class="map-container">
+                <!-- Imagem grande simulando o mapa -->
+                <img src="./maps.png" alt="Mapa">
+                <div class="map-pin" onclick="toggleQuickInfo()"></div>
+                <div class="quick-info" id="quickInfo">
+                    <h3>Monumento do Laçador</h3>
+                    <p>Localizado em Porto Alegre, RS, é um símbolo da cultura gaúcha, representando o tradicionalismo
+                        do estado.</p>
+                    <button class="save-btn" onclick="alert('Salvo no Planejador de Itinerário!')">Salvar no
+                        Itinerário</button>
+                </div>
+            </div>
+            <div class="floating-buttons">
+                <button class="floating-button" onclick="alert('Captura de tela tirada!')"
+                    title="Captura de Tela">📸</button>
+                <button class="floating-button" onclick="alert('Exibindo fatos rápidos!')"
+                    title="Fatos Rápidos">📄</button>
+                <button class="floating-button" onclick="alert('Narração em áudio ativada!')"
+                    title="Narração em Áudio">🔊</button>
+            </div>
+            <button class="settings-btn" onclick="alert('Abrir Configurações!')">Configurações</button>
+        </section>
+    </div>
+
+    <script>
+        // Função para exibir/esconder o resumo rápido
+        function toggleQuickInfo() {
+            const quickInfo = document.getElementById('quickInfo');
+            quickInfo.classList.toggle('active');
+        }
+    </script>
+</body>
+
+</html>

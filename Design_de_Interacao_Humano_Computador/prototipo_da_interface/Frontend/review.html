@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avaliações</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 10px;
+        }
+
+        .mobile-container {
+            width: 100%;
+            max-width: 375px;
+            height: 812px;
+            background-color: #fff;
+            border-radius: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            position: relative;
+        }
+
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 15px 20px;
+            border-bottom: 1px solid #ddd;
+            position: relative;
+        }
+
+        .back-btn {
+            background: none;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            color: #333;
+            position: absolute;
+            left: 20px;
+        }
+
+        .header-title {
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .rating-section {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .prompt {
+            font-size: 16px;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .stars {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .star-input {
+            display: none;
+        }
+
+        .star-label {
+            font-size: 36px;
+            color: #ddd;
+            cursor: pointer;
+        }
+
+        .star-input:checked + .star-label {
+            color: #ffd700;
+        }
+
+        .comment-box {
+            width: 100%;
+            height: 100px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            resize: none;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 10px;
+            background-color: #4caf50;
+            color: #fff;
+            border: none;
+            border-radius: 20px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+        }
+
+        .submit-btn:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="mobile-container">
+        <div class="header">
+            <a href="index.html" class="back-btn">←</a>
+            <h2 class="header-title">Avaliações</h2>
+        </div>
+        <div class="rating-section">
+            <div class="prompt">Faça sua avaliação:</div>
+            <div class="stars">
+                <input type="radio" id="star5" name="rating" class="star-input" value="5">
+                <label for="star5" class="star-label">★</label>
+                <input type="radio" id="star4" name="rating" class="star-input" value="4">
+                <label for="star4" class="star-label">★</label>
+                <input type="radio" id="star3" name="rating" class="star-input" value="3">
+                <label for="star3" class="star-label">★</label>
+                <input type="radio" id="star2" name="rating" class="star-input" value="2">
+                <label for="star2" class="star-label">★</label>
+                <input type="radio" id="star1" name="rating" class="star-input" value="1">
+                <label for="star1" class="star-label">★</label>
+            </div>
+            <textarea class="comment-box" placeholder="Escreva aqui..."></textarea>
+            <button class="submit-btn" onclick="alert('Avaliação enviada!')">Enviar</button>
+        </div>
+    </div>
+</body>
+</html>

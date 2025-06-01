@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=375, initial-scale=1.0">
+    <title>Visualização RA</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        body {
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 10px;
+        }
+        .mobile-container {
+            width: 100%;
+            max-width: 375px;
+            height: 812px;
+            background-color: #fff;
+            border-radius: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            position: relative;
+        }
+        .background-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+        }
+        .floating-buttons {
+            position: absolute;
+            bottom: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 30px;
+            z-index: 2;
+        }
+        .floating-btn {
+            width: 56px;
+            height: 56px;
+            background-color: #6b21a8;
+            color: #fff;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 26px;
+            border: none;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+        .floating-btn:hover {
+            background-color: #4b158a;
+        }
+        .modal-overlay {
+            display: none;
+            position: absolute;
+            z-index: 10;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(0,0,0,0.4);
+            justify-content: center;
+            align-items: center;
+        }
+        .modal-overlay.active {
+            display: flex;
+        }
+        .modal-window {
+            background: #fff;
+            border-radius: 16px;
+            padding: 24px 18px;
+            max-width: 300px;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+            text-align: center;
+            position: relative;
+        }
+        .modal-close {
+            position: absolute;
+            top: 8px;
+            right: 12px;
+            background: none;
+            border: none;
+            font-size: 20px;
+            color: #6b21a8;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="mobile-container">
+        <img src="lacador.jpeg" alt="Fundo RA" class="background-image">
+        <div class="floating-buttons">
+            <a href="index.html" class="floating-btn" title="Voltar">←</a>
+            <button class="floating-btn" title="Tirar Foto" onclick="showModal()">📸</button>
+            <button class="floating-btn" title="Ler mais" onclick="showModal()">ℹ️</button>
+        </div>
+        <div id="modal" class="modal-overlay">
+            <div class="modal-window">
+                <button class="modal-close" onclick="closeModal()" title="Fechar">×</button>
+                <h2>Informação</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque euismod, urna eu tincidunt consectetur, nisi nisl aliquam nunc, eget aliquam massa nisl quis neque.</p>
+            </div>
+        </div>
+    </div>
+    <script>
+        function showModal() {
+            document.getElementById('modal').classList.add('active');
+        }
+        function closeModal() {
+            document.getElementById('modal').classList.remove('active');
+        }
+    </script>
+</body>
+</html>
