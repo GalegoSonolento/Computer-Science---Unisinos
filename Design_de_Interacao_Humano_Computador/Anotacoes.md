@@ -343,3 +343,13 @@ DATA: 12/Maio/2025
 ### Plano estrutural (hierarquia)
 - definição de alternativas e identificação de outros possíveis processos
 - dar algum tipo de pontuação e escolher o que melhor pontuar
+
+DATA: 2/Maio/2025
+# IHC Acessibilidade
+- é necessário ter acessibilidade
+- existem algumas boas práticas (pincipalmente da W3C) para acessibilidade
+    - World Wide Web Consortium
+- a ferramenta axe (google chrome) tem uma função pra analizar o site e ver os descumprimentos em relação à acessibilidade
+- apenas cor para indicação de criticidade é problemático
+    - informações precisam de pelo menos 2 a 3 canais de comunicação para o sistema passar uma mensagem corretamente
+- 
