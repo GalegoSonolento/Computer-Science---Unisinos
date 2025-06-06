@@ -65,4 +65,7 @@ DATA: 29/Maio/2025
     - tem as mesmas funções
     - ainda dá pra usar powershell no linux, mas n tem mto fundamento a n ser que seja absolutamente necessario
 - comandos por terminal
+- é o mais utilizado - inclusive no windows
+    - usualmente, aplicações montadas em bash tem uma leitura melhor
+    - usuários estão mais acostumados com esses comandos uma vez que normalmente usuarios de Linux (administradores de servidor) utilizam essa linguagem
 - 

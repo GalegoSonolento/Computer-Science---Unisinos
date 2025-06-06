@@ -448,6 +448,7 @@ DATA: 14/Maio/2025
 - não é o conhecimento dos especialistas de negócio que vai pra produção, é a interpretação dos desenvolvedores.
     - em um mundo ideal os desenvolvedores e especialistas todos conhecem o produto e sabem das mesmas coisas
 - precisa de uma porrada de gente pra desenvolver software
+    - na maioria dos casos o pessoal trabalhando no sotware é igual cego em tiroteio
     - td mundo precisa (ou deveria) estar no mesmo pé de entendimento do projeto
     - às vezes o pessoal entra no meio do camihno do projeto
         - clássico é o QA não estar no começo e n dizer que um requisito nãp é testável
@@ -470,3 +471,21 @@ DATA: 21/Maio/2025
     - uma boa parte dos problemas surgem por falta de testes e algumas vezes a equipe nem sabe que uma situação é possível até alguém chegar lá de algum modo
     - por isso, muitas estruturas de If/Else, cadeias de escolhas, vários caminhos para um ponto, geram maior complexidade e, assim, maior necessidade de testes
     - os piores casos são quando *loops* podem ocorrer
+
+DATA: 28/Maio/2025
+# DevOps e DevSecOps
+- DevOps refere-se ao operacional mesmo
+    - prestam serviços à todas as parted da aplicação
+    - a cola e o meio do caminho entre todas as equipes
+- Equipes de DevOps e operacional seguram uma onda maior e permitem melhor comunicação entre as partes
+- serviços se tornam mais resilientes
+- DevSecOps é uma extrapolação do DevOps comum
+    - cuidam da parte de segurança junto do operacional e desenvolvimento
+    - mais uma tarefa atribuída
+    - essa organização é mais cultural do que de ferramentas atribuídas
+- automação nesse cenário é extremamente necessária
+    - para que a própria aplicação trabalhe para os profissionais de DevSecOps
+- ainda existem diversos tipos de Ops a mais no mercado
+    - todas elas tem algum propósito
+        - mesmo que muitas sejam Buzz words inventadas pra algum propósito de marketing ou político específico
+    - 
