@@ -62,8 +62,10 @@
             cursor: pointer;
             transition: background-color 0.2s;
         }
-        .floating-btn:hover {
+        .floating-btn:hover,
+        .floating-btn:focus {
             background-color: #4b158a;
+            outline: 3px solid #ff9800;
         }
         .modal-overlay {
             display: none;
@@ -96,31 +98,53 @@
             color: #6b21a8;
             cursor: pointer;
         }
+        .modal-close:focus {
+            outline: 3px solid #ff9800;
+        }
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0,0,0,0);
+            border: 0;
+        }
     </style>
 </head>
 <body>
-    <div class="mobile-container">
-        <img src="lacador.jpeg" alt="Fundo RA" class="background-image">
+    <main class="mobile-container" aria-label="Visualização de Realidade Aumentada">
+        <img src="lacador.jpeg" alt="Fundo do Monumento do Laçador" class="background-image">
         <div class="floating-buttons">
-            <a href="index.html" class="floating-btn" title="Voltar">←</a>
-            <button class="floating-btn" title="Tirar Foto" onclick="showModal()">📸</button>
-            <button class="floating-btn" title="Ler mais" onclick="showModal()">ℹ️</button>
+            <a href="index.html" class="floating-btn" title="Voltar" aria-label="Voltar para a tela inicial">←</a>
+            <button class="floating-btn" title="Tirar Foto" aria-label="Tirar Foto" onclick="showModal()">📸</button>
+            <button class="floating-btn" title="Ler mais" aria-label="Ler mais sobre o local" onclick="showModal()">ℹ️</button>
         </div>
-        <div id="modal" class="modal-overlay">
+        <div id="modal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
             <div class="modal-window">
-                <button class="modal-close" onclick="closeModal()" title="Fechar">×</button>
-                <h2>Informação</h2>
+                <button class="modal-close" onclick="closeModal()" title="Fechar" aria-label="Fechar janela">×</button>
+                <h2 id="modalTitle">Informação</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque euismod, urna eu tincidunt consectetur, nisi nisl aliquam nunc, eget aliquam massa nisl quis neque.</p>
             </div>
         </div>
-    </div>
+    </main>
     <script>
         function showModal() {
-            document.getElementById('modal').classList.add('active');
+            const modal = document.getElementById('modal');
+            modal.classList.add('active');
+            // Foco acessível para o botão fechar
+            setTimeout(() => {
+                modal.querySelector('.modal-close').focus();
+            }, 100);
         }
         function closeModal() {
             document.getElementById('modal').classList.remove('active');
         }
+        // Fechar modal com ESC
+        document.addEventListener('keydown', function(e) {
+            if (e.key === "Escape") closeModal();
+        });
     </script>
 </body>
 </html>

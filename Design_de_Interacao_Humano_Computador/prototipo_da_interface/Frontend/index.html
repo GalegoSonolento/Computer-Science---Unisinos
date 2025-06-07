@@ -22,7 +22,6 @@
             padding: 10px;
         }
 
-        /* Container principal simulando um celular */
         .mobile-container {
             width: 100%;
             max-width: 375px;
@@ -34,7 +33,6 @@
             position: relative;
         }
 
-        /* Estilo para as seções (telas) */
         .screen {
             width: 100%;
             height: 100%;
@@ -44,7 +42,6 @@
             transition: transform 0.3s ease;
         }
 
-        /* Tela de RA */
         .ar-screen {
             background-image: url('https://via.placeholder.com/375x812?text=Visualização+RA');
             background-size: cover;
@@ -55,13 +52,11 @@
             padding: 20px;
         }
 
-        /* Tela de Mapa */
         .map-screen {
             display: flex;
             flex-direction: column;
             background-color: #e0e0e0;
             height: 100%;
-            /* Garante que a tela ocupe toda a altura */
         }
 
         .map-container {
@@ -70,7 +65,6 @@
             background-color: #ddd;
         }
 
-        /* Cabeçalho com título, botões de compartilhar, salvar e ícone de modo offline */
         .map-header {
             display: flex;
             align-items: center;
@@ -113,7 +107,6 @@
             z-index: 10;
         }
 
-        /* Filtros acima do mapa */
         .map-filters {
             display: flex;
             justify-content: center;
@@ -133,15 +126,10 @@
             transition: background-color 0.2s ease;
         }
 
-        .filter-btn:hover {
+        .filter-btn:hover,
+        .filter-btn:focus {
             background-color: #e0e0e0;
-        }
-
-        /* Mapa (com imagem grande) */
-        .map-container {
-            flex: 1;
-            position: relative;
-            background-color: #ddd;
+            outline: 2px solid #6b21a8;
         }
 
         .map-image {
@@ -150,7 +138,6 @@
             object-fit: cover;
         }
 
-        /* Pin no mapa */
         .map-pin {
             position: absolute;
             top: 50%;
@@ -164,7 +151,10 @@
             cursor: pointer;
         }
 
-        /* Resumo rápido ao clicar no pin */
+        .map-pin:focus {
+            outline: 3px solid #ff9800;
+        }
+
         .quick-info {
             position: absolute;
             bottom: 20px;
@@ -203,11 +193,12 @@
             transition: background-color 0.2s ease;
         }
 
-        .save-btn:hover {
+        .save-btn:hover,
+        .save-btn:focus {
             background-color: #45a049;
+            outline: 2px solid #6b21a8;
         }
 
-        /* Botões flutuantes na tela de RA e Mapa */
         .floating-buttons {
             display: flex;
             justify-content: center;
@@ -228,13 +219,15 @@
             cursor: pointer;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
             transition: transform 0.2s ease;
+            border: none;
         }
 
-        .floating-button:hover {
+        .floating-button:hover,
+        .floating-button:focus {
             transform: scale(1.1);
+            outline: 3px solid #ff9800;
         }
 
-        /* Botão de Configurações */
         .settings-btn {
             position: absolute;
             bottom: 20px;
@@ -250,11 +243,12 @@
             transition: background-color 0.2s ease;
         }
 
-        .settings-btn:hover {
+        .settings-btn:hover,
+        .settings-btn:focus {
             background-color: #555;
+            outline: 2px solid #6b21a8;
         }
 
-        /* Navegação entre telas (simulada) */
         .screen:not(:first-child) {
             transform: translateX(100%);
         }
@@ -262,73 +256,69 @@
 </head>
 
 <body>
-    <div class="mobile-container">
+    <main class="mobile-container" aria-label="Aplicativo de RA e Mapa Interativo">
         <!-- Tela de RA -->
-        <section class="screen ar-screen">
-            <!-- Nova div para o Modo Offline -->
+        <section class="screen ar-screen" aria-labelledby="titulo-ra">
             <div class="offline-indicator">
-                <span class="offline-icon">🛜on-line</span>
+                <span class="offline-icon" aria-label="Status de conexão">🛜on-line</span>
             </div>
             <div class="map-header">
                 <div class="header-buttons">
-                    <button class="header-btn" onclick="alert('Compartilhar!')" title="Compartilhar">🔗</button>
+                    <button class="header-btn" onclick="alert('Compartilhar!')" title="Compartilhar" aria-label="Compartilhar localização">🔗</button>
                 </div>
-                <h2 class="map-title">Monumento do Laçador</h2>
-                <button class="header-btn" onclick="alert('Salvo!')" title="Salvar">🔖</button>
-                <a href="review.html">⭐</a>
+                <h1 class="map-title" id="titulo-ra">Monumento do Laçador</h1>
+                <button class="header-btn" onclick="alert('Salvo!')" title="Salvar" aria-label="Salvar localização">🔖</button>
+                <a href="review.html" aria-label="Ver avaliações" title="Ver avaliações">⭐</a>
             </div>
-            <img src="./maps.png" alt="Mapa">
+            <img src="./maps.png" alt="Mapa do entorno do Monumento do Laçador">
             <div class="floating-buttons">
-                <button class="floating-button" onclick="window.location.href='rascreen.html'" title="Captura de Tela">📸</button>
-                <button class="floating-button" onclick="alert('Exibindo fatos rápidos!')" title="Fatos Rápidos">📄</button>
-                <button class="floating-button" onclick="alert('Narração em áudio ativada!')" title="Narração em Áudio">🔊</button>
+                <button class="floating-button" onclick="window.location.href='rascreen.html'" title="Captura de Tela" aria-label="Captura de Tela">📸</button>
+                <button class="floating-button" onclick="alert('Exibindo fatos rápidos!')" title="Fatos Rápidos" aria-label="Fatos Rápidos">📄</button>
+                <button class="floating-button" onclick="alert('Narração em áudio ativada!')" title="Narração em Áudio" aria-label="Narração em Áudio">🔊</button>
             </div>
-            <a href="config.html" class="settings-btn">⚙️</a>
+            <a href="config.html" class="settings-btn" aria-label="Abrir configurações" title="Abrir configurações">⚙️</a>
         </section>
 
         <!-- Tela de Mapa -->
-        <section class="screen map-screen">
+        <section class="screen map-screen" aria-labelledby="titulo-mapa">
             <div class="map-header">
                 <div class="header-buttons">
-                    <button class="header-btn" onclick="alert('Compartilhar!')" title="Compartilhar">🔗</button>
+                    <button class="header-btn" onclick="alert('Compartilhar!')" title="Compartilhar" aria-label="Compartilhar localização">🔗</button>
                 </div>
-                <h2 class="map-title">Monumento do Laçador</h2>
-                <button class="header-btn" onclick="alert('Salvo!')" title="Salvar">🔖</button>
+                <h1 class="map-title" id="titulo-mapa">Monumento do Laçador</h1>
+                <button class="header-btn" onclick="alert('Salvo!')" title="Salvar" aria-label="Salvar localização">🔖</button>
             </div>
-            <div class="map-filters">
-                <button class="filter-btn">📍 Proximidade</button>
-                <button class="filter-btn">🗂️ Categoria</button>
-                <button class="filter-btn">⭐ Popularidade</button>
-            </div>
+            <nav class="map-filters" aria-label="Filtros do mapa">
+                <button class="filter-btn" aria-label="Filtrar por proximidade">📍 Proximidade</button>
+                <button class="filter-btn" aria-label="Filtrar por categoria">🗂️ Categoria</button>
+                <button class="filter-btn" aria-label="Filtrar por popularidade">⭐ Popularidade</button>
+            </nav>
             <div class="map-container">
-                <!-- Imagem grande simulando o mapa -->
-                <img src="./maps.png" alt="Mapa">
-                <div class="map-pin" onclick="toggleQuickInfo()"></div>
-                <div class="quick-info" id="quickInfo">
-                    <h3>Monumento do Laçador</h3>
-                    <p>Localizado em Porto Alegre, RS, é um símbolo da cultura gaúcha, representando o tradicionalismo
-                        do estado.</p>
-                    <button class="save-btn" onclick="alert('Salvo no Planejador de Itinerário!')">Salvar no
-                        Itinerário</button>
+                <img src="./maps.png" alt="Mapa do entorno do Monumento do Laçador">
+                <button class="map-pin" onclick="toggleQuickInfo()" aria-label="Ver informações rápidas do local" title="Ver informações rápidas do local"></button>
+                <div class="quick-info" id="quickInfo" role="dialog" aria-modal="true" aria-labelledby="quickInfoTitle">
+                    <h2 id="quickInfoTitle">Monumento do Laçador</h2>
+                    <p>Localizado em Porto Alegre, RS, é um símbolo da cultura gaúcha, representando o tradicionalismo do estado.</p>
+                    <button class="save-btn" onclick="alert('Salvo no Planejador de Itinerário!')" aria-label="Salvar no Itinerário">Salvar no Itinerário</button>
                 </div>
             </div>
             <div class="floating-buttons">
-                <button class="floating-button" onclick="alert('Captura de tela tirada!')"
-                    title="Captura de Tela">📸</button>
-                <button class="floating-button" onclick="alert('Exibindo fatos rápidos!')"
-                    title="Fatos Rápidos">📄</button>
-                <button class="floating-button" onclick="alert('Narração em áudio ativada!')"
-                    title="Narração em Áudio">🔊</button>
+                <button class="floating-button" onclick="alert('Captura de tela tirada!')" title="Captura de Tela" aria-label="Captura de Tela">📸</button>
+                <button class="floating-button" onclick="alert('Exibindo fatos rápidos!')" title="Fatos Rápidos" aria-label="Fatos Rápidos">📄</button>
+                <button class="floating-button" onclick="alert('Narração em áudio ativada!')" title="Narração em Áudio" aria-label="Narração em Áudio">🔊</button>
             </div>
-            <button class="settings-btn" onclick="alert('Abrir Configurações!')">Configurações</button>
+            <button class="settings-btn" onclick="alert('Abrir Configurações!')" aria-label="Abrir configurações" title="Abrir configurações">Configurações</button>
         </section>
-    </div>
+    </main>
 
     <script>
         // Função para exibir/esconder o resumo rápido
         function toggleQuickInfo() {
             const quickInfo = document.getElementById('quickInfo');
             quickInfo.classList.toggle('active');
+            if (quickInfo.classList.contains('active')) {
+                quickInfo.focus();
+            }
         }
     </script>
 </body>

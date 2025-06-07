@@ -51,6 +51,10 @@
             left: 20px;
         }
 
+        .back-btn:focus {
+            outline: 3px solid #ff9800;
+        }
+
         .settings-title {
             font-size: 18px;
             font-weight: bold;
@@ -75,8 +79,10 @@
             border-bottom: 1px solid #ddd;
         }
 
-        .setting-item:hover {
+        .setting-item:hover,
+        .setting-item:focus {
             background-color: #f0f0f0;
+            outline: 3px solid #ff9800;
         }
 
         .settings-list li:last-child .setting-item {
@@ -97,43 +103,43 @@
     </style>
 </head>
 <body>
-    <div class="mobile-container">
-        <div class="settings-header">
-            <a href="index.html" class="back-btn">←</a>
-            <h2 class="settings-title">Configurações</h2>
-        </div>
-        <ul class="settings-list">
+    <main class="mobile-container" aria-label="Configurações do aplicativo">
+        <header class="settings-header">
+            <a href="index.html" class="back-btn" aria-label="Voltar para a tela inicial" title="Voltar para a tela inicial">←</a>
+            <h1 class="settings-title" id="titulo-config">Configurações</h1>
+        </header>
+        <ul class="settings-list" aria-labelledby="titulo-config">
             <li>
-                <button class="setting-item" onclick="alert('Acessibilidade')">
-                    <span class="icon">♿</span>
+                <button class="setting-item" onclick="alert('Acessibilidade')" aria-label="Acessibilidade" title="Acessibilidade">
+                    <span class="icon" aria-hidden="true">♿</span>
                     <span class="label">Acessibilidade</span>
                 </button>
             </li>
             <li>
-                <button class="setting-item" onclick="alert('Downloads')">
-                    <span class="icon">📥</span>
+                <button class="setting-item" onclick="alert('Downloads')" aria-label="Downloads" title="Downloads">
+                    <span class="icon" aria-hidden="true">📥</span>
                     <span class="label">Downloads</span>
                 </button>
             </li>
             <li>
-                <button class="setting-item" onclick="alert('Idiomas')">
-                    <span class="icon">🌐</span>
+                <button class="setting-item" onclick="alert('Idiomas')" aria-label="Idiomas" title="Idiomas">
+                    <span class="icon" aria-hidden="true">🌐</span>
                     <span class="label">Idiomas</span>
                 </button>
             </li>
             <li>
-                <button class="setting-item" onclick="alert('Narração em áudio')">
-                    <span class="icon">🎧</span>
+                <button class="setting-item" onclick="alert('Narração em áudio')" aria-label="Narração em áudio" title="Narração em áudio">
+                    <span class="icon" aria-hidden="true">🎧</span>
                     <span class="label">Narração em áudio</span>
                 </button>
             </li>
             <li>
-                <button class="setting-item" onclick="alert('Sair')">
-                    <span class="icon">←</span>
+                <button class="setting-item" onclick="alert('Sair')" aria-label="Sair" title="Sair">
+                    <span class="icon" aria-hidden="true">←</span>
                     <span class="label">Sair</span>
                 </button>
             </li>
         </ul>
-    </div>
+    </main>
 </body>
 </html>
