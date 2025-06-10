@@ -352,4 +352,16 @@ DATA: 2/Maio/2025
 - a ferramenta axe (google chrome) tem uma função pra analizar o site e ver os descumprimentos em relação à acessibilidade
 - apenas cor para indicação de criticidade é problemático
     - informações precisam de pelo menos 2 a 3 canais de comunicação para o sistema passar uma mensagem corretamente
+- normalmente negligenciada pela formação acadêmica de informática
+- Esse tipo de acessibilidade nem é tão voltada apenas para usuários com deficiência
+    - alguns são até princípios de design que deveriam ser seguidos à risca
+- informações críticas passam desapercebidas por usuários (mesmo os que não apresentam uma deficiência)
+- organização de CSS que funciona com inputs pelo teclado e identifica onde o usuário está são alguns exemplos
+- Campos com identificação também são interessantes
+- descrição dos elementos e das imagens dentro do html, por exemplo, ajuda os apps de audiodescrição a, bom, descrever
+    - se a imagem se referencia a alguma ação, descreva a ação
+- deficiência visuais tem mais problemas para lidar com visualização já que a internet é basicamente visual
+    - aplicativos de audiodescrição e outros de simples transcrição de sites inteiros em texto (já que não vê nada mesmo, pega tudo pelo terminal)
+- procure usar legendas nos vídeos
+- "*Muitas vezes, as regras de design criadas para ajudar usuários com deficiências acabam beneficiando todos os usuários!*"
 - 

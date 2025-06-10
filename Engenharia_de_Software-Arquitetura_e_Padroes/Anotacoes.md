@@ -488,4 +488,3 @@ DATA: 28/Maio/2025
 - ainda existem diversos tipos de Ops a mais no mercado
     - todas elas tem algum propósito
         - mesmo que muitas sejam Buzz words inventadas pra algum propósito de marketing ou político específico
-    - 

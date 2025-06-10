@@ -1,0 +1,1 @@
+A aplicação é basicamente a mesma da entrega anterior, nós apenas adicionamos labels nos botões, alteramos a imagem de salvar para um botão (favorecendo navegação) e descrição das imagens.
