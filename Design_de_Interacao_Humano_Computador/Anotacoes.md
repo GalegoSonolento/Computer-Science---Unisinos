@@ -364,4 +364,18 @@ DATA: 2/Maio/2025
     - aplicativos de audiodescrição e outros de simples transcrição de sites inteiros em texto (já que não vê nada mesmo, pega tudo pelo terminal)
 - procure usar legendas nos vídeos
 - "*Muitas vezes, as regras de design criadas para ajudar usuários com deficiências acabam beneficiando todos os usuários!*"
-- 
+
+DATA: 09/Junho/2025
+# IHC Avaliação de Interfaces
+- Muitas vezes só os engenheiros podem produzir algo muito efetivo, mas sem um design minimamente inteligente, um produto muito poderoso pode se tornar inutilizável.
+    - designers mtas vezes tem uma visão diferente do que o usuário de fato precisa
+- Existem diversas formas de avaliar uma interface e produção de mais conhecimento
+    - usabilidade
+    - consistência
+    - percurso cognitivo
+    - ergonomia
+- design precisa ser avaliado com a facilidade de aprendizagem
+    - usuários tendem a preferir aprender usando do que com treinamento formal
+- dá pra fazer teste A/B com esquemas de design também
+- nunca acredite piamente nos testadores, eles não são designers
+- existe um número máximo de testadores antes da qualidade (e quantidade) das observações começar a cair
