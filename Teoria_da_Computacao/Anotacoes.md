@@ -1,0 +1,62 @@
+DATA: 05/Agosto/2025
+# Apresentação, conceitos básicos e execícios
+- Máquina universal - pode fazer qualquer coisa
+- LInguagem
+    - Bons resultados vem de bons prompts
+    - Se o algoritmo resolve o problema ele é computável
+- Alfabeto
+    - conjunto finito de caracteres
+    - finito (sempre)
+    - formação de palavras - *word* - sentença
+    - números também é um conjunto {0,...,9}
+    - P.R. - palavras reservadas - conceito de linguagens de programação
+        - termos usados pela linguagem - variáveis não podem ter esses tempos
+    - variáveis n podem começar com números
+        - eles já representam valores
+    - ε -> já constitui um termo != ∅ ou {}
+- Cadeia de símbolos
+    - concatenação de 0 ou mais caracteres do meu alfabeto
+    - é uma String bem dizer
+    - é possível constituir restrições
+- Palavra
+    - cadeia de símbolos finita
+    - Array
+    - precisa analisar pra ver se encaixa no alfabeto e se está de acordo com a linguagem
+    - & -> cadeia vazia
+    - todo alfabeto tem a palavra vazia
+        - a menos que Σ exista - alfabeto
+        - Σ* -> todas as palavras (qualquer palavra)
+        - Σ+ -> todas as palavras menos a vazia {ε}
+            - palavra vazia é um conjunto
+        - se assume por padrão que a palavra vazia existe
+            - analise a linguagem que é montada
+- Comprimento ou tamanho de uma palavra
+    - primeiros 32 caracteres são válidos em uma variável
+        - padrão
+    - |W| = definição de cumprimento de palavra
+    - |ε| = 0
+        - precisa analisar no que a palavra deriva, não no que ela é naquele momento
+        - |εabc| = 3 (comprimento)
+- Prefixo e sufixo
+    - sim, igual o português
+    - prefixo e sufixo **não** compreendem a palavra inteira
+- Subpalavra
+    - palavra encontrada dentro de outra
+    - e.g.:sinos em unisinos
+    - precisa ser contíguo
+    - **nunca** vai ser a palavra inteira
+    - pelo menos 2 caracteres da palavra
+- Linguagem Formal (Linguagem)
+    - alfabeto - conjunto finito que monta infinitas *words* dependendo da linguagem
+    - conjunto de palavras sobre um alfabeto
+    - L = {w | w = |3|} -> só posso fazer palavras de comprimento 3
+        - aqui não tem a palavra vazia
+- Concatenação
+    - tem um expoente
+    - (ab)² = abab
+    - ab² = abb
+    - tudo que não tiver um expoente
+- Concatenação Sucessiva
+    - w^0 = ε
+    - concatenação com expoentes
+    - as duas podem se misturar
