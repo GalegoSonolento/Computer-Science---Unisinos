@@ -1,3 +1,5 @@
+AWS course: https://awsacademy.instructure.com/courses/127492
+
 DATA: 04/Agosto/2025
 
 # Course details, presentation, general information and project definition
