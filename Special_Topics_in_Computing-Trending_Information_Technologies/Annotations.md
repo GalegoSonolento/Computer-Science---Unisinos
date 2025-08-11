@@ -1,4 +1,4 @@
-AWS course: https://awsacademy.instructure.com/courses/127492
+AWS course: https://awsacademy.instructure.com/courses
 
 DATA: 04/Agosto/2025
 
@@ -20,3 +20,6 @@ A cadeira vai ser toda em inglês, mas sempre tem aquele jeitinho - também vamo
 - algumas empresas usam o termo IaaS - Infraestructure as a Service - Infraestrutura como Serviço - mas nesse nível elas já oferecem muito mais que uma plataforma comum e usualmente entregam segurança e cursos
     - PaaS - Platform as a Service - Plataforma como Seriço também é um termo utilizado
 - no fim das contas, é tudo *utility Computing*, nós, meros mortais, usamos a *public cloud*, enquanto empresas grandes podem se beneficiar de uma *private cloud* específica para eles.
+
+
+35.153.133.169
