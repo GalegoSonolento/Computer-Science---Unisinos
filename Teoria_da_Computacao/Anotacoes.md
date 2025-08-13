@@ -60,3 +60,47 @@ DATA: 05/Agosto/2025
     - w^0 = ε
     - concatenação com expoentes
     - as duas podem se misturar
+
+DATA: 12/Agosto/2025
+# Programas, máquinas e computações
+- máquinas podem ser equivalentes entre si e programas
+- programas precisam de máquinas
+- programas ainda são algoritmos
+    - operações e teste com controle
+- máquinas interpretam programas
+    - todas as funções computadas podem ser representadas em máquinas de turing
+- computações
+    - interpretações de entradas que geram uma saída
+- um programa deve virar um fluxograma e vice-versa
+    - testes são operações de condição
+- estruturação iterativa é o mais próximo de uma linguagem
+- comandos sempre sequenciais
+    - condição de saída
+- ifs - não-determinísticos
+- sequencialidade é sempre uma flecha
+- compisições concorrentes não tem uma ordem importante 
+    - *threads*
+    - "irrelevante"
+
+-  Programas
+- iden. de operaç~es sempre são letras - instruções
+- identificadores de teste (escolha) são Ts (até Tn)
+- operação vazia indica encerramento
+    - símbolo de check
+    - ou colocar um rótulo q n existe na saída
+
+- programa monolítico
+    - rotulados
+    - formulado com fluxogramas
+    - instruções rotuladas (rn)
+    - rótulo é uma palavra
+    - par ordenado P = (I, r)
+        I - conjunto de instuções - significado
+        r - instrução/rótulo
+    - rótulos únicos para cada instrução
+    - sempre INTEGER
+    - programas de diferentes tipos podem fazer a mesma coisa
+    - P é sempre um programa
+    - a manutenção pode ser um problema - prefira códigos estruturados
+    - desvios complexos podem ser um problema
+    - a seta sempre significa o "faça" nos fluxos
