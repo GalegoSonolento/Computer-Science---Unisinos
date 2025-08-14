@@ -132,4 +132,86 @@ Essa é a forma padrão de descrever um qubit na mecânica quântica.
     - qualquer espiada ele colapsa
 - existem qudits tbm
     - 2+ mais camadas de elétrons ao mesmo tempo
-- 
+
+
+DATA: 13/Agosto/2025
+# Números e Vetores Complexos
+- número complexo sempre fica na parte direita
+- somatório de complexos é pelos reais
+- representação complexa no python é um **j**
+- python evita criação excessiva de classes
+- teoria dos complexos só funciona com fundamento matemático
+- cálculos sempre entre os reais (e partes interas)
+- **a + bi (ou a + ib)**
+- Reais fazem parte dos complexos
+- imaginário é a parte do complexo que *provavelmente* tem √-1
+    - i² = (0,1).(0,1) = (-1,0) = -1
+- (a,0)+(0,b) = (a,b)
+    - (0,b) = (b,0).(0,1)
+- (0,1) é a representação do imaginário
+- par ordennado (normalmente o imaginário é posto no eixo das ordenadas)
+- o *i* é uma marcação apenas
+- dois número dentro de um só (o complexo)
+    - ele é 2D
+    - dá pra fazer ele ser 3D ainda
+    - a moral toda é q isso é um número, completo, de duas partes
+        - o número real e o iimaginário
+- feito pelo Heisemberg
+- além de apontar a coordenada, ele diz onde o bit zero e 1 colapsam
+- a parte real é usada pra calcular probabilidade - o imaginário larga a parte da esfera (do átomo) que estamos
+- somas são sempre entre reais e imaginários
+    - Re{somados}
+    - Im{somados}
+- a multiplicação é fácil o suficiente pra induzir, mas é basicamente juntar as partes
+- **operações comutam**
+    - resultados são os mesmos em qql ordem
+    - MAS existem portas quânticas q não o fazem
+
+
+## Números complexos - Conjugado
+- notação da física = * (estrela)
+    - conjugação/conjugado complexa
+    - isso é pra trocar o sinal do estado imaginário puro
+    - troca o sinal do imaginário
+    - Z* é o mais usado
+    - pego minha função e coloco invertida
+- uso Z.Z* pra calcular a "hipotenusa", o valor do ponto (complexo) até a origem
+    - nesse caso o produto notável vai ser positivo
+- 1925, pega
+
+## Divisão de complexos
+- 1/algo equivalente algo^(-1)
+- fica uma parada bizarramente grante
+
+## Vetores complexos
+- usam portas quânticas (matrizes) de operação em cima dos vetores complexos
+- os vetores mesmos são números complexos
+- Dirac criou uma notação
+- BRA KET
+    - |psi> e <psi|
+- dá pra fazer transposiição com complexo conjugado (e convertendo a matriz de linha pra coluna ou vice-versa)
+- Daggar (Dága) -> cruz (literal)
+    - transposição conjugada complexa
+    - transpõe a matriz (igual uma inversão de índice da matemática clássica mesmo)
+        - depois faz um **conjugado** de cada elemento
+    - atua em cima de um vetor/matriz KET
+- KET com Dagger é um BRA
+    - é uma equivalência por conveniência mesmo
+
+## Matrizes
+- soma é sempre com a mesma proporção
+- escalar
+    - usa o K
+    - multiplica todos os valores das matrizes
+- produto matricial
+    - num de colunas precisa ser igual ao número de linhas da outra
+    - é uma porrada de produto escalar entre todos os valores entre eles
+    - no python o operador é '@'
+    - A@B != B@A
+    - sempre multiplicação de linha por coluna
+- inversão
+    - pra ser invertível precisa de um determinante != 0
+    - A^(-1) = 1/det(A) . [matriz]
+    - a inversa * a matriz = I (identidade)
+        - na identidade passa pro próximo nível do sistema quântico
+        - ||
