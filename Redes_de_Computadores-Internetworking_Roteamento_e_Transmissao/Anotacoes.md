@@ -28,4 +28,24 @@ DATA: 07/Agosto/2025
 - tratamento de dado e voz é bastante diferente
     - voz precisa de QoS
     - algumas tem circuitos dedicados
-- 
+
+DATA: 14/Agosto/2025
+# Topologia IPv4
+- Na camada de rede (IP) temos a seleção de melhor caminho pelo sistem
+- rede da unisinos é um sistema autômo
+    - não recebe IP do exterior - dona dos IPs
+    - Pode até vender
+- IP não trata de perda de pacotes - camadas superiores resolvem (TCP)
+- Ethernet normalmente consome 1500bytes
+    - padrão
+    - Existe o Jumbo frame - 9000 bytes
+- os pacotes precisam ser todos unidos no destino antes de mandar pra camada de transporte
+    - caso contrário é td descartado
+- subredes usam as máscaras de rede
+    - subredes tem o endereço de host (.0 -> tds os bits em zero) e endereço de broadcast (.255 -> todos os bits em 1)
+    - o barra significa quantos bits tem o valor 1 na máscara
+    - 
+
+por que /30 considera 2 IPs?
+os roteadores veêm apenas os vizinhos imediatos ou as redes deles também
+por que com uma rota é /24?
