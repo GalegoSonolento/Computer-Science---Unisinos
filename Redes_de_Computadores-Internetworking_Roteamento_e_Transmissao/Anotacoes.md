@@ -28,6 +28,22 @@ DATA: 07/Agosto/2025
 - tratamento de dado e voz é bastante diferente
     - voz precisa de QoS
     - algumas tem circuitos dedicados
+- OSI é a o modelo mais simples e didático (não é utilizado)
+    - feito pra estudo, internet hoje usa TCP/IP
+- as camadas se comunicam apenas entre si
+- em uma tradução
+
+| TCP/IP              | OSI Model          
+| --------------------|-------------------
+| Application Layer   | Application Layer
+|                     | Presentation Layer
+|                     | Session Layer
+| TransportLayer      | Transport Layer
+| Internet Layer      | Network Layer
+| Network Access Layer| Data Link Layer
+|                     | Physical Layer
+
+
 
 DATA: 14/Agosto/2025
 # Topologia IPv4

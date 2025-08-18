@@ -81,6 +81,11 @@ DATA: 12/Agosto/2025
 - compisições concorrentes não tem uma ordem importante 
     - *threads*
     - "irrelevante"
+- qualquer tipo de escolha é não-determinística
+- como uma anotação simples, o programa iterativo 
+
+- ordenação seria computação <- contém> máquinas <- contém> programas
+- programas devem possuir estruturas de controle e testes
 
 -  Programas
 - iden. de operaç~es sempre são letras - instruções
@@ -104,3 +109,4 @@ DATA: 12/Agosto/2025
     - a manutenção pode ser um problema - prefira códigos estruturados
     - desvios complexos podem ser um problema
     - a seta sempre significa o "faça" nos fluxos
+    - etiquetas = rótulos

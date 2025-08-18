@@ -41,3 +41,5 @@ DATA: 11/Agosto/2025
     - além da necessidade de gerenciamento de memória
         - não mais pra evitar overhead, mas pra gastar menos
 - Service Level Agreement (SLA) need to be guaranteed by the provider -> this can make a difference between selling or dying
+- a grande parada disso aqui é poder ter uma alteração no uso (e na capacidade)
+- 
