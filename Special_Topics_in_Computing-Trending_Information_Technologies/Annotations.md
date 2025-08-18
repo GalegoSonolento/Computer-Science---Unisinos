@@ -42,4 +42,32 @@ DATA: 11/Agosto/2025
         - não mais pra evitar overhead, mas pra gastar menos
 - Service Level Agreement (SLA) need to be guaranteed by the provider -> this can make a difference between selling or dying
 - a grande parada disso aqui é poder ter uma alteração no uso (e na capacidade)
+
+DATA: 18/Agosto/2025
+# Clouds and data centers, Data center topology, Novel topologies, Network expansion, Types of traffic, Routing and Addressing
+- not all DBs/datacenters are cloud
+    - but they're still the ones that hold Cloud
+- 1 cloud can be composed of several datacenters
+- bigger cloud providers have warehouse-scale datacenters knowledgment
+    - this is a concept that got more popular recently.
+- the topology begins at the servers, passes through Access (ToR) switches, than the aggregator switches, and then the core (core switches), connect several aggregators and admin the payouts
+    - DCN - Data Center Network
+    - several paths available between physical servers
+- as the data goes up (to the root - source switches), the bandwidth diminishes
+- oversubscription is a concept that the racks need to have 1:240 bandwidth when compared to the core
+    - this might break systems
+    - resources eventually get fragmented and spread to different regions
+    - this makes process and access slower
+- servers are easier to customize than switches
+- we should aim to minimize inter-datacenter comms (East-West)
+- Cloud is too powerfull for current statistical multiplexing codes we have today
+    - many servers share the same hardware (logically separated)
+    - this can impact security and performance
+- there are multiple physical paths in the network
+    - Equal-Cost Multi-Path (ECMP) - spread traffic among paths with the same costs - layer 3 (OSI)
+    - Valiant Load Balancing (VLB) - randomly selects the next router - layer 3 (OSI)
+- the logic of net in data centers is LAN
+    - VLANs can isolate and create more addresses for the VMs (each one needs one IP), but are restricted to 4096 VLANs (not a lot, really)
+- Ossification - it gets pretty difficult to change protocols in Network layer
+    - Internet is old already, it's hard to make config changes effectively
 - 
