@@ -1,0 +1,21 @@
+Exercícios de aula
+1. O que é uma mensagem da camada de aplicação? Um segmento da camada de transporte? Um datagrama da camada de rede? Um quadro da camada de enlace?
+    Uma mensagem da camada de aplicação é um dado proveniente de alguma aplicação utilizada (payload); o segmento da camada de transporte será esse dado mais o header da camada de transporte (depende o protocolo, mas adiciona o header mesmo assim, TCP ou UDP); o datagrama da camada de rede será o datagrama do protocolo IP - cabeçalho IP adicionado às informações já existentes; o quadro da camada de enlace é o encapsulamento de todas essas iniformações em um cabeçalho (que usualmente contém o endereço MAC do destino), que por sua vez será transmitido pelo meio físico.
+
+2. Quais camadas na pilha de protocolos da Internet são processadas por um roteador? Quais as camadas um switch de nível 2 processa? Quais camadas um host processa?
+    Da pilha de protocolos de internet, considerando TCP/IP, os roteadores consomem até a camada de rede, ou seja, físco/enlace e rede (lidam com quadros e datagramas IP).
+    Um switch de nível 2 lerá até a camada física/enlace, dado que ele relaciona os endereços MAC (Media Access Control) - endereços físicos da rede local. O Switch não tem toda a "Inteligência" para realizar roteamento.
+    Agora, no host (tanto destino quanto transmissor) lerá todas as camadas do protocolo (físca/enlace, rede, transmissão, aplicação) dado que ele precisa processar o dado (payload) para a aplicação.
+
+3. Qual é a diferença entre roteamento e encaminhamento?
+    Roteamento define o caminho que o pacote/datagrama seguirá, o encaminhamento é o que o roteador, por exemplo, encaminha/faz o stream do pacote.
+
+4. Suponha que um nó de origem e um destino exigem que uma quantidade fixa de capacidade esteja sempre disponível em todos os roteadores no caminho entre eles para o uso exclusivo do tráfego que flui entre eles. Isso pesaria a favor de uma arquitetura CV ou datagrama? Por quê?
+    Arquitetura CV. Datagramas compensariam se precisássemos de uma conexão 100% constante, mas para alocação de recursos e QoS, um CV é mais adequado.
+
+5. Defina uma rede de circuito virtual e uma rede orientada a datagramas. Quais as diferenças entre ambas? Cite exemplos.
+    Uma CV terá recursos direcionados e um caminho exclusivo e previamente montado para a conexão ponta a ponta (E2E), um caminho lógico físico, o que significa que se algum dos pontos de enlace caírem ou falharem, a conexão morre, apesar de existirem maneiras de contorno (como no protocolo MPLS - Multiprotocol Label Switching) - pode ser usado para chamadas de voz e streaming.
+    Agora, uma rede orientada a datagramas, apesar de uma garantia de QoS menor (ou mais complexa), tem uma rede de roteadores e constantemente enviam pacotes/datagramas (independentes e que dependem das tabelas de roteamento - IPs), que não necessariamente chegam na mesma ordem no destino, criando a necessidade de indicação de ordenamento no pacote, definição de tempo de vida (TTL - Time To Live) que o pacote pode permanecer na rede, etc - pode ser usado para navegação web, emails, transferência de arquivos, etc.
+
+6. Suponha que os roteadores tenham sido submetidos a condições que possam fazer com que eles falhem com bastante frequência. Isso pesaria a favor de uma arquitetura CV ou datagrama? Por quê?
+    Datagrama. Já que eles falham com bastante frequência, é importante que a conexão se mantenha viva constantemente. Protocolos baseados em datagramas tem uma capacidade maior de encontrar outros caminhos dinamicamente (melhor e mais rápida, dado que cada pacote/datagrama é roteado independentemente).

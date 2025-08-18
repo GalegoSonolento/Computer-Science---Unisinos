@@ -43,6 +43,13 @@ DATA: 07/Agosto/2025
 | Network Access Layer| Data Link Layer
 |                     | Physical Layer
 
+- os headers dos protocolos todos tem todas as camadas embeddadas
+- usualmente todo mundo tem uma intranet (rede privada) se tem um modem dentro de casa - praticamente a intranet existe até chegar na concessionária e ir pra internet
+- roteadores primeiro roteiam o caminho (dnâmico - datagramas) e depois encaminham (stream de dados/pacotes)
+- Datagramas apenas mandam os dados e esperam que eles cheguem no destino (pra UDP)
+    - TCP/IP ainda tenta mandar um ACK pra saber que o destino existe
+        - mas não é uma conexão virtual direta
+- 
 
 
 DATA: 14/Agosto/2025

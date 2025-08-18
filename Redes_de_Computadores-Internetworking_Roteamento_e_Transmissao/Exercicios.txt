@@ -1,4 +1,0 @@
-Exercícios de aula
-1. O que é uma mensagem da camada de aplicação? Um
-segmento da camada de transporte? Um datagrama da
-camada de rede? Um quadro da camada de enlace?
