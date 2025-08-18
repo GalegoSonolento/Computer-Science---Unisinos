@@ -49,8 +49,6 @@ DATA: 07/Agosto/2025
 - Datagramas apenas mandam os dados e esperam que eles cheguem no destino (pra UDP)
     - TCP/IP ainda tenta mandar um ACK pra saber que o destino existe
         - mas não é uma conexão virtual direta
-- 
-
 
 DATA: 14/Agosto/2025
 # Topologia IPv4
@@ -67,8 +65,19 @@ DATA: 14/Agosto/2025
 - subredes usam as máscaras de rede
     - subredes tem o endereço de host (.0 -> tds os bits em zero) e endereço de broadcast (.255 -> todos os bits em 1)
     - o barra significa quantos bits tem o valor 1 na máscara
-    - 
-
-por que /30 considera 2 IPs?
-os roteadores veêm apenas os vizinhos imediatos ou as redes deles também
-por que com uma rota é /24?
+- a internet é descentralizada
+    - caso não o fosse poderia ser problemática
+    - não seria tão escalável quanto é atualmente
+    - era possível, mas o departamento de defesa queria algo desse tipo
+    - programação *best-effort* -> não é confiável (IP)
+        - quem resolve esses problemas são as camdas superiores
+- os fragmentos possuem identificação dentro da rede e sempre precisam avisar o receptor se mais estão à caminho
+- para comunicação, todos os dispositivos precisam de um endereço IP
+    - é possível a comunicação com o endereço MAC ou um IP designado para pedir um IP ao roteador (quem controla e limita os IPs)
+    - nesse *range* de IPs, o primeiro e o último são reservados
+        - 223.1.1.0 -> endereço de rede
+        - 223.1.1.255 -> endereço de broadcast
+        - não necessariamente esses endereços serão com o final .0 ou .255
+            - redes mescladas (somadas) podem ter esses endereços como HOST tranquilamente
+        - uma máscara 223.1.1.0/24 significa que 24 bits mais a esquerda definem o endereço de rede e o resto o endereço de host
+            2-4-8-16-32-64-128-**256** endereços de host.
