@@ -81,3 +81,7 @@ DATA: 14/Agosto/2025
             - redes mescladas (somadas) podem ter esses endereços como HOST tranquilamente
         - uma máscara 223.1.1.0/24 significa que 24 bits mais a esquerda definem o endereço de rede e o resto o endereço de host
             2-4-8-16-32-64-128-**256** endereços de host.
+- DHCP *Dynamic Host Configuration Protocol*
+    - protocolo de internet
+    - cliente-servido
+- 

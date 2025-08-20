@@ -110,3 +110,21 @@ DATA: 12/Agosto/2025
     - desvios complexos podem ser um problema
     - a seta sempre significa o "faça" nos fluxos
     - etiquetas = rótulos
+
+DATA: 19/Agosto/2025
+- programa iterativo
+    - ele é, bom, iterativo
+    - entrelaça com vários comandos
+    - repetições
+    - P é um programa
+    - operações vazias podem ter sequanciais
+        - também pode ser uma operação de saída
+        - precisa ter atenção e interpretar o que ele significa no momento
+    - composição sequencial V;W -> executa V e logo depois W
+        - ; é indicação de sequencial na sequência apresentada
+    - organização utilizando chaves
+    - é uma notação mais próxima de um pseudo-código
+    - uso de parênteses necessário para evitar ambiguidade
+    - idente
+    - se enquanto e teste todos têm o mesmo símbolo
+    - 

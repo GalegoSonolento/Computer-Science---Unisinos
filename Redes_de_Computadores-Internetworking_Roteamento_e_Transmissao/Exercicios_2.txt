@@ -1,0 +1,24 @@
+1. Os roteadores possuem endereços IP? Em caso afirmativo, quantos?
+    Sim, um endereço IP para cada interfaçe que ele está conectado.
+
+2. Assuma que um host possui endereço IPv4 223.1.3.27:
+    a. Qual é o equivalente binário de 32 bits do endereço IP 223.1.3.27?
+        O equivalente 32 bits é 11011111.00000001.00000011.00011011.
+
+    b. Considerando uma máscara de sub-rede de 26 bits (255.255.255.192), qual é o endereço de rede e de broadcast dessa rede?
+        O endereço de rede será 223.1.3.0
+        O endereço de broadcast 223.1.3.63
+
+    c. Quantos hosts essa rede comporta?
+        COnsiderando uma máscara de 26 bits, temos que 32-26 = 6; 2⁶ = 64 - 2 (endereços de broadcast e rede) = 62 hosts.
+
+3. Suponha que o Host A envie ao Host B um segmento TCP encapsulado em um datagrama IP. Quando o Host B recebe o datagrama, como a camada de rede no Host B sabe que deve passar o segmento (isto é, a carga útil do datagrama) para o TCP em vez do UDP ou para outro protocolo?
+    Existe um trecho no header que indica o uso de qual protocolo através de um numeral. Por exemplo, o valor de TCP é 6, já o de UDP é 17.
+
+4. Considere uma sub-rede com o prefixo 128.119.40.128/26. Dê um exemplo de endereço IP (xxx.xxx.xxx.xxx) que pode ser atribuído a esta rede. 
+    Considerando esta rede, um possível endereo de host seria 128.119.40.129. Todavia, dada esta rede, o endereço de rede seria 128.119.40.128e o de broadcast seria 128.119.40.191, ou seja, desde 128.119.40.129 até 128.119.40.190 são endereços de host.
+
+5. Use o serviço whois no site https://centralops.net/co/ para determinar os blocos de endereço IP para três universidades.
+
+6. Suponha que os datagramas sejam limitados a 1500 bytes (incluindo o cabeçalho) entre o Host A e o host de destino B. Supondo um cabeçalho IP de 20 bytes, quantos datagramas seriam necessários para enviar um MP3 composto por 5 milhões de bytes? Explique como você calculou sua resposta.
+    Seriam 3379 datagramas, dado que um datagrama pode ter 1500 bytes e o cabeçalho tem 20, temos que 1500-20 = 1480. Dessa fora, 5,000,000/1480 = 3378.378..., arredondando, temos 3379 datagramas para completar o envio do arquivo.
