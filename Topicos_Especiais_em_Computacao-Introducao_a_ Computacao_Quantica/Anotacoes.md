@@ -215,3 +215,71 @@ DATA: 13/Agosto/2025
     - a inversa * a matriz = I (identidade)
         - na identidade passa pro próximo nível do sistema quântico
         - ||
+
+DATA: 20/Agosto/2025
+# Produtos
+- produto interno
+    - retorna uma informação única
+    - escalar ou complexo
+- BraKet dos mesmos estados (produto interno) precisa ser 1, do contrário seja 0
+- para outros, calcule uma multiplicação (produto) de matrizes normal
+    - sempre vai ser possível
+- saber as notações semelhantes simples é bom para entender a simplificação de Dirac
+- Produto externo
+    - retorna outra matriz - **operador**
+    - **início do conceito de porta quântica**
+    - KetBra
+    - definido por Heisenberg
+    - vetor de estado - projetor
+    - leva o qubit pra um novo estado
+        - evolui = estado quântico (muda)
+    - normalmente são matrizes quadradas
+    - número complexo de 2 (2 estados)
+    - multiplicação de matrizes
+    - operação @ do python
+    - existem valores padrão para os produtos externos
+- Produto tensorial
+    - X em um círculo
+        NÃO CONFUNFIR COM XOR (mais dentro de um círculo)
+    - funciona como um expansor
+    - leva pra uma dimensão maior
+    - ainda são matrizes quadradas
+    - o operador ainda é uma matriz que age em cima delas
+    - multipla o valor pela matriz inteira
+        - quantidade de linhas somadas?
+        - produto cartesiano
+        - imbução (existe?) de matrizes
+- Base computacional
+    - conceito de colapso
+    - toda base é **ortonormal** dois estados normalizados
+        - ortogonalidade
+        - normal = superposição
+    - estado 0 é 100% de prob de largar zero no clássico
+    - estado 1 é 100% de prob de largar um no clássico
+    - Base Computacional Z
+        - usa a base z pra trabalhar (referência)
+            - posso criar eixos (bases computacionais) novas
+        - condição de normalização é o comprimento do centro até a superfícia da esfera dando 1 - no limite da esfera
+            - se n bate lá é inválido
+            - é a chance de 100%
+        - condição de ortogonalidade
+            - um vai pra um lado e o outro pro outro
+            - zero no produto interno
+            - antagônicos
+            - mira pros 2 lados
+    - Base Hadamart
+        - usa o eixo x
+        - outra base, mas o princípio é o mesmo
+    - as outras bases q existem já são ortonormais
+    - normalmente se trabalha em Z
+    - dá pra trocar pra outras bases
+
+- uso da notação de Dirac
+    - Bra-Ket
+    - Â -> acento circumflexo indica que é um operador
+    - a notação de Dirac é uma abstração de operação de matrizes 
+
+- usar uma operação é trocar ele de bases
+
+- Como fica um qubit?
+- ^X -> porta de inversão

@@ -19,6 +19,9 @@
     Considerando esta rede, um possível endereo de host seria 128.119.40.129. Todavia, dada esta rede, o endereço de rede seria 128.119.40.128e o de broadcast seria 128.119.40.191, ou seja, desde 128.119.40.129 até 128.119.40.190 são endereços de host.
 
 5. Use o serviço whois no site https://centralops.net/co/ para determinar os blocos de endereço IP para três universidades.
+    unisinos.br - nserver: 200.188.161.163 - dá pra inferir que o bloco vai de 200.188.128.0 até 200.188.128.255;
+    pucsp.br - nserver: 200.144.145.9 - dá pra inferir que o bloco vai de 200.144.128.0 até 200.144.191.255;
+    ufrgs.br - server: 143.54.1.58 - dá pra inferir que o bloco vai de 143.54.0.0 até 143.54.127.255.
 
 6. Suponha que os datagramas sejam limitados a 1500 bytes (incluindo o cabeçalho) entre o Host A e o host de destino B. Supondo um cabeçalho IP de 20 bytes, quantos datagramas seriam necessários para enviar um MP3 composto por 5 milhões de bytes? Explique como você calculou sua resposta.
     Seriam 3379 datagramas, dado que um datagrama pode ter 1500 bytes e o cabeçalho tem 20, temos que 1500-20 = 1480. Dessa fora, 5,000,000/1480 = 3378.378..., arredondando, temos 3379 datagramas para completar o envio do arquivo.
