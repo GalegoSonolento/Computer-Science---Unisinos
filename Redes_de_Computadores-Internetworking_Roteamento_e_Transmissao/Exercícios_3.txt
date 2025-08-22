@@ -1,0 +1,24 @@
+1. Compare e contraste os algoritmos de roteamento de estado de enlace e vetor de distância.
+    O algoritmo de estado de enlace é mais performático e de convergência mais rápida para identificar alterações na rede (algoritmos OSPF), é uma boa pedida para redes maiores. O vetor de distância performa suficientemente bem em redes pequenas, mas pode ser um problema com as grandes - seu protocolo de propagação das tabelas de roteamento é problemático (demorado - Bellman-Ford e RIP).
+
+2. Defina rota default
+    Uma rota default (rota padrão / gateway) é uma rota pré-definida pelo sistema, no sentido de ela ser a designada quando o roteador (ou host) é incluso na rede. Aparece quando uma rota específica não é definida para aquele endereço na tabela de roteamento.
+
+3. Como os algoritmos de roteamento são classificados? Explique cada classe.
+    - direto
+        - tiers 1 e 2
+        - host destino na mesma rede
+        - pega o endereço IP e máscara pra ver se está na mesma rede
+            - IP binário
+            - máscara binária
+            - operação AND
+            - se o resultado do IP host AND máscara for igual destinatário AND máscara -> é a mesma rede
+    - indireto
+        - fora do mesmo segmento de rede
+        - vai pra um gateway
+        - entra na internet
+    - intra-domínio
+        - dentro da operadora
+        - datagramas passam por dentro da operadora
+    - inter-domínio
+        - levando pra outro sistema autônomo (e.g. outra operadora)

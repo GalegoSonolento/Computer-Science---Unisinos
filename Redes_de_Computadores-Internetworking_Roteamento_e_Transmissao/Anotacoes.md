@@ -84,4 +84,87 @@ DATA: 14/Agosto/2025
 - DHCP *Dynamic Host Configuration Protocol*
     - protocolo de internet
     - cliente-servido
-- 
+
+DATA: 21/Aug/2025
+# Roteamento - Conceitos iniciais
+- forma da informação chegar no ponto A até o ponto B
+- menor distância não é necessariamente o caminho mais curto (número de saltos)
+    - o número de banda pode variar bastante
+- nem sempre as entidades de backbone são operadoras
+    - existem inter-operadoras
+        - VIVO chegar até a AT&T
+- ISP - Tier 3
+    - próximo do user
+    - normalmente empresas
+- ISP - Tier 2
+    - só conecta grandes usuários e operadoras
+- ISP - Tier 3
+    - vazão de banda
+    - conexões grandes
+- IXP
+    - Internet Exchange Point - PTT - Ponto de Troca de Tráfego
+    - links contratados de conexão entre operadoras
+    - quando operadores contratam tiers mais altos elas precisam pagar
+- roteamento
+    - direto
+        - tier 1 e 2
+        - host destino na mesma rede
+        - pega o endereço IP e máscara pra ver se está na mesma rede
+            - IP binário
+            - máscara binária
+            - operação AND
+            - se o resultado do IP host AND máscara for igual destinatário AND máscara -> é a mesma rede
+    - indireto
+        - fora do mesmo segmento de rede
+        - vai pra um gateway
+    - intra-domínio
+        - dentro da operadora
+        - datagramas passam por dentro da operadora
+    - inter-domínio
+        - levando pra outro sistema autônomo (e.g. outra operadora)
+- quanto mais próximo da ponta, menos dinâmico e menos dependências de protocolos
+    - inverta quando estiver entrando
+- usa-se o endereço MAC do default Gateway
+    - Layer 2
+- equipamentos físicos reais com tables de roteamento
+    - se o roteador vê que não é pra ele, ele precisa escoar pra alguém
+        - decisão feita com base na table de roteamento
+- operadores normalmente escondem os IPs mais específicos por segurança 
+    - começaram a colocar IPs privados pra gerência do roteador
+- table de roteamento != table de encaminhamento
+    - seleção de melhor caminho
+    - tables têm endereços de rede não de hosts
+    - quanto mais pra dentro, mais genérica é a rota
+- próximo passo é usar o IP destino
+    - varia de algoritmo - pode nao conhecer o caminho completo
+- protocolos diferentes podem dar subsídios para outros
+- diretamente conectado - rota estática - table de roteamento - métrica de roteamento (pesos - podem ser alterados para mudar comportamento)
+- como essas tables são montadas
+    - no mínimo reconhece as interfaces pra colocar o default
+    - algoritmos de roteamento
+    - host final tem rota por ThCP
+        - o problema é a rota entre roteadores
+    - tabela de roteamento é montada igual q qql forma
+    - roteamento estático fica extremamente complexo pra redes médias já
+    - dinâmicos pode aumentar as redes e manter o funcionamento
+        - vetor distância
+            - grande problema é como a informação se propaga para todos os equipamentos
+                - tempo de adaptação -> protocolo bastante lento
+            - os vizinhos pegam as tabelas dos vizinhos e trocam figurinhas
+                - espalhamento de tabelas -> flooding
+                - o problema é se alguma coisa cair
+        - estado de enlace
+            - monta um mapa topológico em estado de link
+            - peso
+            - banda
+            - etc
+            - OSPF - Open Shortest Path First
+            - troca informações somente entre roteadores imediatamente ligados a eles
+            - SPF - Shortest Path First
+                - Dijkstra e anúncios pra criar a topologia
+        - vetor de caminhos
+            - labels -> determinação do sistema autônomo
+            - caminhos pré-montados por sistemas autônomos
+            - prfixo de rede
+            - BGP - Border Gateway Protocol
+            
