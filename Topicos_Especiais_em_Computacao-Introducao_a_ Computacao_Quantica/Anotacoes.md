@@ -132,10 +132,14 @@ Essa é a forma padrão de descrever um qubit na mecânica quântica.
     - qualquer espiada ele colapsa
 - existem qudits tbm
     - 2+ mais camadas de elétrons ao mesmo tempo
+- o Feynmann disse que a própria natureza é absurda - se ele disse isso quem sou eu pra questionar
+- o princípio da computação quântica é, em última instância, ser massivamente paralela
 
 
 DATA: 13/Agosto/2025
 # Números e Vetores Complexos
+- Nem sempre os reais podem descrever a realidade completamente
+    - números reais são casos especiais de números complexos
 - número complexo sempre fica na parte direita
 - somatório de complexos é pelos reais
 - representação complexa no python é um **j**
@@ -283,3 +287,4 @@ DATA: 20/Agosto/2025
 
 - Como fica um qubit?
 - ^X -> porta de inversão
+- 
