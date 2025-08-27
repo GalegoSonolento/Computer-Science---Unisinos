@@ -84,6 +84,8 @@ DATA: 14/Agosto/2025
 - DHCP *Dynamic Host Configuration Protocol*
     - protocolo de internet
     - cliente-servido
+- timestamp sempre tem 32bits
+- 
 
 DATA: 21/Aug/2025
 # Roteamento - Conceitos iniciais

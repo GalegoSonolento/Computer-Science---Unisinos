@@ -127,4 +127,21 @@ DATA: 19/Agosto/2025
     - uso de parênteses necessário para evitar ambiguidade
     - idente
     - se enquanto e teste todos têm o mesmo símbolo
-    - 
+
+DATA: 26/Agosto/2025
+# Recursividade
+- empilhamento
+- nem todo programa pode ser escrito na recursividade
+- definição de scape é bastante importante
+    - expressão vazia funciona
+- composição considicional ainda é o T
+- continua se chamando (laço próprio)
+- E0 - expressão inicial (posso ter vários)
+- R1 define E1 e assim vai
+- fluxograma ainda continua o mesmo
+    - mesmos símbolos e letras
+- o sinal de checkmark (√) é basicamente um break
+- as chamadas, definições, são sub-rotinas
+    - são basicamente funções
+- as subrotinas são declarações (definições - def) de função por assim dizer
+- existem tantas subrotinas quanto forem necessárias e todas as subrotinas possuem definição
