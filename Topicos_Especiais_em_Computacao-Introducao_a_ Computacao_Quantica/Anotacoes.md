@@ -287,4 +287,76 @@ DATA: 20/Agosto/2025
 
 - Como fica um qubit?
 - ^X -> porta de inversão
-- 
+
+DATA: 27/Agosto/2025
+# Mecânica e circuito quântico
+- Todas as operações devem ser unitárias
+- as portas todas abordam sempre um qubit
+    - mas dá pra fazer mais em sequência
+- uma operação unitária é uma matriz qualquer
+    - cria um psi linha
+- algumas portas atuam em 2 qubits (matrizes 4x4)
+- Toffoli
+    - 3 estados (8x8)
+    - existem portas pra n qubits
+- portas são matrizes que evoluem o estado quântico
+- operadores unitários são funções
+- algoritmo quântico só retorna zero ou um, sempre
+- procure deixar escalares fora das matrizes (dá pra cortar mais tarde)
+- a operação unitária pode ser qql coisa
+
+- Portas de Rotação
+    - faz a rotação em cima do eixo
+    - usadas pra problemas de otimização combinatória
+
+- Porta Hadamard
+    - geração de superposição de estados
+    - em cima de um estado zero leva pro meio do caminho
+    - porta natural
+    - superposição enxerga todas as possibilidades ao mesmo tempo
+        - depende da vontade do programador
+    - a superposição forte as possibilidades todas tem a mesma chance de acontecer
+        - do contrário é uma superposição fraca
+    - Shor não usa Hadamard
+        - se entender esse algoritmo entende comp quântica
+        - QFT -> Transformada de Fourier Quântica
+            - Hadamard é a versão simples
+    
+- Circuito quântico
+    - sequência de portas
+    - contém fios  de evolução de estado
+    - dá pra superpôr n ou n-x portas
+    - com mais portas, maior a chance de ruído
+        - CNOTs são a que mais geram ruído
+    - 2 riscos (um bem em cima do outro) representam bits clássicos
+    - X é uma porta NOT
+    - aplicação de matriz em cima de estado
+    - não importa o valor dos componentes, pra ser válido precisa ser 1]
+    - todas as operações são reversíveis
+
+- Qiskit
+    - framework open souce
+    - tudo que precisa pra programar
+    - toda semana muda alguma coisa
+    - não é o melhor em tudo mas o básico funciona
+    - Aer é bem usado - simulador de verdade
+    - Link do IBM Q:
+        - https://www.ibm.com/quantum
+    - Link do Qiskit:
+        - https://www.ibm.com/quantum/qiskit
+    - Link sobre Portas Quânticas:
+        - https://quantum.cloud.ibm.com/learning/en/courses/utility-scale-quantum-computing/bits-gates-and-circuits
+    - Link para a ferramenta Composer
+        - https://quantum.cloud.ibm.com/composer
+    - qiskit runtime funciona pra chamar no comp quântico da IBM
+        - com limite de 10min
+    - computadores quânticos estão em evolução
+        - não sei em quais qubits vou usar
+    - é bastante possível compor o circunto vizualmente no site de IBM
+    - bits menos significativos pro mais
+    - os qubits precisam cair em bits clássicos depois da medição
+    - transpilação é uma validação do simulador
+        - verifica se uma das portas criadas não está criada
+        - gera portas novas para comtemplação
+    - mais *shots* - números de execuções, mais perto da realidade a execução chega
+    - 
