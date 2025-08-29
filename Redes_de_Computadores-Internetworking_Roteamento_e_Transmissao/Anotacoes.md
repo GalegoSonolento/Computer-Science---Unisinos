@@ -85,7 +85,6 @@ DATA: 14/Agosto/2025
     - protocolo de internet
     - cliente-servido
 - timestamp sempre tem 32bits
-- 
 
 DATA: 21/Aug/2025
 # Roteamento - Conceitos iniciais
@@ -169,4 +168,7 @@ DATA: 21/Aug/2025
             - caminhos pré-montados por sistemas autônomos
             - prfixo de rede
             - BGP - Border Gateway Protocol
-            
+
+DATA: 28/Agosto/2025
+# Algoritmos de roteamento
+- 
