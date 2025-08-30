@@ -85,6 +85,11 @@ DATA: 14/Agosto/2025
     - protocolo de internet
     - cliente-servido
 - timestamp sempre tem 32bits
+- construção da internet é baseada em sistêmas autônomos que se comunicam com interfaces padrões ou inventadas entre as duas partes
+    - qql coisa que funcione entre uma comunicação de 2 endpoints é válido
+- O IP não trata pacotes perdidos, ele está mais preocupado com roteamento do que a entrega mesmo
+- IANA - *Internet Assigned Numbers Authority* - órgão organizador da entrega de endereços IP
+-  
 
 DATA: 21/Aug/2025
 # Roteamento - Conceitos iniciais
@@ -168,7 +173,38 @@ DATA: 21/Aug/2025
             - caminhos pré-montados por sistemas autônomos
             - prfixo de rede
             - BGP - Border Gateway Protocol
+- a grande filosofia do roteamento é rotear todos sem prejudicar nenhum
+- rotas default dos roteadores vêm "de fábrica"
+- a equação de Bellman-Ford é utilizada para geração de caminhos mínimos e é mais ou menos assim:
+    d_x(y) = min_v{c(x,v) + d_v(y)}
+    - dx(y) é o custo do caminho mínimo de x para y
+    - minv é feito para todos os vizinhos v de x
+    - c(x,v) é o custo do caminho de x para v
+    - dv(y) é o custo do caminho de v para y
+- Um algoritmo BGP serve basicamente para controle de borda (literal *Border Gateway Control*)
 
 DATA: 28/Agosto/2025
 # Algoritmos de roteamento
-- 
+- algoritmos de roteamento têm relações com os demais componentes de roteamento de um roteador (dã)
+    - mas eles ainda tem problemas
+- Vetor de distância
+    - preenche todos os nós com as distâncias
+        - *flooding*
+    - quando um valor é alterado, ele demora até ser propagado
+        - isso gera inconsistências na rede e pode gerar *loops*
+            - principalmente quando os nós ainda não se comunicaram para atualizarem suas tabelas de roteamento
+    - *couting to infinity*
+        - a descrição desse problema consistem em um link quebrado, uma tabela atualizada, só aquele caminho e tabelas desatualzadas na rede para trás
+        - uma tentativa de resolução é o **horizonte dividido**, que só funciona com 2 nós vizinhos
+- *Routing Information Protocol (RIP)*
+    - protocolo de roteamento intra-domínio (descarta roteadores depois do de borda)
+    - RIP Advertisement é outro nome para a mensagem do protocolo (????)
+    - utiliza a equação de Bellman-Ford e armazena apenas a melhor rota
+- *Open Shortest Path First (OSPF)*
+    - IGP (Interior Gateway Protocol) que usa Dijkstra e supre as lacunas do RIP
+    - temos uma definição de ¨backbone"para o local
+        - a coms passa por ele
+    - possibilidade de comunicação entre sistemas autônomos
+    - é ele que cola a internet
+    - assim como APIs, o protocolo tbm tem trocas internas de mensageria
+    - 
