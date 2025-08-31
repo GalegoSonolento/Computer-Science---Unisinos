@@ -359,4 +359,9 @@ DATA: 27/Agosto/2025
         - verifica se uma das portas criadas não está criada
         - gera portas novas para comtemplação
     - mais *shots* - números de execuções, mais perto da realidade a execução chega
-    - 
+- Uma porta quântica é a aplicação de uma operação =em cima da nossa matriz existente
+    - ela sempre deve ser reversível unitária (ela * ela.Dagger = 1)
+    - matrizes unitárias 2^n x 2^n
+- nossos estados quânticos **evoluem**
+- Qiskit Aer é a biblioteca de uso de verdade
+- 
