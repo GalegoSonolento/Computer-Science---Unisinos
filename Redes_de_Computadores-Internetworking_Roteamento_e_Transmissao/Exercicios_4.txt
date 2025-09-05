@@ -7,6 +7,7 @@
 
 3. Explique o problema de convergência lenta do protocolo vetor de distância.
     Esse problema ocorre dado o princípio de "flodding" que esse protocolo tem para estabelecer as tabelas de roteamento. Imagine que uma das rotas (um link entre 2 roteadores) está inviável para uso, apenas esse dois roteadores conhecem o problema. Até que o resto do sistema conheça essa falha de link e mude suas rotas, teremos pacotes (datagramas) perdidos devido à morte por tempo TTS (custo de rota), uma vez que o pacote bate em um dos roteadores com o link comprometido e é "devolvido", gerando "loops".
+    Um fator importante para se lembrar é que as atualizações (pelo menos na versão 1) são de 30 em 30s.
 
 4. Quais os problemas gerados por loops em uma rede?
     Alguns dos grandes problemas podem ser tempestades de Broadcast (quando a mensagem de broadcast é enviada várias vezes e enviada inclusive para quem a mandou originalmente), duplicação de quadros (quando o pacote A é dado como pertido, já estamos no pacote D e o A é recebido novamente), deteorização de banda (mais dados trafegando na rede diminuem sua capacidade de tráfego e qualidade); apenas para citar alguns.

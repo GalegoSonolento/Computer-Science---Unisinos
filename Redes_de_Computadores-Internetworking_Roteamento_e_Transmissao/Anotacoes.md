@@ -207,4 +207,32 @@ DATA: 28/Agosto/2025
     - possibilidade de comunicação entre sistemas autônomos
     - é ele que cola a internet
     - assim como APIs, o protocolo tbm tem trocas internas de mensageria
-    - 
+
+DATA: 04/Setembro/2025
+# Network Address Translation (NAT)
+- endereço IP é normalmente mascarado
+- sobrevida do IPv4 permitiu endereços serem usados em qql lugar, menos na internet
+    - IPs reaproveitados
+- roteador pode fazer NAT
+- Wireshark é uma ótima máquina pra esse tipo de monitoramento
+- NAT são 2 firewalls que "fingem" uma rede de transição e mandam pra outro lugar com a mesma rede
+    - existe um endereço intermediário que serve como isca para a passagem por 2 firewalls até chegar na rede com o mesmo endereço7
+- NAT de origem - trocar o IP da origem do pacote para a interface (router) antes do 1° firewall
+    - no 2° firewall mantem o origem do firewall 1 e troca o destino para o IP original (NAT destino)
+- os firewalls são os próprios default gateways, não é necessário alterar
+- NAT reverso é necessário  
+    - dá pra settar que o pacote veio como uma tradução
+- não existe mais IPv4 para aquisição
+    - nao tem mais o que montar/fazer
+    - 2³²
+- IPv6 soluciona o problema do IPv4 - a questão que fica é a transição
+    - já existem lugaresm que responem em IPv6 e IPv4
+- sistemas convencionais funcionam apenas para IPv4
+    - transição é bastante lenta
+    - aplicações mto antigas podem nem entender as interfaces
+- durante a migração, dá pra usar os blocos IPv6 pra fazer a comunicação interna
+    - privada, sem acesso à internet
+- use blocos não publicados
+    - se calhar de ser um site q tu settou o modem como DHCP a requisição nunca vai sair da rede local
+- aumenta a segurança no sentido de esconder a infra-estrutura
+- 
