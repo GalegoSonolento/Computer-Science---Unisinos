@@ -70,7 +70,6 @@ DATA: 18/Agosto/2025
     - VLANs can isolate and create more addresses for the VMs (each one needs one IP), but are restricted to 4096 VLANs (not a lot, really)
 - Ossification - it gets pretty difficult to change protocols in Network layer
     - Internet is old already, it's hard to make config changes effectively
-- 
 
 DATA: 25/Agosto/2025
 # Developing applications for cloud computing – Part 1
@@ -78,4 +77,5 @@ DATA: 25/Agosto/2025
 - Potential of software dev cost reduction
     - hardware no longer necessary
     - everything is pay-per-use / pay-per-view
-- 
+
+DATA: 8/Setembro/2025
