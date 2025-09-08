@@ -210,6 +210,13 @@ DATA: 28/Agosto/2025
 
 DATA: 04/Setembro/2025
 # Network Address Translation (NAT)
+- normalmente o endereço host da máquina é diferente do endereço IPv4 que os sites que mostram o host apresentam
+    - dado o fato que esses sites mostram o valor que a operadora (Sistema Autônomo que estamos conectados) mostra pra internet
+    - os IPs que a máquina vê são sempre IPs internos ao SA
+    - isso acontece porque o IPv4 é bastante limitado (2³²)
+    - IPv6 é a saída viável mas é bastante caro de implemetar e atualizar todos os sistemas
+        - existe uma grande quantidade de sistemas hoje que não tem nem ondição de entender protocolos IPv6
+        - um caminho bem grande já foi trilhado
 - endereço IP é normalmente mascarado
 - sobrevida do IPv4 permitiu endereços serem usados em qql lugar, menos na internet
     - IPs reaproveitados
@@ -230,9 +237,22 @@ DATA: 04/Setembro/2025
 - sistemas convencionais funcionam apenas para IPv4
     - transição é bastante lenta
     - aplicações mto antigas podem nem entender as interfaces
+    - nessa onda, IPv4s privados foram designados
+        - 10.0.0.0: uma única rede Classe A (8 bits de máscara de sub-rede)
+        - 172.16.0.0 até 172.31.0.0: 16 redes Classe B (16 bits de máscara de sub-rede)
+        - 192.168.0.0 até 192.168.255.0: 256 redes classe C (24 bits de máscara de sub-rede)
+        - IPs privados podem ser utilizados à bel prazer, desde que não comuniquem com o mundo externo
+            - por isso que o NAT existe
 - durante a migração, dá pra usar os blocos IPv6 pra fazer a comunicação interna
     - privada, sem acesso à internet
 - use blocos não publicados
     - se calhar de ser um site q tu settou o modem como DHCP a requisição nunca vai sair da rede local
 - aumenta a segurança no sentido de esconder a infra-estrutura
-- 
+- o servidor NAT fica no meio do caminho da comunicação entre a borda e o Sistema Autônomo
+    - serve bastante como um gargalo - apenas um endereço de IP que segura diversos depois dele
+    - funciona bem, mas esse é justamente o problema dele, é um gargado pros SA
+    - pode aumentar a segurança no sentido de esconder o endereço IP interno - não dá pra chegar nele diretamente - mas é uma segurança meio falsa
+    - conexões de fora pra dento podem enfrentar problemas (pacotes perdidos
+    - Universal Plug and Play (UPnP) pode ajudar, mas serve como falha de segurança
+    - checksum precisa ser recalculado sempre
+    - quebra conectividade fim-a-afim
