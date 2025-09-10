@@ -145,3 +145,46 @@ DATA: 26/Agosto/2025
     - são basicamente funções
 - as subrotinas são declarações (definições - def) de função por assim dizer
 - existem tantas subrotinas quanto forem necessárias e todas as subrotinas possuem definição
+
+DATA: 09/Setembro/2025
+# Máquinas universais
+- simulação de qualquer programa computável
+- a mais comun é a máquina de Turing
+- cabeça de controle que pode ir pra direita ou esquerda
+    - preciso de um símbolo inicial e final
+    - MT
+    - máquinas sempre infinitas
+- maquina de Turing
+    - qualquer coisa computável fica na fita
+    - alfabeto de entrada
+        - determina reconhecimento da Linguagem
+    - alfabeto auxiliar
+        - registra as validações
+        - variações do alfabeto já existente
+    - início da fita é um sol
+    - final da fita é a letra grega Beta
+    - Tem uma porrada de letra grega na verdade
+        - M = (∑, Q, δ, q0, F, V, β, ☼)
+    - na máquina de Turing normalmente n tem um "ir pra frente" depois do final
+    - a ideia de validação é uma marcação que já li aquela casa
+        - pra isso serve o alfabeto auxiliar
+    - formado por estados
+        - sempre saio de um pra outro
+        - a transição de estado é sempre indicada no fluxo do autômato
+            - apesar do desenho sempre ser indo pra direita
+    - obrigatoriamente precisa passar pela fita gravando
+        - nem q grave o msm símbolo de novo
+    - aceita entrada de dado
+    - chega em um estado final
+        - precisa chegar em qf (validou a fita toda)
+        - troca o f pela numeração dos estados
+    - dá pra rejeitar entradas
+        - que não pertençam ao alfabeto ou linguagem
+    - dá pra fazer um loop
+    - símbolo inicial tem um loop no q0 pra evitar um estado a mais
+        - evita passar por cima do q0
+    - alfabeto auxiliar é sempre definido por quem constrói a máquina
+    - dá pra gravar alfabeto ou o auxiliar (ou branco ou axiliar) - ∑, V ou β
+    - máquinas de Turing são específicas para uma linguagem
+        - a fita cria uma máquina de estados que valida uma linguagem
+        - fita e máquina de estados
