@@ -364,4 +364,116 @@ DATA: 27/Agosto/2025
     - matrizes unitárias 2^n x 2^n
 - nossos estados quânticos **evoluem**
 - Qiskit Aer é a biblioteca de uso de verdade
-- 
+
+DATA: 10/Setembro/2025
+# Mecânica Quântica e Circuito Quântico - Parte II
+- circuito quantico de 2 qubits
+    - o estado do sistema quântico é composto por variáveis
+    - sempre sai do zero (**spin** pra cima)
+    - se n tenho uma porta, coloco uma matriz identidade
+        - matriz unitátia (1 na hipotenusa)
+    - produto tensor
+        - prod. tensor da identidade quando n tem porta
+    - produto tensor aumenta a dimensão
+    - aplique expoentes por fora
+    - primeiro preciso de um produto tensor das portas que vão afetar os 2 (ou mais) qubits e daí eu faço o produto matricial
+    - o qiskit sempre lê de dentro para fora
+        - troca ordem dos algarismos do meio basicamente
+        - "little Indian"
+    - qiskit faz q1 e q0 ao invés de q0q1
+- Porta CNOT
+    - tao boa quanto a Hadamard
+    - permite (junto com a Hadamard) emaranhar um sistema
+    - CNOT é 2 qubit no mínimo
+    - porta contrle
+    - qubit origem (controle) e origem (target)
+        - dependendo do controle ele muda o destino
+    - **C**ontrolled **NOT** gate
+    - 𝐼 𝜓 -> identidade de psi
+    - bloco + identidade
+    - tensorial com x
+    - some as duas -> pegou a CNOT
+    - se controle é zero destino é zero
+    - só muda se controle é 1
+        - faz o bitflip
+    - usado no algoritmo de Deutsch
+- Medição
+    - **não é uma porta quântica**
+        - quebra a regra de comutação
+    - irreverssível
+    - colapsa o sistema e gera um resultado clássico
+    - gera tantos bits quanto qubits existem no sistema
+    - decoerência
+        - força o colapso do qubit
+        - observação
+            - algum sensor
+        - sai de onda e vira partícula
+        - dá pra ser qql coisa, mas o sistema normalizado entrega sempre 1
+    - módulo ao quadrado somado precisa ser = 1
+        - sistemas quânticos não-normalizados não tem utilizada
+    - após o colapso são bits clássicos
+        - sistema quântico vira um sistema booleano
+- Coerência (quântica)
+    - possibilidade do qubit manter uma superposição e emaranhamento suficiente pra realizar cálculos
+        - atualmente são microssegundos
+        - grande desafio é manter a coerência
+        - falhar em manter o estado gera ruído (imprecisão)
+    - ouro é um ótimo condutor (e bem coerente e pouco corrosivo)
+- Decoerência
+    - processo natural de perca de estado puro
+    - dá pra simular essa decoerência no simulador
+        - complexo - o clássico simula bem certinho
+    - "Simulação de sistemas quânticos precisa de um sistema quântico"
+    - os próprios sistemas se atrapalham
+        - decoerência por quantidade de portas
+        - '''' por quantidade de qubits
+    - T2 -> tempo de decoerência
+        - tempo que mantém o sistema puro (e não misto)
+        - para de ser coerênte
+    - T1 - Tempo de relaxação
+        - perda de energia
+        - processamento precisa ser rápido pra n dar tempo de o sistema todo perder a energia
+        - métrica da IBM
+    - existem erros de coerência
+        - pouco explorado - pessoal precisa manter o sistema coerente ainda
+    - quantidade de qubits = amplitude
+    - quantidade de portas = profundidade/camadas
+        - quanto mais de ambas, maior a chance de incoerência
+        - NISQ - Noise Intermediate-Scale Quantum
+    - em setembro de 2025 - ~100 operações fazem a incoerência dominar
+    - qubits lógicos são libres de erros (precisa de 10 qubits físicos)
+        - surface code
+        - shor code
+            - correção de erros
+- operador densidade
+    - matriz
+    - verificação de sistema puro ou misto
+        - coerente ou decoerente
+    - letra grega rho
+    - verficia se ocorreu operação de bit-flip
+        - inverte as amplitudes por algum motivo
+        - ou phase-flip
+        - ou bit-phase-flip
+    - diagonal principal é a população
+    - Tr{} - traço (trace)
+        - Tr{rho} = 1 -> sistema puro
+        - sistemas puros cospem psi constantes
+        - faça no rho²
+- Esfera de Bloch
+    - Felix Bloch (1903-1983)
+    - espaço 3D
+    - polo Norte - spin up
+    - polo sul - spin down
+    - base Z
+    - Theta (ângulo)
+        - responsável por norte-sul
+        - Ângulo polar
+    - Phi - diferença entre Ket 0 e Ket 1
+        - responsável por leste-oeste
+        - ângulo azimutal
+        - abre o 3D
+    - r (de raio mesmo) precisa dar 1
+        - como no circuito trigonométrico
+        - hipotenusa
+    - y é a parte real do imaginário
+    - número imaginário troca a fase (em torno do Z)
