@@ -256,3 +256,51 @@ DATA: 04/Setembro/2025
     - Universal Plug and Play (UPnP) pode ajudar, mas serve como falha de segurança
     - checksum precisa ser recalculado sempre
     - quebra conectividade fim-a-afim
+
+DATA: 11/Setembro/2025
+# Internet Control Message Protocol (ICMP)
+- DMZ - Zona Desmilitarizada
+    - interessante usar com NAT pra isolar do restante
+    - interessante como robustez contra ataques
+- IP de origem é definido pelo IP da interface quando exposta ao tráfego
+- ICMP é pra algum controle do pacote 
+    - tempo de rede
+    - ritmo de tráfego
+    - manda o retorno pro sender do pacote que n chegou
+- "Destination Unreacheable" é mandado por um roteador no meio do caminho com ICMP
+- ICMP precisa do IP pra funcionar, mas está acima do IP (camada 4?)
+    - Talvez um 3,5
+- auxilia o roteador no processo de queue
+- Switch Fabric é do roteador e faz as conexões entre filas de entrada e saída
+    - congestionamentos acontecem
+    - controle de fluxo
+    - transmissor rápido
+        - exacerbação da taxa de transmissão
+- atuação em nível de rede
+- mensageria de erro e controle entre roteadores
+- não torna o IP confiável, apenas informa dos erros
+- sem correção de erros (não é a preocupação do IP)
+- mensageria genérica pro Host
+    - orbital do problema
+- só reporta erros de pacotes IP
+    - o *header* do report pega a informação de onde parou e retransmite para informar onde o pacote parou (onde aconteceu o erro)
+- *Redirect* pra melhor rota
+    - ICMP identifica loops de roteamento
+- toda tráfico cai no *input* firewall - tráfego do *output* tá atravessando o **Firewall**
+- descarte não é descaso
+    - entregas e problemas são enviados pelo ICMP
+    - identifica a origem sempre
+    - isso não é válido com firewalls bloqueando conexões
+        - impede onerar o firewall
+- até pode causar congestionamento (problemas de **forwarding**)
+- **ICMP redirect** manda mensageria para alteração de rotas
+- proxies acontecem utiizando browsers
+- *Default Gateway* deveria saber as rotas (internas inclusive)
+    - o ICMP pode enviar a rota interna correta na primeira tentativa de acesso de rede
+- Detecção de rotas circulares longas
+    - TTL - **Time to Live**
+    - mensgem de TTL pode ludibriar potenciais invasores
+    - mensageria anônima
+- hosts são usualmente abertos
+    - tem um dos EUA de fácil acesso para testar visibilidade dos servidores/páginas
+- ICMP auxilia a interromper a transmissão do UDP - manda um destination unreacheable
