@@ -259,6 +259,9 @@ DATA: 04/Setembro/2025
 
 DATA: 11/Setembro/2025
 # Internet Control Message Protocol (ICMP)
+- IP fornece um serviço de conexao que apresenta poucos problemas
+    - mas ele nao é confiável
+    - diversos problemas podem ocorrer no meio da rede e ICMP serve como a mensageria que entrega aos *endpoints* as informações do que rola na rede
 - DMZ - Zona Desmilitarizada
     - interessante usar com NAT pra isolar do restante
     - interessante como robustez contra ataques
@@ -304,3 +307,5 @@ DATA: 11/Setembro/2025
 - hosts são usualmente abertos
     - tem um dos EUA de fácil acesso para testar visibilidade dos servidores/páginas
 - ICMP auxilia a interromper a transmissão do UDP - manda um destination unreacheable
+- ICMP também auxilia pra troca de rotas e atualização de tabelas de roteamento
+- 
