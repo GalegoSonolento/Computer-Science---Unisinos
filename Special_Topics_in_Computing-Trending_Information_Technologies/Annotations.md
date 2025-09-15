@@ -1,4 +1,5 @@
 AWS course: https://awsacademy.instructure.com/courses
+Main bucket name for Development course: haaghenrique
 
 DATA: 04/Agosto/2025
 
@@ -79,3 +80,7 @@ DATA: 25/Agosto/2025
     - everything is pay-per-use / pay-per-view
 
 DATA: 8/Setembro/2025
+
+
+c169845a4385584l11609860t1w7303351928-samplebucket-ktfas1heh5f2
+aws s3 cp list-buckets.py s3://c169845a4385584l11609860t1w7303351928-samplebucket-ktfas1heh5f2
