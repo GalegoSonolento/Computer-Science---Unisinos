@@ -84,3 +84,14 @@ DATA: 8/Setembro/2025
 
 c169845a4385584l11609860t1w7303351928-samplebucket-ktfas1heh5f2
 aws s3 cp list-buckets.py s3://c169845a4385584l11609860t1w7303351928-samplebucket-ktfas1heh5f2
+
+DATA: 15/Setembro/2025
+# C4 model
+- diagrama de engenharia de software
+- esquematização do software pra construí-lo posteriormente
+- nessa altura do campeonato mapear os serviços utilizados e interações é o importante
+- tem um bom exemplo na página relacionada nas notas da aula
+- describe business problem
+- specify architecture or deplyment
+- diagram must have cloud services utilized
+    - how the service interact with one another
