@@ -188,3 +188,17 @@ DATA: 09/Setembro/2025
     - máquinas de Turing são específicas para uma linguagem
         - a fita cria uma máquina de estados que valida uma linguagem
         - fita e máquina de estados
+
+DATA: 16/Setembro/2025
+# Máquina de norma
+- parte de uma máquina universal
+- deve ser executável em tempo finito
+- deve ser capaz de executar qualquer programa de máquinas reais ou teóricas
+- Norma (esposa do Richard Bird) - Number Theoretic Register Machine
+- valores de memória (registradores) são todos letras maiúsculas
+- programas iterativos
+- não recebe uma atribuição completa, precisa somar pra chegar nela
+- nomenclatura *usando X* transfere o uso e decremento pra outra variável à vontade de manter a de apoio
+- só tem operação de soma e subtração
+    - todo o resto precisa ser feito baseado nisso
+- 
