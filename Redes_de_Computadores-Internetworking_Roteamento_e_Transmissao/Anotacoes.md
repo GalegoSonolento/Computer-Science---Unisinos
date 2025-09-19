@@ -308,4 +308,26 @@ DATA: 11/Setembro/2025
     - tem um dos EUA de fácil acesso para testar visibilidade dos servidores/páginas
 - ICMP auxilia a interromper a transmissão do UDP - manda um destination unreacheable
 - ICMP também auxilia pra troca de rotas e atualização de tabelas de roteamento
-- 
+
+DATA: 18/Setembro/2025
+# Roteadores
+- ligação entre redes distintas
+    - diferente de Bridge - isso aqui é uma tecnologia X conversando uma tecnologia Y
+- ASICS - Application Specific INtegrated Circuit
+- SO especializado
+    - Cisco IOS
+    - Juniper JUNOS
+- linux é bastante útil pra fazer modificação e adaptar ao hardware
+- eve.com pode ser útil
+- LInux pode fazer o roteamento IPv4
+    - só não fala protocolos de roteamento
+- roteador pode fazer a função de firewall, mas não faz tudo
+    - stateless
+- composto por routing processor
+- busca binária pode ser lenta em backbones
+- memória é dada por interface ao invés de um buffer
+- crossbar não atrapalha outras filas
+- existe enfilaremento tanto pra input quanto pra output
+- QoS só faz sentido se tem congestionamento
+    - ainda dá pra priorizar, mas é diferente
+    - validação é em outro momento
