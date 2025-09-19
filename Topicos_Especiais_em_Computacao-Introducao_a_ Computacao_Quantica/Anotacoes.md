@@ -477,3 +477,39 @@ DATA: 10/Setembro/2025
         - hipotenusa
     - y é a parte real do imaginário
     - número imaginário troca a fase (em torno do Z)
+
+DATA: 17/Setembro/2025
+# Emaranhamento e Teletransporte Quântico
+- Gato de Schrödinger
+    - estado do gato é descconhecido
+- Discussion of of probability relations between separated systems
+    - 1935
+- emaranhamento/entrelaçamento
+    - A característica única da quântica?
+- Heisemberg afirmava que a concepção da mecânica quântica estava completa em si
+    - Einstein e seu grupo ia contra e afirmava que existiam variáveis ocultas - que não seriam proobabilísticas
+- A única maneira de a violação das inegualdades de John Bell é os Fótons estarem relacionados (emaranhados) de alguma forma
+- o problema da quântica é aplicar as mesmas regras e propriedades que temos no mundo macro no micro
+- correlação quântica **não local**
+- fundamental
+    - mais forte que superposição supermassiva
+- Algoritmo de Shor utiliza
+- comunicação utiliza bastante
+    - sensores também, mas não tanto
+- estados separáveis não são emaranhados
+- espaço de Hilbert são todas as possibilidades da esfera de Bloch
+    - multipartes - multipartite
+- dentro de todos os possíveis estados no espaço de Hilbert, alguns deles podem ser emaranhados
+    - precisa de programação pra entrar nesse subconjunto
+- superposição não significa emaranhamento
+- a porta C-NOT é importante
+- Hadamard + C-NOT emaranha o sistema
+- Hadamard só no primeiro e depois uma C-NOT ele gera uma operação não-local
+- |𝜓𝑖𝑗⟩ = 𝐼 ⊗ X𝑗Z𝑖 |𝜓00⟩ -> emaranhamento máximo
+    - Z troca o sinal (fase)
+- transporte quântico precisa de um estado emaranhado
+    - estado de Bell
+- teletransporte quântico é de estado
+    - não é uma informação instantânea
+    - não viola teorema da relatividade geral
+- 
