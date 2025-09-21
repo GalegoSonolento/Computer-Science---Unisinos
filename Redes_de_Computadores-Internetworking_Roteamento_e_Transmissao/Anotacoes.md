@@ -331,3 +331,31 @@ DATA: 18/Setembro/2025
 - QoS só faz sentido se tem congestionamento
     - ainda dá pra priorizar, mas é diferente
     - validação é em outro momento
+- roteadores pequenos podem ser usados dentro do sistema operacional comum
+    - apesar de ser pouco recomendado
+- roteadores empresariais são mais robustos
+    - QoS
+    - Vlans
+    - firewalls
+    - custo baixo se comparado com o poder de roteamento
+- Edge routers precisam de robustes para comunicação com recursos fora dos provedores
+    - usualmente *edge* routers se comunicam com outros edge routers
+- aqui as portas são consideradas as interfaces mesmo
+- buscas em memórias desses roteadores (portas de entrada) são todas em tempo constante
+    - de outra forma elas quebrariam a conectividade da internet
+- processamento de camadas física e de enlace
+- em comutações por memória, normalmente sua velocidade é o limitador principal
+- transmissão por barramento sofre do mesmo problema que a rede por barramento tinha
+    - uma conexão existente no barramento fecha a porta para outras
+- comutação por rede de interconexão é uma das melhores
+    - melhor desempenho (impede interrupções de conexão)
+- quandos *buffers*, filas dos roteadores ficam cheios, os pacote começam a ser descartados
+    - nesse momento priorização de pacotes se torna bastante importante 
+- exemplo mais simples de administração de filas: Round-Robin 
+    - é ruim porque n consegue administrar prioridade
+    - mas é melhor que uma fila FCFS
+- notação de vazão é em bit/s (notação brasileira, a americana é bps)
+- é importante saber **quantos pacotes** o roteador pode transmitir
+- é notavelmente melhor que uma quantidade menor de pacotes, mesmo que maiores, passe pelo roteador
+    - menos leituras de cabeçalho = mais velocidade de processamento
+    - maior quantidade de leitura torna onerosa as tarefas do processador do roteador
