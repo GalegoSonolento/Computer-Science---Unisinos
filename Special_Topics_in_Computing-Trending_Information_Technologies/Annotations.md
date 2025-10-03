@@ -1,5 +1,6 @@
 AWS course: https://awsacademy.instructure.com/courses
 Main bucket name for Development course: haaghenrique
+API invoke URL: https://nclcd1mbii.execute-api.us-east-1.amazonaws.com/prod
 
 DATA: 04/Agosto/2025
 
