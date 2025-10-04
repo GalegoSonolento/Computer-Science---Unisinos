@@ -165,6 +165,15 @@ DATA: 09/Setembro/2025
     - final da fita é a letra grega Beta
     - Tem uma porrada de letra grega na verdade
         - M = (∑, Q, δ, q0, F, V, β, ☼)
+        ∑ alfabeto de símbolos de entrada.
+        Q conjunto de estados possíveis da máquina, o qual é finito.
+        δ programa ou função de transição (é uma função parcial).
+        q0 estado inicial da máquina, tal que q0 é elemento de Q.
+        F conjunto de estados finais, tal que F está contido em Q.
+        V alfabeto auxiliar.
+        β símbolo especial que representa o branco.
+        ☼ símbolo especial de marcador que representa o início da fita.
+        - essa notação precisa necessariamente ser escrita junto da máquina de estados para formar, efetivamente, a máquina de Turing
     - na máquina de Turing normalmente n tem um "ir pra frente" depois do final
     - a ideia de validação é uma marcação que já li aquela casa
         - pra isso serve o alfabeto auxiliar
@@ -188,6 +197,22 @@ DATA: 09/Setembro/2025
     - máquinas de Turing são específicas para uma linguagem
         - a fita cria uma máquina de estados que valida uma linguagem
         - fita e máquina de estados
+- Conceitos Básicos: 
+    - Símbolo: menor unidade.
+    - Alfabeto: conjunto de símbolos.
+    - Palavra: sequência de símbolos.
+    - Linguagem: conjunto de sentenças sobre um alfabeto.
+- Tipos de Dados
+    - Qualquer conjunto contável que apresente descrição finita (naturais, inteiros, caracteres, valores-verdade, vetores, entre outros). 
+    - irracionais não satisfazem essa condição
+- a Máquina de Turing é basicamente uma fita (com a informação) com uma cabeça
+    - essa cabeça pode tanto ler quanto escrever
+    - unidade de controle (o algoritmo mesmo) fica junto dessa cabeça
+    - esses algoritmos são montados como máquinas de estado
+    - tem no mínimo o mesmo poder de processamento que qualquer máquina de uso geral
+    - 𝚷(p, au) = (q, av, m) → 𝚷(estado_atual, simb_lido) = (novo_estado, simb_gravado, sent_movimento)
+    - 
+
 
 DATA: 16/Setembro/2025
 # Máquina de norma
@@ -201,4 +226,4 @@ DATA: 16/Setembro/2025
 - nomenclatura *usando X* transfere o uso e decremento pra outra variável à vontade de manter a de apoio
 - só tem operação de soma e subtração
     - todo o resto precisa ser feito baseado nisso
-- 
+-  
