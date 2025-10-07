@@ -226,4 +226,25 @@ DATA: 16/Setembro/2025
 - nomenclatura *usando X* transfere o uso e decremento pra outra variável à vontade de manter a de apoio
 - só tem operação de soma e subtração
     - todo o resto precisa ser feito baseado nisso
--  
+
+DATA: 07/Outubro/2025
+# Máquinas (continuação)
+- agora temos uma 7-upla
+- sempre 2 registradores
+    - duas entradas e uma saída ou vice-versa
+    - assumem valores em N
+- aqui é uma comunicação pra monolítico, iterativo ou Turing
+    - a descrição da máquina e suas definições precisam ser estabelecidas primeiramente
+- máquina já vem com as operações todas descritas
+    - e operacional
+    - não precisa inserir M
+- toda máquina vira qualquer máquina
+    - pra virar recursivo precisa de algum grau de recursividade, claro
+- com máquinas monolíticas é mais simples de trabalhar com valores
+- computação infinita = loop
+    - prova de que operação não finaliza
+    - "erro"
+- valores de testes (normalmente baixos) para testes precisam ser utilizados
+- isso é mais perto de um Assembly que os outros
+    - descrição de ações mais semelhante
+- 
