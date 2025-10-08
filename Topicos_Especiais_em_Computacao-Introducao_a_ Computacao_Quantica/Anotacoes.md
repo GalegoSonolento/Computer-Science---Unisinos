@@ -477,6 +477,21 @@ DATA: 10/Setembro/2025
         - hipotenusa
     - y é a parte real do imaginário
     - número imaginário troca a fase (em torno do Z)
+- Sempre precisamos manter a mesma proporção conforme os vetores
+- a medição sempre vai fazer o qubit colapsar em algum resultado
+- dispositivos NISQ ainda enfrentam problemas com decaimento (decorência) prematura
+- o operador densidade entra nessa história como um verificador de integridade (corência) do qubit
+    - sistemas puros
+    - sisttemas mistos
+    - produto externo
+        - a identidade é a população e a inversa é a coerência
+    - Tr{𝜌} -> traço de rho - diagonal principal
+    - 𝜌 (rho) será sempre positivo
+    - um Tr{𝜌²} < 1 indica um estado misto
+- Esfera de Bloch utiliza números complexos para a definição de coordenadas
+    - precisam ser coordenadas polares (dado que é uma esfera)
+    - z = re^i^0 -> fórmula de Euler
+    - 
 
 DATA: 17/Setembro/2025
 # Emaranhamento e Teletransporte Quântico
@@ -512,4 +527,9 @@ DATA: 17/Setembro/2025
 - teletransporte quântico é de estado
     - não é uma informação instantânea
     - não viola teorema da relatividade geral
+- pra medidas de Bell preciso aplicar o 𝐼 ⊗ X𝑗Z𝑖 pra cada um dos qubits
+    - |𝜓00⟩ = 1/√2 (|00 + |11⟩) vira
+    - |𝜓11 = 1/√2 𝐼|0⟩ ⊗ XZ|0⟩ + 𝐼|1⟩ ⊗ XZ|1⟩
+    - e depois fazemos as operações ⊗ e aí temos um estado de Bell
+    - a medida de Bell serve para definir o estado correto do emaranhamento
 - 
