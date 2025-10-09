@@ -359,3 +359,43 @@ DATA: 18/Setembro/2025
 - é notavelmente melhor que uma quantidade menor de pacotes, mesmo que maiores, passe pelo roteador
     - menos leituras de cabeçalho = mais velocidade de processamento
     - maior quantidade de leitura torna onerosa as tarefas do processador do roteador
+ 
+DATA: 09/Outubro/2025
+# Introdução à Camada de Enlace
+- Trabalho com a camada 2 do modelo OSI
+- quadro/frame é contido dentro de uma rede
+    - endereços de camada dois de outra rede não são visíveis
+- roteadores não propagam broadcast
+- HDLC - 2M
+- PPP - 2M
+- Serial - 2M
+- Ethernet - 100G
+- ADSL
+- diferetes redes tem saboderes diferentes de layer 2
+- SDH
+- PDH
+- NGSDH
+- DWDM
+- ATM
+- Frame Relay
+- dependendo de onde o dado passa é necessário segmentar o pacote
+- ainda são pacotes, mas eles são quebrado em células sequanciais à depender do quadro
+    - é tudo sempre remontado
+- IPs públicos são vistos globalmente - podem perder funcionalidade por rede
+    - por isso não de chumba o IP na placa
+- IP é hierárquico, MAC address não
+- camada de rede é fim-a-fim
+- só dá pra ver MAC Address estando na mesma VLAN
+- IP é independente, dá pra transitar por diversas tecnologias
+- enlace cuida de comunicação lateral enlace-porta
+- camada 2 não depende de algoritmo de roteamento
+- FHSS - Bluetooth usa - salto em expectro de frequência
+- nível 4 vê fim-a-fim - sem poder de ver as portas - garantir que a informação chegue corretamente pela camada 2 (validação de checksum)
+- half e full duplex
+    - dois sentidos não simultêneos (half)
+    - bidirecioal - full
+- cabos precisam ser blindados para evitar interferências eletro-magnéticas
+- é importante saber o formato pra conseguir formatar os dados e fazer uma busca - camada superior precisa saber montar o dado
+- sequências padrão entregam o começo de quadros - preâmbulos
+- nessa camada algoritmos de anticolisão são necessários - CSMAICD
+- 
