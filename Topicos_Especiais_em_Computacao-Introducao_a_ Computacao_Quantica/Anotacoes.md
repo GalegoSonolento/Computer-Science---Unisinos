@@ -532,4 +532,51 @@ DATA: 17/Setembro/2025
     - |𝜓11 = 1/√2 𝐼|0⟩ ⊗ XZ|0⟩ + 𝐼|1⟩ ⊗ XZ|1⟩
     - e depois fazemos as operações ⊗ e aí temos um estado de Bell
     - a medida de Bell serve para definir o estado correto do emaranhamento
-- 
+ 
+DATA: 08/Outubro/2025
+# Algoritmo de Deutsch e Deutsch-Jozsa
+- algoritmos quânticos são exatamente iguais os normais
+    - mas a primeira parte do processamento é feita em computador quântico
+- uso de propriedados como superposição, interferência e emaranhamento
+    - se não tem essas propriedades não é um sistema quântico
+    - fazendo tudo ao mesmo tempo
+    - sistema único (não se enxerga qubits individuais)
+    - qubits variam de -1 a 1 (diferentes fases)
+- uso para tunelamento quântico
+    - usado pra chips quânticos atuais
+- Devid Deutsch criou a máquina de Turing universal quântica (com várias fitas em superposição)
+    - paralelismo e verificação de f(x)
+- Q-Day = dia que um algoritmo quântica vai quebrar uma criptografia RSA 2048 bits - atualmente está em 2030 - algoritmo existe desde os anos 90
+- algoritmo de Deutsch foi mostrado primeiramente com 1 qubit
+    - balanceado dá uma probabilidade - vários *shots* pra balancear
+    - atualmente tem 2 qubits, uma caixa-preta e um measure - mas ainda mantiveram com o mesmo nome
+- DEutsch-Jozsa formalizam o problema - extensão
+    - N variáveis (tabela verdade)
+    - cm um shot ele diz se tá balanceado
+- Algoritmo de Deutsch
+    - Oráculo - caixa-preta (conteúdo desconhecido) - Deutsch chamava de subrotina
+    - sistema físico qualquer
+    - não se sabe o que se passa lá dentro
+    - paralelismo massivo
+        - coloca em superposição todos os qubits
+    - tem 2 qubits de entrada em superposição
+    - constância é tudo zero ou tudo 1
+    - função balanceada tem 50% de saída 0 e 50% de saída 1 (necessairamente - exatamente)
+    - Toy model
+    - prova de conceito
+    - problema promessa - entradas certas e já sabemos a saída
+    - fase do destino pode ir pra origem - isso faz com que uma consulta seja o suficiente
+    - qubit auxiliar/ancilla é fundamental para a interferência |1>
+    - oráculo faz uma XOR - cálculo do módulo de F(x)
+    - o retorno no measure é se 0 ou 1 sempre
+    - usamos XOR porque é uma natural já conhecida = CNOT
+    - tranformação de Zhegalkin ou Reed-Muller - pega qualquer expressão booleana e transforma em funções de XOR - daí podemos aplicar CNOTs
+    - fase não pode começar em 00
+    - phase kick back -> retroceder uma fase -> dá pra mandar os negativos pra outros lugares na esfera de bloch -> coloca fase pra fora (no x)
+    - funções constantes tem os mesmos blocos que multiplicam x e y
+    - não se pode deixar a fase dentro do qubit - ela precia ficar pra fora, necessariamente
+- casos constantes não precisam de aplicação de portas
+- Deutsch-Jozsa
+    - amostragem de melhora exponencial
+    - 2^(n-1) + 1 entradas pra descobrir balanceamento no clássico
+    - Deutsch descobre com uma lida
