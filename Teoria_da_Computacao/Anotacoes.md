@@ -247,4 +247,11 @@ DATA: 07/Outubro/2025
 - valores de testes (normalmente baixos) para testes precisam ser utilizados
 - isso é mais perto de um Assembly que os outros
     - descrição de ações mais semelhante
-- 
+- 7-upla => M = (V, X, Y, πx, πy, ∏F, ∏T) 
+- a declaração da máquina aqui passa todas as funções que ela pode exercer
+- a computação é sempre inicializada por um par pelo menos (entrada e saída)
+    - podem existir N entradas e usualmente uma só saída
+- a máquina precisa passar, também, os testes realizados nela para que ela seja possível
+    - caso eles falham ou sejam impossúiveis com as funções fornecidas, a tradução está errada
+- depois de montar a máquina em dada linguagem (monolítica, iterativa ou recursiva) é necessário verificar se a máquina é finita ou não
+    - não, não existe meio termo
