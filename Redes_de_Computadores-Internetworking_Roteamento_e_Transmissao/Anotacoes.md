@@ -398,4 +398,16 @@ DATA: 09/Outubro/2025
 - é importante saber o formato pra conseguir formatar os dados e fazer uma busca - camada superior precisa saber montar o dado
 - sequências padrão entregam o começo de quadros - preâmbulos
 - nessa camada algoritmos de anticolisão são necessários - CSMAICD
-- 
+- limite de 1500 é por fatores históricos de RAM
+- endereços MAC tem 48 bits
+- frames têm, no mínimo, 46 bytes
+
+# Protocolo ARP
+- cada adaptador tem um endereço exclusivo por máquina
+- fabricante compra parte do endereço MAC pra fabricação
+- plano (sem hierarquia)
+- dá pra mover placas de rede entre computadores sem problemas
+- preciso do endereço MAC de destino - se n tiver preciso do ARP pra encontrar - pra poder mandar o quadro corretamente
+- tabelas ARP separadas por rede (não se conversam)
+- como troubleshoot sempre dá pra settar um MAC numa porta
+- comando flush de praxe pra limpar tudo
