@@ -95,3 +95,15 @@ DATA: 15/Setembro/2025
 - specify architecture or deplyment
 - diagram must have cloud services utilized
     - how the service interact with one another
+ 
+DATA: 06/Outubro/2025
+# Cloud Security Fundamentals
+- Infomration security is often times mislead or misinterpreted
+- According to ISO 27002, information security is the protection of information against various types of threats to ensure business continuity, minimize risks, and maximize return on investments and business opportunities
+- confidentiality, integrity and availability are the main concerns of information security
+    - as this is a triangle, you can see that this might be an issue to have them 3 at high, at the same time
+- computer, storage and networking assets - they need availability and are all proon to fail
+- Man-in-the-Middle attacks are very easy to do and useul
+    - problem is to know where the information is passing through
+- security is the protection against external attackers and information integrity
+- privacy is the end user's right to control their personal information
