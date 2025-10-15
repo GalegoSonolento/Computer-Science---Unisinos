@@ -379,7 +379,7 @@ DATA: 09/Outubro/2025
 - ATM
 - Frame Relay
 - dependendo de onde o dado passa é necessário segmentar o pacote
-- ainda são pacotes, mas eles são quebrado em células sequanciais à depender do quadro
+- ainda são pacotes, mas eles são quebrados em células sequanciais à depender do quadro
     - é tudo sempre remontado
 - IPs públicos são vistos globalmente - podem perder funcionalidade por rede
     - por isso não de chumba o IP na placa
@@ -401,6 +401,24 @@ DATA: 09/Outubro/2025
 - limite de 1500 é por fatores históricos de RAM
 - endereços MAC tem 48 bits
 - frames têm, no mínimo, 46 bytes
+- 
+- frames e quadros são a mesma coisa
+    - pacotes são compostos de quadros
+- o datagrama ainda é o mesmo e a lógica de roteamento continua
+    - o que muda aqui é só o meio de propagação
+- camdas 4 e 2 precisam de garantia de entrega porque:
+    - na 2 preciso entregar o stream de bits pra remontar o pacote do outro lado, do contrário ele se perde
+    - na 4 preciso verificar que todos os pacotes são ínegros e podem remontar a mensagem
+- para os hosts entenderem começos e finais de quadros, precisamos de técnicas
+    - mais comuns ssão flags
+    - *bit stuffing*
+        - insere um bit contrário a cada 5
+        - 000001000001
+        - 111110111110
+        - até protocolo USB usa
+- detecção de erros utiliza bastante checksum
+    - s/ correção ainda
+- cada interface precisa de um endereço MAC independente
 
 # Protocolo ARP
 - cada adaptador tem um endereço exclusivo por máquina

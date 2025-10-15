@@ -1,0 +1,10 @@
+Exercícios
+
+    1. Por que é necessário ter endereços MAC além de endereços IP?
+       Porque endereços MAC são planos e sem hierarquia, se usássemos endereços IP para as máquias apenas, não poderíamos usar a mesma placa de rede fora da rede em que ele foi instalado ou feito para.
+
+    2. Por que a camada de enlace divide os bits em quadros? 
+Para que eles caibam na taxa de transferência, controle de fluxo e adição de endereçamento MAC.
+
+    3. O protocolo ARP pertence à camada de enlace ou de rede? Explique detalhadamente a sua resposta.
+Enlace. ARP necessariamente precisa de acesso à camada de enlace para ver os endereços MAC e designar um IP. As tabelas ARP são quem associam os Ips aos endereços MAC para enviar os datagramas (ou quaadros, na camada de enlace) para o host 
