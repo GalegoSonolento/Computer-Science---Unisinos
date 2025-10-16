@@ -580,3 +580,49 @@ DATA: 08/Outubro/2025
     - amostragem de melhora exponencial
     - 2^(n-1) + 1 entradas pra descobrir balanceamento no clássico
     - Deutsch descobre com uma lida
+
+DATA: 15/Outubro/2025
+# Algoritmo de Bernstein-Vazirani e Simon
+- descobriram uma classe nova de algoritmoss
+- teoria da complexidade quântica
+    - classe BQP - *Bounded-Error Quantum Polynomial Time*
+    - existem problemas fora do *Bounded-error Probabilistic Polynomial time*
+    - não dá pra resolver via polinômio e nem NP
+    - o algoritmo saiu daí
+- um dos primeiros quânticos
+- demonstra claramente uma **vantagem quântica**
+    - em cima de um problema clássico
+- adaptação do Deutsch e Deutsch-Jozsa
+- resolve com uma consulta ao Oráculo
+- classe Deutsch de execução
+    - têm um oráculo como função
+- a máquina de Turing ainda resolve
+- módulo 2 é feito em cada connnjunto
+    - equivalente ao XOR do Deutsch
+- objetivo é descobrir a String s
+- speed exponencial em consultas
+    - sai de exponencial para linear (ABSURDO)
+- S.X ⊕ = ⊕ s.x
+- sempre módulo 2
+- a alteração toda é dentro da função (Oráculo)
+- String secreta é definida previamente
+
+## Algoritmo de Simon
+- Híbrido
+- algoritmo 2 pra 1
+- separação absurda de processamento do clássico pro quântico
+- sai de O(2^(n/2)) pra um O(1)
+- usa Deutsch (mesma classe)
+- algoritmo de fatoração
+- X é uma string
+- devolve uma sequência de bits
+- 2 inputs, mesma saída
+    - 2:1
+- vários ansilas
+- XOR de f(x) na caixa-preta de novo
+- faz um medição dos ansilas logo depois do Oráculo
+- ele mostra a String que aplicando XOR gera a saída
+- dá pra fazer um output qqql
+- aplicação da entrada XOR a string secreta entrega a outra entrada que dá o resultado arbitrário
+- saída |00> é injetora e desconiderada
+- execução n-1 vezes
