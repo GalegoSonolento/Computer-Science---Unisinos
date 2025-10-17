@@ -1,0 +1,81 @@
+Assinale a alternativa que indica corretamente a situação em que as filas das portas de entrada do roteador irão crescer até lotar e poderá haver descarte de pacotes:
+Questão 04 Resposta
+
+a. Uma baixa taxa de pacotes que chegam pelas portas de entrada e um elemento de comutação lento, mas que consegue dar conta de todos os pacotes.
+b.Um elemento de comutação rápido no roteador (que consegue lidar com todos os pacotes que chegam) e enlaces conectados nas portas de saída cuja vazão é menor do que a taxa de pacotes que chegam.
+c.A vazão do enlace conectado na porta de saída do roteador é menor do que a vazão do enlace conectado na porta de entrada (ou seja, a taxa de chegada de pacotes é maior que a taxa de saída de pacotes do roteador).
+d.Uma alta taxa de pacotes que chegam no roteador pelas portas de entrada e uma baixa vazão nas portas de saída do roteador (ou seja, a taxa de pacotes que chegam pelas portas de entrada é maior do que taxa de pacotes que podem ser enviados pela rede nas portas de saída).
+-> e.Uma alta taxa de pacotes que chegam pelas portas de entrada e um elemento de comutação lento (que não é rápido o suficiente para lidar com todos os pacotes).
+
+Sua resposta está correta.
+A resposta correta é: Uma alta taxa de pacotes que chegam pelas portas de entrada e um elemento de comutação lento (que não é rápido o suficiente para lidar com todos os pacotes).
+
+
+
+
+Suponha que uma organização possua o bloco de endereços 128.119.40.64/26. Considerando esse bloco, especifique o endereço de rede, de broadcast, os endereços que podem ser atribuídos a hosts nessa rede e o número máximo de hosts que essa rede comporta. Explique como você chegou na resposta.
+
+    Nessa rede, teremos que o endereço de Host será 128.119.40.64, o endereço de Broadcast será 128.119.40.127 e teremos um total de 62 hosts à disposição (do endereço 128.119.40.65 - incluso - até 128.119.40.126 - também incluso).
+
+    É possível chegar nesse resultado tornando o endereço base (128.119.40.64/26) em binário e aplicando uma porta AND; ficando mais ou menos (1000000.01111011.00101000.01000000 AND 11111111.11111111.11111111.11000000 - o segundo valor é dado pela máscara de rede, /26, que pressupõe uma máscara 255.255.255.192, o segundo valor em binário). 
+    Essa cálculo gera 10000000.01111011.00101000.01000000, que traduz-se em 128.119.40.64, o endereço de Host.
+
+    Para a quantidade de hosts de usuário, podemos fazer 32-26 (tamanho de um endereço IPv4 - tamanho da máscara), e potencializar a base dois no resultado, logo 2^6, que resulta em 64, menos um endereço de host e um de broadcast, 62.
+
+    Para o endereço de Broadcast, podemos fazer uma soma simples, adicionando 63 (64 endereços totais menos o já analisado de host) ao último octeto, assim gerando o endereço 128.119.40.127 de Broadcast.
+
+
+
+Conforme estudado em aula, um roteador pode fragmentar datagramas IPv4 caso o MTU do enlace de saída seja menor que o tamanho do datagrama recebido. Nesse contexto, um roteador recebe um datagrama de 4000 bytes em uma de suas interfaces de entrada, com identifcador 897. Este datagrama precisará ser encaminhado para um enlace Ethernet, cujo MTU é 1500 bytes. Nesse sentido, informe os valores do campo deslocamento do fragmento (fragment offset) e da flag mais fragmentos (more fragments) do último fragmento.
+
+Observação: ambos os valores devem ser informados dentro de net{}, separados por vírgula e sem espaço (ou seja, net{deslocamento,flag}). Exemplo: net{4123,1}
+
+    Orientações
+
+    Cada fragmento (exceto o último) deve ter tamanho de dados múltiplo de 8 bytes, pois o deslocamento é medido em unidades de 8 bytes.
+
+    Primeiro fragmento: 1480 bytes de dados → deslocamento 0
+
+    Segundo fragmento: 1480 bytes de dados → deslocamento 1480 ÷ 8 = 185
+
+    Terceiro (último) fragmento: 1020 bytes de dados (4000 - 1480 - 1480) → deslocamento 2960 ÷ 8 = 370
+
+    A flag “More Fragments” (MF) só é 0 no último fragmento.
+
+    Resposta: net{370,0)
+
+
+
+Cite e explique as duas principais funções da camada de rede. Após, explique qual é a relação entre essas duas funções.
+
+    As duas funções são:
+
+    ·         Encaminhamento: o roteador deve mover o pacote da interface de entrada para uma das interfaces de saída
+
+    ·         Roteamento: a camada de rede deve determinar a rota utilizada pelos pacotes desde a origem até o destino
+
+    
+
+    Elas estão relacionadas da seguinte maneira. A função de roteamento é desempenhada pelos protocolos de roteamento que executam nos roteadores e determinam as rotas existentes entre a fonte (transmissor) e o destinatário (receptor dos dados). O protocolo de roteamento monta a tabela de roteamento, que possui todas as informações utilizadas pelo respectivo protocolo sobre a rede e os destinatários. A tabela de encaminhamento, utilizada pelos roteadores para realizar a função de encaminhamento de pacotes, é montada com base nas informações presentes na tabela de roteamento (os melhores caminhos determinados pelo protocolo de roteamento são selecionados para serem utilizados no encaminhamento de pacotes).
+
+    
+
+    “Protocolos de roteamento determinam rotas e constroem tabela de roteamento; tabela de encaminhamento é derivada desta e usada para decidir o próximo salto.”
+
+
+
+
+
+Descreva os anúncios usados pelos algoritmos de vetor de distância e estado de enlace, explicando as diferenças entre ambos.
+
+Observação: um anúncio significa quais informações o roteador envia pela rede e para quem essas informações são enviadas.
+
+    Com o estado de enlace, um roteador periodicamente transmite informações de roteamento para todos os outros roteadores no sistema autônomo, não apenas para os seus roteadores vizinhos. Esta informação de roteamento enviada por um roteador possui uma entrada para cada um dos vizinhos do roteador; a entrada fornece a distância (custo) do roteador para o vizinho.
+
+    Um anúncio de vetor de distância enviado por um roteador contém informações de custo para chegar em todos os roteadores no sistema autônomo (que o anunciante conhece), embora esta informação seja enviada somente para os seus vizinhos.
+
+    
+
+    Vetor de Distancia: O anuncio consiste em uma tabela contendo os custos (distancia) para todos destino conhecidos por aquele roteador. 
+
+    Estado de Enlace: O anuncio consiste uma tabela contendo informações (pesos) apenas dos enlaces diretamente conectados ao roteador em questão. Diferentemente do vetor de distancia, essa tabela é enviada apenas para os roteadores diretamente conectados.

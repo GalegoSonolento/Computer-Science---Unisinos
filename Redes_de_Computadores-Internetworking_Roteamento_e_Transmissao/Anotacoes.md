@@ -429,3 +429,12 @@ DATA: 09/Outubro/2025
 - tabelas ARP separadas por rede (não se conversam)
 - como troubleshoot sempre dá pra settar um MAC numa porta
 - comando flush de praxe pra limpar tudo
+
+DATA: 16/Outubro/2025
+# Controle de fluxo de detecção de erros
+- taxa de envio ajustada à capacidade de transmissão evita erros de armazenamento
+- cabo precisa de certificação justamente pra n perder capacidade com a idade (muita)
+- detecção e tratamento de erros aqui já ajuda o sistema a não perder tempo
+    - evita precisar abrir o TCP pra identificação
+- erros normalmente são em rajadas e podem passar batido
+- 
