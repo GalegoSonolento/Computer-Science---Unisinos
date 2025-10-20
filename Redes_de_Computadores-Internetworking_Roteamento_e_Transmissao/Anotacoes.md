@@ -437,4 +437,14 @@ DATA: 16/Outubro/2025
 - detecção e tratamento de erros aqui já ajuda o sistema a não perder tempo
     - evita precisar abrir o TCP pra identificação
 - erros normalmente são em rajadas e podem passar batido
-- 
+- os fluxos de transmissão de dados podem se encerrar apeans evitando a transmissão de um ACK novo
+- Abordagens possíveis no tratamento de erros:
+    - Ignorar o erro
+    - Eco (transmissão à origem dos dados recebidos)
+    - Detectar e solicitar retransmissão
+    - Detectar e corrigir os erros na recepção de forma automática
+- Bit Error Rate:
+    - simplesmente BER = NumDeBitsErrados/TotDeBitsTransmitidos
+    - taxas de 10⁻⁶ é 1 bit errado em 1 milhão
+    - bastante baixo - taxas maiores que essa em quantidade são sinais
+- Quanto mais longo o quadro, mais bits ele tem e, consequentemente, maior a probabilidade de que um deles esteja com erro

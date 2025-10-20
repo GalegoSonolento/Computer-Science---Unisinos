@@ -107,3 +107,10 @@ DATA: 06/Outubro/2025
     - problem is to know where the information is passing through
 - security is the protection against external attackers and information integrity
 - privacy is the end user's right to control their personal information
+
+DATA: 15/Outubro/2025
+# Accesss Control and Identity Access Management
+- every system should be using the minimal access approach
+    - only assign the accessess a user really needs
+    - asssigning extras is a ssecuriy risk - even if the authentication method is good
+- 

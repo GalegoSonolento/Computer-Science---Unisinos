@@ -580,6 +580,12 @@ DATA: 08/Outubro/2025
     - amostragem de melhora exponencial
     - 2^(n-1) + 1 entradas pra descobrir balanceamento no clássico
     - Deutsch descobre com uma lida
+- Função constante é bem diferente de balanceada
+    - constante tem uma saída única
+        - 100% de saída, determinístico
+    - balanceada tem duas, em partes iguais
+        - superposição
+    - a moral do Deutsch é mostrar que essa verificação é possível com apenas 1 verificação
 
 DATA: 15/Outubro/2025
 # Algoritmo de Bernstein-Vazirani e Simon
