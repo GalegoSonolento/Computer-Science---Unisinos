@@ -113,4 +113,10 @@ DATA: 15/Outubro/2025
 - every system should be using the minimal access approach
     - only assign the accessess a user really needs
     - asssigning extras is a ssecuriy risk - even if the authentication method is good
+
+DATA: 20/October/2025
+# Data Security
+- Data must be encrypted while navigating on the Internet, sending plain text is problematic
+- AWS and other cloud services can generate this for teh users (always best to have your own)
+- Data accountability on cloud is important
 - 
