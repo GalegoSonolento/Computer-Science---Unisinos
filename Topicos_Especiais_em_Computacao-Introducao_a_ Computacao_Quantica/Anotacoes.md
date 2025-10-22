@@ -1,3 +1,5 @@
+# https://github.com/irajamuller/quantum_computing
+
 DATA: 06/Agosto/2025
 # Introdução à Computação Quântica
 - O modelo clássico chegou a um limite
@@ -588,7 +590,7 @@ DATA: 08/Outubro/2025
     - a moral do Deutsch é mostrar que essa verificação é possível com apenas 1 verificação
 
 DATA: 15/Outubro/2025
-# Algoritmo de Bernstein-Vazirani e Simon
+# Algoritmo de Bernstein-Vazirani
 - descobriram uma classe nova de algoritmoss
 - teoria da complexidade quântica
     - classe BQP - *Bounded-Error Quantum Polynomial Time*
