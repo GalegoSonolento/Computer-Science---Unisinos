@@ -10,4 +10,14 @@ DATA: 17/Outubro/2025
     - ele não é maligo, só capitalista
 - valores dos dados vêm do contexto e entendimento do que eles são
     - entendimento do negócio é bastante importante
-- 
+- em torno de 90% de todos os dado do planeta oram gerado nos últimos 2 anos
+    - é sempre mais e mais, precisamos connseguir armazenar e extrair informação desses dados de maneira eficiente
+- 5 Vs de big data
+    - volume
+    - velocidade
+    - variedade
+    - veracidade
+    - valor
+- o pipeline é o conjunto de instruções de extração e preparação dos dados
+    - é um método para coletar, analisar e passar para a tomada de decisão
+    - uma automação, um método
