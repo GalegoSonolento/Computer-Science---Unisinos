@@ -634,3 +634,37 @@ DATA: 15/Outubro/2025
 - aplicação da entrada XOR a string secreta entrega a outra entrada que dá o resultado arbitrário
 - saída |00> é injetora e desconiderada
 - execução n-1 vezes
+
+DATA: 22/Outubro/2025
+# Algoritmo de Grover
+- utiliza bastante repetições
+    - a gente usa um for dentro do python, mas na realidade no circuito ele gera as operações várias vezes
+- reduz amplitude de quem não faz parte da solução
+- problema do 3-SAT - SAtilidad
+    - problema genérico pra encontrar um NP
+    - P = NP?
+    - resolve com problemas pequenos (existem competições pra tentar encontrar maiores)
+    - precisa de mto qubit (mas o algoritmo de Grover consegue resolver)
+- tem mais de um oráculo - o primeiro é igual o de Deutsch
+- começa tudo sempre em zero (estado fundamental)
+    - seta na esfera de Bloch apontando pra cima
+- operador de difusão é o segundo oráculo
+    - amplificação da amplitude
+    - estado procurado amplificado
+    - 2|0^n><0^n| - I_n
+- aplica o bloco de dois oráculos N vezes
+    - o cálculo é ~ (pi/4)*sqrt(2^2)
+        - 2² qubits
+        - pra procurar um ítem
+        - pra dois
+            - (pi/4)*sqrt(N/M)
+    - arredonda pra baixo sempre
+- esse é o algoritmo que pode quebrar criptografia
+- Grover no pior caso é sqrt(n)
+- ccz -> porta control control Z - pra 3 qubits
+
+# interferência
+- pegar a fase de um qubit e transportar pra outra
+- construtiva ou destrutiva (tipo ondas mesmo)
+- com CNOT e CCNOT dá pra fazer qualquer operação em table verdade
+- 
