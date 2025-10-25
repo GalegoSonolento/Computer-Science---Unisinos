@@ -448,3 +448,10 @@ DATA: 16/Outubro/2025
     - taxas de 10⁻⁶ é 1 bit errado em 1 milhão
     - bastante baixo - taxas maiores que essa em quantidade são sinais
 - Quanto mais longo o quadro, mais bits ele tem e, consequentemente, maior a probabilidade de que um deles esteja com erro
+
+DATA: 23/Outubro/2025
+# Controle e Correção de Erros e o Protocolo HDLC
+- ARQ
+- tempo de propagação mais alto que transmissão pode ser um problema
+- adição de informação (redundância) pode ser uma solução
+    - consumo bem maior de banda
