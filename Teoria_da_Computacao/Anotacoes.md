@@ -1,3 +1,5 @@
+- https://try.scheme.org/
+
 DATA: 05/Agosto/2025
 # Apresentação, conceitos básicos e execícios
 - Máquina universal - pode fazer qualquer coisa
@@ -255,3 +257,41 @@ DATA: 07/Outubro/2025
     - caso eles falham ou sejam impossúiveis com as funções fornecidas, a tradução está errada
 - depois de montar a máquina em dada linguagem (monolítica, iterativa ou recursiva) é necessário verificar se a máquina é finita ou não
     - não, não existe meio termo
+
+DATA: 28/Outubro/2025
+# Lambda cálculo
+- variáveis livres nao têm lambda associado
+- linguagem de programação abstrata
+- recursividade (chamada de funções aninhada)
+
+(define (soma x)) -> definição de função "soma" com parâmetro x
+(+ x x) -> associação de função com símbolo (variável)
+
+- trabalho com redução de expressões
+    - igual uma operação matemática mesmo
+- (λx. + x 1)
+    - lambda com parâmetro
+    - variáveis dentro do Lâmbda são **ligadas**
+        - podem ter parâmetros e substituições
+- λ é o define
+(define (soma x)
+(+ x 1))
+
+- https://try.scheme.org/ -> pra estudos (pessoal usa antes de ir pro Lisp)
+- com variáveis ligadas ao lâmbda é possível fazer substituições
+    - β-redução
+    - dá pra usar o parâmetro mais de uma vez
+- isso é a normalidade (chegar em um resultado)
+- dá pra trabalhar com vários termos
+    - expressões complexas
+- declarações das funções não são necessárias depois da primeira declaração
+- variável é livre quando não associada a uma função qualquer
+    - declaração de função precisa do lâmbda
+        - ligados estão junto ao λ
+- é uma boa prática renomear variáveis internamente pra evitar confusão
+- redução implica na subsituição das variáveis e fazer os cálculos de fato
+- α-conversão
+    - quando se troca a variável da função λ
+- η-redução
+    - pega só a expressão sem o parâmetro
+    - substituição não é pelo parâmetro
