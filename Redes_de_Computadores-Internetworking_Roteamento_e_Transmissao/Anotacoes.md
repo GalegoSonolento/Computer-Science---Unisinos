@@ -455,3 +455,35 @@ DATA: 23/Outubro/2025
 - tempo de propagação mais alto que transmissão pode ser um problema
 - adição de informação (redundância) pode ser uma solução
     - consumo bem maior de banda
+
+DATA: 30/Outubro/2025
+# LAN
+- Local Area Network
+- BAN - Body Area Network
+    - wearables
+    - itens de exame no corpo, etc
+- PAN - Personal Area Network
+    - até 10 metros (mas depende)
+    - mas são para itens pessoais
+        - Bluetooth por exemplo
+    - a característica maior é ser ponto-a-ponto
+- SAN - Storage Area Network
+    - integração de sistemas de grande escala
+    - sempre usam fibra ótica
+- Lâminas em servidores modernos são equivalesntes a Hacks
+    - tem placas para etherned SAN e LAN
+    - também temos VLANs e VSANs
+- Blades são, em tese, mais baratos de manter (menos energia)
+- normalmente LANs de alta conectividade tem um software em cima (front-end) pra comunicação de várias blades
+    - modelo quase que de uma AWS mas local
+- quanto mais próximo do core ou topo da rede
+    - maior precisa ser o valor do uplink
+- topologia estrela é basicamente um HUB
+- multigiga é só maior que 1GB
+    - celular vão até mais ou menos 1,5GB atualmente
+- IEE 802 é tudo pra LAN
+- Bridges são pontes
+    - Conectam LANs similares
+    - antigamente conectavam diferentes tecnologias
+- visão topológica é geralmente diferente da física
+    - posso ter VLANs diferentes na mesma visão física pra evitar enchurrada de broadcast (**broadcast storm**)
