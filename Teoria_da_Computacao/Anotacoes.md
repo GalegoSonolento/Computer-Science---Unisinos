@@ -295,3 +295,5 @@ DATA: 28/Outubro/2025
 - η-redução
     - pega só a expressão sem o parâmetro
     - substituição não é pelo parâmetro
+- calculo lâmbda é bastante relacionado com programação funcional, ou seja, Haskell
+- 
