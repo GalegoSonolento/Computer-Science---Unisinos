@@ -119,4 +119,9 @@ DATA: 20/October/2025
 - Data must be encrypted while navigating on the Internet, sending plain text is problematic
 - AWS and other cloud services can generate this for teh users (always best to have your own)
 - Data accountability on cloud is important
+- There's a difference between data in transit and data at rest
+    - it's usually easier to catch data in transit if there's no effective encrypting.
+- one of the solutions recently found was the AWS KMS - for key management
+- client made keys tend to be safer in general
+    - server application does not has both key pairs
 - 
