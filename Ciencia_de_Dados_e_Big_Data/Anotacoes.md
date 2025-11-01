@@ -21,3 +21,17 @@ DATA: 17/Outubro/2025
 - o pipeline é o conjunto de instruções de extração e preparação dos dados
     - é um método para coletar, analisar e passar para a tomada de decisão
     - uma automação, um método
+
+DATA: -> semana 2
+# Estrutura e natureza dos dados
+- maior parte dos dados são não-estruturados
+    - aqui cai imagem audio, vídeo etc
+    - a imagem digital é erstruturada, mas o significado dela não
+        - um computador consegue representar ou desenhar a imagem, mas não consegue entender computacionalmente
+- estrutura de hierarquia também é muito importante 
+    - JSON e XML são semi-estruturados
+- SPARK permite processamento em múltiplas máquinas
+- diversas empresas têm datasets publicados
+    - kaggle tem vários datasets publicados 
+    - algumas empresas anonimizam os dados e criam competições abertas ao público
+- 
