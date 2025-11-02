@@ -462,6 +462,7 @@ DATA: 30/Outubro/2025
 - BAN - Body Area Network
     - wearables
     - itens de exame no corpo, etc
+    - dispositivos operando no ou sobre o corpo
 - PAN - Personal Area Network
     - até 10 metros (mas depende)
     - mas são para itens pessoais
