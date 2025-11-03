@@ -124,4 +124,8 @@ DATA: 20/October/2025
 - one of the solutions recently found was the AWS KMS - for key management
 - client made keys tend to be safer in general
     - server application does not has both key pairs
-- 
+
+DATA: 11/Novembro/2025
+# Network virtualization
+- Virtual networks need a physical layer to work
+    - but one PC can hold 
