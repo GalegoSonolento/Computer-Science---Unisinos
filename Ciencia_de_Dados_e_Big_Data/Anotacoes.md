@@ -37,6 +37,8 @@ DATA: -> semana 2
 
 DATA: 31/Outubro/2025
 # Projetos de dados
+- em datasets com meses, pro exemplo, tire os últimos meses em separado e use-os para validação do modelo
+    - para ensinar o modelo a prever o futuro - e validar
 - ciÊncia de dados não vai entrar só na IA
     - tem todo o processo de garimpar, limpar, otimizar, etc
 - cientista de dados precisa entender o que ele está fazendo
