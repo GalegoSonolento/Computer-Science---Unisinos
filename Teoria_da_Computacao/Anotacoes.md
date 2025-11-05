@@ -213,8 +213,6 @@ DATA: 09/Setembro/2025
     - esses algoritmos são montados como máquinas de estado
     - tem no mínimo o mesmo poder de processamento que qualquer máquina de uso geral
     - 𝚷(p, au) = (q, av, m) → 𝚷(estado_atual, simb_lido) = (novo_estado, simb_gravado, sent_movimento)
-    - 
-
 
 DATA: 16/Setembro/2025
 # Máquina de norma
@@ -296,4 +294,12 @@ DATA: 28/Outubro/2025
     - pega só a expressão sem o parâmetro
     - substituição não é pelo parâmetro
 - calculo lâmbda é bastante relacionado com programação funcional, ou seja, Haskell
+
+DATA: 04/November/2025
+# Equivalências
+- basicamente equivalência entre programas, bem como o nome diz
+- processamento precisa ser o mesmo entre as duas
+    - simulação de uma máquina na outra
+- equivalência forte é, bom, uma equivalência
+- basicamente fluxogramas
 - 
