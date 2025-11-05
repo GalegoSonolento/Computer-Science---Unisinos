@@ -128,4 +128,7 @@ DATA: 20/October/2025
 DATA: 11/Novembro/2025
 # Network virtualization
 - Virtual networks need a physical layer to work
-    - but one PC can hold 
+    - but one PC can hold several VMs to make a LAN
+- virtual nodes still need the physical paths to function
+    - it´s more of a abstraction layer where the phyisical can be divided better
+- The virtual nodes of the virtual network can expand and be spread out on the SPs (service Providers)
