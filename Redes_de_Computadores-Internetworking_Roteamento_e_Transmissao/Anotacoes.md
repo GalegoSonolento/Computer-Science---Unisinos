@@ -488,3 +488,12 @@ DATA: 30/Outubro/2025
     - antigamente conectavam diferentes tecnologias
 - visão topológica é geralmente diferente da física
     - posso ter VLANs diferentes na mesma visão física pra evitar enchurrada de broadcast (**broadcast storm**)
+- Bridges são ótimas para conectar duas tecnologias diferentes e transformar os datagramas (quadros) traduzindo-os
+- HUB é um cabo reto com transmissão pra todas as portas
+    - não tem memoria pra MAC-Address table
+    - barramento
+    - tudo é broadcast
+
+DATA: 06/Novembro/2025
+# Especificações ethernet
+- 
