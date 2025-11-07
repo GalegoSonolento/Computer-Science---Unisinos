@@ -302,4 +302,18 @@ DATA: 04/November/2025
     - simulação de uma máquina na outra
 - equivalência forte é, bom, uma equivalência
 - basicamente fluxogramas
+- programas equivalentes são máquinas equivalentes
+- simluações podem existir
+    - se o resultado for o mesmo existe equivalência
+- <P, M> = <Q, M>
+    - sendo M o resultado
+    - sendo o par <P, Q> igual em funções e execução
+    - eles são **fortemente equivalentes**
+- equivalencia forte
+    - Iterativo 	⇨	Monolítico
+    - Monolítico 	⇨	Recursivo
+    - Iterativo 	⇨	Recursivo
+    - Recursivo 	≠	Monolítico
+    - Monolítico	≠	Iterativo
+- programas não podem mudar dinamicamente durante a computação, ou seja, caminhos possíveis (não-determinísticos) devem ser mapeados anteriormente
 - 
