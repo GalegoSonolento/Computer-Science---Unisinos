@@ -496,4 +496,10 @@ DATA: 30/Outubro/2025
 
 DATA: 06/Novembro/2025
 # Especificações ethernet
+- coaxial, cabo de par trançado
+- novas tecnologias propostas normalmente precisam de consideração da rede á instalada 
+    - não dá pra trocar o cabeamento todo
+- fast ethernet é retrocompatível
+    - backbone pode ser fast ethernet e hubs são ethernet (possível)
+    - 100GB e estações multigiga
 - 
