@@ -125,10 +125,22 @@ DATA: 20/October/2025
 - client made keys tend to be safer in general
     - server application does not has both key pairs
 
-DATA: 11/Novembro/2025
+DATA: 03/Novembro/2025
 # Network virtualization
 - Virtual networks need a physical layer to work
     - but one PC can hold several VMs to make a LAN
 - virtual nodes still need the physical paths to function
     - it´s more of a abstraction layer where the phyisical can be divided better
 - The virtual nodes of the virtual network can expand and be spread out on the SPs (service Providers)
+
+DATA: 10/Novembro/2025
+# Software-Defined Networking (SDN)
+- This helps to keep up with the growing complexity and sheer size of internet and networking in modern days
+- Helps on isolation of issues and increases escalability
+- Logically centralized even though physical instances are distributed 
+    - this require at least decent hardware (e.g. Fast Ethernet cable of 10km - quite expensive)
+- Classical physical layer control information by package
+- Proactive control is much better
+    - push policy rules to devices before them receive a larger flow or predicting it is better, always
+        - avoids loosing connections due to lack of resources (sales suffers from this, mainly)
+- Application churn may lead to resource re-application (issue)
