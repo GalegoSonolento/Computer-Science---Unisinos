@@ -67,3 +67,7 @@ DATA: 07/Novembro/2025
 - existem diferentes maneiras de se lidar com dados inconsistentes
     - mas é importante que se lide com eles de alguma forma
 - menos colunas (não dados!) ajudam o algritmo a concentrar processamento nas informações que importam de verdade
+
+DATA: 14/Novembro/2025
+# Aprendizagem de Máquina
+- 
