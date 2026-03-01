@@ -667,4 +667,22 @@ DATA: 22/Outubro/2025
 - pegar a fase de um qubit e transportar pra outra
 - construtiva ou destrutiva (tipo ondas mesmo)
 - com CNOT e CCNOT dá pra fazer qualquer operação em table verdade
-- 
+
+DATA: 5/Novembro/2025
+# Transformada quântica de Fourier
+- Fourier introduziu a possibilidade de funções periódicas em uma soma de senos e conssenos
+    - introdução da **série de Fourier**
+    - viraria a **Transformada de Fourier**
+- a série de Fourier quer, na realidade, escrever uma onda como a soma de senos e cossenos, essencialmente distrinchando a onda para funções mais simples
+- https://www.youtube.com/watch?v=r6sGWTCMz2k -> preciso terminar de ver esse vídeo (talvez a série)
+- Transformada de Fourier original informa o tempo em uma frequência, a inversa mostra a frequência em tempo
+    - uma quebra a onda em várias simples (puras) a inversa mostra as puras em composição
+- Para computação, necessariamente a frequência deve ser mostrada dioscretamente, em uma versão discreta da transformada de Fourier
+    - Base para algoritmos QFT
+- Transformadas discretas geralmente levam O(n²), a versão rápida leva O(nlogn)
+    - estratégia de divisão e conquista
+- A moral da QFT é colocar bases computacionais em valores binários em base Z
+    - em Fourier temos |+> e |->
+- Transformada quântica de Fourier (QFT)
+    - 1/√N Σ^(N-1)_k=0 e^(i[2πxk]/N)|k>
+- QFT será um produto tensor de todas as posições possíveis de estados para o qubit (probabilidades)

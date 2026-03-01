@@ -1,0 +1,61 @@
+# Futebol e computação: Dados, Decisão e Desafios
+- muitas variáveis dificultam análise
+- mental tem uma participação bastante grande no desempenho
+- além de umbilhão de outras
+    - variáveis táticas e técnicas aumentam exponencialmente
+- FUTEBOL É PREVISÍVEL - apesar de ter algum caos
+- 22 agentes -> decisões constantes em tempo real
+    - reorganização simultânea
+    - organização ofensiva e defensiva
+- tem a influência dos técnicos ainda -> mudança tática ao-vivo
+- placar influencia bastante -> time vencendo tende a compactar
+    - principalmente em times que jogam em divisões mais baixas
+- erros humanos (jogadores, arbitragem) mudam condição psicológica bem forte
+- pra computacionar isso é necessário representar matematicamente
+- estados não são aleatórios
+    - mudanças forçam transições de estados específicas
+        - do contrário não é um jogo
+    - estados novos sao condicionados pelos anteriores
+- futebol é bastante previsível na realidade
+- futebol é um sistema complexo
+    - de diversos esportes é o mais
+    - diversos jogadores e mudanças de estado muito frequentes
+- caos estruturado
+    - procura de padrões de transição de estados
+- a análise também considera, além de acertos, se eles foram significativos
+- dinâmico, complexo e estruturado
+- ordem - instabilidade - padrão (movimentação) - imprevisibilidade -> ao mesmo tempo!
+- complexidade aumenta exponencialmente
+    - na computação sai do espetáculo pra um sistema
+- Rogério Ceni usa bastante analistas pra análise
+    - PC, drone, câmera, relatórios -> bastante complexo
+    - já existe matéria em educação física c/ tech
+- Sistêma dinâmico e discreto
+    - estado altera o tempo todo
+    - descrição de variáveis de estado que mudam ao longo do tempo
+    - sistema discreto
+    - tracking ótico e GPS auxiliam adquirir dados
+- sequência formal de estados sequancial no tempo
+    - Propriedades e cadeia de Markov -> pode ser usado para predição de comportamentos
+- XD -> eXpected Goals
+    - usa os dados do estado atual
+- histórico de estados semelhantes mudam a estatística
+- Não totalmente determinístico
+- estados dependem de representação
+    - não necessariamente tenho todas as variáveis presentes
+    - posição espacial jogador (sistema de rastreamento), pos bola, posse de bola, tempo de jogo (inferência de fadiga), placar (pesa na decisão)
+- cada instante do jogo tem uma situação específica
+- com mtas variáveis estados não podem ser iguais
+    - mas se forem simples o suficiente os grafos de estados podem ser cíclicos
+- Noção do conceito de emergência
+    - à partir de atitudes individuais (locais) vinda de interações
+- além de avaliações individuais precisa avaliar grupo
+    - emergência e identificação de falhas
+- interações causais não são lineares
+- scouting são valores numéricos puros
+- incertezas e estocasticidade
+    - existem variáveis não observáveis
+    - modelos precisam incorporar probabilidade
+- sistema não completamente observável -> não pode ser puramente determinístico
+- modelos de progressão puramente probabilísticos não podem ser simplesmente escritos com álgebra, IA entra aqui
+- ETL -> Extraxt Transform Load

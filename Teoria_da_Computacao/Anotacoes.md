@@ -1,3 +1,5 @@
+- https://try.scheme.org/
+
 DATA: 05/Agosto/2025
 # Apresentação, conceitos básicos e execícios
 - Máquina universal - pode fazer qualquer coisa
@@ -211,8 +213,6 @@ DATA: 09/Setembro/2025
     - esses algoritmos são montados como máquinas de estado
     - tem no mínimo o mesmo poder de processamento que qualquer máquina de uso geral
     - 𝚷(p, au) = (q, av, m) → 𝚷(estado_atual, simb_lido) = (novo_estado, simb_gravado, sent_movimento)
-    - 
-
 
 DATA: 16/Setembro/2025
 # Máquina de norma
@@ -255,3 +255,65 @@ DATA: 07/Outubro/2025
     - caso eles falham ou sejam impossúiveis com as funções fornecidas, a tradução está errada
 - depois de montar a máquina em dada linguagem (monolítica, iterativa ou recursiva) é necessário verificar se a máquina é finita ou não
     - não, não existe meio termo
+
+DATA: 28/Outubro/2025
+# Lambda cálculo
+- variáveis livres nao têm lambda associado
+- linguagem de programação abstrata
+- recursividade (chamada de funções aninhada)
+
+(define (soma x)) -> definição de função "soma" com parâmetro x
+(+ x x) -> associação de função com símbolo (variável)
+
+- trabalho com redução de expressões
+    - igual uma operação matemática mesmo
+- (λx. + x 1)
+    - lambda com parâmetro
+    - variáveis dentro do Lâmbda são **ligadas**
+        - podem ter parâmetros e substituições
+- λ é o define
+(define (soma x)
+(+ x 1))
+
+- https://try.scheme.org/ -> pra estudos (pessoal usa antes de ir pro Lisp)
+- com variáveis ligadas ao lâmbda é possível fazer substituições
+    - β-redução
+    - dá pra usar o parâmetro mais de uma vez
+- isso é a normalidade (chegar em um resultado)
+- dá pra trabalhar com vários termos
+    - expressões complexas
+- declarações das funções não são necessárias depois da primeira declaração
+- variável é livre quando não associada a uma função qualquer
+    - declaração de função precisa do lâmbda
+        - ligados estão junto ao λ
+- é uma boa prática renomear variáveis internamente pra evitar confusão
+- redução implica na subsituição das variáveis e fazer os cálculos de fato
+- α-conversão
+    - quando se troca a variável da função λ
+- η-redução
+    - pega só a expressão sem o parâmetro
+    - substituição não é pelo parâmetro
+- calculo lâmbda é bastante relacionado com programação funcional, ou seja, Haskell
+
+DATA: 04/November/2025
+# Equivalências
+- basicamente equivalência entre programas, bem como o nome diz
+- processamento precisa ser o mesmo entre as duas
+    - simulação de uma máquina na outra
+- equivalência forte é, bom, uma equivalência
+- basicamente fluxogramas
+- programas equivalentes são máquinas equivalentes
+- simluações podem existir
+    - se o resultado for o mesmo existe equivalência
+- <P, M> = <Q, M>
+    - sendo M o resultado
+    - sendo o par <P, Q> igual em funções e execução
+    - eles são **fortemente equivalentes**
+- equivalencia forte
+    - Iterativo 	⇨	Monolítico
+    - Monolítico 	⇨	Recursivo
+    - Iterativo 	⇨	Recursivo
+    - Recursivo 	≠	Monolítico
+    - Monolítico	≠	Iterativo
+- programas não podem mudar dinamicamente durante a computação, ou seja, caminhos possíveis (não-determinísticos) devem ser mapeados anteriormente
+- 

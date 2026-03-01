@@ -448,3 +448,58 @@ DATA: 16/Outubro/2025
     - taxas de 10⁻⁶ é 1 bit errado em 1 milhão
     - bastante baixo - taxas maiores que essa em quantidade são sinais
 - Quanto mais longo o quadro, mais bits ele tem e, consequentemente, maior a probabilidade de que um deles esteja com erro
+
+DATA: 23/Outubro/2025
+# Controle e Correção de Erros e o Protocolo HDLC
+- ARQ
+- tempo de propagação mais alto que transmissão pode ser um problema
+- adição de informação (redundância) pode ser uma solução
+    - consumo bem maior de banda
+
+DATA: 30/Outubro/2025
+# LAN
+- Local Area Network
+- BAN - Body Area Network
+    - wearables
+    - itens de exame no corpo, etc
+    - dispositivos operando no ou sobre o corpo
+- PAN - Personal Area Network
+    - até 10 metros (mas depende)
+    - mas são para itens pessoais
+        - Bluetooth por exemplo
+    - a característica maior é ser ponto-a-ponto
+- SAN - Storage Area Network
+    - integração de sistemas de grande escala
+    - sempre usam fibra ótica
+- Lâminas em servidores modernos são equivalesntes a Hacks
+    - tem placas para etherned SAN e LAN
+    - também temos VLANs e VSANs
+- Blades são, em tese, mais baratos de manter (menos energia)
+- normalmente LANs de alta conectividade tem um software em cima (front-end) pra comunicação de várias blades
+    - modelo quase que de uma AWS mas local
+- quanto mais próximo do core ou topo da rede
+    - maior precisa ser o valor do uplink
+- topologia estrela é basicamente um HUB
+- multigiga é só maior que 1GB
+    - celular vão até mais ou menos 1,5GB atualmente
+- IEE 802 é tudo pra LAN
+- Bridges são pontes
+    - Conectam LANs similares
+    - antigamente conectavam diferentes tecnologias
+- visão topológica é geralmente diferente da física
+    - posso ter VLANs diferentes na mesma visão física pra evitar enchurrada de broadcast (**broadcast storm**)
+- Bridges são ótimas para conectar duas tecnologias diferentes e transformar os datagramas (quadros) traduzindo-os
+- HUB é um cabo reto com transmissão pra todas as portas
+    - não tem memoria pra MAC-Address table
+    - barramento
+    - tudo é broadcast
+
+DATA: 06/Novembro/2025
+# Especificações ethernet
+- coaxial, cabo de par trançado
+- novas tecnologias propostas normalmente precisam de consideração da rede á instalada 
+    - não dá pra trocar o cabeamento todo
+- fast ethernet é retrocompatível
+    - backbone pode ser fast ethernet e hubs são ethernet (possível)
+    - 100GB e estações multigiga
+- 
