@@ -1,3 +1,5 @@
+Alguns do conteúdos (ainda mais os textos grandes em outros arquivos .txt) podem ter sido gerados por IA porque 1) po é muito texto e 2) o NotebookLM do Google é bastante competente no que ele faz e faço os testes dele com frequência - eu ainda tomo muitas notas em papel, então n enche meu saco.
+
 - Apautação
 - Avaliação
 - PAD
@@ -29,3 +31,4 @@
 
 
 Achar a "Equação Internacional". Dada uma aplicação com i interações, e estágios e o tempo de estágio em n, qual é o tempo t para execução desse programa
+T = ((i + e) - 2) * n
