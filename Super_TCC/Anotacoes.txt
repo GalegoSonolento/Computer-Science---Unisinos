@@ -31,3 +31,5 @@ https://repositorio.jesuita.org.br/handle/UNISINOS/1640
 https://www.unisinos.br/biblioteca/images/abnt/2024-2/tutorial_monografia_TCC_todos_cursos.pdf
 
 -> Todos esses links são encontráveis na internet
+
+https://github.com/ruvnet/RuView -> Projeto com bastante potencial de ser útil
