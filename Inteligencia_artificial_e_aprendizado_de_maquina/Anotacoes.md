@@ -10,3 +10,7 @@ https://qiao.github.io/PathFinding.js/visual/ -> site interessante pra testar al
 - valores matemáticos de métrica (réguas) são geranlamente mais fáceis de usar
 - multiagentes atuam no mesmo ambiente apenas
 - defini~çao precisa ser por tarfa
+
+04 Março 2026
+# Busca
+- 
