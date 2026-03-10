@@ -1,0 +1,56 @@
+Entidades definidas 
+- Jogador
+- Time
+- Partida
+- Estádio
+- Evento de jogo
+
+
+Atributos principais
+- Jogador
+	- ID do jogador - inteiro
+	- nome - texto (string)
+	- posição - texto (string)
+	- ID do time - inteiro
+	- numero da camisa - inteiro
+- Time
+	- ID do time - inteiro
+	- nome - texto (string)
+	- cidade - texto (string)
+	- campeonatos ativos - lista
+- Partida
+	- ID da partida - inteiro
+	- ID do estádio - inteiro
+	- ID time mandante - inteiro
+	- ID time visitante - inteiro
+	- tipo de jogo (final, semis, amistoso, etc.) - categoria
+	- Hora da partida - datetime
+	- placar_mandante - inteiro
+	- placar_visitante - inteiro
+- Estádio
+	- ID do estádio - inteiro
+	- cidade - texto (string)
+	- times da casa - lista
+	- nome - texto (string)
+- Evento de jogo
+	- ID do evento - inteiro
+	- ação (passe, chute ao gol, defesa, etc.) - categoria
+	- ID da partida - inteiro
+	- ID do jogador - inteiro
+	- tempo em segundos - float
+	- período - categoria
+	- coordenada X - float
+	- coordenada Y - float
+	- resultado do evento - categoria
+
+Estrutura de armazenamento
+- Para todos os atributos definidos antes da partida começar (i.e. estáticas) - relacional
+- Mídias da partida - NoSQL
+- Eventos descritos durante a partida e em tempo real com alta demanda - base orientada a eventos (e.g. DynamoDB Streams)
+
+
+
+Breve reflexão sobre limitações da representação proposta
+- Apesar de tentar incluir, essa abordagem deixa de fora alguns aspectos que poderiam ser importantes para os jogadores (e.g. psicológicos). A tentativa de adicionar a localidade e campeonatos no qual a equipe participa procura aproximar rivalidades entre times apesar de ser um tanto raso.
+- O modelo também deixa de fora dados físicos contínuos dos jogadores (como frequência cardíaca, distância percorrida e velocidade), o foco aqui tende a ser os eventos e suas consequências imediatas.
+- Existe uma ligeira correlação indireta possível entre aspectos psicológicos e de pressão e ações dentro da partida neste modelo, mas limitados à dados discretos e sem captura de causas subjacentes, apenas resultados observáveis.
