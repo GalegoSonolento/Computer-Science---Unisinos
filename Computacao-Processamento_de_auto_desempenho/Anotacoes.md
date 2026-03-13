@@ -100,7 +100,106 @@ T = ((i + e) - 2) * n
         - acesso mais rápido em alguns trechos
         - o interessante é ter um bom compilador aqui
         - o benefício é o paralelismo de acesso de memória
+        - precisa de um compilador top de linha
     - COMA - Cache-Only Memory Architecture
         - máquinas de cluster
         - acesso restrito às memórias cache
+        - basicamente não existe mais
+    - NORMA
+        - ambiente multicomputador
+        - NO Remote Memory Access
 - cache e replicação funcionam superbem quando a maioria das operações são de leitura
+- MIMD - top de linha multicore e computador
+- SIMD - GPUs
+    - CUDA
+    - OpenCL
+- Multicomputadores
+    - NOW - Network of Workstations
+        - baixo custo
+        - computadores interligados
+        - catapultada pela Ethernet - sim, o cabão de rede
+            - 16 Mpbs
+    - COW - Cluster of Workstations
+        - NOW forte
+        - Hacks
+        - espaço pra máquinas dimensionado em U (U's)
+        - uso exclusivo
+        - NIC - Network Interface Card - placa de rede
+        - Switch interno pra toda a configuração de rede
+        - clusters homogêneos são perante aos nós
+            - nós de processamento iguais
+            - heterogêneo é o contrário
+    - Cluster computer
+        - um conjunto de máquinas normalmente homogêneas ligadas por uma rede dedicada para uma tarefa em comum
+        - instação por PXE - todas as máquinas precisam ser iguais
+        - KVM - plataforma com um monitor teclado video e mouse
+            - digital
+            - dá pra selecionar a máquina do cluster e não jogar um VGA em cada máquina
+        - NIS - Network Information System - evitar incompatibilidade
+        - NFS - Network File System
+        - SSH - trabalhar na porta 22
+            - Substitui o telnet
+            - criptografado
+            - SSH sem senha
+                - depois do primeiro login, já dentro do cluster
+                - SSH sem senha pros nós
+                - chaves públicas e privadas
+        - Pthreads e MPI
+        - Resource Ger
+        - depuração de código em sistemas paralelos é mais complexo
+            - sem debug
+            - mas tem geração de rastros de processos
+            - coloque os rastros em uma tool de visualização
+            - análise sempre post mortem - Pajé
+- Cluster - reprodução de resultados e exclusividade
+    - pode usar o cluster do PPG inclusive (fala com os caras)
+    - o gerenciador dá as máquinas exclusivamente (mais ngm pode fazer SSH nas máquinas)
+        - se elas forem iguais também -> validação científica
+    - reprodução de dados validada
+- **Grid computing**
+    - 86 - ethernet
+    - cluster que não precisa estar necessariamente dentro da minha empresa
+    - rede mais ampla de computadores
+    - conexão de laboratórios
+    - não vingou mto no começo
+    - AWS nasce em 2005 e basicamente **mata** esse processo
+
+# Redes de Interconexão
+- Multiplexação é muito importante
+    - demultiplexão do outro lado
+    - necessário em qualquer meio compartilhado
+    - Top - **Temporal**
+- Time sharing
+- sender rápido e receptor lerdo
+- CPU ainda controla o quão rápido o processo de rede funciona (velocidade de rede)
+    - rede lerda pode ser CPU no gargalo e/ou processador defasado
+- latência é o tempo mínimo de abrir o canal de coms
+    - pacote de 0 bites nao tem um pacote de zero bites no final do processo
+- CSMA/CD
+    - CD -> backof exponencial pra evitar colisões
+        - 2^x (x = num da colisão) - escolhe 0, 1, ...x localmente pra tentar enviar de novo
+        - Ethernet não é escalável ... com HUB
+- tempo de desfazer o processo é infinitamente mais ligeiro do que montar os pacotes
+- letência != tempo de comunicação
+    - tempo de coms é != de 0 bites (qql coisa)
+- 100 bytes (1 latência) != 10x 10 bytes (10 latências)
+    - por isso se faz bufferização 
+        - algoritmos de Nagle
+        - Bufferização de vários pacotes
+- Largura de banda
+    - B = dados/tempo = Megabits/segundo
+    - TPS - Transações por Segundo
+    - Fast Ethernet = 100 Megabits por segundo - 100Mbps
+    - Jitter
+        - Internet da rua é dinâmica
+        - controle de Jitter do browser - bufferiza os frames de um vídeo por exemplo   
+- Em rede cabeada de cluster, dedicada e de alta velocidade é sereno usar UDP
+    - chance de perder pacotes é bem pequena
+    - e tem transmissão de dados pequenos (não vai compilar 1 mega de pacote)
+    - dado pequeno é de 1 byte até 64MB
+- Infiniband é pra resolver o problema da Ethernet ser lenta
+    - mta coisa em software no ethernet (TCP)
+    - criado em 2003
+    - joga tudo na placa de rede
+    - uso extensivo de hardware
+    - RDMA - inscrição de ponteiro remota - zero copy
