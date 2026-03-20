@@ -203,3 +203,12 @@ T = ((i + e) - 2) * n
     - joga tudo na placa de rede
     - uso extensivo de hardware
     - RDMA - inscrição de ponteiro remota - zero copy
+
+# Modelagem de Apliações Paralelas
+- Parte mais complexa
+- cheque o trecho com mais computação e com mais rotinas (loops)
+    - rotinas que podem ser executadas em paralelo são nossas amigas
+- dependência e sincronização é o que pode quebrar nossas pernas
+- pra saber se vale a pena paralelizar tem q ver a aplicação e a entrada de dados
+- Filtro de Mediana - suavização de bordas
+- DAG-> Grafo Dirigido Aciclico
