@@ -61,3 +61,52 @@ Alguns do conteúdos podem ter sido gerados por IA porque 1) po é muito texto e
 - sistema não completamente observável -> não pode ser puramente determinístico
 - modelos de progressão puramente probabilísticos não podem ser simplesmente escritos com álgebra, IA entra aqui
 - ETL -> Extraxt Transform Load
+
+# Arquitetura de Sistemas de Rastreamento no Futebol
+- Coletas manuais são problemáticas
+- sistemas de coleta de dados evoluíram bastante nos últimos anos
+    - automatização de sistemas de coleta e precisão
+    - registro de tempo e espaço
+    - justificação de erros - identificação de qualidade
+- Tipos de sistemas
+    - Sistemas de rastreamento
+    - visão computacional (com câmeras)
+        - câmeras do estádio
+        - processos multilayer pra ter qualidade boa
+        - bastante caro
+        - jogador e bola
+        - posicionamento ao vivo
+            - mapa de passe e etc
+        - sem wearable
+    - Vestíveis (os croppeds q os jogadores usam)
+        - vemos bastante no brasileirão
+        - GPS/LPS/UWB (Ultra-Wideband - melhor em qualidade)
+        - Identificação de cansaço e física antes do visual
+        - 
+    - sistemas de posicionamento - clubes grandes usam
+    - coleta de dados ainda é bastante cara
+    - clube define os dados a serem coletados
+        - sem relatórios gigantescos
+- Arquitetura dos sistemas
+    - evolução de sensores, envio, processamento
+    - falhas impactam em análise - interferência de transmissão gera posições incorretas, por exemplo
+    - informações podem ser perdidas
+        - UDPs
+    - tempo real vs processamento em lote
+        - Real-time é normalmente usado durante o jogo e decisões dentro do jogo (ajuste tático)
+        - Batch (lote) é tudo feito depois do jogo
+            - ainda usado por mtos clubes menores
+        coleta depende da apliação de do financeiro
+- limitações técnicas
+    - nada é perfeito - taxas de erro menores que humanas valhem a pena
+    - tudo tem taxa de erro
+    - latêcia
+        - coleta -> uso
+        - atraso de decisão em tempo real
+        - demora de correção
+        - perda de utilidade de aplicativo ao vivo
+    - trade-off entre qualidade e custo
+    - informações de tempo e espaço
+        - maior qualidade possível que não atrase meu processamento demais
+- Conexão com Computação
+    - 
