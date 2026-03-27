@@ -109,4 +109,18 @@ Alguns do conteúdos podem ter sido gerados por IA porque 1) po é muito texto e
     - informações de tempo e espaço
         - maior qualidade possível que não atrase meu processamento demais
 - Conexão com Computação
-    - 
+
+# Visualização de Dados no Futebol
+- Dados nunca são trivialmente observáveis
+- Desempenho precisa ser analisado com distribuições e análises mais profundas
+    - só o número não vai me responder
+    - onde o jogador está e para onde ele vai é absurdamente importante
+- Visualização depende do intento
+    - objetivos requerem gráficos específicos - gráficos bons variam
+- gráficos de redes de passes são extremamente complexos
+    - eles requerem MUITOS dados para o mesmo tempo
+    - certamente é algo realizado com pós processamento
+- cores devem ter significados
+    - psicologia das cores e escala consistente
+    - quanto menos cores melhor
+- 

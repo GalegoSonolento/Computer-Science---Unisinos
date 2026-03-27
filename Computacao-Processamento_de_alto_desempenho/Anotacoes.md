@@ -212,3 +212,9 @@ T = ((i + e) - 2) * n
 - pra saber se vale a pena paralelizar tem q ver a aplicação e a entrada de dados
 - Filtro de Mediana - suavização de bordas
 - DAG-> Grafo Dirigido Aciclico
+
+# Programação paralela utilizando memória compartilhada
+- 
+
+# Pthreads
+- 
