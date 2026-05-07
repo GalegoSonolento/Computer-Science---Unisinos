@@ -213,8 +213,33 @@ T = ((i + e) - 2) * n
 - Filtro de Mediana - suavização de bordas
 - DAG-> Grafo Dirigido Aciclico
 
-# Programação paralela utilizando memória compartilhada
-- 
+# Programação paralela utilizando memória distribuída
+- normalmente se aceita o send assíncrono, não o receive (não faz mto sentido)
+- MPI usa broadcast com teorías de árvore
+- Sincriniazao com barreias
+    - vários processos executando - operação coletiva
+    - espera todo mundo chegar pra avançar (gargalo)
 
-# Pthreads
+# Biblioteca MPI
+- padrão de código
+- número de processo está fora da linha de comando
+    - só passa os binários p/s máquinas
+- MPI faz bastante parte da comunicação interna dos clusters
+
+```C
+#include <mpi.h>
+#include <stdio.h>
+
+int main(int argc, char ***argv)
+{
+    MPI_Init(&argc, &argv);
+
+    printf("Hello, World!\n");
+
+    MPI_Finalize();
+    return 0;
+}
+```
+
+- lógica de código mestre-escravo (if-else dentro do main)
 - 
