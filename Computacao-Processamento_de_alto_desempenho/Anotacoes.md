@@ -242,4 +242,26 @@ int main(int argc, char ***argv)
 ```
 
 - lógica de código mestre-escravo (if-else dentro do main)
+
+# Computação em cloud e PAD
+- conceitos de 1992 -> modelo de pagamento e virtualização são apareceram em 2003
+- A diferenciação do cloud vem da elasticidade
+    - ao encontro de long running applications -> cloud permite criação de checkpoints e Disaster Recovery
+- Temos sistemas reativos (treshholds) e proativos
+- temos máquinas verticais (resizing) ou horizontais (aumentando lâminas e recursos)
+- fracamente acoplados não geram dependências entre processos
+    - bag-of-tasks
+    - pipelines
+    - divisão e conquista
+        - tem bastante o jeito da elasticidade
+    - paralelo de barreira
+        - problemas levam na barreira
+        - diminuir os superprocessos pode ser uma resposta
+        - elasticidade não cola mto - talvez migração de processos fosse melhor
+            - em runtime
+- heurísticas boas de compução e rápidas sao preferíveis
+- Alterar a aplicação pra colocar na cloud é melhor se for com o menor nível de esfoço possível
+- No kit do AWS o nome disso é lambda
+- Programar em Kuda pra cluster é o game
+    - n precisa mudar muita coisa pra Cloud depois
 - 
