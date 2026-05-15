@@ -22,3 +22,10 @@ limited to a single floor and can capture movement in full
 
 # Experimental Evaluation
 - Em locais mais remotos, menos access points e, principalmente, mais densos em material (concreto) a qualidade da análise e dos dados coletados dmimnuía significativamente
+- Efetividade e precisão foi de 3 a 4 metros no geral
+    - interessante para cobrir uma área tão grande
+
+# Conclusions
+- média de 2.2m dentro do dataset deles
+    - *state-of-the-art* consegue 0.7m
+- em áreas muito extensas com a cobertura de um access point apenas geram falhas (não consegue analizar as bordas direito)
