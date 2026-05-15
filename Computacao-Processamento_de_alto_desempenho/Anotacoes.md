@@ -264,4 +264,79 @@ int main(int argc, char ***argv)
 - No kit do AWS o nome disso é lambda
 - Programar em Kuda pra cluster é o game
     - n precisa mudar muita coisa pra Cloud depois
-- 
+- política de escalonamento n tem balanceamento de carga por padrão
+    - lançamento de threads -> escalonador do SO -> thread-core
+    - lançamento de uma aplicaão MPI -> reserva de recursos (nó) - files.txt -> MPI run -np <x_processos> prog files.txt - processo de mapeamento (round-robin, na maioria dos casos)
+- Round Robin
+    - mais comum na internet
+    - ótimo em sistemas homogêneos
+    - pode náo ser o ótimo (na maioria das vezes não é) em sistemas heterogêneos
+    - padrão do cloud computing
+- ótimo nem sempre é o único escalonamento
+- ou o recurso ou o consumidor, ou os dois, serão heterogêneos
+- Execução Real Time de uma aplicação de PAD é a soma de 2 tempos:
+    - T1 - tempo de escalonamento
+    - T2 - tempo de execução
+- Escalonamentos -> taxonomia (1988 Casavanti e Coulomb)
+    - **local**
+        1CPU
+    - **global**
+        - /> 1CPU
+        - **dinâmico**
+            - ou não tenho informação da aplicação (tarefas ou recursos)
+            - ou elas mudam em runtime
+            - **fisicamente não distribuído**
+                - multicore
+            - **fisicamente distribuído**
+                - cluster
+                - **não cooperativo**
+                    - escalonadores não se comunicam
+                    - podem dar overload em um Target sem querer
+                - **cooperativo**
+                    - checa com os recursos (target) e outros escalonadores - chega se recursos estão overloaded e se comunica com os outros escalonadores
+                    - **ótimo**
+                    - **subótimo**
+        - **Estático**
+            - não mudam em tempo de execução
+            - podem ser heterogêneos
+            - **ótimo**
+                - estresso todas as possibilidades
+                - **filas**
+                - **grafo** - principal
+                - **Computação matemática**
+            - **subótimo**
+                - **heurístico**
+                    - bom senso
+                    - noção da realidade
+                    - sem provas
+                    - list scheduling (de escalonamento que faz balanceamento de carga)
+                - **aproximado**
+                    - vai até um nível x da árvore
+                    - pega o melhor escalonamento que achar e usa
+- Balanceamento de carga - Load Balancing
+    - equilíbrio pros rápidos não fiquem parados esperando os lentos por muito tempo
+- Escalonador + LB
+    - normalmente eles andam juntos
+    - métricas p/ LB
+        - CPU (ou load), mem (ou load), rede (latência, banda)
+    - vazão - sempre usados
+        - dados/tempo
+        - de dados, tipo TPS (Transaões por Segundo)
+    - Ideia -> somar duas métricas (problema da unidade)
+        - uniformização de unidades
+    - Síncrono
+        - período -> x em x tempo verifica o sistema
+        - definição de tempo varia
+            - período curto
+                - mto overhead
+                - alta intrusividade
+                - impacto em desempenho normal
+            - período longo
+                - Perda de reatividade
+                - tempo demais no overhead - pouca reação
+            - a solução pra esses problemas pode ser uma adaptação do sistema
+                - dá um chute do período e progride geometricamente conforme está tudo certo
+                    - quando encontra um overload quebra o período em 2 pra aumentar a reatividade até estar tudo certo de novo
+    - Assíncrono
+        - configura e.g. threshold com regras e ações pra elastiticidade reativa
+        - monitoramento é função do programa (backend)
