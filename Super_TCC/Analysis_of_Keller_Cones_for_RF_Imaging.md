@@ -45,3 +45,15 @@ Também compara essa ideia, de identificação por bordas, com outros métodos j
 - em alguns testes é sugerido que pelo menos 2 transmissores sem ângulo (Θ = 0°) entre sí e o plano
     - junto de outro à 90°
 - em alguns testes, a borda de baixo ter uma alteração de profundidade é menos prejudicial
+- outra descoberta deles foi justamente qualidade de iluminação
+    - com muita iluminação vertical, por exemplo, a iluminação horizontal não é mais detectada
+    - para ambas direções serem detectadas, é necessário perder um pouco de qualidade
+
+# Imaging Objects with Different Curvatures
+- funciona com objetos com lados mesmo - mesmo com pequenas curvaturas
+- o sistema deles usa 3 receptores e mistura as 3 imagens com Bayesian propagation
+- sem machine learning no presente momento
+
+# Conclusion
+- o sistema funciona e é possível identificar objetos para um plano 2D, desde que tenham lados identificáveis com bordas suficientemente agudas
+
