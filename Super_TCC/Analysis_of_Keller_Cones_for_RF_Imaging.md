@@ -57,3 +57,23 @@ Também compara essa ideia, de identificação por bordas, com outros métodos j
 # Conclusion
 - o sistema funciona e é possível identificar objetos para um plano 2D, desde que tenham lados identificáveis com bordas suficientemente agudas
 
+
+==============================================================================
+# mmEye: Super-Resolution Millimeter Wave Imaging
+### Abstract
+- com ondas milimétricas de wifi é possível chegar a resultados semelhantes à produtos comerciais consolidados, como o Kinect
+
+## Introduction
+- *In addition to networking, commodity 60GHz radios are going to support a dual role of radar-like sensing [20], with merely one extra antenna array attached to the chipset and without any circuit changes. With this, the 60GHz radio, under the radar mode, can transmit and receive on a single networking device and capture the precise channel response for precise sensing and imaging*
+- a onda milimétrica consegue, com alguma precisão relativa e dado um corpo grande o suficiente, identificar uma pessoa, por exemplo
+- *We prototype mmEye using a Qualcomm 802.11ad chipset and conduct extensive real-world experiments. It shows that mmEye achieves comparable imaging with commercial products like Kinect using a single 60GHz networking device in a much smaller size, underlying pervasive imaging for various applications such as VR gaming, pose estimation, etc.*
+
+## Reusing 60 GHz WiFi as a Radar
+- *Great potentials in the steerable phased arrays and the dual radar mode of 60GHz WiFi remains largely underexploited*
+
+## Super Resolution Imaging
+- *mmEye tries to reconstruct the contour of the target based on the estimation of the Angle of Arrival (AoA) and Time of Arrival (ToA) of each signal reflected off the surface of the target.*
+- Dá pra enteder que o sistema faz uma estimativa do posicionamento dos azimutes pra entender o tamanho do objeto na frente dele
+- também identifica apenas um objeto por vez
+- Eles usaram o algoritmo MUSIC pra montar uma eigen-composition da matriz de covariância da imagem que as ondas fazem no objeto analisado (receptor das ondas)
+- 
