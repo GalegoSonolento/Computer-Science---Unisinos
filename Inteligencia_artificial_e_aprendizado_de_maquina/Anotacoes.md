@@ -11,5 +11,46 @@ https://qiao.github.io/PathFinding.js/visual/ -> site interessante pra testar al
 - multiagentes atuam no mesmo ambiente apenas
 - defini~çao precisa ser por tarfa
 
-04 Março 2026
-# Busca
+# Transformers
+- Bert
+    - modelo genérico e utulizável pra tarefas específicas
+    - outros usos mais específicos 
+    - modelo original serve para fornecer a sequência (palavra) seguinte
+
+- GPT
+    - autorregrassivo
+    - lê as próprias entradas
+    - grupo de etapas atravessado 12x
+    - ajuste pra tarefas específicas
+
+# Tipos de LLMs
+- modelos default auxiliam a completar sequências
+- GPT-3 entregava variações da frase
+    - InstructGPR entendia as entradas como prompts de instrução
+    - oferecer uma sequência de resposta
+    - adaptado pra responder
+- LLMs maiores passaram a usar aprendizado por reforço, principalmente no começo
+
+# Aprendizado por reforço
+- não temos mais dados prontos
+- geração de dados, clusterização, etc
+- o agente coleta os dados por conta conforme interage com o ambiente
+- sinal de feedback avaliativo
+    - não totalmente externa, o agente pode fazer pra ele mesmo
+- decisão por tentativa e erro
+    - quase um adestramento
+- é possível indução de estímulos relacionados não necessariamente o que deveria causar dado estímulo
+- ambiente feedback avaliativo pra IA
+    - o modelo precisa necessariamente observar o ambiente e avaliar as concequências de suas ações
+    - estado + ação = estado resultante -> dados que são armazenados
+- processo sequencial
+    - diferente das antigas, episódicas
+- recompensa não necessariamente precisa de um superespecialista pra avaliar suas ações
+- assume-se um agente racional que quer maximização 
+    - eventualmente assume um comportamento ótimo
+- pode ter recompensa atrasada
+- ações agora que podem gerar uma recompensa futura várias iterações mais tarde
+- os estados devem conter toda a informção relevante para o agente
+    - uma CNN pode extrair isso pra nós a partir de um contexto
+- dá pra fazer mta aplicação
+    - mas os nerdolas da computação botaram ela pra jogar videogame
