@@ -340,3 +340,63 @@ int main(int argc, char ***argv)
     - Assíncrono
         - configura e.g. threshold com regras e ações pra elastiticidade reativa
         - monitoramento é função do programa (backend)
+
+# Migração de processos
+- sempre precisa de (Migração do processo) -> necessário pra reescalonamento
+    - quando
+        - quando se lança o balanceamento de carga?
+        - Load Balancers monitoram todos os processos
+        - LBs funcionam periodicamente (tempo em tempo balanceia)
+        - isso serve como referência se a migração é necessária
+        - 1º ⲁ = aposta
+            - ⲁ balanceado?
+            - Sim, ok
+            - ⲁ = ⲁ*2
+            - balanceado?
+            - não
+            - balanceamento executado
+            - ⲁ = ⲁ/2
+        - o que é estar balanceado?
+            - uma das implementações é ver todos os tempos dos processos dentro da superstep e montar uma média - distribui todos
+            - indústria - >3𝜎 é problema -> controle estatístico de processo (usado em chão de fábrica pra controle)
+            - fora de 3𝜎 preciso balancear
+    - quem
+        - qual processo trocar?
+        - qual vai ter uma melhor alocação de recurso 
+            - efeitos de comunicação
+                - intra-cluster é muito melhor
+            - recurso computacional
+            - uma força contra a migração é memória
+                - jogar o processo de um lugar pro outro tem custo
+                - serialização e revival do processo do outro lado custa bastante
+            - PM (i,j) = Comp(i,j) + Comm(i,j) - Mem(i,j)
+                - PM = Potencial de Migração
+                - i = processo
+                - j = cluster
+                - avaliação de cada processo para cada cluster
+                - os componentes passam por normalizaçõ [0, 1]
+                - PM = [-1, 2]
+    - onde 
+        - máquina de dentro do cluster
+        - (1-load) * CPU (teórica)
+            - métrica de BL
+        - migração acontece justamente quando ninguém tá fazendo nada
+    - como
+        - Checkpointing
+        - espelha o processo em disco e espelha na outra máquina
+        - *Modelo/arquitetura/framework vende*
+        - o como é a tecnologia - junta os dois é um sistema
+    - Problemas?
+        - Histerese - problema de a atividade ser ativada várias vezes seguidas
+            - é como um eco dos estímulos anteriores, nesse caso, é migrar um processo, rodar a análise de novo, e remigrar o processo pro mesmo cluster q ele saiu da primeira vez
+- a ideia é fazer grid de vários clusters
+- gerenciadores de cluster
+    - BSP + MIP + PThreads
+    - modelo de aplicação
+
+# Explorando elasticidade de recursos de computação em nuvem para execução de aplicações de alto desempenho iterativa
+
+# Pthreads e MPI
+- Thread pool (com ideia de pipeline)
+    - app multimídia (transformadas sequenciais)
+- comunicação assíncrona: serve pra mascarar latência de rede
