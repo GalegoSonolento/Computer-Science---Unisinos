@@ -76,4 +76,6 @@ Também compara essa ideia, de identificação por bordas, com outros métodos j
 - Dá pra enteder que o sistema faz uma estimativa do posicionamento dos azimutes pra entender o tamanho do objeto na frente dele
 - também identifica apenas um objeto por vez
 - Eles usaram o algoritmo MUSIC pra montar uma eigen-composition da matriz de covariância da imagem que as ondas fazem no objeto analisado (receptor das ondas)
-- 
+- ainda precisa rolar um arredondamento espacial de todas as fontes, a fim de tornar a visualização mais interessante/legível
+
+# System Design
