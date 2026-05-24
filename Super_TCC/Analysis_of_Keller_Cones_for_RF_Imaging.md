@@ -79,3 +79,7 @@ Também compara essa ideia, de identificação por bordas, com outros métodos j
 - ainda precisa rolar um arredondamento espacial de todas as fontes, a fim de tornar a visualização mais interessante/legível
 
 # System Design
+# Evaluation
+- mesmo que use recursos "comuns e milimétricos", ainda consegue ver através do drywall
+- *mEye takes an important step towards superresolution imaging on 60GHz WiFi radios. There are several limitations though. First, the working range of mmEye is inherently determined by the 60GHz radio. While our experimental device is specified to support up to 10 m for target detection, the imaging resolution decreases linearly over the range. Second, since 60GHz signals can hardly penetrate walls or most objects, mmEye mainly images objects in a line-ofsight view but does not perform well for through-the-wall targets*
+- Overlay com um identificador de profundidade? (como um Kinect)

@@ -123,4 +123,34 @@ Alguns do conteúdos podem ter sido gerados por IA porque 1) po é muito texto e
 - cores devem ter significados
     - psicologia das cores e escala consistente
     - quanto menos cores melhor
+
+# Evoluçção da análise do futebol
+- futebol hoje é altamente voltado à dados
+    - inclusive em clubes pequenos
+- precisa-se falar a linguagem dos analistas
+- a evolução se dá muito pelos concorrentes usarem as ferramentas
+- treinadores vitoriosos usam muita tecnologia
+- sistema de tracking é uma das revoluções recentes no meio
+    - têm diferentes tipos, óptico, GPS, etc
+- marioria dos analistas querem ópticas
+- muito mais complexo anotar passes sem posicionamento de jogadores
+- analistas acostumados com tecnologia só vão se importar com os dados qualitativos realmnente
+    - de fato precisa dos quantitativos - mas o treinador não quer muito saber
+- relações complexas do futebol são bastante comuns
+    - modelos de IA pra enxergar padrões é bastante útil
+    - IA pra auxílio em contratação é importante
+    - lesão, fadiga, scouting, avaliação de desempenho específico (AFA, LD, etc.), classificaçao de jogadas (ainda não tem comercial) - usos modernos de IA
+- dado ruim cria modelos terríveis
+    - clube se confunde com bastante frequência (magia) - Deep learning tbm é usado
+    - geração dfe viés é bastante comum
+- é preciso saber porque o problema está certo
+    - se nem eu sei como que eu explico?
+- sistema de suporte
+    - clubes menores acham que aquilo vai substituir o trabalho dele (resistência à adoção por medo)
+    - IA/sistema **NUNCA** deve tomar uma decisão sozinha - consciência hhumana ainda é a melhor que existe na natureza
+- simplificação exacerbada da realidade é problemática
+    - muitos dados deixam o sistema complexo demais
+    - interpretação automática é bastante complexa (precisa entender o peso das entradas para evoluir o sistema)
+- entendimento do jogo ainda é essencial
+- bons modelos computacionais precisam estar alinhados com entendimento real de futebol
 - 
