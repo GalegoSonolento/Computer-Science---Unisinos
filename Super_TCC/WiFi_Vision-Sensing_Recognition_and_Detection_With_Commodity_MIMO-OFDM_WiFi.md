@@ -23,6 +23,6 @@
 - *WiWho [37] is a system that can identify a person from a small group of people by extracting the gait profile of these people from the CSI. The system first constructs a step cycle with a peak-valley detection algorithm and extracts the time-domain statistic features of a single step. Then, the system performs frequency domain analysis to the entire walk segment and extracts frequency domain features. All these features are combined to build up the gait profiles of people. With a pair of off-the-shelf WiFi devices equipped with three antennas, WiWho achieves an identification accuracy of 92%–80% for a group size of 2 to 6, respectively, when the walking path is in parallel to the LOS link at a distance of 1 m in office rooms and classrooms*
 - *The system in [42] proposes to utilize the CSI information to identify the simple sign languages, including yes, no, and thanks. The system extracts eight statistics of the CSI amplitude as features, similar to the WiFall system in [53], to build the feature profiles. It is found that not all the eight features but only the average of amplitude and average of median absolute difference (MAD) are useful for classification*
     - *Since traditional SVM classifiers only support two labels, a two-stage classification with three classifiers are designed to recognize the three sign languages. By using a TPLink TL-WR1043ND WiFi router in the AP mode at 2.4 GHz as a transmitter, and a Lenovo X100e laptop 0.2-m away as a receiver, WiSign achieves a mean prediction accuracy of 87.38%*
-- 
 
-## Parei na Tanble IX
+# Conclusion
+- assim como visto e descrito, esse artigo é basicamente uma grande revisão abordando os vários outros artigos já investigados até o momento
