@@ -153,4 +153,10 @@ Alguns do conteúdos podem ter sido gerados por IA porque 1) po é muito texto e
     - interpretação automática é bastante complexa (precisa entender o peso das entradas para evoluir o sistema)
 - entendimento do jogo ainda é essencial
 - bons modelos computacionais precisam estar alinhados com entendimento real de futebol
-- 
+
+# Modelagem preditiva
+- diminui incerteza dentro do futebol
+- resultados provavelmente nunca chegam perto do 100%
+    - ajuda em planejamento, mas surpresas ainda acontecem 
+    - predição de fadiga, por exemplo, outros fatores entram no cálculo e situações de jogo alteram planos relacionados aos modelos computacionais
+- modelos computacionais **NÃO** podem entregar 100% de certeza em nenhum modelo
