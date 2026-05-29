@@ -400,3 +400,72 @@ int main(int argc, char ***argv)
 - Thread pool (com ideia de pipeline)
     - app multimídia (transformadas sequenciais)
 - comunicação assíncrona: serve pra mascarar latência de rede
+
+# OpenMP: Programação em Memória Compartilhada
+- Pthreads é de 1992 (flexível)
+- multiprocessing
+- API de C
+    - d[a pra baixar a biblioteca]
+- diretivas de compilação - PRAGMA - diretivas de computação
+- permite gerar código paralelo - mas perde um pouco do controle q o pthreads entregava
+- #pragmas abrem as janelas de cod paralelo
+- é mais interessante pra execução mas tem o trade-off do controle fino
+- variável_de_ambiente
+    - bash, linux, etc
+    - variável tem um valor
+    - programa identifica as variáveis do terminal para execução
+- tbm tem inserção de barreiras pra execução
+- expansão de região paralela com FOR, por exemplo - executa o for todo em um tick ou itens/cores\processos
+- sections são sesçoes que ocorrem em paralelo
+- utilidade cresce bastante já q o paralelismo está abstraído - flexível e mais rápido de montar
+    - ainda tem algumas idiossíncrasias
+
+# Cuda C/C++ Basica
+- SIMD - classificação de FLIN
+    - máquinas vetoriais
+- programa começa no HOST (CPU), executa no Device (GPU) e fecha no Host de novo
+- CPU tem operações lógicas que uma GPU n consegue fazer
+- paralelismo de dados
+    - for e while
+    - trabalhos de vetores e matrizes
+- fonte de overhead é entre a CPU Mem e a DRAM
+- pra execução em GPU precisa de definição de kernel (que é o que a GPU executa)
+- __global__ é indicação de GPU chamada à partir do Host
+    - compilador separa as execuções do Host e do Device
+- mykernel<<1,1>> -> kernel launch -> com parâmetros definidos pra ele
+- a DRAM recebe cópias dos dados pra execução
+- codaMalloc aloca memória dentro da DRAM
+- gargalo é de fato gerenciamento de memória
+- p/ running in parallel precisa de add<<< N,1 >>> - entrega vários blocos pra 1 thread
+- threads em CUDA são CUDA Threads
+- um bloco pode ter diversas threads dentro dele
+- add<<<1, N>>> -> 1 bloco pra N threads
+
+# Convergência HPC-Cloud -> Aproveitamento de desciplina
+- microsserviços
+- gargalos denotam pontos fracos
+- Serverless HPC Computing - eveolução direta do On-Premise
+- Win-Zip
+    - Lossless - sem perder dados - sai 1Gb e devolve 1Gb
+    - pro tempo de compressão é preciso ver o Lossy -> bastante usado pra streaming (compressão não tira dado o suficiente pra que seja perceptível)
+        - tem uma ideia de interpolação lá na fonte pra pegar só o absulutamente necessário pra exibir do outro lado (salva banda)
+- TCP-IP-Ethernet é maravilhoso pra Software (confiabilidade)
+    - infiniband soca tudo do TCP dentro do Hardware
+- EdgeAI como Filtro
+    - IA na berola
+    - tinyML - ML super pequena
+    - engg e educação do modelo pra usos superespecíficos
+- Estatística (data-science)
+- dá pra montar multiplexação entre sockets
+    - split de dados pra multiplexação e demultiplexação
+- zero-copy network é um trava zap!
+    - não dá pra travar usando sockets (mas sim com Infiniband - nível de usuário)
+- bufferização é feita pra otimizar latência
+    - dá pra desabilitar com flush ou com alg de Nigle
+- DNS é útil pra tolerância à falhas
+- banco de dados serverless pode ter sharding
+- SLM praticamente n tem alucinação
+    - foco mto pequeno pra alucinar
+- STM32 - ST Microelectronics -> estado da arte pra EdgeAI
+- hj mto se pede as IAs explicáveis
+- 
