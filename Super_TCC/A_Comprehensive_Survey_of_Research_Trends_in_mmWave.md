@@ -31,6 +31,6 @@
 - processamento real-time
 - Federated Learning e proteção de dados
 - msitura de sistemas infra-vermelho e/ou RGB com mmWaves pode ser uma das soluções pra problemas de luz dinâmica ou para aumentar a acurácia de programas
-- 
 
-Parei na Table 3
+# Conclusions
+- listão de possíveis temas relacionados à área médica com mmWave
