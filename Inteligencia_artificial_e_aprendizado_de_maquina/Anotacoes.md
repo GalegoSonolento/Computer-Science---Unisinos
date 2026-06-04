@@ -54,3 +54,45 @@ https://qiao.github.io/PathFinding.js/visual/ -> site interessante pra testar al
     - uma CNN pode extrair isso pra nós a partir de um contexto
 - dá pra fazer mta aplicação
     - mas os nerdolas da computação botaram ela pra jogar videogame
+- projetista modela problemas, não recompensas
+    - dá pra montar sinais extrínscicos, mas azar
+
+- formalização de treinamentos
+- Processos de Decisão de Markov
+    - propriedade de Markov diz que todos os dados necessários estão no mesmo estado (do contrário querba a propriedade)
+    - simplifica com 1 agente, tempo sequencial, não-dinâmico e infinito
+    - representação é da sua natureza, não deles mesmos
+        - conjunto de features, etc - especificação apenas, sem enumeração de todos os estados
+        - só o suficiente pra diferenciar 2 estados
+    - assume-se S e A finitos
+    - tempo discreto
+    - estados e ações discretos (à priori)
+    - objetividade e retorno
+        - recompensas podem ter um cálculo absurdamente grande
+        - gammas com valores muito baixos mostram futuros difíceis
+    - política
+        - comportamento
+        - Pi
+        - como a gente pretende se comportar
+        - boas ações devem vir de associações do retorno e do comportamento
+            - escolher as ações que mais me dão respostas de acordo com minha política
+        - aprendizado por reforço é criar, executar e escolher políticas que geram maior retorno
+        - objetivo é aprendar a política pi*
+            - dá pra encontrar com programação dinâmica ou modelo tabular
+    
+    - Programação dinâmica pra escolha de política
+        - se o agente conhece T e R dá pra inferir as equações de Bellman
+        - popula tudo como zero e faz o caminho do final pro começo
+            - escolhe políticas de forma aleatória
+            - atualiza com valores atualizados
+        - iteração de valor
+            - critério de parada (até mudanças serem baixas o suficiente)
+            - mudanças de valor com valores aleatórios ou zero (final precisa ser zero)
+            - calcule dois valores (antigo e novo) pra criar um delta
+            - várias x pra vincular o valor em S pra gerar erros mais baixos
+            - política age de forma gulosa pra valores de V
+            - daí posso agir de forma gulosa
+            - garantia de convergência pra funções de valor ótimas
+            - depende do modelo perfeito do ambiente
+                - difícil saber exataemnte o mundo que o agente atua
+                - existem outros algoritmos que não usam isso
