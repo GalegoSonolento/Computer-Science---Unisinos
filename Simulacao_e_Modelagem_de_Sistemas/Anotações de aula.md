@@ -1,3 +1,5 @@
+https://www.rockwellautomation.com/pt-br/products/software/arena-simulation/academic.html -> anotações e documentação do Arena
+
 Simulação é o processo de projetar um modelo de um sistema real e conduzir experimentos com este modelo para compreender seu comportamento e avaliar estratégias para sua operação.
 
 - Análise do sistema: identificar entidades, atributos e relações relevantes.
