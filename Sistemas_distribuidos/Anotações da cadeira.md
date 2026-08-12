@@ -48,3 +48,7 @@ Latência é o tempo pra chegar do sender pro receiver - mensagem de 0 bytes (of
 Ethernet com Hub dá mta colisão (com muitos sinais)
 medição de latência? é só estimável (ping-pong) - ida e volta é roundtrip (lat6encia é só ida - /2)
 Lat = tempo mínimo pra abrir o canal de coms (impossível pagar menos que isso) e a soma dos processos de software (header), serialização pra rede e navegação na rede
+
+NFS = Network File System - entra alguns outros conceitos aqui como RPC (Remote Procedure Calls) e segurança e acesso de rede, mas é essencialmente o mounting do esquema de arquivos de uma máquina (qualquer). Nesse sentido, pode ser um linux local ou um servidor de verdade - pra isso existem URLs NFS `nfs://servidor/caminho/arquivo` - bastante utilizado na internet
+
+Utilização de sistemas se dá pela fórmula: **U=λ/μ​** dado que quanto maior a minha capacidade de processamento μ perante um uso (requisições) computacional λ tente à valores baixos de U e vice-versa. Valores muito parecidos (ou iguais) podem levar a sistemas lentos ou até paralização completa de um sistema.
