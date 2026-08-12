@@ -20,23 +20,8 @@
               "icon": "lucide-file",
               "title": "Anotações da cadeira"
             }
-          },
-          {
-            "id": "6bc77125fbad99e0",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "conflict-files-obsidian-git.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "conflict-files-obsidian-git"
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -114,7 +99,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "conflict-files-obsidian-git.md",
+                "file": "Sistemas_distribuidos/Anotações da cadeira.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -133,7 +118,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "conflict-files-obsidian-git.md",
+                "file": "Sistemas_distribuidos/Anotações da cadeira.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
@@ -176,7 +161,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "conflict-files-obsidian-git.md",
+                "file": "Sistemas_distribuidos/Anotações da cadeira.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -215,23 +200,31 @@
       "vscode-editor:Create Code File": false
     }
   },
-  "active": "6bc77125fbad99e0",
+  "active": "bd686ab556404e2e",
   "lastOpenFiles": [
+    "Sistemas_distribuidos/Attachments/Pasted image 20260811214056.png",
+    "Sistemas_distribuidos/Trabalho do GA - anotações.md",
+    "Sistemas_distribuidos/Anotações da cadeira.md",
+    "Sistemas_distribuidos/Attachments/Pasted image 20260811213724.png",
+    "Sistemas_distribuidos/Attachments/Pasted image 20260811213602.png",
+    "Sistemas_distribuidos/Attachments/Pasted image 20260811213418.png",
+    "Sistemas_distribuidos/Attachments/Pasted image 20260811212852.png",
+    "Sistemas_distribuidos/Attachments/Pasted image 20260811212024.png",
+    "Sistemas_distribuidos/Attachments/Pasted image 20260811211507.png",
+    "Sistemas_distribuidos/Attachments/Pasted image 20260811210948.png",
+    "Sistemas_distribuidos/Attachments/Pasted image 20260811210542.png",
+    "Sistemas_distribuidos/Attachments/Pasted image 20260811204306.png",
+    "Sistemas_distribuidos/Attachments/Pasted image 20260811203815.png",
+    "Sistemas_distribuidos/Attachments",
+    "conflict-files-obsidian-git.md",
     "Distributed_Systems_4.pdf",
-    "Super_TCC/Attachments/Pasted image 20260808120807.png",
-    "Super_TCC/Attachments/Pasted image 20260808120755.png",
     "Super_TCC/Attachments",
     "Super_TCC/Anotações de verdade.md",
-    "Sistemas_distribuidos/Anotações da cadeira.md",
-    "conflict-files-obsidian-git.md",
     "Simulacao_e_Modelagem_de_Sistemas/Anotações de aula.md",
-    "Simulacao_e_Modelagem_de_Sistemas/Attachments/Pasted image 20260809153731.png",
     "Compiladores/Anotações de aula.md",
-    "Compiladores/Attachments/Pasted image 20260806202245.png",
     "Compiladores/Attachments",
     "Compiladores",
     "Sistemas_distribuidos",
-    "Simulacao_e_Modelagem_de_Sistemas/Attachments/Pasted image 20260805201823.png",
     "Simulacao_e_Modelagem_de_Sistemas/Attachments",
     "Simulacao_e_Modelagem_de_Sistemas",
     "Super_TCC/3D_Imaging_Milimeter_Wave_Circular_Synthetic_Aperture_Radar.md"

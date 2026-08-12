@@ -1,0 +1,1 @@
+https://www.dre.vanderbilt.edu/~schmidt/PDF/FOME-HCDS-paper.pdf -> ler esse artigo pra ter uma ideia
