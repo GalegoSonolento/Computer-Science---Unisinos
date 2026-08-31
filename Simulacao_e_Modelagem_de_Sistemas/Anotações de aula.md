@@ -22,3 +22,8 @@ A grande moral das simulações vai ser coleta de dados prévios - os tipo de da
 
 Cases são simulados várias vezes.
 
+**Método de Monte Carlo**
+Isso aqui é bastante utilizado como previsão e testagem de sistemas
+![[Pasted image 20260819200254.png]]
+E esse método leva à esse
+![[Pasted image 20260819200314.png]]
