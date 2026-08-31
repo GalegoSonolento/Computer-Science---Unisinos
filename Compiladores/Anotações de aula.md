@@ -51,3 +51,17 @@ Tradução dos tokens e expressões regulares pra uma árvore de execução - ba
 ![[Pasted image 20260813214930.png]]Outra notação padrão pra gramática
 ![[Pasted image 20260813215158.png]]
 Linguagens mais recentes tem paralelizado análise da compilação
+
+Sempre vai ser possível montar um analisador léxico manualmente - os programas automatizam processos
+Palavras reservadas são utilizadas apenas como marcadores da linguagem, mas contextuais. Isso acontece mais com palavras que seriam reservadas hoje mas foram contextualizadas para evitar programas antigos gerarem erros - retrocompatibilidade de programas.
+
+![[Pasted image 20260820202127.png]]
+![[Pasted image 20260820202852.png]]
+![[Pasted image 20260820211617.png]]
+Pode ser um problema gerar expressões regulares sem recursividade - milhares de chamadas do autômato sem necessidade
+
+![[Pasted image 20260827200932.png]]
+![[Pasted image 20260827201117.png]]
+![[Pasted image 20260827202755.png]]
+![[Pasted image 20260827203029.png]]
+Pro trabalho do GA é só identificar com essa esquematização e printar mesmo - provavelmente tudo no terminal e azar

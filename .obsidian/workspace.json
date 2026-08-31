@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Sistemas_distribuidos/Anotações da cadeira.md",
+                "file": "Compiladores/Anotações de aula.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Anotações da cadeira"
+              "title": "Anotações de aula"
             }
           }
         ]
@@ -99,7 +99,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Sistemas_distribuidos/Anotações da cadeira.md",
+                "file": "Compiladores/Anotações de aula.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -118,7 +118,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Sistemas_distribuidos/Anotações da cadeira.md",
+                "file": "Compiladores/Anotações de aula.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
@@ -161,7 +161,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Sistemas_distribuidos/Anotações da cadeira.md",
+                "file": "Compiladores/Anotações de aula.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -202,35 +202,38 @@
   },
   "active": "bd686ab556404e2e",
   "lastOpenFiles": [
-    "Sistemas_distribuidos/Attachments/Pasted image 20260818220252.png",
-    "Sistemas_distribuidos/Attachments/Pasted image 20260818215827.png",
-    "Sistemas_distribuidos/Attachments/Pasted image 20260818215542.png",
-    "Sistemas_distribuidos/Attachments/Pasted image 20260818215452.png",
-    "Sistemas_distribuidos/Attachments/Pasted image 20260818215318.png",
-    "Sistemas_distribuidos/Attachments/Pasted image 20260818215126.png",
-    "Sistemas_distribuidos/Attachments/Pasted image 20260818215035.png",
-    "Sistemas_distribuidos/Attachments/Pasted image 20260818214650.png",
-    "Sistemas_distribuidos/Attachments/Pasted image 20260818213917.png",
-    "Sistemas_distribuidos/Attachments/Pasted image 20260818213805.png",
-    "Sistemas_distribuidos/Attachments/Pasted image 20260818213625.png",
-    "Computacao-Processamento_de_alto_desempenho/Anotacoes.md",
-    "Sistemas_distribuidos/Anotações da cadeira.md",
-    "Sistemas_distribuidos/Trabalho do GA - anotações.md",
+    "Compiladores/teste_compilador_aula4/programa.txt",
+    "Compiladores/teste_compilador_aula4/lexico",
+    "Compiladores/teste_compilador_aula4/lexico.c",
+    "Compiladores/teste_compilador_aula4/lexico.l",
+    "Compiladores/teste_compilador_aula4/Untitled.md",
     "Compiladores/Anotações de aula.md",
+    "Compiladores/teste_compilador_aula4/teste.md",
+    "Compiladores/teste_compilador_aula4/lexico.txt",
+    "Compiladores/lexico.l",
+    "Compiladores/teste_compilador_aula4",
+    "Compiladores/Attachments/Pasted image 20260827203029.png",
+    "Compiladores/Attachments/Pasted image 20260827202755.png",
+    "Compiladores/Attachments/Pasted image 20260827201117.png",
+    "Compiladores/Attachments/Pasted image 20260827200932.png",
+    "Sistemas_distribuidos/Trabalho do GA - anotações.md",
+    "Sistemas_distribuidos/Anotações da cadeira.md",
+    "Sistemas_distribuidos/Attachments/Pasted image 20260825215310.png",
+    "Sistemas_distribuidos/Attachments/Pasted image 20260825215053.png",
+    "Sistemas_distribuidos/Attachments/Pasted image 20260825213809.png",
+    "Sistemas_distribuidos/Attachments/Pasted image 20260825213545.png",
+    "Sistemas_distribuidos/Attachments/Pasted image 20260825213331.png",
+    "Sistemas_distribuidos/Attachments/Pasted image 20260825213244.png",
+    "Simulacao_e_Modelagem_de_Sistemas/Anotações de aula.md",
+    "Computacao-Processamento_de_alto_desempenho/Anotacoes.md",
     "Internet_das_coisas-IoT/Desafio extensionista da cadeira.md",
     "Internet_das_coisas-IoT/Anotações de aula.md",
-    "Simulacao_e_Modelagem_de_Sistemas/Anotações de aula.md",
     "Internet_das_coisas-IoT",
     "Sistemas_distribuidos/Attachments",
     "conflict-files-obsidian-git.md",
     "Distributed_Systems_4.pdf",
     "Super_TCC/Attachments",
     "Super_TCC/Anotações de verdade.md",
-    "Compiladores/Attachments",
-    "Compiladores",
-    "Sistemas_distribuidos",
-    "Simulacao_e_Modelagem_de_Sistemas/Attachments",
-    "Simulacao_e_Modelagem_de_Sistemas",
     "Super_TCC/3D_Imaging_Milimeter_Wave_Circular_Synthetic_Aperture_Radar.md"
   ]
 }

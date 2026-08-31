@@ -148,3 +148,31 @@ RDMA - Remote Direct Memory Access
 ![[Pasted image 20260818215542.png]]
 ![[Pasted image 20260818215827.png]]
 ![[Pasted image 20260818220252.png]]
+RPC é uma abstração de Sckets basicamente
+
+Paradigmas e Computações
+![[Pasted image 20260825203158.png]]
+**Comunicação indireta** -> aplicações no meio do caminho salvam ou administram requisições
+Email é coms indireta, por exemplo (tem um server no meio)
+![[Pasted image 20260825204112.png]]
+
+**Comunicação Pub/Sub**
+![[Pasted image 20260825212023.png]]
+Servidores centralizados sempre servirão para todas as tarefas e geralmente mostrarão outros problemas relacionados
+![[Pasted image 20260825212309.png]]
+Publish/subscribe distribuído
+![[Pasted image 20260825212537.png]]
+Um dos problemas do flooding é uma mensagem loopar e circular eternamente dentro da rede
+	Solução normalmente é largar um ID nas mensagens - os nós verificam aquele ID e vêem se ele já passou por eles, se sim descartam
+	Importante ter um líder dentro da arquitetura/rede - faz definições de IDs por exemplo
+![[Pasted image 20260825213244.png]]
+
+Message Queues
+![[Pasted image 20260825213331.png]]
+![[Pasted image 20260825213545.png]]
+
+Presença de grana noramalmente mora na amazon ou na Google
+![[Pasted image 20260825213809.png]]
+
+![[Pasted image 20260825215053.png]]Configuro dentro do DSM (o software), mesmo com máquinas heterogêneas, pra ele administrar os endereços locais das máquinas e quais são os abstraídos do software dele.
+![[Pasted image 20260825215310.png]]
