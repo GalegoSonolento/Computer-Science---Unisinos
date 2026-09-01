@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Compiladores/Anotações de aula.md",
+                "file": "Sistemas_distribuidos/Trabalho do GA - anotações.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Anotações de aula"
+              "title": "Trabalho do GA - anotações"
             }
           }
         ]
@@ -99,7 +99,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Compiladores/Anotações de aula.md",
+                "file": "Sistemas_distribuidos/Trabalho do GA - anotações.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -118,7 +118,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Compiladores/Anotações de aula.md",
+                "file": "Sistemas_distribuidos/Trabalho do GA - anotações.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
@@ -161,7 +161,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Compiladores/Anotações de aula.md",
+                "file": "Sistemas_distribuidos/Trabalho do GA - anotações.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -202,12 +202,12 @@
   },
   "active": "bd686ab556404e2e",
   "lastOpenFiles": [
+    "Compiladores/Anotações de aula.md",
     "Compiladores/teste_compilador_aula4/programa.txt",
     "Compiladores/teste_compilador_aula4/lexico",
     "Compiladores/teste_compilador_aula4/lexico.c",
     "Compiladores/teste_compilador_aula4/lexico.l",
     "Compiladores/teste_compilador_aula4/Untitled.md",
-    "Compiladores/Anotações de aula.md",
     "Compiladores/teste_compilador_aula4/teste.md",
     "Compiladores/teste_compilador_aula4/lexico.txt",
     "Compiladores/lexico.l",
@@ -232,7 +232,6 @@
     "Sistemas_distribuidos/Attachments",
     "conflict-files-obsidian-git.md",
     "Distributed_Systems_4.pdf",
-    "Super_TCC/Attachments",
     "Super_TCC/Anotações de verdade.md",
     "Super_TCC/3D_Imaging_Milimeter_Wave_Circular_Synthetic_Aperture_Radar.md"
   ]
