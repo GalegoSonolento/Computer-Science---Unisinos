@@ -176,3 +176,62 @@ Presença de grana noramalmente mora na amazon ou na Google
 
 ![[Pasted image 20260825215053.png]]Configuro dentro do DSM (o software), mesmo com máquinas heterogêneas, pra ele administrar os endereços locais das máquinas e quais são os abstraídos do software dele.
 ![[Pasted image 20260825215310.png]]
+
+![[Pasted image 20260901194210.png]]
+**DNS** - nomes importantes dentro do contexto de computadores
+Identificação de modos e métodos é toda feita aqui
+![[Pasted image 20260901194751.png]]
+![[Pasted image 20260901194809.png]]
+![[Pasted image 20260901200405.png]]
+![[Pasted image 20260901200531.png]]
+![[Pasted image 20260901201107.png]]
+![[Pasted image 20260901201408.png]]
+![[Pasted image 20260901201625.png]]
+Desses métodos o delineado é instituido na chamada pro primeiro server. Depende dessa chamada pra saber como que ele atua. O NS ou retorna tem/n~tem ou diz que tem/trabalho iterativo, toma outro server.
+O cliente se vira dependendo da primeira reply do 1st server.
+Mais usado é o recursivo mesmo (dominância)
+
+cliente - iterativo
+servidor - recursivo
+servidor - não recursivo
+
+![[Pasted image 20260901202954.png]]
+Aqui ele pode faezr um DNS reverso - o resolver tenta resolver o IP do nome que chega pra ele - pra email ele pega a credencial do server que mandou a req e vê se ele existe de fato.
+![[Pasted image 20260901203606.png]]
+![[Pasted image 20260901203805.png]]
+![[Pasted image 20260901204127.png]]
+![[Pasted image 20260901204704.png]]
+
+ACL - Access Control List:
+O número **740** assume significados completamente diferentes dependendo de onde está sendo aplicado: em um sistema operacional (como o Linux) ou em um equipamento de rede (como um switch ou roteador Cisco).
+
+**1. Em Sistemas Operacionais (Permissões Linux/Unix)**
+
+No Linux, o controle de acesso a arquivos e diretórios usa um sistema numérico baseado em somas. O número 740 é lido da esquerda para a direita, dividindo os acessos em três grupos de usuários:
+ 
+- **7 (Dono do arquivo):** Tem permissão total. O número 7 é a soma matemática de **Ler (4) + Escrever (2) + Executar (1)**.
+- **4 (Grupo do arquivo):** Tem permissão restrita. O número **4** significa apenas **Ler**. O grupo não pode alterar nem executar o arquivo.
+- **0 (Outros usuários):** Não tem permissão nenhuma. O **0** bloqueia qualquer tipo de acesso.
+**Como o sistema lê:** _"O dono do arquivo pode fazer qualquer coisa com ele, o grupo de usuários atrelado ao arquivo só pode visualizá-lo, e qualquer pessoa de fora do grupo está totalmente bloqueada."_
+
+**2. Em Roteadores e Switches (Padrão Cisco)**
+
+Nos equipamentos de rede, os números das ACLs não representam permissões matemáticas, mas funcionam como **etiquetas de identificação** que dizem ao roteador qual cabeçalho ele deve inspecionar. O sistema operacional da rede (Cisco IOS) reserva faixas de números para cada tipo de protocolo:
+- 1 a 99: ACLs para IPv4 Padrão.
+- 100 a 199: ACLs para IPv4 Estendida (IPs e Portas).
+- **700 a 799: ACLs para Endereços MAC (Camada 2).**
+
+**Como o roteador lê:** Quando você digita a criação de uma `access-list 740`, o roteador automaticamente entende: _"O número 740 está na faixa de 700 a 799. Portanto, eu vou ignorar os endereços IP (Camada 3) e as portas TCP/UDP (Camada 4). Vou filtrar esse tráfego olhando exclusivamente para os endereços físicos (MAC Address) das placas de rede."_
+![[Pasted image 20260901212330.png]]
+![[Pasted image 20260901213010.png]]
+![[Pasted image 20260901213257.png]]
+![[Pasted image 20260901213601.png]]
+![[Pasted image 20260901213809.png]]
+Problemas dessas caras são os problemas de computação pela rede - ainda tem server centralizado (problema de escalabilidade e segurança).
+NFS funciona bem quando 90+ operations são de read - se forem mtos writes o NFS é pouco performático.
+	Pra resolver esse problema: 
+	![[Pasted image 20260901214249.png]]
+	Computadores velhos tem HDs pequenos, dá pra transformar isso tudo num Storage Area Network (SAN) e ofereço como um HD gigante único (software - HD grande lógico) oferecido pro cliente. 
+		Salvo mtos computadores assim
+		Tem semelhanças com Distributed Shared Memory - oferece a semântica de HD grande, mas particionado
+		Permite leituras simultâneas se diferentes HDs do lógico estejam em uso.
