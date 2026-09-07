@@ -1,0 +1,133 @@
+\documentclass[12pt]{article}
+
+\usepackage{sbc-template}
+
+\usepackage{graphicx,url}
+ 
+\usepackage[utf8]{inputenc}  
+
+\usepackage{longtable}
+     
+\sloppy
+
+\title{Trabalho Sistemas Distribuídos GA - Kafka}
+
+\author{Henrique Haag\inst{1} \\
+        Arthur Wild\inst{1} }
+
+\address{Bacharelado em Ciência da Computação\\
+Universidade do Vale do Rio dos Sinos - UNISINOS\\
+   Rio Grande do Sul -- RS -- Brasil
+  \email{\ haaghenrique@edu.unisinos.br}
+  \email{wildarthur@edu.unisinos.br}
+}
+
+\begin{document} 
+
+\maketitle
+
+\section{Visiilidade do estudo de caso do software Kafka} 
+
+\begin{abstract}
+  The text follows the style of argumentative dissertation, containing two pages and     four paragraphs that are divided in: Introduction, first case, second case and         conclusion. The text model used was made available in the official domain of SBC       (Sociedade Brasileira de Computação). The purpose of the text is to inform the         author's opinion on two situations cited in Michael J. Sandel's book, "Justice -       What it is to do a certain thing", and explain its reasons.
+\end{abstract}
+     
+\begin{resumo} 
+  O texto segue o estilo de dissertação argumentativa, contendo duas páginas e quatro   parágrafos que se dividem em introdução, primeiro caso, segundo caso e                 conclusão. O modelo de texto utilizado foi o disponibilizado no domínio               oficial  da SBC(Sociedade Brasileira de Computação). O objetivo do texto é             informar a  opinião do autor sobre duas situações citadas no livro “Justiça - o que   é fazer a coisa certa” de Michael J. Sandel, e explicar seus motivos.
+\end{resumo}
+
+
+\subsection{Introdução}
+
+No tocante à sistemas distribuídos, a comunicação direta entre produtores e consumidores de dados não raro resulta em forte acoplamento entre os componentes, dificultando a escalabilidade e a manutenção de sistemas complexos. À fim de mitigar esse problema, os middlewares de mensageria para intermediar a troca de informações entre serviços de forma assíncrona e desacoplada.
+
+Este trabalho tem como objetivo apresentar o funcionamento do Apache Kafka como middleware de mensageria, relacionando seus mecanismos internos aos conceitos fundamentais de sistemas distribuídos, comparando-o com outras soluções do mercado e discutindo sua adoção em provedores modernos de nuvem. 
+
+==============================================
+
+
+Adição posterior:
+
+
+
+Revisar necessidade de inclusão:
+O texto está organizado da seguinte forma: a Seção 2 descreve a arquitetura do Kafka; a Seção 3 relaciona seus mecanismos aos conceitos de sistemas distribuídos; a Seção 4 apresenta comparações com outros middlewares; a Seção 5 discute sua presença em provedores de nuvem; a Seção 6 explora aplicações modernas; e a Seção 7 conclui o trabalho. 
+
+\subsection{Funcionamento geral do Kafka} \label{sec:firstpage}
+
+Grosso modo, o Kafka funciona como um cluster de brokers, os quais hospedam réplicas das partitions, unidades de armazenamento e ordenação dentro de um tópico, definindo uma delas como líder. Nesse sentido, o broker com a partition líder é responsável por receber as mensagens enviadas pelo producer e entregá-las aos consumers de acordo com a demanda destes (pull, via subscription), enquanto os demais brokers mantêm réplicas, sendo consideradas In-Sync Replicas (ISR) aquelas que permanecem suficientemente sincronizadas com o líder se torne indisponível (e.g. queda de conexão do Broker, lembre-se que eles estão clusterizados). Dessa forma, o produtor deixa de ser responsável por coordenar a entrega das mensagens a cada consumidor individualmente, e as mensagens são mantidas de acordo com uma política de retenção configurável.
+
+A leitura das mensagens é controlada pelo próprio consumidor por meio do conceito de offset, um índice sequencial que indica sua posição de leitura dentro da partition, permitindo que múltiplos consumidores leiam o mesmo tópico em ritmos e momentos diferentes. Além disso, o Kafka organiza consumidores em consumer groups: cada partition de um tópico é atribuída a, no máximo, um consumidor dentro de um mesmo grupo, o que possibilita paralelismo no processamento sem duplicidade de mensagens, ao mesmo tempo em que múltiplos grupos podem consumir o mesmo tópico de forma independente.
+
+A garantia de ordenação do Kafka é local à partition e não ao tópico como um todo — mensagens em partitions diferentes podem ser processadas fora de ordem entre si. A coordenação dos metadados do cluster e a eleição de líderes de partition, originalmente dependentes do Apache ZooKeeper, passaram a ser gerenciadas internamente pelo próprio Kafka a partir da introdução do protocolo KRaft, eliminando a dependência de um serviço externo de coordenação.mo.
+
+
+
+\subsection{Comparação entre Kafka e RabbitMQ}
+
+É importante destacar que no universo de Middlewares para comunicação assíncrona (tanto de espaço quando de tempo), temos outras opções tão boas quanto (ou ainda mais indicadas para determinada situação que outras). Nessa ceara, teamos exemplos como IBM MQ, Apache ZooKeeper, Redis e Amazon SNS; todos funcionando com uma ou outra diferença, à depender da implementação dos desenvolvedores. Nesse momento; todavia, cabe uma comparação entre o Kafka e outra ferramenta bastante utilizada no mesmo meio, o Rabbit MQ.
+
+Abaixo segue uma tabela comparativa entre as duas ferramentas:
+
+\begin{tabular}{|l|c|r|}
+\hline
+     & Apache Kafka & RabbitMQ \\
+\hline
+Paradigma & Log de commits & Mensageria inteligente \\  Principal & distribuído imutável.  & e flexível baseada em \\ &   & Exchanges, Bindings \\ && e Filas. \\ \\
+Estrutura & Tópico dividido em & Filas tradicionais \\ Física & Partições distribuídas e & temporárias/destrutivas \\ & replicadas em disco. & (Classic/Quorum  \\ && Queues) ou Logs \\ && append-only (Streams). \\ \\
+Unidade da & Posição sequencial imutável & Item de trabalho  \\ Mensagem & (offset) dentro de um log & independente com metadados \\ & compartilhado. & e ciclo de vida \\ && próprios no envelope. \\ \\
+Roteamento & No cliente (client-side): & No servidor (broker-side): \\  de Dados & o produtor decide para & Exchanges aplicam regras \\ & qual partição enviar (via & \\ & hash de chave); o broker & dinâmicas (Bindings) para \\ & é agnóstico ao conteúdo. & direcionar cópias às filas. \\ \\
+Garantia de & Baseia-se primariamente em & Quorum Queues: replicadas \\ Durabilidade & replicação ativa (ISR). & via Raft, exigem gravação \\ & Desabilita o fsync síncrono & e fsync físico da maioria \\ & por padrão, confiando & antes do reconhecimento \\ & no page cache. & (publisher confirm). \\ \\
+Semântica & Tradicionalmente por partições & Consumidores concorrentes \\ de Consumo & exclusivas via Consumer & que competem pela carga \\ & Groups. A partir de 2026 & de trabalho de uma \\ & (v4.2), aceita Share & mesma fila. \\ & Groups (consumidores & \\ & concorrentes). & \\ \\
+Filtragem & No cliente (client-side): o & No servidor (server-side): \\ de Dados & consumidor precisa baixar & filtros de Bloom e expressões \\ & todos os registros da & SQL limitam o tráfego \\ & partição para filtrá-los & de rede enviando apenas \\ & localmente. & o dado requisitado. \\ \\
+Controle & Baseado na política de & Toolkit individual: atraso \\ Fino de & retenção global do tópico & de entrega, retentativa \\ Mensagens & (tempo ou espaço & com backoff dinâmico, \\ & em disco). & prioridade estrita (32 níveis), \\ && TTL e dead-lettering.\\ \\
+\hline
+\end{tabular}
+
+\begin{tabular}{|l|c|r|}
+\hline
+     & Apache Kafka & RabbitMQ \\
+\hline
+Protocolos & Protocolo binário & Multi-protocolo nativo: \\ Suportados & proprietário via TCP. & AMQP 0-9-1, AMQP 1.0, \\ && MQTT, STOMP e \\ && protocolo de Stream \\ && próprio. \\ \\
+Consenso de & Quorum de controladores & Consenso e estado interno do \\ Metadados & unificado e interno via KRaft & cluster gerenciado via \\ & (eliminando a necessidade de & Khepri (consenso baseado em \\ & ZooKeeper externo). & Raft). \\ \\
+\hline
+\end{tabular}
+
+\subsection{Complemento à comparação da tabela}
+
+Além das métricas apresentadas na tabela, é importante destacar as diferenças conceituais entre esses middlewares. Enquanto o RabbitMQ opera sob um modelo push, em que o broker é responsável por empurrar as mensagens aos consumidores no ritmo que julga adequado, o Kafka adota um modelo pull, no qual o próprio consumidor controla o ritmo de leitura por meio do offset, característica que confere maior controle sobre o processamento e facilita mecanismos de backpressure. Essa diferença reflete também em como cada sistema trata a persistência dos dados: no RabbitMQ, uma mensagem é tratada como um item transiente, removido da fila assim que confirmado o seu consumo (ack), ao passo que o Kafka mantém as mensagens como um log distribuído e duravelmente armazenado, permitindo que consumidores releiam o histórico de eventos mesmo muito tempo após sua publicação original — uma distinção que evidencia a mudança de paradigma de "fila de mensagens" para "log de eventos". Já o gRPC, incluído nesta comparação como contraponto a um modelo de comunicação síncrona, ainda pressupõe conhecimento mútuo entre cliente e servidor por meio de um contrato de interface fortemente tipado (via Protocol Buffers), aproximando-se conceitualmente de uma evolução dos sockets tradicionais, enquanto o Kafka elimina essa dependência ao desacoplar completamente produtores e consumidores através do modelo publish-subscribe. 
+
+Nesse sentido, cada middleware demonstra maior aptidão para um contexto de uso específico: o RabbitMQ destaca-se em cenários de roteamento complexo de mensagens e filas de tarefas de baixa latência; o Kafka é mais adequado a streaming de eventos de alto volume, com necessidade de reprocessamento e retenção histórica; e o gRPC sobressai-se em comunicação síncrona serviço-a-serviço que exige contratos de interface bem definidos.
+ 
+\subsection{Conclusão}
+
+Temos, então, o Apache Kafka como middleware de mensageria distribuída, tendo sua arquitetura, os conceitos de sistemas distribuídos nele aplicados, suas diferenças em relação a outras soluções de mercado e sua presença em provedores modernos de nuvem discutidos aqui. Tendo o Kafka como uma ferramenta robusta e versátil, capaz de atender desde cenários simples de entrega de mensagens até pipelines complexos de streaming de eventos em larga escala — ainda que, como discutido na comparação com RabbitMQ , seu ponto forte esteja em cenários de alto volume, retenção histórica e desacoplamento temporal entre produtores e consumidores. Tecnicamente, o Kafka utiliza sockets TCP como camada de transporte, mas constrói sobre essa base uma abstração de mais alto nível — o log distribuído e replicável — que o diferencia conceitualmente de uma comunicação direta ponto a ponto.
+
+Por outro lado, deve-se reconhecer os trade-offs impostos: sua implementação exige maior complexidade operacional, e, embora o Kafka disponibilize mecanismos nativos de segurança (autenticação via SASL, criptografia via SSL/TLS e controle de acesso via ACLs), esses recursos não vêm habilitados por padrão, exigindo configuração explícita por parte de quem o implementa — um ponto de atenção especialmente relevante em ambientes corporativos.
+
+Não obstante, o Apache Kafka permanece como um middleware de configuração relativamente complexa, porém de elevado grau de aplicabilidade em contextos empresariais modernos, consolidando-se como peça central em arquiteturas orientadas a eventos e na integração de sistemas distribuídos em larga escala.
+
+\subsection{Referências}
+
+\cite{sandel:2015}.
+
+\bibliographystyle{sbc}
+\bibliography{sbc-template}
+
+\newpage
+
+\section{Delineando o perfil dos alunos egressos do BCC do IFCE - Campus Aracati.}
+
+
+\subsection{Introdução}
+
+
+\newpage
+\section{Trabalho}
+
+
+
+
+
+
+\end{document}
