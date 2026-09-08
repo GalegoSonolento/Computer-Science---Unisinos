@@ -22,20 +22,6 @@
             }
           },
           {
-            "id": "e364784026ccbf14",
-            "type": "leaf",
-            "state": {
-              "type": "split-diff-view",
-              "state": {
-                "aFile": "conflict-files-obsidian-git.md",
-                "bFile": "conflict-files-obsidian-git.md",
-                "aRef": ""
-              },
-              "icon": "diff",
-              "title": "Diff: conflict-files-obsidian-git  (Working Tree)"
-            }
-          },
-          {
             "id": "48e25c01befff53c",
             "type": "leaf",
             "state": {
@@ -222,11 +208,10 @@
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
       "bases:Create new base": false,
-      "obsidian-git:Open Git source control": false,
-      "vscode-editor:Create Code File": false
+      "obsidian-git:Open Git source control": false
     }
   },
-  "active": "e364784026ccbf14",
+  "active": "72e6eb00c8260086",
   "lastOpenFiles": [
     "conflict-files-obsidian-git.md",
     "Compiladores/Exercicio de identificação de bibliotecas.md",
