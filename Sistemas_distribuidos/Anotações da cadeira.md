@@ -235,3 +235,29 @@ NFS funciona bem quando 90+ operations são de read - se forem mtos writes o NFS
 		Salvo mtos computadores assim
 		Tem semelhanças com Distributed Shared Memory - oferece a semântica de HD grande, mas particionado
 		Permite leituras simultâneas se diferentes HDs do lógico estejam em uso.
+
+---
+**Criptografia e Segurança**
+![[Pasted image 20260908195514.png]]
+![[Pasted image 20260908195604.png]]
+RSA ainda é a melhor arquitetura de chave, mas elas precisaram crescer substancialmente pra segurar o padrão
+![[Pasted image 20260908200432.png]]
+![[Pasted image 20260908201053.png]]
+![[Pasted image 20260908201736.png]]
+Gurizada ainda usa pela simplicidade de entregar as chaves e pela rapidez pra montar e desmontar a criptografia (hoje ainda é rápido computar essas chaves)
+(não abordado em sist. dist.) segurança em engenharia social
+![[Pasted image 20260908202406.png]]
+![[Pasted image 20260908203316.png]]
+OpenSSL é camada de aplicação
+![[Pasted image 20260908204910.png]]
+Problema de assinatura ainda persiste (remetente não identificado)
+Atualmente a gurizada pega as chaves assimétricas pra settar o canal seguro pra mandar a chave simétrica e espabelecer uma comunicação
+
+![[Pasted image 20260908211201.png]]
+![[Pasted image 20260908211701.png]]
+Sempre se assina Hash - Assinatura Digital é bastante complexa - Hash é mais ligeiro de assinar pra mensageria
+
+Apesar de Assinatura Digital com criptografia, ainda não dá atestar quem um usuário diz ser
+Dentro de certificados tem chaves públicas - precisa ir nas entidades certificadoras pra certificar chaves públicas
+Nos certificados tem chaves públicas e a validade -> root de segurança
+
