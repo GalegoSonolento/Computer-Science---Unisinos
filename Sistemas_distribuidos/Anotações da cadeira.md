@@ -261,3 +261,20 @@ Apesar de Assinatura Digital com criptografia, ainda não dá atestar quem um us
 Dentro de certificados tem chaves públicas - precisa ir nas entidades certificadoras pra certificar chaves públicas
 Nos certificados tem chaves públicas e a validade -> root de segurança
 
+**Exclusão mútua distribuída**
+![[Pasted image 20260915195524.png]]
+Mto presente na internet - rede montada pra evitar corrupção de dados
+Isso é uma tentativa de deixar a operação do I386 atômica (apesar de não ser, nativamente)
+![[Pasted image 20260915200551.png]]
+![[Pasted image 20260915201403.png]]
+seria interessante pensar em tolerância a falhas (colocar temporazadores) e validação de conexão
+obedece o Happened Before
+![[Pasted image 20260915202601.png]]
+![[Pasted image 20260915203718.png]]
+Mundo real tem cache e falhas - os algoritmos precisam ser alterados para entrarem em conformidade com as situações
+
+![[Pasted image 20260915204009.png]]
+![[Pasted image 20260915204627.png]]
+2 rounds - o ID depende do processo (adjuntos - cada um vai ter o seu)
+Líder é sempre quem vai ter o maior clock lógico (funciona pra conhecer todos os clocks da rede)
+Se um deles cair, para de funcionar - tolerância a falhas meio fraca.

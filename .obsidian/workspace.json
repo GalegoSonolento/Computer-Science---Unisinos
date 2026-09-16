@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Sistemas_distribuidos/Anotações da cadeira.md",
+                "file": "Sistemas_distribuidos/Relatório apresentação Exclusão mútua e eleição de líderes.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Anotações da cadeira"
+              "title": "Relatório apresentação Exclusão mútua e eleição de líderes"
             }
           },
           {
@@ -57,8 +57,8 @@
               "state": {
                 "file": "Sistemas_distribuidos/LAN_test/main.py"
               },
-              "icon": "lucide-file",
-              "title": "main"
+              "icon": "lucide-ghost",
+              "title": "vscode-editor"
             }
           },
           {
@@ -67,10 +67,10 @@
             "state": {
               "type": "vscode-editor",
               "state": {
-                "file": "Sistemas_distribuidos/LAN_test/test_udp.py"
+                "file": "Compiladores/teste_compilador_aula4/lexico.c"
               },
               "icon": "lucide-file",
-              "title": "test_udp"
+              "title": "lexico"
             }
           },
           {
@@ -81,12 +81,11 @@
               "state": {
                 "file": "Sistemas_distribuidos/LAN_test/main.py"
               },
-              "icon": "lucide-file",
-              "title": "main"
+              "icon": "lucide-ghost",
+              "title": "vscode-editor"
             }
           }
-        ],
-        "currentTab": 4
+        ]
       }
     ],
     "direction": "vertical"
@@ -261,14 +260,29 @@
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
       "bases:Create new base": false,
-      "vscode-editor:Create Code File": false,
-      "obsidian-git:Open Git source control": false
+      "obsidian-git:Open Git source control": false,
+      "vscode-editor:Create Code File": false
     }
   },
-  "active": "c0311c5203a4c86a",
+  "active": "b166b0493566a590",
   "lastOpenFiles": [
-    "Sistemas_distribuidos/LAN_test/Untitled.md",
+    "Sistemas_distribuidos/Anotações da cadeira.md",
+    "Sistemas_distribuidos/Relatório apresentação Exclusão mútua e eleição de líderes.md",
+    "Sistemas_distribuidos/Attachments/Pasted image 20260915204627.png",
+    "Sistemas_distribuidos/Attachments/Pasted image 20260915204009.png",
+    "Sistemas_distribuidos/Attachments/Pasted image 20260915203718.png",
+    "Sistemas_distribuidos/Attachments/Pasted image 20260915202601.png",
+    "Sistemas_distribuidos/Attachments/Pasted image 20260915202505.png",
+    "Sistemas_distribuidos/Attachments/Pasted image 20260915201403.png",
+    "Sistemas_distribuidos/Attachments/Pasted image 20260915200551.png",
+    "Sistemas_distribuidos/Attachments/Pasted image 20260915195524.png",
+    "Compiladores/teste_compilador_aula4/lexico.c",
+    "Compiladores/teste_compilador_aula4/Compilador.txt",
+    "Compiladores/impl_trab_ga",
+    "parallel-programming-techniques-and-applications-using-networked-workstations-and-parallel-computers-2nd-edition_compress.pdf",
+    "Pasted image 20260908201736.png",
     "Sistemas_distribuidos/LAN_test/test_udp.py",
+    "Sistemas_distribuidos/LAN_test/Untitled.md",
     "Sistemas_distribuidos/LAN_test/main.py",
     "Sistemas_distribuidos/LAN_test/server.py",
     "Sistemas_distribuidos/LAN_test/__pycache__/server.cpython-314.pyc",
@@ -277,23 +291,9 @@
     "Sistemas_distribuidos/LAN_test",
     "Sistemas_distribuidos/Exercicio_2_GA.md",
     "Sistemas_distribuidos/Attachments/Pasted image 20260901214249.png",
-    "Sistemas_distribuidos/Attachments/Pasted image 20260901213809.png",
-    "Sistemas_distribuidos/Attachments/Pasted image 20260901213601.png",
-    "Sistemas_distribuidos/Attachments/Pasted image 20260901213257.png",
-    "Sistemas_distribuidos/Attachments/Pasted image 20260901213010.png",
-    "Sistemas_distribuidos/Attachments/Pasted image 20260901212330.png",
-    "Sistemas_distribuidos/Attachments/Pasted image 20260901204704.png",
-    "Sistemas_distribuidos/Attachments/Pasted image 20260901204127.png",
-    "Sistemas_distribuidos/Attachments/Pasted image 20260901203805.png",
-    "Sistemas_distribuidos/Attachments/Pasted image 20260901203606.png",
     "Compiladores/Exercicio de identificação de bibliotecas.md",
     "Sistemas_distribuidos/Exercicio_1_GA.md",
-    "Sistemas_distribuidos/Anotações da cadeira.md",
     "Sistemas_distribuidos/Trabalho do GA - anotações.md",
-    "Sistemas_distribuidos/Trabalho_GA_Kafka_Sis_Dist.pdf",
-    "Sistemas_distribuidos/latex_final.txt",
-    "Sistemas_distribuidos/Trabalho do GA.md",
-    "Sistemas_distribuidos/trab_latex_2.pdf",
-    "Sistemas_distribuidos/trab_latex_2.txt"
+    "Sistemas_distribuidos/Trabalho do GA.md"
   ]
 }
