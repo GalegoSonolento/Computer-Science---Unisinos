@@ -1,0 +1,6 @@
+int numero#;
+float valor$total;
+char email@teste;
+int a, b  c;
+
+//Gerar a ilegalidade da linguagem para sinais de '#', por exemplo

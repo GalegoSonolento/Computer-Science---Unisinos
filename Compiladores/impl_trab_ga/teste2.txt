@@ -1,0 +1,6 @@
+int 2contador;
+float x = 3.5;
+double z;
+int a b;
+
+//Entede-se que aqui teremos erros pela variável começar com o valor 2 e pela atribuição direta junto de declaração de uma variável

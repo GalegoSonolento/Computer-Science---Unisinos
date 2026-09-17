@@ -1,0 +1,5 @@
+int contador = 0;
+string texto;
+float a, b, 3c;
+
+//Programa inválido - validação de atribuição com declaração, identificação de tipos não suportados e nomes de variáveis estranhos.
