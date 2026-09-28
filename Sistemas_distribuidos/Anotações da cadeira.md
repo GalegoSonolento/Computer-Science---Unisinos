@@ -253,6 +253,8 @@ OpenSSL é camada de aplicação
 Problema de assinatura ainda persiste (remetente não identificado)
 Atualmente a gurizada pega as chaves assimétricas pra settar o canal seguro pra mandar a chave simétrica e espabelecer uma comunicação
 
+![[Pasted image 20260928015255.png]]
+
 ![[Pasted image 20260908211201.png]]
 ![[Pasted image 20260908211701.png]]
 Sempre se assina Hash - Assinatura Digital é bastante complexa - Hash é mais ligeiro de assinar pra mensageria

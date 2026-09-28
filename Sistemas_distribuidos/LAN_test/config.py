@@ -1,6 +1,7 @@
 # Esse aqui é pra ser o IP da máquina auxiliar (no meu caso um Lenovo com CachyOS)
 # todo: trocar esse IP pro IP de verdade da máquina
-IP_SERVIDOR = '127.0.0.1' 
+# IP_SERVIDOR = '127.0.0.1' 
+IP_SERVIDOR = '192.168.10.2'
 PORTA_TCP = 5000
 PORTA_UDP = 5001
 

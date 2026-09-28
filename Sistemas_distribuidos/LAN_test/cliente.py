@@ -27,21 +27,27 @@ def testar_tcp(tamanho, payload):
 
 def testar_udp(tamanho, payload):
     with socket.socket(socket.AF_INET, socket.SOCK_DGRAM) as s:
+        s.settimeout(2.0)
         endereco_servidor = (IP_SERVIDOR, PORTA_UDP)
         
         inicio = time.perf_counter()
         
-        # Envio fracionado (Chunking) para evitar erro de MTU/Message too long
+        bytes_recebidos = 0
+        
+        # Envio e recebimento intercalados (Ping-pong síncrono por fragmento)
         for i in range(0, tamanho, BUFFER_SIZE):
             pedaco = payload[i:i+BUFFER_SIZE]
+            
+            # Ping
             s.sendto(pedaco, endereco_servidor)
             
-        # Recebimento fracionado
-        bytes_recebidos = 0
-        while bytes_recebidos < tamanho:
-            data, _ = s.recvfrom(BUFFER_SIZE)
-            bytes_recebidos += len(data)
-            
+            # Pong
+            try:
+                data, _ = s.recvfrom(BUFFER_SIZE)
+                bytes_recebidos += len(data)
+            except socket.timeout:
+                raise Exception(f"Perda de pacote. Recebidos {bytes_recebidos}/{tamanho} bytes")
+                
         fim = time.perf_counter()
         
     return fim - inicio
