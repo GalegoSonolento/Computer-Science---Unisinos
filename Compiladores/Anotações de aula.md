@@ -65,3 +65,22 @@ Pode ser um problema gerar expressões regulares sem recursividade - milhares de
 ![[Pasted image 20260827202755.png]]
 ![[Pasted image 20260827203029.png]]
 Pro trabalho do GA é só identificar com essa esquematização e printar mesmo - provavelmente tudo no terminal e azar
+
+**Analise ascendente e a tabela SLR**
+A ideia disso aqui é n ter mais recursão à esquerda mesmo
+Usam-se pilhas e redução
+
+Tem uma marcação que vai caminhando e lendo a linguagem toda
+Temos uma table com todas as ações e uma marcação de final
+
+A principal diferença entre análises descendentes e ascnedentes é que a ascendente só toma alguma ação de verdade quando tem todo o contexto na pilha de análise
+
+As árvores de expressão crescem indefinidamente pra cada expressão - o código acumula várias dessas árvores.
+
+Cada redução de uma pilha (troca) é um nó adicional dentro da árvore
+O identificador vai caminhando com um ponto na expressão e vai adicionando dentro da pilha
+Redução apenas acontece com corpos completos (ponto chegou no final da expressão)
+
+**Tabela SLR(1)**
+Roda em paralelo da análise
+-> decisões em consultas
