@@ -1,0 +1,2 @@
+- Em grupos
+- Baixar um programa com API (Ethernet, Hyperledger, ...) Blockchain, entender e explicar o funcionamento linha a linha
