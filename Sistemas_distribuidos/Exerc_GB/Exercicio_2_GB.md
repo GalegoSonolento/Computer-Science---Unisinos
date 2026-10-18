@@ -6,3 +6,8 @@ Entre no site, gere os gráficos e escreva um minirrelatório sobre:
 - Sistema operacional
 - Rede de Interconexão
 - Aceleradores - coprocessadores - GPU
+
+Site do Top500 com a lista dos top500 atuais: https://top500.org/lists/top500/list/2026/06/
+Geração dos gráficos de análise: https://top500.org/statistics/list/
+
+![[Pasted image 20261014201934.png]]
