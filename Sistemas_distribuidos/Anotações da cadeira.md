@@ -280,3 +280,32 @@ Mundo real tem cache e falhas - os algoritmos precisam ser alterados para entrar
 2 rounds - o ID depende do processo (adjuntos - cada um vai ter o seu)
 Líder é sempre quem vai ter o maior clock lógico (funciona pra conhecer todos os clocks da rede)
 Se um deles cair, para de funcionar - tolerância a falhas meio fraca.
+
+# Cluster comp
+Computação industrial
+KVM - Keyboard Video and Mouse
+- aquele tecladinho de server msm
+Gerenciador de recurso é um load balancer pra armar um semáforo de recurso (nós) que u user pede pro cluster
+- reprodução de resultados 
+
+# Web services
+integração de apps
+Normalmente as integraoes meio que largam de mão o UDDI -> maior parte da gurizada já tem os endereços que precisa
+WSDL é tudo em padrão XML -> dá pra bater contra um esquema (tipo dentro do html)
+
+# p2p
+Replicação de dados funciona quando temos dados não alteráveis - escrita é terrível
+Chord -> pegas os nós de um p2p e organiza num anel lógico (rede overlay)
+- n precisa de IP
+- potência de 2 
+	- consegue pular os nós em potências de 2
+	- bidirecional (naquelas)
+Redes híbridas tem Super-peers
+- nós finais tem computações úteis e armazenamento
+	- só são conectados em super-peers
+- capacidade de roteamento real
+![[Pasted image 20261020215713.png]]
+Sistema pra verificaçaõ de atividade extra-terrestre
+Screen-saver de windows que monta request quando o PC fica inativo pro PC da borda (com o screensaver) processsar
+Tipo um P2P centralizado (o servidor central recebe as computações e passa as tarefas)
+É P2P (comp na borda) / Cliente-server (screen-saver cliente chama o server central)
