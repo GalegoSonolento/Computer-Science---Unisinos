@@ -27,3 +27,7 @@ Isso aqui é bastante utilizado como previsão e testagem de sistemas
 ![[Pasted image 20260819200254.png]]
 E esse método leva à esse
 ![[Pasted image 20260819200314.png]]
+
+De acordo com os conceitos de modelagem e simulação, qual é a principal pergunta que a etapa de Verificação busca responder? **O modelo faz o que eu quero?**
+![[Pasted image 20261022131331.png]]
+Isso aqui pode ser interessante pro trabalho
