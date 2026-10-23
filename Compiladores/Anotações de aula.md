@@ -84,3 +84,5 @@ Redução apenas acontece com corpos completos (ponto chegou no final da express
 **Tabela SLR(1)**
 Roda em paralelo da análise
 -> decisões em consultas
+
+Árvore de análise sintática da linguagem sempre é recursiva
