@@ -305,7 +305,19 @@ Redes híbridas tem Super-peers
 	- só são conectados em super-peers
 - capacidade de roteamento real
 ![[Pasted image 20261020215713.png]]
-Sistema pra verificaçaõ de atividade extra-terrestre
+Sistema pra verificaçaõ de atividade extra-terrestre 
 Screen-saver de windows que monta request quando o PC fica inativo pro PC da borda (com o screensaver) processsar
 Tipo um P2P centralizado (o servidor central recebe as computações e passa as tarefas)
 É P2P (comp na borda) / Cliente-server (screen-saver cliente chama o server central)
+
+# Computação em nuvem de maneira geral
+- Nuvem é feito pra resolução de problemas de elasticidade principalmente
+- maior parte dos problemas vem de sites de retail
+	- alguns usam overprovisioning pra garantir banda
+	- subprovisionado atende a média, mas fica à mercê de churn
+	- tarde demais segura a onda média, mas aumenta a capacidade muito tarde
+	- elástico sobe com o treshold razoável acima do uso
+- mercado de servidor tá bem saturado (por causa da IA)
+- Nuvem tem despesa operacional apenas (OPEX)
+	- grande argumento é não pagar hardware e pagar por recurso antecipadamente
+- 
